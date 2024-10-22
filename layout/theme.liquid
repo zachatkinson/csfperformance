@@ -299,7 +299,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link href="https://csf-performance.myshopify.com/cdn/shop/t/3/assets/csf-custom-styles.css.liquid" rel="stylesheet" type="text/css">
+    {%  render 'csf-custom-styles' %}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
