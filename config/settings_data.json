@@ -186,7 +186,7 @@
       },
       "7772116548038543877": {
         "type": "shopify://apps/c-year-make-model-search/blocks/app-embed-ymm-result-page-new/ce35ea35-ef50-4f43-8cb6-7c34cae4c285",
-        "disabled": true,
+        "disabled": false,
         "settings": {
           "hide_ymm_rs_title": true,
           "cust_title_ele": ""
