@@ -1,1 +1,213 @@
-{"sections":{"1729007960e8d42a51":{"type":"apps","blocks":{"c_year_make_model_search_ymm_searchbox_CYjiri":{"type":"shopify:\/\/apps\/c-year-make-model-search\/blocks\/ymm-searchbox\/ce35ea35-ef50-4f43-8cb6-7c34cae4c285","settings":{"searchbox_title":"","searchbox_style":"horizontal"}}},"block_order":["c_year_make_model_search_ymm_searchbox_CYjiri"],"custom_css":["label {color: #f5f5f5;}","button {border-radius: 10px !important;}"],"settings":{"include_margins":true}},"slideshow_VKiGGP":{"type":"slideshow","blocks":{"slide_hMTFQN":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/downtown-city-skyline.jpg","heading":"","heading_size":"h1","subheading":"","button_label":"","link":"","button_style_secondary":false,"box_align":"middle-center","show_text_box":false,"text_alignment":"center","image_overlay_opacity":0,"color_scheme":"","text_alignment_mobile":"center"}},"slide_YLC3fL":{"type":"slide","settings":{"image":"shopify:\/\/shop_images\/city-behind-greenery.jpg","heading":"","heading_size":"h1","subheading":"","button_label":"","link":"","button_style_secondary":false,"box_align":"middle-center","show_text_box":false,"text_alignment":"center","image_overlay_opacity":0,"color_scheme":"","text_alignment_mobile":"center"}}},"block_order":["slide_hMTFQN","slide_YLC3fL"],"settings":{"layout":"full_bleed","slide_height":"medium","slider_visual":"dots","auto_rotate":true,"change_slides_speed":9,"image_behavior":"ambient","show_text_below":true,"accessibility_info":"Featured Product Slideshow"}},"multicolumn_iHNf8c":{"type":"multicolumn","blocks":{"column_QiEBQm":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/cooling-systems_u-copy.jpg","title":"","text":"","link_label":"","link":""}},"column_ByMhTx":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/bts-final-compress.jpg","title":"","text":"","link_label":"","link":""}},"column_CqikUt":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/custom-finishes-kadence-block.jpg","title":"","text":"","link_label":"","link":""}},"column_NHeynW":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/oilcoolers_title-copy-1.jpg","title":"","text":"","link_label":"","link":""}},"column_w7za4z":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/iccores_title-1.jpg","title":"","text":"","link_label":"","link":""}},"column_X4BYL7":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/8400-kadence_1.jpg","title":"","text":"","link_label":"","link":""}}},"block_order":["column_QiEBQm","column_ByMhTx","column_CqikUt","column_NHeynW","column_w7za4z","column_X4BYL7"],"settings":{"title":"","heading_size":"h1","image_width":"full","image_ratio":"adapt","columns_desktop":3,"column_alignment":"left","background_style":"primary","button_label":"","button_link":"","color_scheme":"","columns_mobile":"2","swipe_on_mobile":false,"padding_top":0,"padding_bottom":0}},"featured_collection":{"type":"featured-collection","settings":{"title":"Featured Products","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"all","products_to_show":8,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"scheme-3","image_ratio":"adapt","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":44,"padding_bottom":36}}},"order":["1729007960e8d42a51","slideshow_VKiGGP","multicolumn_iHNf8c","featured_collection"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1729007960e8d42a51": {
+      "type": "apps",
+      "blocks": {
+        "c_year_make_model_search_ymm_searchbox_CYjiri": {
+          "type": "shopify://apps/c-year-make-model-search/blocks/ymm-searchbox/ce35ea35-ef50-4f43-8cb6-7c34cae4c285",
+          "settings": {
+            "searchbox_title": "Search By Year / Make / Model",
+            "searchbox_style": "horizontal"
+          }
+        }
+      },
+      "block_order": [
+        "c_year_make_model_search_ymm_searchbox_CYjiri"
+      ],
+      "custom_css": [
+        "label {color: #f5f5f5;}",
+        "button {border-radius: 10px !important;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "slideshow_VKiGGP": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_hMTFQN": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/downtown-city-skyline.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_YLC3fL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/city-behind-greenery.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_hMTFQN",
+        "slide_YLC3fL"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 9,
+        "image_behavior": "ambient",
+        "show_text_below": true,
+        "accessibility_info": "Featured Product Slideshow"
+      }
+    },
+    "multicolumn_iHNf8c": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_QiEBQm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/cooling-systems_u-copy.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ByMhTx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/bts-final-compress.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_CqikUt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/custom-finishes-kadence-block.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_NHeynW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/oilcoolers_title-copy-1.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_w7za4z": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/iccores_title-1.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_X4BYL7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/8400-kadence_1.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_QiEBQm",
+        "column_ByMhTx",
+        "column_CqikUt",
+        "column_NHeynW",
+        "column_w7za4z",
+        "column_X4BYL7"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-3",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "1729007960e8d42a51",
+    "slideshow_VKiGGP",
+    "multicolumn_iHNf8c",
+    "featured_collection"
+  ]
+}
