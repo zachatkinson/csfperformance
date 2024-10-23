@@ -90,6 +90,7 @@
                 {%- when 'featured-buttons' -%}
                     {% if product.metafields.custom.featured_dealer_links %}
                         {% assign featured_links = product.metafields.custom.featured_dealer_links %}
+                        <h3>Buy Now</h3>
                         {% for item in featured_links.value %}
                             <a href="{{ item.url }}" class="button button--full-width" target="_blank">
                                 {{ item.text }}
