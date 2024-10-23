@@ -49,8 +49,7 @@
         "variant_picker",
         "custom_liquid_KrWfA6",
         "description",
-        "share",
-        "featured-buttons"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -122,8 +121,8 @@
         "padding_bottom": 52
       }
     },
-    "featured-buttons": {
-      "type": "featured-buttons"
+    "custom-block": {
+      "type": "custom-block"
     }
   },
   "order": [
@@ -131,6 +130,7 @@
     "1729277438619c2109",
     "related-products",
     "custom_liquid_rpXXAH",
-    "custom_liquid_AWW7mL"
+    "custom_liquid_AWW7mL",
+    "custom-block"
   ]
 }
