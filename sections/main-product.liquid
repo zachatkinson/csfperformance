@@ -87,6 +87,10 @@
 
           {%- for block in section.blocks -%}
             {%- case block.type -%}
+                {%- when 'custom-block' -%}
+                    {% if block.settings.custom-block %}
+                        <p><a href="/collection/{{ block.settings.custom-block }}">View Collection</a></p>
+                    {%  endif %}
               {%- when '@app' -%}
                 {% render block %}
               {%- when 'text' -%}
@@ -731,6 +735,17 @@
   "tag": "section",
   "class": "section",
   "blocks": [
+    {
+      "type": "custom-block",
+      "name": "Custom Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "custom-block",
+          "label": "Type Collection"
+        }
+      ]
+    },
     {
       "type": "@app"
     },
