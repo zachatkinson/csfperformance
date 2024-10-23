@@ -41,12 +41,6 @@
           "settings": {
           }
         },
-        "custom_liquid_KrWfA6": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% if product.metafields.custom.featured_dealer_links %}\n\n  {% assign featured_links = product.metafields.custom.featured_dealer_links %}\n  \n    {% for item in featured_links.value %}\n      <a href=\"{{ item.url}}\" class=\"button button--full-width\" target=\"_blank\">{{ item.text }}</a>\n    {% endfor %}\n{% endif %}"
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
@@ -65,7 +59,6 @@
         "price",
         "variant_picker",
         "featured_buttons_NDDLN4",
-        "custom_liquid_KrWfA6",
         "description",
         "share"
       ],
