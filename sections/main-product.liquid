@@ -87,10 +87,15 @@
 
           {%- for block in section.blocks -%}
             {%- case block.type -%}
-                {%- when 'custom-block' -%}
-                    {% if block.settings.custom-block %}
-                        <p><a href="/collection/{{ block.settings.custom-block }}">View Collection</a></p>
-                    {%  endif %}
+                {%- when 'featured-buttons' -%}
+                    {% if product.metafields.custom.featured_dealer_links %}
+                        {% assign featured_links = product.metafields.custom.featured_dealer_links %}
+                        {% for item in featured_links.value %}\n
+                            <a href="{{ item.url }}" class="button button--full-width" target="_blank">
+                                {{ item.text }}
+                            </a>
+                        {% endfor %}
+                    {% endif %}
               {%- when '@app' -%}
                 {% render block %}
               {%- when 'text' -%}
