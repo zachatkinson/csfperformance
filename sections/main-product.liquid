@@ -90,7 +90,7 @@
                 {%- when 'featured-buttons' -%}
                     {% if product.metafields.custom.featured_dealer_links %}
                         {% assign featured_links = product.metafields.custom.featured_dealer_links %}
-                        {% for item in featured_links.value %}\n
+                        {% for item in featured_links.value %}
                             <a href="{{ item.url }}" class="button button--full-width" target="_blank">
                                 {{ item.text }}
                             </a>
