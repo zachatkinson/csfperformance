@@ -88,19 +88,19 @@
           {%- for block in section.blocks -%}
             {%- case block.type -%}
                 {%- when 'featured-buttons' -%}
+                    <h3>Where to buy</h3>
+                    <a href="#" class="button button--full-width button--secondary" target="_blank">
+                        Find a Dealer
+                    </a>
                     {% if product.metafields.custom.featured_dealer_links %}
                         {% assign featured_links = product.metafields.custom.featured_dealer_links %}
-                        <h3>Buy it now</h3>
+                        <hr />
                         {% for item in featured_links.value %}
                             <a href="{{ item.url }}" class="button button--full-width" target="_blank">
                                 Shop {{ item.text }}
                             </a>
                         {% endfor %}
-                        <hr />
                     {% endif %}
-                    <a href="#" class="button button--full-width button--secondary" target="_blank">
-                        Find a Dealer
-                    </a>
               {%- when '@app' -%}
                 {% render block %}
               {%- when 'text' -%}
