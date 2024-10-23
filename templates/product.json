@@ -52,12 +52,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "custom_block_PjkYnr": {
-          "type": "custom-block",
-          "settings": {
-            "custom-block": "intercoolers"
-          }
         }
       },
       "block_order": [
@@ -67,8 +61,7 @@
         "variant_picker",
         "custom_liquid_KrWfA6",
         "description",
-        "share",
-        "custom_block_PjkYnr"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
