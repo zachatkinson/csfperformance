@@ -3,11 +3,9 @@
     {% assign finishes = product.metafields.custom.custom_finishes %}
     <div style="display: flex; flex-direction: row; flex-wrap: wrap;justify-content: center; margin-left: auto; margin-right: auto;">
             {% for finish in finishes.value %}
-                {{ finish }}
-                <h3>TEXT: {{ finish.value.text }}</h3>
                 <div style="text-align: center; max-width: 320px; margin: 0 20px 0 20px; ">
                         <img src="{{ finish.url }}" alt="{{ finish.text }}" style="max-width: 100%;"/>
-                        <p>{{ finish.value.text }}</p>
+                        <p>{{ finish.text }}</p>
                 </div>
             {% endfor %}
     </div>
