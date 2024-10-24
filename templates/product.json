@@ -114,17 +114,13 @@
         "padding_bottom": 28
       }
     },
-    "custom_liquid_AWW7mL": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{% if product.metafields.custom.featured_articles %}\n    <h2 style='max-width: 1100px; margin-left: auto; margin-right: auto; padding: 10px;'>Featured Articles</h2>\n    {% assign articles = product.metafields.custom.featured_articles %}\n    {% assign images = product.metafields.custom.featured_article_images %}\n    {% assign counter = 0 %}\n    <div style=\"display: flex; flex-direction: row; flex-wrap: wrap;justify-content: center; margin-left: auto; margin-right: auto;\">\n        {% if articles.value.size != images.value.size %}\n            <p style=\"background-color: red; color: white; margin-right: auto; padding: 10px;\"><strong>You have {{ articles.value.size }} articles, and {{ images.value.size }} article images. Please ensure you have equal amount of featured images for your featured articles.</strong></p>\n        {%  else  %}\n            {{ articles[0] }}\n            {% for image in images.value %}\n                {% assign count = forloop.index0 %}\n                <div style=\"text-align: center; max-width: 320px; margin: 0 20px 0 20px; \">\n                    <a href=\"{{ articles.value[count].url}}\" target=\"_blank\">\n                        <img src=\"{{ image }}\" alt=\"{{ articles.value[count].text }}\" style=\"max-width: 100%;\"/>\n                        <p>{{ articles.value[count].text }}</p>\n                    </a>\n                </div>\n            {% endfor %}\n        {% endif %}\n    </div>\n{% endif %}",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "featured_youtube_qB77Q6": {
       "type": "featured-youtube",
+      "settings": {
+      }
+    },
+    "featured_articles_rCcKCX": {
+      "type": "featured-articles",
       "settings": {
       }
     }
@@ -134,6 +130,6 @@
     "1729277438619c2109",
     "related-products",
     "featured_youtube_qB77Q6",
-    "custom_liquid_AWW7mL"
+    "featured_articles_rCcKCX"
   ]
 }
