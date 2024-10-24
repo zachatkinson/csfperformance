@@ -78,6 +78,10 @@
         "padding_bottom": 12
       }
     },
+    "featured-youtube" : {
+      "type": "featured-youtube",
+
+    },
     "1729277438619c2109": {
       "type": "apps",
       "blocks": {
