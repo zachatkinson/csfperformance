@@ -1,0 +1,35 @@
+{% if product.metafields.custom.featured_articles %}
+    <h2 style='max-width: 1100px; margin-left: auto; margin-right: auto; padding: 10px;'>Featured Articles</h2>
+    {% assign articles = product.metafields.custom.featured_articles %}
+    {% assign images = product.metafields.custom.featured_article_images %}
+    {% assign counter = 0 %}
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap;justify-content: center; margin-left: auto; margin-right: auto;">
+        {% if articles.value.size != images.value.size %}
+            <p style="background-color: red; color: white; margin-right: auto; padding: 10px;"><strong>You have {{ articles.value.size }} articles, and {{ images.value.size }} article images. Please ensure you have equal amount of featured images for your featured articles.</strong></p>
+        {%  else  %}
+            {{ articles[0] }}
+            {% for image in images.value %}
+                {% assign count = forloop.index0 %}
+                <div style="text-align: center; max-width: 320px; margin: 0 20px 0 20px; ">
+                    <a href="{{ articles.value[count].url}}" target="_blank">
+                        <img src="{{ image }}" alt="{{ articles.value[count].text }}" style="max-width: 100%;"/>
+                        <p>{{ articles.value[count].text }}</p>
+                    </a>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endif %}
+{% schema %}
+{
+  "name": "Featured Articles Videos",
+  "settings": [],
+  "presets": [{
+    "name": "Featured Articles"
+  }]
+}
+{% endschema %}
+{%  stylesheet %}
+{%  endstylesheet %}
+{%  javascript %}
+{%  endjavascript %}
