@@ -7,7 +7,6 @@
         {% if articles.value.size != images.value.size %}
             <p style="background-color: red; color: white; margin-right: auto; padding: 10px;"><strong>You have {{ articles.value.size }} articles, and {{ images.value.size }} article images. Please ensure you have equal amount of featured images for your featured articles.</strong></p>
         {%  else  %}
-            {{ articles[0] }}
             {% for image in images.value %}
                 {% assign count = forloop.index0 %}
                 <div style="text-align: center; max-width: 320px; margin: 0 20px 0 20px; ">
