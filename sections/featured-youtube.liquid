@@ -10,11 +10,11 @@
             {% elsif video contains  "https://youtu.be/" %}
                 {% assign video_id = video |  remove: "https://youtu.be/" %}
             {%  endif %}
-            <div style="max-width: 350px; display: inline-block">
-                <iframe style="aspect-ratio: 16/9; width: 100%; padding: 10px; min-width: 350px;"
-                        src="https://www.youtube.com/embed/{{ video_id }}" title="YouTube video player" frameborder="0"
+            <div class="video-wrapper" style="max-width: 350px; display: inline-block">
+                <iframe class="video-iframe" src="https://www.youtube.com/embed/{{ video_id }}"
+                        title="YouTube video player" referrerpolicy="strict-origin-when-cross-origin"
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        frameborder="0" allowfullscreen>
                 </iframe>
             </div>
         {% endfor %}
@@ -42,6 +42,16 @@
         }
 {% endschema %}
 {% stylesheet %}
+.video-iframe{
+    aspect-ratio: 16/9;
+    width: 100%;
+    padding: 10px;
+    min-width: 350px;
+}
+.video-wrapper{
+    width: 100%;
+    display: inline-block;
+}
 {% endstylesheet %}
 {% javascript %}
 {% endjavascript %}
