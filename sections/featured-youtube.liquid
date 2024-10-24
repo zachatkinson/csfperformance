@@ -10,7 +10,7 @@
             {% elsif video contains  "https://youtu.be/" %}
                 {% assign video_id = video |  remove: "https://youtu.be/" %}
             {%  endif %}
-            <div class="video-wrapper" style="max-width: 350px; display: inline-block">
+            <div class="video-wrapper">
                 <iframe class="video-iframe" src="https://www.youtube.com/embed/{{ video_id }}"
                         title="YouTube video player" referrerpolicy="strict-origin-when-cross-origin"
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
