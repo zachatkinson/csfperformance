@@ -1,3 +1,21 @@
+{% if product.metafields.custom.youtube_videos %}
+    <h2 style='max-width: 1100px; margin-left: auto; margin-right: auto; padding: 10px;'>Featured Videos</h2>
+    {% assign yt_videos = product.metafields.custom.youtube_videos %}
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap;justify-content: space-around; max-width: 1100px; margin-left: auto; margin-right: auto;">
+        {% for video in yt_videos.value %}
+            {% if video contains "embed" %}
+                {% assign video_id = video |  remove: "https://www.youtube.com/embed/" %}
+            {% elsif video contains  "https://www.youtube.com/watch?v=" %}
+                {% assign video_id = video |  remove: "https://www.youtube.com/watch?v=" %}
+            {% elsif video contains  "https://youtu.be/" %}
+                {% assign video_id = video |  remove: "https://youtu.be/" %}
+            {%  endif %}
+            <div style="min-width: 350px;">
+                <iframe style="aspect-ratio: 16/9; width: 100%;padding: 10px; min-width: 350px;" src="https://www.youtube.com/embed/{{ video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
 {% schema %}
  {
  "name": "Featured YouTube Videos",
