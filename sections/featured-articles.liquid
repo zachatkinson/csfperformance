@@ -6,15 +6,17 @@
     {% if articles.value.size != images.value.size %}
         <p style="background-color: red; color: white; margin-right: auto; padding: 10px;"><strong>You have {{ articles.value.size }} articles, and {{ images.value.size }} article images. Please ensure you have equal amount of featured images for your featured articles.</strong></p>
     {%  else  %}
-        {% for image in images.value %}
-            {% assign count = forloop.index0 %}
-            <div>
-                <a href="{{ articles.value[count].url}}" target="_blank">
-                    <img src="{{ image }}" alt="{{ articles.value[count].text }}" style="max-width: 100%;"/>
-                    <p>{{ articles.value[count].text }}</p>
-                </a>
-            </div>
-        {% endfor %}
+        <div class="article-grid">
+            {% for image in images.value %}
+                {% assign count = forloop.index0 %}
+                <div class="article-wrapper">
+                    <a href="{{ articles.value[count].url}}" target="_blank">
+                        <img src="{{ image }}" alt="{{ articles.value[count].text }}" style="max-width: 100%;"/>
+                        <p>{{ articles.value[count].text }}</p>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     {% endif %}
 </div>
 {% endif %}
