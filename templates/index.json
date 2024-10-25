@@ -59,108 +59,19 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_JzKLRE": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_WzaQ7D": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_GtgC8n": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_M7LkcB": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_WzaQ7D",
-        "column_GtgC8n",
-        "column_M7LkcB"
-      ],
+    "custom_liquid_ezPgHR": {
+      "type": "custom-liquid",
       "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
+        "custom_liquid": "<div class=\"page-width scroll-trigger animate--slide-in\">\n<h2>Featured Videos</h2>\n    <div class=\"video-grid\">\n            <div class=\"video-wrapper\">\n                <iframe class=\"video-iframe\" src=\"https://www.youtube.com/embed/{{ video_id }}\"\n                        title=\"YouTube video player\" referrerpolicy=\"strict-origin-when-cross-origin\"\n                        allow=\"accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"\n                        frameborder=\"0\" allowfullscreen>\n                </iframe>\n            </div>\n    </div>\n</div>\n\n<style>\n.video-grid{\n    display: grid;\n    grid-template-columns: 1fr;\n    transition: all ease-in-out 0.3s;\n}\n.video-iframe{\n    aspect-ratio: 16/9;\n    width: 100%;\n    padding: 10px;\n}\n.video-wrapper{\n    width: 100%;\n}\n@media screen and (min-width: 611px) {\n    .video-grid{\n        grid-template-columns: 1fr 1fr;\n    }\n}\n@media screen and (min-width: 900px) {\n    .video-grid{\n        grid-template-columns: 1fr 1fr 1fr;\n    }\n}\n</style>",
         "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video_WR8xpe": {
-      "type": "video",
-      "settings": {
-        "heading": "Video",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video_dJVGm8": {
-      "type": "video",
-      "settings": {
-        "heading": "Video",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video_gffJTg": {
-      "type": "video",
-      "settings": {
-        "heading": "Video",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "1729007960e8d42a51",
     "featured_collection",
-    "multicolumn_JzKLRE",
-    "video_WR8xpe",
-    "video_dJVGm8",
-    "video_gffJTg"
+    "custom_liquid_ezPgHR"
   ]
 }
