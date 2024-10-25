@@ -27,7 +27,7 @@
         "custom_liquid_nE9CzA": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "MSRP: {{product.metafields.custom.msrp.value | money_with_currency}}<br />  MAP: {{product.price | money_with_currency}}"
+            "custom_liquid": "MSRP: {{product.metafields.custom.msrp.value | money_with_currency}}<br />  MAP: <strong>{{product.price | money_with_currency}}</strong>"
           }
         },
         "price": {
