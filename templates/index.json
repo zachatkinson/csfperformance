@@ -28,7 +28,7 @@
         "button {border-radius: 10px !important;}"
       ],
       "settings": {
-        "include_margins": false
+        "include_margins": true
       }
     },
     "slideshow_VKiGGP": {
