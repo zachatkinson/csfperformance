@@ -105,10 +105,17 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "csf_slider_FqbCDD": {
+      "type": "csf-slider",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "1729007960e8d42a51",
+    "csf_slider_FqbCDD",
     "featured_collection",
     "image_with_text_xzk4iE",
     "custom_liquid_ezPgHR"
