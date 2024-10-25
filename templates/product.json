@@ -67,7 +67,7 @@
         "color_scheme": "scheme-1",
         "media_size": "large",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
+        "media_fit": "cover",
         "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "lightbox",
@@ -99,16 +99,19 @@
     "product_custom_finishes_4P6ceq": {
       "type": "product-custom-finishes",
       "settings": {
+        "include_margins": true
       }
     },
     "featured_youtube_qB77Q6": {
       "type": "featured-youtube",
       "settings": {
+        "include_margins": true
       }
     },
     "featured_articles_rCcKCX": {
       "type": "featured-articles",
       "settings": {
+        "include_margins": true
       }
     },
     "related-products": {
