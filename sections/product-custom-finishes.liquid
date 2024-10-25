@@ -1,9 +1,10 @@
 {% if product.metafields.custom.custom_finishes %}
-    <h2 style='max-width: 1100px; margin-left: auto; margin-right: auto; padding: 10px;'>Custom Finish Gallery</h2>
+<div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <h2>Custom Finish Gallery</h2>
     {% assign finishes = product.metafields.custom.custom_finishes %}
-    <div style="display: flex; flex-direction: row; flex-wrap: wrap;justify-content: center; margin-left: auto; margin-right: auto;">
+    <div class="finish-grid">
             {% for finish in finishes.value %}
-                <div style="text-align: center; max-width: 320px; margin: 0 20px 0 20px; ">
+                <div class="finish-wrapper">
                         <img src="{{ finish.url }}" alt="{{ finish.text }}" style="max-width: 100%;"/>
                         <p>{{ finish.text }}</p>
                 </div>
@@ -13,7 +14,14 @@
 {% schema %}
 {
   "name": "Custom Finishes",
-  "settings": [],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "include_margins",
+      "default": true,
+      "label": "t:sections.product-custom-finishes.settings.include_margins.label"
+    }
+  ],
   "presets": [{
     "name": "Custom Finishes"
   }],
@@ -21,6 +29,24 @@
 }
 {% endschema %}
 {%  stylesheet %}
+    .finish-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    transition: all ease-in-out 0.3s;
+    }
+    .finish-wrapper{
+    width: 100%;
+    }
+    @media screen and (min-width: 611px) {
+    .finish-grid{
+    grid-template-columns: 1fr 1fr;
+    }
+    }
+    @media screen and (min-width: 900px) {
+    .finish-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+    }
 {%  endstylesheet %}
 {%  javascript %}
 {%  endjavascript %}
