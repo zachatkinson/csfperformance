@@ -31,150 +31,6 @@
         "include_margins": true
       }
     },
-    "slideshow_VKiGGP": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_hMTFQN": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/downtown-city-skyline.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_YLC3fL": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify://shop_images/city-behind-greenery.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_hMTFQN",
-        "slide_YLC3fL"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "dots",
-        "auto_rotate": true,
-        "change_slides_speed": 9,
-        "image_behavior": "ambient",
-        "show_text_below": true,
-        "accessibility_info": "Featured Product Slideshow"
-      }
-    },
-    "multicolumn_iHNf8c": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_QiEBQm": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/cooling-systems_u-copy.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_ByMhTx": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/bts-final-compress.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_CqikUt": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/custom-finishes-kadence-block.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_NHeynW": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/oilcoolers_title-copy-1.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_w7za4z": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/iccores_title-1.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_X4BYL7": {
-          "type": "column",
-          "settings": {
-            "image": "shopify://shop_images/8400-kadence_1.jpg",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_QiEBQm",
-        "column_ByMhTx",
-        "column_CqikUt",
-        "column_NHeynW",
-        "column_w7za4z",
-        "column_X4BYL7"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -202,12 +58,59 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_xzk4iE": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rVV7M7": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Story",
+            "heading_size": "h1"
+          }
+        },
+        "text_eJnXEH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our story dates back almost 80 years to the beginnings of a small radiator repair shop. Since then, four generations later and still family owned, CSF has expanded across the world while staying true to our roots. </p><p>The Racing & High Performance division was founded to supply performance enthusiasts (just like ourselves) and professional racers a product that truly performs – proven in some of the most demanding races in motorsports with many world records.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rVV7M7",
+        "text_eJnXEH"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/csf-original-garage.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-5",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_ezPgHR": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width scroll-trigger animate--slide-in\">\n<h2>Featured Videos</h2>\n    <div class=\"video-grid\">\n            <div class=\"video-wrapper\">\n                <iframe class=\"video-iframe\" src=\"https://www.youtube.com/embed/Tt9Z9QL76ps\"\n                        title=\"YouTube video player\" referrerpolicy=\"strict-origin-when-cross-origin\"\n                        allow=\"accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"\n                        frameborder=\"0\" allowfullscreen>\n                </iframe>\n            </div>\n <div class=\"video-wrapper\">\n                <iframe class=\"video-iframe\" src=\"https://www.youtube.com/embed/EOe5xRF39TQ\"\n                        title=\"YouTube video player\" referrerpolicy=\"strict-origin-when-cross-origin\"\n                        allow=\"accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"\n                        frameborder=\"0\" allowfullscreen>\n                </iframe>\n            </div>\n <div class=\"video-wrapper\">\n                <iframe class=\"video-iframe\" src=\"https://www.youtube.com/embed/-EV-wa8uQdU\"\n                        title=\"YouTube video player\" referrerpolicy=\"strict-origin-when-cross-origin\"\n                        allow=\"accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"\n                        frameborder=\"0\" allowfullscreen>\n                </iframe>\n            </div>\n    </div>\n</div>\n\n<style>\n.video-grid{\n    display: grid;\n    grid-template-columns: 1fr;\n    transition: all ease-in-out 0.3s;\n}\n.video-iframe{\n    aspect-ratio: 16/9;\n    width: 100%;\n    padding: 10px;\n}\n.video-wrapper{\n    width: 100%;\n}\n@media screen and (min-width: 611px) {\n    .video-grid{\n        grid-template-columns: 1fr 1fr;\n    }\n}\n@media screen and (min-width: 900px) {\n    .video-grid{\n        grid-template-columns: 1fr 1fr 1fr;\n    }\n}\n</style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "1729007960e8d42a51",
-    "slideshow_VKiGGP",
-    "multicolumn_iHNf8c",
-    "featured_collection"
+    "featured_collection",
+    "image_with_text_xzk4iE",
+    "custom_liquid_ezPgHR"
   ]
 }
