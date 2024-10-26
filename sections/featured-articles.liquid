@@ -12,8 +12,8 @@
                 {% assign count = forloop.index0 %}
                 <div class="article-wrapper">
                     <a href="{{ articles.value[count].url}}" target="_blank">
-                        <img src="{{ image }}" alt="{{ articles.value[count].text }}" style="max-width: 100%;"/>
-                        <p>{{ articles.value[count].text }}</p>
+                        <img src="{{ image }}" alt="{{ articles.value[count].text }}" style="max-width: 100%;"/></a>
+                        <p><a href="#">{{ articles.value[count].text }}</a></p>
                     </a>
                 </div>
             {% endfor %}
