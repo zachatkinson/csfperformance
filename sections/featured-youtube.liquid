@@ -1,6 +1,6 @@
 {% if product.metafields.custom.youtube_videos %}
     <div class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
-<div class="{% if section.settings.include_margins %}page-width{% endif %}">
+<div class="{% if section.settings.include_margins %}page-width{% endif %} yt-padding">
 <h2>Featured Videos</h2>
     {% assign yt_videos = product.metafields.custom.youtube_videos %}
     <div class="video-grid">
@@ -74,6 +74,9 @@
     .video-grid{
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
+.yt-padding{
+ 1em auto;
 }
 
 {% endstylesheet %}
