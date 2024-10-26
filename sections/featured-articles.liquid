@@ -10,10 +10,10 @@
         <div class="article-grid">
             {% for image in images.value %}
                 {% assign count = forloop.index0 %}
-                <div class="article-wrapper color-{{ section.settings.color_scheme }}">
+                <div class="article-wrapper">
                     <a href="{{ articles.value[count].url}}" target="_blank">
                         <img src="{{ image }}" alt="{{ articles.value[count].text }}" style="max-width: 100%;"/></a>
-                        <p><a href="#">{{ articles.value[count].text }}</a></p>
+                        <p><a href="#" class="color-{{ section.settings.color_scheme }}">{{ articles.value[count].text }}</a></p>
                     </a>
                 </div>
             {% endfor %}
