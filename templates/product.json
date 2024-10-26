@@ -113,7 +113,8 @@
     "featured_youtube_qB77Q6": {
       "type": "featured-youtube",
       "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "color_scheme": "scheme-3"
       }
     },
     "featured_articles_rCcKCX": {
