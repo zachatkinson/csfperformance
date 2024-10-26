@@ -1,5 +1,7 @@
 {% if product.metafields.custom.custom_finishes %}
-<div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+<div class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
+    <div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} yt-padding color-{{ section.settings.color_scheme }}">
+
     <h2>Custom Finish Gallery</h2>
     {% assign finishes = product.metafields.custom.custom_finishes %}
     <div class="finish-grid">
@@ -11,6 +13,7 @@
             {% endfor %}
     </div>
 </div>
+</div>
 {% endif %}
 {% schema %}
 {
@@ -21,6 +24,12 @@
       "id": "include_margins",
       "default": true,
       "label": "t:sections.product-custom-finishes.settings.include_margins.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
     }
   ],
   "presets": [{
