@@ -692,6 +692,13 @@
         "name": "Custom Liquid"
       }
     },
+    "featured-articles": {
+      "settings": {
+        "include_margins": {
+          "label": "Make section margins the same as theme"
+        }
+      }
+    },
     "featured-blog": {
       "name": "Blog posts",
       "settings": {
