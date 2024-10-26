@@ -31,6 +31,12 @@
         "include_margins": true
       }
     },
+    "csf_slider_FqbCDD": {
+      "type": "csf-slider",
+      "settings": {
+        "include_margins": false
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -104,12 +110,6 @@
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "csf_slider_FqbCDD": {
-      "type": "csf-slider",
-      "settings": {
-        "include_margins": true
       }
     }
   },
