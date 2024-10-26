@@ -1,5 +1,5 @@
 {% if product.metafields.custom.youtube_videos %}
-<div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.section_color_scheme }}">
+<div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
 <h2>Featured Videos</h2>
     {% assign yt_videos = product.metafields.custom.youtube_videos %}
     <div class="video-grid">
