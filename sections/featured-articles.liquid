@@ -1,6 +1,6 @@
 {% if product.metafields.custom.featured_articles %}
     <div class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
-<div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} yt-padding">
+<div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} yt-padding color-{{ section.settings.color_scheme }}">
     <h2>Featured Articles</h2>
     {% assign articles = product.metafields.custom.featured_articles %}
     {% assign images = product.metafields.custom.featured_article_images %}
