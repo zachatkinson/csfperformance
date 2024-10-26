@@ -204,7 +204,7 @@
               </p>
             {%- endif -%}
 
-            <p>{{ card_product.metafields.custom.msrp.value | money_with_currency }} MSRP<br /><strong>{{ card_product.price | money }}</strong> USD MAP
+            <p><em>{{ card_product.metafields.custom.msrp.value | money_with_currency }} MSRP</em><br /><strong>{{ card_product.price | money }}</strong> USD MAP
             {%- if card_product.quantity_price_breaks_configured? -%}
               {% if card_product.variants.size == 1 and quick_add == 'bulk' %}
                 {% liquid
