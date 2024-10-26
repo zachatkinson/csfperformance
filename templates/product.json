@@ -24,8 +24,15 @@
           "settings": {
           }
         },
+        "custom_liquid_nE9CzA": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "MSRP: {{product.metafields.custom.msrp.value | money_with_currency}}<br />  MAP: <strong>{{product.price | money}}</strong> USD"
+          }
+        },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
           }
         },
@@ -56,6 +63,7 @@
       "block_order": [
         "vendor",
         "title",
+        "custom_liquid_nE9CzA",
         "price",
         "variant_picker",
         "featured_buttons_NDDLN4",
@@ -71,7 +79,7 @@
         "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "hover",
-        "mobile_thumbnails": "columns",
+        "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 36,
