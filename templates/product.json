@@ -120,7 +120,8 @@
     "featured_articles_rCcKCX": {
       "type": "featured-articles",
       "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "color_scheme": "scheme-5"
       }
     },
     "related-products": {
