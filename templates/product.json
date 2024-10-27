@@ -107,7 +107,8 @@
     "product_custom_finishes_4P6ceq": {
       "type": "product-custom-finishes",
       "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "color_scheme": "scheme-4"
       }
     },
     "featured_youtube_qB77Q6": {
