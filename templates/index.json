@@ -111,6 +111,14 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "featured_youtube_home_KNK3Pc": {
+      "type": "featured-youtube-home",
+      "settings": {
+        "include_margins": true,
+        "color_scheme": "",
+        "video_url": "https://www.youtube.com/watch?v=Tt9Z9QL76ps"
+      }
     }
   },
   "order": [
@@ -118,6 +126,7 @@
     "csf_slider_FqbCDD",
     "featured_collection",
     "image_with_text_xzk4iE",
-    "custom_liquid_ezPgHR"
+    "custom_liquid_ezPgHR",
+    "featured_youtube_home_KNK3Pc"
   ]
 }
