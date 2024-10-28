@@ -12,7 +12,7 @@
                         {{ video_id }}
                     {% elsif block.settings.video_url contains  "https://youtu.be/" %}
                         {% assign video_id = video |  remove: "https://youtu.be/" %}
-                        {{ video_id }}
+                        out of loop {{ video_id }}
                     {%  endif %}
                     {{ video_id }}
                     <div class="video-wrapper">
