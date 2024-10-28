@@ -3,7 +3,7 @@
     <div class="csf-slider-left">
       {% for block in section.blocks %}
       {% if block.type == 'side-link' %}
-        {{  block.settings.image | img_tag: 'Alt Text'  }}
+        {{  block.settings.image | image_url: width: 200 | image_tag  }}
       {% endif %}
       {% endfor %}
     </div>
