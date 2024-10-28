@@ -1,6 +1,25 @@
     <div class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
         <div class="{% if section.settings.include_margins %}page-width{% endif %} yt-padding">
             <h2>Featured Videos</h2>
+            {% for block in section.blocks %}
+                {% if block.type == 'youtube_video' %}
+                    {% if block.settings.video_url contains "embed" %}
+                        {% assign video_id = video |  remove: "https://www.youtube.com/embed/" %}
+                    {% elsif block.settings.video_url contains  "https://www.youtube.com/watch?v=" %}
+                        {% assign video_id = video |  remove: "https://www.youtube.com/watch?v=" %}
+                    {% elsif block.settings.video_url contains  "https://youtu.be/" %}
+                        {% assign video_id = video |  remove: "https://youtu.be/" %}
+                    {%  endif %}
+                    <div class="video-wrapper">
+                        <iframe
+                                class="video-iframe"
+                                src="https://www.youtube.com/embed/{{ video_id }}"
+                                frameborder="0"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 {% schema %}
