@@ -105,6 +105,31 @@
     },
     "featured_youtube_home_KNK3Pc": {
       "type": "featured-youtube-home",
+      "blocks": {
+        "youtube_video_QYDAkG": {
+          "type": "youtube_video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=Tt9Z9QL76ps"
+          }
+        },
+        "youtube_video_Qm3T7b": {
+          "type": "youtube_video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=Tt9Z9QL76ps"
+          }
+        },
+        "youtube_video_HJB7ew": {
+          "type": "youtube_video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=Tt9Z9QL76ps"
+          }
+        }
+      },
+      "block_order": [
+        "youtube_video_QYDAkG",
+        "youtube_video_Qm3T7b",
+        "youtube_video_HJB7ew"
+      ],
       "settings": {
         "include_margins": true,
         "color_scheme": "scheme-3"
