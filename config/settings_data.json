@@ -451,7 +451,7 @@
       "#ymm_searchbox {width: 100%;}",
       "@keyframes fadeInAnimation {0% {opacity: 0; } 100% {opacity: 1; }}",
       ".slideshow__controls {display: none !important;}",
-      "span.card-information__text.h5 {font-weight: normal; font-size: 2em !important;}"
+      ".card__heading {font-weight: normal; font-size: 1.3em !important;}"
     ]
   }
 }
