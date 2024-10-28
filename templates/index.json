@@ -154,7 +154,7 @@
           "settings": {
             "button_label": "The CSF Story",
             "button_link": "",
-            "button_style_secondary": false
+            "button_style_secondary": true
           }
         }
       },
