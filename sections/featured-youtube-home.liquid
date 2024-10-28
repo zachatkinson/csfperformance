@@ -11,6 +11,7 @@
                     {% elsif block.settings.video_url contains  "https://youtu.be/" %}
                         {% assign video_id = video |  remove: "https://youtu.be/" %}
                     {%  endif %}
+                    {{ video_id }}
                     <div class="video-wrapper">
                         <iframe
                                 class="video-iframe"
