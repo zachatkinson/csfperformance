@@ -10,7 +10,7 @@
     <div class="csf-slider-right">
       {% for block in section.blocks %}
       {% if block.type == 'slide' %}
-        {{  block.settings.slide-image | image_url: height: 1200 | image_tag  }}
+        <a href="{{ block.settings.slide.slide-url }}">{{  block.settings.slide-image | image_url: height: 1200 | image_tag  }}</a>
       {% endif %}
       {% endfor %}
     </div>
@@ -44,7 +44,7 @@
         },
         {
           "type": "text",
-          "id": "alt-text",
+          "id": "side-link-alt-text",
           "label": "Alt Text"
         },
         {
@@ -62,6 +62,16 @@
           "type": "image_picker",
           "id": "slide-image",
           "label": "Slide Image"
+        }
+        {
+          "type": "text",
+          "id": "slide-alt-text",
+          "label": "Alt Text"
+        },
+        {
+          "type": "url",
+          "id": "slide-url",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
         }
       ]
     }
