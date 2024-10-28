@@ -33,6 +33,17 @@
     },
     "csf_slider_FqbCDD": {
       "type": "csf-slider",
+      "blocks": {
+        "side_link_apd7xy": {
+          "type": "side-link",
+          "settings": {
+            "image": "shopify://shop_images/8400-kadence_1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "side_link_apd7xy"
+      ],
       "settings": {
         "include_margins": false
       }
