@@ -37,43 +37,57 @@
         "side_link_apd7xy": {
           "type": "side-link",
           "settings": {
-            "image": "shopify://shop_images/8400-kadence_1.jpg"
+            "image": "shopify://shop_images/8400-kadence_1.jpg",
+            "side-link-alt-text": "",
+            "side-link-url": ""
           }
         },
         "side_link_VfHCHh": {
           "type": "side-link",
           "settings": {
-            "image": "shopify://shop_images/bts-final-compress.jpg"
+            "image": "shopify://shop_images/bts-final-compress.jpg",
+            "side-link-alt-text": "",
+            "side-link-url": ""
           }
         },
         "side_link_zVYVAY": {
           "type": "side-link",
           "settings": {
-            "image": "shopify://shop_images/iccores_title-1.jpg"
+            "image": "shopify://shop_images/iccores_title-1.jpg",
+            "side-link-alt-text": "",
+            "side-link-url": ""
           }
         },
         "side_link_kcAT8Y": {
           "type": "side-link",
           "settings": {
-            "image": "shopify://shop_images/oilcoolers_title-copy-1.jpg"
+            "image": "shopify://shop_images/oilcoolers_title-copy-1.jpg",
+            "side-link-alt-text": "",
+            "side-link-url": ""
           }
         },
         "side_link_AAgkMP": {
           "type": "side-link",
           "settings": {
-            "image": "shopify://shop_images/custom-finishes-kadence-block.jpg"
+            "image": "shopify://shop_images/custom-finishes-kadence-block.jpg",
+            "side-link-alt-text": "",
+            "side-link-url": ""
           }
         },
         "side_link_RyLMwd": {
           "type": "side-link",
           "settings": {
-            "image": "shopify://shop_images/cooling-systems_u-copy.jpg"
+            "image": "shopify://shop_images/cooling-systems_u-copy.jpg",
+            "side-link-alt-text": "",
+            "side-link-url": ""
           }
         },
         "slide_GAzVyQ": {
           "type": "slide",
           "settings": {
-            "slide-image": "shopify://shop_images/slide-default.jpg"
+            "slide-image": "shopify://shop_images/slide-default.jpg",
+            "slide-alt-text": "",
+            "slide-url": ""
           }
         }
       },
@@ -134,11 +148,20 @@
             "text": "<p>Our story dates back almost 80 years to the beginnings of a small radiator repair shop. Since then, four generations later and still family owned, CSF has expanded across the world while staying true to our roots. </p><p>The Racing & High Performance division was founded to supply performance enthusiasts (just like ourselves) and professional racers a product that truly performs – proven in some of the most demanding races in motorsports with many world records.</p>",
             "text_style": "body"
           }
+        },
+        "button_GWjkRp": {
+          "type": "button",
+          "settings": {
+            "button_label": "The CSF Story",
+            "button_link": "",
+            "button_style_secondary": false
+          }
         }
       },
       "block_order": [
         "heading_rVV7M7",
-        "text_eJnXEH"
+        "text_eJnXEH",
+        "button_GWjkRp"
       ],
       "settings": {
         "image": "shopify://shop_images/csf-original-garage.jpg",
