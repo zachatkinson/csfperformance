@@ -24,6 +24,28 @@
     {
       "name": "Homepage YouTube"
     }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Text Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text_content",
+          "label": "Text Content",
+          "default": "Enter your text here"
+        },
+        {
+          "type": "video_url",
+          "id": "video_url",
+          "accept": ["youtube", "vimeo"],
+          "default": "https://www.youtube.com/watch?v=Tt9Z9QL76ps",
+          "label": "t:sections.video.settings.video_url.label",
+          "info": "t:sections.video.settings.video_url.info"
+        }
+      ]
+    }
   ]
 }
 {% endschema %}
