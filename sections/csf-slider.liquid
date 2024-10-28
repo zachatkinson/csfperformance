@@ -3,7 +3,7 @@
     <div class="csf-slider-left">
       {% for block in section.blocks %}
       {% if block.type == 'side-link' %}
-        {{  block.settings.image | image_url: height: 100 width: 300 | image_tag  }}
+        {{  block.settings.image | image_url: height: 100 | image_tag  }}
       {% endif %}
       {% endfor %}
     </div>
@@ -54,11 +54,12 @@
   grid-template-rows: 1fr;
 }
 .csf-slider-right{
+  background: red;
   padding: 1em;
 }
 @media screen and (min-width: 611px) {
   .slider-grid{
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 33% 1fr;
   }
 }
 {% endstylesheet %}
