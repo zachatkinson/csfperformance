@@ -76,17 +76,23 @@ height: 100%;
 .csf-slider-left{
   display: grid;
   grid-template-columns: 1fr 1fr;
+order: 1;
 }
 .csf-slider-right{
+order: 0;
 }
 @media screen and (min-width: 768px) {
   .slider-grid{
     grid-template-columns: 300px 1fr;
   }
-.csf-slider-left{
-grid-template-rows: 1fr;
-grid-template-columns: 1fr;
-}
+  .csf-slider-left{
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    order: 0;
+  }
+  .csf-slider-right{
+    order: 1;
+  }
 }
 
 {% endstylesheet %}
