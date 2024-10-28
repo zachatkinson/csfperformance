@@ -153,8 +153,8 @@
           "type": "button",
           "settings": {
             "button_label": "The CSF Story",
-            "button_link": "",
-            "button_style_secondary": true
+            "button_link": "https://csfrace.com/the-csf-story/",
+            "button_style_secondary": false
           }
         }
       },
