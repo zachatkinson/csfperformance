@@ -69,6 +69,12 @@
           "settings": {
             "image": "shopify://shop_images/cooling-systems_u-copy.jpg"
           }
+        },
+        "slide_GAzVyQ": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/slide-default.jpg"
+          }
         }
       },
       "block_order": [
@@ -77,7 +83,8 @@
         "side_link_zVYVAY",
         "side_link_kcAT8Y",
         "side_link_AAgkMP",
-        "side_link_RyLMwd"
+        "side_link_RyLMwd",
+        "slide_GAzVyQ"
       ],
       "settings": {
         "include_margins": false
