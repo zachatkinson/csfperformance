@@ -1,0 +1,26 @@
+<div class="video-wrapper">
+    <iframe class="video-iframe" src="https://www.youtube.com/embed/{{ video_id }}"
+            title="YouTube video player" referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+{% schema %}
+{
+  "name": "YouTube Video",
+  "settings": [
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "accept": ["youtube", "vimeo"],
+      "default": "https://www.youtube.com/watch?v=Tt9Z9QL76ps",
+      "label": "t:sections.video.settings.video_url.label",
+      "info": "t:sections.video.settings.video_url.info"
+    }
+  ]
+}
+{%  endschema %}
+{% stylsheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}
