@@ -39,10 +39,45 @@
           "settings": {
             "image": "shopify://shop_images/8400-kadence_1.jpg"
           }
+        },
+        "side_link_VfHCHh": {
+          "type": "side-link",
+          "settings": {
+            "image": "shopify://shop_images/bts-final-compress.jpg"
+          }
+        },
+        "side_link_kcAT8Y": {
+          "type": "side-link",
+          "settings": {
+            "image": "shopify://shop_images/oilcoolers_title-copy-1.jpg"
+          }
+        },
+        "side_link_zVYVAY": {
+          "type": "side-link",
+          "settings": {
+            "image": "shopify://shop_images/iccores_title-1.jpg"
+          }
+        },
+        "side_link_AAgkMP": {
+          "type": "side-link",
+          "settings": {
+            "image": "shopify://shop_images/custom-finishes-kadence-block.jpg"
+          }
+        },
+        "side_link_RyLMwd": {
+          "type": "side-link",
+          "settings": {
+            "image": "shopify://shop_images/cooling-systems_u-copy.jpg"
+          }
         }
       },
       "block_order": [
-        "side_link_apd7xy"
+        "side_link_apd7xy",
+        "side_link_VfHCHh",
+        "side_link_kcAT8Y",
+        "side_link_zVYVAY",
+        "side_link_AAgkMP",
+        "side_link_RyLMwd"
       ],
       "settings": {
         "include_margins": false
