@@ -1,7 +1,6 @@
     <div class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
         <div class="{% if section.settings.include_margins %}page-width{% endif %} yt-padding">
             <h2>Featured Videos</h2>
-            {% content_for 'blocks' %}
         </div>
     </div>
 {% schema %}
