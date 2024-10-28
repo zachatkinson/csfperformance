@@ -10,7 +10,8 @@
     <div class="csf-slider-right">
       {% for block in section.blocks %}
       {% if block.type == 'slide' %}
-      {{  block.settings.slide | image_url: height: 1200 | image_tag  }}
+        {{  block.settings['slide-image'] | image_url: height: 1200 | image_tag  }}
+      {% endif %}
       {% endif %}
       {% endfor %}
     </div>
