@@ -1,12 +1,12 @@
 <div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
   <div class="slider-grid">
     <div class="csf-slider-left">
-      Left hand side of slider
-      Left hand side of slider
-      Left hand side of slider
-      Left hand side of slider
-      Left hand side of slider
-      Left hand side of slider
+      {% for block in section.blocks %}
+      {% if block.type == 'side-link' %}
+        Zach
+        {{  block.settings.image_picker | img_tag: 'Alt Text'  }}
+      {% endif %}
+      {% endfor %}
     </div>
     <div class="csf-slider-right">
       Right hand side of slider
@@ -28,7 +28,21 @@
     {
       "name": "CSF Slider"
     }
+  ],
+  "blocks": [
+    {
+      "name": "Side Link",
+      "type": "side-link",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
   ]
+
 }
 {% endschema %}
 {% stylesheet %}
