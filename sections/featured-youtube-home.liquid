@@ -6,15 +6,15 @@
                 {% if block.type == 'youtube_video' %}
                     {% if block.settings.video_url contains "embed" %}
                         {% assign video_id = video |  remove: "https://www.youtube.com/embed/" %}
-                        {{ video_id }}
+                        yo1 {{ video_id }}
                     {% elsif block.settings.video_url contains  "https://www.youtube.com/watch?v=" %}
                         {% assign video_id = video |  remove: "https://www.youtube.com/watch?v=" %}
-                        {{ video_id }}
+                        yo2 {{ video_id }}
                     {% elsif block.settings.video_url contains  "https://youtu.be/" %}
                         {% assign video_id = video |  remove: "https://youtu.be/" %}
-                        out of loop {{ video_id }}
+                        yo3 {{ video_id }}
                     {%  endif %}
-                    {{ video_id }}
+                    out of loop{{ video_id }}
                     <div class="video-wrapper">
                         <iframe
                                 class="video-iframe"
