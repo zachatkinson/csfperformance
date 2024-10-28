@@ -248,6 +248,17 @@
           "secondary_button_label": "#ffffff",
           "shadow": "#121212"
         }
+      },
+      "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b": {
+        "settings": {
+          "background": "#202020",
+          "background_gradient": "",
+          "text": "#f5f5f5",
+          "button": "#e54242",
+          "button_label": "#f5f5f5",
+          "secondary_button_label": "#e54242",
+          "shadow": "#494949"
+        }
       }
     }
   },
@@ -450,7 +461,8 @@
       "#ymm_searchbox,.ymm_app {background-color: #e54242; border: 0; color: #f5f5f5; border-radius: 8px; min-height: 200px; animation: fadeInAnimation ease 3s; opacity: 0; animation-iteration-count: 1; animation-fill-mode: forwards; min-width: 100%; max-width: 1100px;}",
       "#ymm_searchbox {width: 100%;}",
       "@keyframes fadeInAnimation {0% {opacity: 0; } 100% {opacity: 1; }}",
-      ".slideshow__controls {display: none !important;}"
+      ".slideshow__controls {display: none !important;}",
+      ".card__heading {font-weight: normal; font-size: 1.3em !important;}"
     ]
   }
 }

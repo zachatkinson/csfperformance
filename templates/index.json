@@ -15,7 +15,7 @@
         "c_year_make_model_search_ymm_searchbox_eG3AHU": {
           "type": "shopify://apps/c-year-make-model-search/blocks/ymm-searchbox/ce35ea35-ef50-4f43-8cb6-7c34cae4c285",
           "settings": {
-            "searchbox_title": "Search By Year / Make / Model",
+            "searchbox_title": "Find Your Part",
             "searchbox_style": "horizontal"
           }
         }
@@ -46,13 +46,13 @@
         "show_description": false,
         "description_style": "body",
         "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
+        "products_to_show": 9,
+        "columns_desktop": 3,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -105,6 +105,31 @@
     },
     "featured_youtube_home_KNK3Pc": {
       "type": "featured-youtube-home",
+      "blocks": {
+        "youtube_video_QYDAkG": {
+          "type": "youtube_video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=Tt9Z9QL76ps"
+          }
+        },
+        "youtube_video_Qm3T7b": {
+          "type": "youtube_video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=EOe5xRF39TQ"
+          }
+        },
+        "youtube_video_HJB7ew": {
+          "type": "youtube_video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=-EV-wa8uQdU"
+          }
+        }
+      },
+      "block_order": [
+        "youtube_video_QYDAkG",
+        "youtube_video_Qm3T7b",
+        "youtube_video_HJB7ew"
+      ],
       "settings": {
         "include_margins": true,
         "color_scheme": "scheme-3"
