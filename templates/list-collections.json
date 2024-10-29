@@ -9,27 +9,6 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-list-collections",
-      "disabled": true,
-      "settings": {
-        "title": "Collections",
-        "sort": "alphabetical",
-        "image_ratio": "square",
-        "columns_desktop": 3,
-        "columns_mobile": "2"
-      }
-    },
-    "page_ERTTzw": {
-      "type": "page",
-      "settings": {
-        "page": "collection-page-test",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "17302148766f2faa4b": {
       "type": "apps",
       "blocks": {
@@ -46,6 +25,26 @@
       ],
       "settings": {
         "include_margins": true
+      }
+    },
+    "page_ERTTzw": {
+      "type": "page",
+      "settings": {
+        "page": "collection-page-test",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "title": "Collections",
+        "sort": "alphabetical",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "columns_mobile": "2"
       }
     }
   },
