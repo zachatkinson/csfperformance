@@ -4,9 +4,9 @@
       {% for block in section.blocks %}
         {% if block.type == 'side-link' %}
           <div class="csf-side-link">
-            <a href="{{ block.settings.side-link.side-link-url }}">
+
               {{  block.settings.image | image_url: height: 100 | image_tag  }}
-            </a>
+
           </div>
         {% endif %}
       {% endfor %}
@@ -14,7 +14,9 @@
     <div class="csf-slider-right">
       {% for block in section.blocks %}
         {% if block.type == 'slide' %}
-          <a href="{{ block.settings.slide.slide-url }}">{{  block.settings.slide-image | image_url: height: 1200 | image_tag  }}</a>
+
+            {{  block.settings.slide-image | image_url: height: 1200 | image_tag  }}
+
         {% endif %}
       {% endfor %}
     </div>
