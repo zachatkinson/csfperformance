@@ -70,8 +70,8 @@
           "type": "side-link",
           "settings": {
             "image": "shopify://shop_images/custom-finishes-kadence-block.jpg",
-            "side-link-alt-text": "",
-            "side-link-url": ""
+            "side-link-alt-text": "Custom Finishes",
+            "side-link-url": "#"
           }
         },
         "side_link_RyLMwd": {
