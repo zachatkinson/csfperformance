@@ -6,7 +6,7 @@
         {% if block.type == 'side-link' %}
           {% if block.settings.side-link.side-link-url %}
             {% assign link2 = block.settings.side-link.side-link-url %}
-            <p style="background: pink;">ZZ LINK2 {{ link2 }}</p>
+            <p>LINK2 {{ link2 }}</p>
             {% endif %}
 
           <a href="{{ link }}" class="slider-anchor">{{  block.settings.image | image_url: height: 100 | image_tag  }}</a>
