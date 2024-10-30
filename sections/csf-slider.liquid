@@ -4,9 +4,7 @@
       {% for block in section.blocks %}
         {% if block.type == 'side-link' %}
           <div class="csf-side-link">
-
               {{  block.settings.image | image_url: height: 100 | image_tag  }}
-
           </div>
         {% endif %}
       {% endfor %}
