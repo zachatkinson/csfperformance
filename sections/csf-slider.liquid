@@ -2,9 +2,13 @@
   <div class="slider-grid">
     <div class="csf-slider-left">
       {% for block in section.blocks %}
+        {% assign link = "#" %}
         {% if block.type == 'side-link' %}
+          {% if block.settings.side-link.side-link-url %}
+            {% assign link = block.settings.slide.slide-url %}
+          {% endif %}
           <div class="side-link">
-            <a href="{{ block.settings.side-link.side-link-url }}">
+            <a href="{{ link }}">
               {{  block.settings.image | image_url: height: 100 | image_tag  }}
             </a>
           </div>
@@ -18,7 +22,6 @@
           {%  if block.settings.slide.slide-url %}
             {% assign link = block.settings.slide.slide-url %}
           {% endif %}
-          {{ link }}
           <a href="{{ link }}">
             {{  block.settings.slide-image | image_url: height: 1200 | image_tag  }}
           </a>
