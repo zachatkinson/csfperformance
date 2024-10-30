@@ -8,9 +8,9 @@
             {% assign link = block.settings.slide.slide-url %}
           {% endif %}
           <div class="side-link">
-            <a href="{{ link }}">
+
               {{  block.settings.image | image_url: height: 100 | image_tag  }}
-            </a>
+
           </div>
         {% endif %}
       {% endfor %}
