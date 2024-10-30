@@ -18,6 +18,7 @@
           {%  if block.settings.slide.slide-url %}
             {% assign link = block.settings.slide.slide-url %}
           {% endif %}
+          {{ link }}
           <a href="{{ link }}">
             {{  block.settings.slide-image | image_url: height: 1200 | image_tag  }}
           </a>
