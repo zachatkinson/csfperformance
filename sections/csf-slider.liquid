@@ -4,7 +4,6 @@
       {% for block in section.blocks %}
         {%  assign link = '#' %}
         {% if block.type == 'side-link' %}
-          {{ block.settings.side-link-url }}
           {% if block.settings.side-link-url %}
             {% assign link = block.settings.side-link-url %}
             {% endif %}
