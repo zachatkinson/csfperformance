@@ -3,14 +3,22 @@
     <div class="csf-slider-left">
       {% for block in section.blocks %}
       {% if block.type == 'side-link' %}
-        <a href="{{ block.settings.side-link.side-link-url }}">{{  block.settings.image | image_url: height: 100 | image_tag  }}</a>
+        <div class="side-link">
+          <a href="{{ block.settings.side-link.side-link-url }}">{
+            {  block.settings.image | image_url: height: 100 | image_tag  }}
+          </a>
+        </div>
       {% endif %}
       {% endfor %}
     </div>
     <div class="csf-slider-right">
       {% for block in section.blocks %}
       {% if block.type == 'slide' %}
-        <a href="{{ block.settings.slide.slide-url }}">{{  block.settings.slide-image | image_url: height: 1200 | image_tag  }}</a>
+        <div class="csf-slide">
+          <a href="{{ block.settings.slide.slide-url }}">
+            {{  block.settings.slide-image | image_url: height: 1200 | image_tag  }}
+          </a>
+        </div>
       {% endif %}
       {% endfor %}
     </div>
