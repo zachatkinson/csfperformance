@@ -4,7 +4,7 @@
       {% for block in section.blocks %}
         {%  assign link = '#' %}
         {% if block.type == 'side-link' %}
-          {{ block.settings }}
+          {{ block.settings.side-link-url }}
           {% if block.settings.side-link.side-link-url %}
             {% assign link2 = block.settings.side-link.side-link-url %}
             <p>LINK2 INSIDE IF {{ link2 }}</p>
