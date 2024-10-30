@@ -13,8 +13,12 @@
     </div>
     <div class="csf-slider-right">
       {% for block in section.blocks %}
+        {% assign link = "#" %}
         {% if block.type == 'slide' %}
-          <a href="{{ block.settings.slide.slide-url }}">
+          {%  if block.settings.slide.slide-url %}
+            {% assign link = block.settings.slide.slide-url %}
+          {% endif %}
+          <a href="{{ link }}">
             {{  block.settings.slide-image | image_url: height: 1200 | image_tag  }}
           </a>
         {% endif %}
