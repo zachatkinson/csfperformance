@@ -8,9 +8,7 @@
             {% assign link = block.settings.slide.slide-url %}
           {% endif %}
           <div class="side-link">
-
-              {{  block.settings.image | image_url: height: 100 | image_tag  }}
-
+            {{  block.settings.image | image_url: height: 100 | image_tag  }}
           </div>
         {% endif %}
       {% endfor %}
@@ -22,9 +20,9 @@
           {%  if block.settings.slide.slide-url %}
             {% assign link = block.settings.slide.slide-url %}
           {% endif %}
-
+        <div class="slide-link">
             {{  block.settings.slide-image | image_url: height: 1200 | image_tag  }}
-
+        </div>
         {% endif %}
       {% endfor %}
     </div>
