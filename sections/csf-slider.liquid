@@ -5,7 +5,7 @@
       {% if block.type == 'side-link' %}
         <div class="side-link">
           <a href="{{ block.settings.side-link.side-link-url }}">{
-            {  block.settings.image | image_url: height: 100 | image_tag  }}
+            {{  block.settings.image | image_url: height: 100 | image_tag  }}
           </a>
         </div>
       {% endif %}
