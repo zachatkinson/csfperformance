@@ -7,15 +7,15 @@
           {% if block.settings.side-link-url %}
             {% assign link = block.settings.side-link-url %}
             {% endif %}
-          <a href="{{ link }}" class="slider-anchor">{{  block.settings.image | image_url: height: 100 | image_tag: alt: block.settings.side-link-alt-text  }}</a>
+          <a href="{{ link }}" class="slider-anchor">{{  block.settings.image | image_url: height: 100 | image_tag: alt: block.settings.side-link-alt-text }}</a>
         {% endif %}
       {% endfor %}
     </div>
     <div class="csf-slider-right">
       {% for block in section.blocks %}
-        {%  assign link = block.settings.slide.slide-url %}
+        {%  assign link = block.settings.slide-url %}
         {% if block.type == 'slide' %}
-          <a href="{{ block.settings.slide.slide-url }}">{{  block.settings.slide-image | image_url: height: 1200 | image_tag  }}</a>
+          <a href="{{ block.settings.slide-url }}">{{  block.settings.slide-image | image_url: height: 1200 | image_tag: block.settings.slide-alt-text }}</a>
         {% endif %}
       {% endfor %}
     </div>
