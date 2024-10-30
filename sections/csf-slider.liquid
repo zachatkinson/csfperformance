@@ -1,13 +1,12 @@
 <div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
   <div class="slider-grid">
-    INSIDE GRID
     <div class="csf-slider-left">
       {% for block in section.blocks %}
         {%  assign link = '#' %}
         {% if block.type == 'side-link' %}
           {% if block.settings.side-link.side-link-url %}
             {% assign link2 = block.settings.side-link.side-link-url %}
-            LINK : {{ link }} | {{ link2 }}
+            <script>console.log({{ link }});</script>
           {% endif %}
           <a href="{{ link }}" class="slider-anchor">{{  block.settings.image | image_url: height: 100 | image_tag  }}</a>
         {% endif %}
