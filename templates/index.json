@@ -89,6 +89,14 @@
             "slide-alt-text": "",
             "slide-url": ""
           }
+        },
+        "slide_irFVUi": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/slide2.jpg",
+            "slide-alt-text": "slide2",
+            "slide-url": "#"
+          }
         }
       },
       "block_order": [
@@ -98,7 +106,8 @@
         "side_link_kcAT8Y",
         "side_link_AAgkMP",
         "side_link_RyLMwd",
-        "slide_GAzVyQ"
+        "slide_GAzVyQ",
+        "slide_irFVUi"
       ],
       "settings": {
         "include_margins": false
