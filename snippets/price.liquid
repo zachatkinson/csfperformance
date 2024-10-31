@@ -65,11 +65,10 @@
   {%  if price-check ==  money_price %}
     MSRP/MAP:
 
-  {% endif %}
-{% else %}
+  {% else %}
   MSRP: {{product.metafields.custom.msrp.value | money_with_currency}}
   MAP:
-  {% endelse %}
+  {% endif %}
         {%- if product.quantity_price_breaks_configured? -%}
           {%- if show_compare_at_price and compare_at_price -%}
             {%- unless product.price_varies == false and product.compare_at_price_varies %}
