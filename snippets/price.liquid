@@ -60,6 +60,7 @@
       {%- endcomment -%}
       {%  assign price-check = product.metafields.custom.msrp.value | money_with_currency %}
       {%  if price-check !=  money_price %}
+        {{ price-check }} ZZ {{ money_price }}
       MSRP: {{product.metafields.custom.msrp.value | money_with_currency}}
       {% endif %}
       <div class="price__regular">
