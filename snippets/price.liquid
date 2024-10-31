@@ -59,7 +59,7 @@
           - div.price__sale: Displayed when a variant is a sale
       {%- endcomment -%}
       {%  assign price-check = product.metafields.custom.msrp.value | money_with_currency %}
-      <div style="background: red; color: white; padding: 1em;">DEBUG<br /><strong>PRICE CHECK:</strong> {{ price-check }}<br /> <dtrong>MONEY PRICE:</dtrong> {{ money_price }}</div>
+      <div style="background: red; color: white; padding: 1em;">DEBUG<br /><strong>PRICE CHECK:</strong> {{ price-check }}<br /> <strong>MONEY PRICE:</strong> {{ money_price }}</div>
 
       <div class="price__regular">
   {%  if price-check ==  money_price %}
