@@ -106,6 +106,16 @@ height: auto;
   order: 0;
 
 }
+.csf-slider-right a {
+display: none;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+
+.csf-slider-right a.active {
+display: block;
+opacity: 1;
+}
 .csf-slider-right img{
   object-fit: cover;
   width: 100%;
@@ -136,6 +146,7 @@ max-height: 100px;
   order: 1;
 width: 100%;
   }
+
 .csf-slider-right img{
   max-height: 600px;
 }
@@ -143,4 +154,30 @@ width: 100%;
 
 {% endstylesheet %}
 {% javascript %}
+document.addEventListener("DOMContentLoaded", function() {
+const slides = document.querySelectorAll(".csf-slider-right .slider-anchor");
+let currentIndex = 0;
+const slideInterval = 3000; // 3 seconds for each slide
+
+function showSlide(index) {
+slides.forEach((slide, i) => {
+if (i === index) {
+slide.classList.add("active");
+} else {
+slide.classList.remove("active");
+}
+});
+}
+
+function nextSlide() {
+currentIndex = (currentIndex + 1) % slides.length;
+showSlide(currentIndex);
+}
+
+// Initially show the first slide
+showSlide(currentIndex);
+
+// Set an interval to automatically cycle through slides
+setInterval(nextSlide, slideInterval);
+});
 {% endjavascript %}
