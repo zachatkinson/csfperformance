@@ -13,7 +13,6 @@
     </div>
     <div class="csf-slider-right">
       {% assign slide-count = 0 %}
-      SLIDE COUNT: {{ slide-count }}
       {% for block in section.blocks %}
         {%  assign link = block.settings.slide-url %}
         {% if block.type == 'slide' %}
