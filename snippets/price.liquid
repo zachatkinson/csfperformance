@@ -64,9 +64,8 @@
       <div class="price__regular">
   {%  if price-check ==  money_price %}
     MSRP/MAP:
-
   {% else %}
-    <em>MSRP: {{product.metafields.custom.msrp.value | money_with_currency}}</em>
+    <em>MSRP: {{product.metafields.custom.msrp.value | money_with_currency}}</em><br />
   MAP:
   {% endif %}
         {%- if product.quantity_price_breaks_configured? -%}
