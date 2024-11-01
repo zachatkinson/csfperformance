@@ -61,10 +61,9 @@
           - div.price__regular: Displayed when there are no variants on sale
           - div.price__sale: Displayed when a variant is a sale
       {%- endcomment -%}
-      {%  assign price-check = product.metafields.custom.msrp.value | money_with_currency %}
       <div style="background: red; color: white; padding: 1em;">DEBUG<br />
-          <strong>PRICE CHECK:</strong> {{ price-check }}<br />
-          <strong>MONEY PRICE:</strong> {{ money_price }}<br />
+          <strong>MSRP PRICE:</strong> {{ product.metafields.custom.msrp.value | money_with_currency }}<br />
+          <strong>MAP PRICE:</strong> {{ money_price }}<br />
           <strong>VARIANT PRICE:</strong> {{ target.price }}<br />
           <strong>VARIANT ID:</strong> {{ target.id }}<br />
           <strong>MAP DIFFERENCE: </strong> {{ target.price | minus: product.price | money_with_currency }}
