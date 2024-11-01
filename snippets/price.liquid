@@ -66,7 +66,8 @@
           <strong>PRICE CHECK:</strong> {{ price-check }}<br />
           <strong>MONEY PRICE:</strong> {{ money_price }}<br />
           <strong>VARIANT PRICEZ:</strong> {{ target.price }}<br />
-          <strong>VARIANT ID:</strong> {{ target.id }}
+          <strong>VARIANT ID:</strong> {{ target.id }}<br />
+          <strong>MAP DIFFERENCE: </strong> {{ target.price |  minus: product.price }}
       </div>
 
       <div class="price__regular">
