@@ -67,7 +67,7 @@
           <strong>MONEY PRICE:</strong> {{ money_price }}<br />
           <strong>VARIANT PRICEZ:</strong> {{ target.price }}<br />
           <strong>VARIANT ID:</strong> {{ target.id }}<br />
-          <strong>MAP DIFFERENCE: </strong> {{ target.price |  minus: product.price }}
+          <strong>MAP DIFFERENCE: </strong> {{ target.price | minus: product.price | money_with_currency }}
       </div>
 
       <div class="price__regular">
