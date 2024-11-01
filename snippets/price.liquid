@@ -67,7 +67,7 @@
           <strong>VARIANT PRICE:</strong> {{ target.price }}<br />
           <strong>VARIANT ID:</strong> {{ target.id }}<br />
           {% assign price-difference = target.price | minus: product.price | money_with_currency  %}<br />
-          <strong>MAP DIFFERENCE:</strong> {{ price-difference }}<br />
+          <strong>PRICE DIFFERENCE:</strong> {{ price-difference }}<br />
           <strong>NEW MSRP:</strong> {{ product.metafields.custom.msrp.value |  plus: price-difference | money_with_currency }}
       </div>
 
