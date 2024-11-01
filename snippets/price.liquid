@@ -70,11 +70,9 @@
       <div style="background: red; color: white; padding: 1em;">DEBUG<br />
           <strong>MSRP PRICE:</strong> {{ variant_msrp_price }}<br />
           <strong>MAP PRICE:</strong> {{ map_price }}<br /><br />
+          <strong>PRICE DIFFERENCE:</strong> {{ price_difference | money_with_currency }}<br /><br />
           <strong>VARIANT PRICE:</strong> {{ variant_price }}<br />
           <strong>VARIANT ID:</strong> {{ variant_id }}<br />
-
-          <strong>PRICE DIFFERENCE:</strong> {{ price_difference | money_with_currency }}<br />
-          <strong>NEW MSRP:</strong> {{ variant_msrp_price }}
       </div>
 
       <div class="price__regular">
