@@ -64,7 +64,7 @@
         {% assign msrp_price = product.metafields.custom.msrp.value | money_with_currency %}
       <div style="background: red; color: white; padding: 1em;">DEBUG<br />
           <strong>MSRP PRICE:</strong> {{ msrp_price }}<br />
-          <strong>MAP PRICE:</strong> {{ money_price }}<br />
+          <strong>MAP PRICE:</strong> {{ money_price }}<br /><br />
           <strong>VARIANT PRICE:</strong> {{ target.price | money_with_currency }}<br />
           <strong>VARIANT ID:</strong> {{ target.id }}<br />
           {% assign price-difference = target.price | minus: product.price  %}<br />
