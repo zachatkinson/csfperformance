@@ -41,6 +41,9 @@
 -%}
 
 {%- unless target == null and placeholder == null -%}
+    <script>
+        let productData = {{ product | json }};
+    </script>
   <div
     class="
       price
@@ -143,3 +146,25 @@
     {%- endif -%}
   </div>
 {% endunless %}
+{% javascript %}
+document.addEventListener("DOMContentLoaded", function() {
+const msrpElement = document.querySelector("#msrp-display"); // ID for MSRP display
+const variantSelect = document.querySelector("[name='id']"); // Default Shopify variant selector
+
+function updateMsrp() {
+const selectedVariantId = variantSelect.value;
+const selectedVariant = productData.variants.find(variant => variant.id == selectedVariantId);
+
+if (selectedVariant) {
+const msrp = selectedVariant.compare_at_price || selectedVariant.msrp; // Using compare_at_price as MSRP
+msrpElement.textContent = msrp ? Shopify.formatMoney(msrp) : "Unavailable";
+}
+}
+
+// Listen for changes on variant selection
+variantSelect.addEventListener("change", updateMsrp);
+
+// Initial call to set MSRP on page load
+updateMsrp();
+});
+{% endjavascript %}
