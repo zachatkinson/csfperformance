@@ -68,7 +68,7 @@
   {%  if price-check ==  money_price %}
     MSRP/MAP:
   {% else %}
-      <em>MSRP: <span id="msrp-amount">{{product.metafields.custom.msrp.value | money_with_currency}}</span></em><br />
+      <em>MSRP: <span class="msrp-amount"></span></em><br />
   MAP:
   {% endif %}
         {%- if product.quantity_price_breaks_configured? -%}
@@ -148,7 +148,7 @@
 {% endunless %}
 {% javascript %}
 document.addEventListener("DOMContentLoaded", function() {
-const msrpElement = document.querySelector("#msrp-display"); // ID for MSRP display
+const msrpElement = document.querySelector(".msrp-display"); // ID for MSRP display
 const variantSelect = document.querySelector("[name='id']"); // Default Shopify variant selector
 
 function updateMsrp() {
