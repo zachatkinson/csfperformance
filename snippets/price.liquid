@@ -155,30 +155,32 @@
       </span>
     {%- endif -%}
   </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const msrpElement = document.querySelector(".msrp-amount");
-            const variantSelect = document.querySelector("[name='id']");
+    {%- if product.variants.size > 1 -%}
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const msrpElement = document.querySelector(".msrp-amount");
+                const variantSelect = document.querySelector("[name='id']");
 
-            console.log("Product data loaded:", productData);
+                console.log("Product data loaded:", productData);
 
-            function updateMsrp() {
-                const selectedVariantId = variantSelect.value;
-                const selectedVariant = productData.variants.find(variant => variant.id == selectedVariantId);
+                function updateMsrp() {
+                    const selectedVariantId = variantSelect.value;
+                    const selectedVariant = productData.variants.find(variant => variant.id == selectedVariantId);
 
-                if (selectedVariant) {
-                    console.log("Selected variant:", selectedVariant);
-                    const msrp = selectedVariant.compare_at_price || selectedVariant.msrp;
-                    msrpElement.textContent = msrp ? Shopify.formatMoney(msrp) : "Unavailable";
+                    if (selectedVariant) {
+                        console.log("Selected variant:", selectedVariant);
+                        const msrp = selectedVariant.compare_at_price || selectedVariant.msrp;
+                        msrpElement.textContent = msrp ? Shopify.formatMoney(msrp) : "Unavailable";
+                    }
                 }
-            }
 
-// Listen for changes on variant selection
-            variantSelect.addEventListener("change", updateMsrp);
+                // Listen for changes on variant selection
+                variantSelect.addEventListener("change", updateMsrp);
 
-// Initial call to set MSRP on page load
-            updateMsrp();
-        });
-    </script>
+                // Initial call to set MSRP on page load
+                updateMsrp();
+            });
+        </script>
+    {%- endif -%}
 {% endunless %}
 
