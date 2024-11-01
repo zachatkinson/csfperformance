@@ -65,7 +65,7 @@
       <div style="background: red; color: white; padding: 1em;">DEBUG<br />
           <strong>MSRP PRICE:</strong> {{ msrp_price }}<br />
           <strong>MAP PRICE:</strong> {{ money_price }}<br />
-          <strong>VARIANT PRICE:</strong> {{ target.price }}<br />
+          <strong>VARIANT PRICE:</strong> {{ target.price | money_with_currency }}<br />
           <strong>VARIANT ID:</strong> {{ target.id }}<br />
           {% assign price-difference = target.price | minus: product.price  %}<br />
           <strong>PRICE DIFFERENCE:</strong> {{ price-difference | money_with_currency }}<br />
