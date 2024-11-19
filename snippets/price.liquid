@@ -68,12 +68,6 @@
         {% assign variant_price = target.price | money_with_currency %}
         {% assign variant_id = target.id %}
         {% assign variant_msrp_price = product.metafields.custom.msrp.value |  plus: price_difference | money_with_currency %}
-        <div style="background: red; color: white; padding: 1em;">
-          <strong>BASE MSRP:</strong> {{ msrp_price }}<br />
-          <strong>VARIANT PRICE:</strong> {{ price_difference | money_with_currency }}<br /><br />
-          <strong>TOTAL MSRP:</strong> {{ variant_msrp_price }}<br />
-          <strong>TOTAL MAP:</strong> {{ map_price }}
-      </div>
 
       <div class="price__regular">
   {%  if variant_msrp_price ==  map_price %}
