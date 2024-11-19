@@ -155,7 +155,7 @@
       </span>
     {%- endif -%}
   </div>
-    {%- if product.variants.size > 1 -%}
+
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 const msrpElement = document.querySelector(".msrp-amount");
@@ -164,16 +164,19 @@
                 console.log("Product data loaded:", productData);
 
                 function updateMsrp() {
+                    {% if product.variants.size > 1 %}
                     const selectedVariantId = variantSelect.value;
                     const selectedVariant = productData.variants.find(variant => variant.id == selectedVariantId);
 
                     if (selectedVariant) {
                         console.log("Selected variant:", selectedVariant);
                         const msrp = selectedVariant.compare_at_price || selectedVariant.msrp;
-                        msrpElement.textContent = msrp ? Shopify.formatMoney(msrp) : "Unavailable";
+                        msrpElement.textContent = msrp ? Shopify.formatMoney(msrp) : msrp;
                     }
                 }
-
+                {% else %}
+                const msrp = productData.compare_at_price || productData.msrp;
+                {% endif %}
                 // Listen for changes on variant selection
                 variantSelect.addEventListener("change", updateMsrp);
 
@@ -181,6 +184,6 @@
                 updateMsrp();
             });
         </script>
-    {%- endif -%}
+
 {% endunless %}
 
