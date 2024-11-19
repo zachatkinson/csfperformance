@@ -203,8 +203,11 @@
                 </span>
               </p>
             {%- endif -%}
-
+              {% if  card_product.metafields.custom.msrp.value == card_product.price %}
+              <p><strong>{{ card_product.price | money_with_currency }}</strong> MSRP/MAP
+              {% else %}
             <p><em>{{ card_product.metafields.custom.msrp.value | money_with_currency }} MSRP</em><br /><strong>{{ card_product.price | money }}</strong> USD MAP
+                  {% endif %}
             {%- if card_product.quantity_price_breaks_configured? -%}
               {% if card_product.variants.size == 1 and quick_add == 'bulk' %}
                 {% liquid
