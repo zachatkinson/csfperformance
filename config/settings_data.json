@@ -20,7 +20,7 @@
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
     "animations_reveal_on_scroll": true,
-    "animations_hover_elements": "3d-lift",
+    "animations_hover_elements": "vertical-lift",
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
     "buttons_radius": 6,
@@ -141,9 +141,7 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "7553055287323118546": {
         "type": "shopify://apps/tinytabs/blocks/tabs-embed/cd5da974-394e-41cb-b448-0c9a6d16a42d",
