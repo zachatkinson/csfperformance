@@ -43,6 +43,7 @@
 {%- unless target == null and placeholder == null -%}
     <script>
         let productData = {{ product | json }};
+        let msrpRender = {{ variant_msrp_price }};
     </script>
   <div
     class="
@@ -175,7 +176,7 @@
                     }
                 }
                 {% else %}
-                const msrp = "{{ variant_msrp_price }}";
+                const msrp = msrpRender;
                 {% endif %}
                 // Listen for changes on variant selection
                 variantSelect.addEventListener("change", updateMsrp);
