@@ -175,7 +175,7 @@
                     }
                 }
                 {% else %}
-                const msrp = productData.compare_at_price || productData.msrp;
+                const msrp = {{ msrp_price }};
                 {% endif %}
                 // Listen for changes on variant selection
                 variantSelect.addEventListener("change", updateMsrp);
