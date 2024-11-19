@@ -175,7 +175,7 @@
                     }
                 }
                 {% else %}
-                const msrp = {{ msrp_price }};
+                const msrp = "{{ variant_msrp_price }}";
                 {% endif %}
                 // Listen for changes on variant selection
                 variantSelect.addEventListener("change", updateMsrp);
