@@ -4,9 +4,9 @@
   Usage:
   {% render 'header-mega-menu' %}
 {% endcomment %}
-
+{{ section.settings.menu.links }}
 <nav class="header__inline-menu">
-    {{ section.settings.menu.links }}
+
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
       <li>
