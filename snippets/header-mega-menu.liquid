@@ -7,6 +7,7 @@
 
 <nav class="header__inline-menu">
     {% for link in linklists.main-menu.links %}
+        <p style="color: yellow">
         ACTIVE: {{ link.active }}<br />
         CHILD ACTIVE: {{ link.child_active }}<br />
         CHILD CURRENT: {{ link.child_current }}<br />
@@ -33,6 +34,7 @@
         {% endif %}
       ===<br />
     {% endfor %}
+        </p>
     <ul class="list-menu list-menu--inline" role="list">
         {%- for link in section.settings.menu.links -%}
             <li>
