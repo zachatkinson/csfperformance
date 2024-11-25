@@ -9,9 +9,12 @@
 
     </script>
   <ul class="list-menu list-menu--inline" role="list">
-    {%- for link in section.settings.menu.links -%}
-        <!-- Main menu -->
-    {% endfor %}
+    {% for link in linklists.main-menu.links %}
+      <p>{{ link.handle }}</p>
+          {% for nestedLink in link.links %}
+            <p>{{ nestedLink.handle }}</p>
+          {% endfor %}
+      {% endfor %}
       <li>
         {%- if link.links != blank -%}
           <header-menu>
