@@ -8,7 +8,9 @@
 <nav class="header__inline-menu">
     <p>Z</p>
     {% for link in linklists.main-menu.links %}
-        {{ link  }}
+        {{ link.title  }}<br />
+        {{ link.url  }}<br />
+        {{ link.levels  }}<br />
     {% endfor %}
     <ul class="list-menu list-menu--inline" role="list">
         {%- for link in section.settings.menu.links -%}
