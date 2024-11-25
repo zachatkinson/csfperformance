@@ -7,10 +7,10 @@
 
 <nav class="header__inline-menu">
     {% for link in linklists.main-menu.links %}
-        {{ link.title  }}<br />
-        {{ link.url  }}<br />
-        {{ link.levels  }}<br />
-        {{ link.object }}
+        TITLE: {{ link.title  }}<br />
+        URL: {{ link.url  }}<br />
+        LEVELS: {{ link.levels  }}<br />
+        OBJECT: {{ link.object }}
         <p>===</p>
     {% endfor %}
     <ul class="list-menu list-menu--inline" role="list">
