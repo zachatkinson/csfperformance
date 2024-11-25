@@ -23,6 +23,12 @@
 
             {%- for childlink in link.links -%}
                 {{ childlink.title }}<br />
+                {% if childlink.links != blank %}
+                        GRANDCHILD LINKS:
+                        {%- for grandchildlink in childlink.links -%}
+                            {{ grandchildlink.title }}<br />
+                        {%  endfor %}
+                {% endif %}
             {%  endfor %}
         {% endif %}
       ===<br />
