@@ -6,7 +6,9 @@
 {% endcomment %}
 
 <nav class="header__inline-menu">
-    <p>Zach</p>
+    {% for link in linklists.main-menu.links %}
+        {{ link |  json }}
+    {% endfor %}
     <ul class="list-menu list-menu--inline" role="list">
         {%- for link in section.settings.menu.links -%}
             <li>
