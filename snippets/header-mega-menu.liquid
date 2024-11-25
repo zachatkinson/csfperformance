@@ -23,7 +23,7 @@
             {%- for childlink in link.links -%}
                 {{ childlink.title }}<br />
                 {% if childlink.links != blank %}
-                        GRANDCHILD LINKS:
+                        <span style="color: red">GRANDCHILD LINKS:
                         {%- for grandchildlink in childlink.links -%}
                             {{ grandchildlink.title }}<br />
                         {%  endfor %}
