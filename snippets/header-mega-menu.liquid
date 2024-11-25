@@ -20,7 +20,7 @@
         TYPE: {{ link.type  }}<br />
         URL: {{ link.url  }}<br />
         {% if link.links != blank %}
-        CHILD LINKS:
+        <span style="color: orange">CHILD LINKS:
 
             {%- for childlink in link.links -%}
                 {{ childlink.title }}<br />
@@ -31,6 +31,7 @@
                         {%  endfor %}
                 {% endif %}
             {%  endfor %}
+        </span>
         {% endif %}
       ===<br />
     {% endfor %}
