@@ -19,7 +19,7 @@
         TYPE: {{ link.type  }}<br />
         URL: {{ link.url  }}<br />
         CHILD LINKS: {%- for childlink in link.links -%}
-        {{ childlink }}
+        {{ childlink.title }}<br />
         {%  endfor %}
         <br />===<br />
     {% endfor %}
