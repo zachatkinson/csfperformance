@@ -18,9 +18,12 @@
         TITLE: {{ link.title  }}<br />
         TYPE: {{ link.type  }}<br />
         URL: {{ link.url  }}<br />
-        CHILD LINKS: {%- for childlink in link.links -%}
-        {{ childlink.title }}<br />
-        {%  endfor %}
+        CHILD LINKS:
+        {% if link.links %}
+            {%- for childlink in link.links -%}
+                {{ childlink.title }}<br />
+            {%  endfor %}
+        {% endif %}
         <br />===<br />
     {% endfor %}
     <ul class="list-menu list-menu--inline" role="list">
