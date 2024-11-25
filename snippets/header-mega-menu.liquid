@@ -8,7 +8,8 @@
     <script>let linklist_variable = [];
     {% for link in section.settings.menu.links %}
         linklist_variable[{{ forloop.index0 }}] = '{{ link.handle }}';
-    {% endfor %}
+        console.log(linklist_variable);
+        {% endfor %}
     </script>
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
