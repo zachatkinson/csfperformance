@@ -7,11 +7,18 @@
 
 <nav class="header__inline-menu">
     {% for link in linklists.main-menu.links %}
-        TITLE: {{ link.title  }}<br />
-        URL: {{ link.url  }}<br />
+        ACTIVE: {{ link.active }}<br />
+        CHILD ACTIVE: {{ link.child_active }}<br />
+        CHILD CURRENT: {{ link.child_current }}<br />
+        CURRENT: {{ link.current }}<br />
+        HANDLE: {{ link.handle }}<br />
         LEVELS: {{ link.levels  }}<br />
-        OBJECT: {{ link.object }}
-        <p>===</p>
+        LINKS: {{ link.links  }}<br />
+        OBJECT: {{ link.object  }}<br />
+        TITLE: {{ link.title  }}<br />
+        TYPE: {{ link.type  }}<br />
+        URL: {{ link.url  }}<br />
+        ===<br />
     {% endfor %}
     <ul class="list-menu list-menu--inline" role="list">
         {%- for link in section.settings.menu.links -%}
