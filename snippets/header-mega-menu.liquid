@@ -5,9 +5,11 @@
   {% render 'header-mega-menu' %}
 {% endcomment %}
 <nav class="header__inline-menu">
-    {% for link in linklists.main-menu.links -%}
-        {{ link | json }}
-    {%- endfor %}
+    <script>let linklist_variable = [];
+    {% for link in linklists['footer'].links %}
+        linklist_variable[{{ forloop.index0 }}] = '{{ link.handle }}';
+    {% endfor %}
+    </script>
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
         <!-- Main menu -->
