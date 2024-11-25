@@ -7,7 +7,7 @@
 
 <nav class="header__inline-menu">
     {% for link in linklists.main-menu.links %}
-        {{ link |  json }}
+        {{ link  }}
     {% endfor %}
     <ul class="list-menu list-menu--inline" role="list">
         {%- for link in section.settings.menu.links -%}
