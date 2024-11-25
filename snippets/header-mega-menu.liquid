@@ -6,7 +6,7 @@
 {% endcomment %}
 <nav class="header__inline-menu">
     <script>let linklist_variable = [];
-    {% for link in linklists['footer'].links %}
+    {% for link in section.settings.menu.links %}
         linklist_variable[{{ forloop.index0 }}] = '{{ link.handle }}';
     {% endfor %}
     </script>
