@@ -5,7 +5,7 @@
   {% render 'header-mega-menu' %}
 {% endcomment %}
 <nav class="header__inline-menu">
-    {%- for link in linklists.main-menu.links[0].links -%}
+    {%- for link in linklists.main-menu.links -%}
         {{ link }}
     {%- endfor -%}
   <ul class="list-menu list-menu--inline" role="list">
