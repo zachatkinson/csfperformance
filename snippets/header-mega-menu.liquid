@@ -18,7 +18,7 @@
         TITLE: {{ link.title  }}<br />
         TYPE: {{ link.type  }}<br />
         URL: {{ link.url  }}<br />
-        {% if link.links %}
+        {% if link.links != blank %}
         CHILD LINKZ:
 
             {%- for childlink in link.links -%}
