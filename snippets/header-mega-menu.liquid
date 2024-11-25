@@ -7,6 +7,7 @@
 <nav class="header__inline-menu">
 
   <ul class="list-menu list-menu--inline" role="list">
+      {{ linklists |  json }}
     {% for link in linklists.main-menu.links %}
       <p>{{ link.handle }}</p>
           {% for nestedLink in link.links %}
