@@ -35,7 +35,9 @@
                     {% if childlink.handle == 'acura' %}
                         {% if childlink.links != blank %}
                             {%- for grandchildlink in childlink.links -%}
+                                {% comment %}
                                 <p>{{ grandchildlink.title }}</p>
+                                {% endcomment %}
                             {% endfor %}
                         {%  endif %}
 
