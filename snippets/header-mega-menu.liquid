@@ -6,6 +6,23 @@
 {% endcomment %}
 
 <nav class="header__inline-menu">
+    {% comment %}
+    Step 1:  Group out top level items:
+    {% endcomment %}
+    {% for link in linklists.main-menu.links %}
+        <p>link.title</p>
+    {% endfor %}
+    {% comment %}
+    End step 1
+    {% endcomment %}
+
+    {% comment %}
+    Step 2:  Retrieve sub level items for link with handle 'explore-products'
+    {% endcomment %}
+
+    {% comment %}
+    Step 3:  Get sub level items for link with handle 'acura'
+    {% endcomment %}
     {% for link in linklists.main-menu.links %}
         <p style="color: yellow">
         ACTIVE: {{ link.active }}<br />
