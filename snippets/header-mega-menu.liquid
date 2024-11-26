@@ -39,7 +39,7 @@
         {% if link.handle == 'explore-products' %}
             {% if link.links != blank %}
                 {%- for childlink in link.links -%}
-                    {% if childlink.handle == 'toyota' %}
+                    {% if childlink.handle == 'acura' %}
                         {% if childlink.links != blank %}
                             {%- for grandchildlink in childlink.links -%}
                                 <p>{{ grandchildlink.title }}</p>
@@ -54,38 +54,7 @@
     {% comment %}
     End step 3
     {% endcomment %}
-    {% for link in linklists.main-menu.links %}
-        <p style="color: yellow">
-        ACTIVE: {{ link.active }}<br />
-        CHILD ACTIVE: {{ link.child_active }}<br />
-        CHILD CURRENT: {{ link.child_current }}<br />
-        CURRENT: {{ link.current }}<br />
-        HANDLE: {{ link.handle }}<br />
-        LEVELS: {{ link.levels  }}<br />
-        TITLE: {{ link.title  }}<br />
-        TYPE: {{ link.type  }}<br />
-        URL: {{ link.url  }}<br />
-            {% if link.handle == 'trucks' %}
-        {% if link.links != blank %}
-        <span style="color: orange">CHILD LINKS:
 
-            {%- for childlink in link.links -%}
-                {{ childlink.title }}<br />
-                {% if childlink.links != blank %}
-                        <span style="color: red">GRANDCHILD LINKS:
-                        {%- for grandchildlink in childlink.links -%}
-                            {{ grandchildlink.title }}<br />
-                        {%  endfor %}
-                            </span>
-                {% endif %}
-            {%  endfor %}
-
-        </span>
-        {% endif %}
-            {% endif %}
-      ===<br />
-    {% endfor %}
-        </p>
     <ul class="list-menu list-menu--inline" role="list">
         {%- for link in section.settings.menu.links -%}
             <li>
