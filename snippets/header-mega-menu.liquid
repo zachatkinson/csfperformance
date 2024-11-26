@@ -23,7 +23,7 @@
         {% if link.handle == 'explore-products' %}
             {% if link.links != blank %}
                 {%- for childlink in link.links -%}
-                    <p>childlink.title</p>
+                    <p>{{ childlink.title }}</p>
                 {% endfor %}
             {% endif %}
         {% endif %}
