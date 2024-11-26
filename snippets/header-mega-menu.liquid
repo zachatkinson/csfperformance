@@ -14,7 +14,9 @@
         {% if link.handle == 'explore-products' %}
             {% if link.links != blank %}
                 {%- for childlink in link.links -%}
+                    {% comment %}
                     <p>{{ childlink.title }}</p>
+                    {% endcomment %}
                 {% endfor %}
             {% endif %}
         {% endif %}
