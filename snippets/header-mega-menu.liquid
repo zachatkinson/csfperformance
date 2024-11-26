@@ -17,22 +17,7 @@
         TITLE: {{ link.title  }}<br />
         TYPE: {{ link.type  }}<br />
         URL: {{ link.url  }}<br />
-        {% if link.links != blank %}
-        <span style="color: orange">CHILD LINKS:
 
-            {%- for childlink in link.links -%}
-                {{ childlink.title }}<br />
-                {% if childlink.links != blank %}
-                        <span style="color: red">GRANDCHILD LINKS:
-                        {%- for grandchildlink in childlink.links -%}
-                            {{ grandchildlink.title }}<br />
-                        {%  endfor %}
-                            </span>
-                {% endif %}
-            {%  endfor %}
-
-        </span>
-        {% endif %}
       ===<br />
     {% endfor %}
         </p>
