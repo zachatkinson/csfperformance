@@ -36,6 +36,25 @@
     Step 3:  Get sub level items for link with handle 'acura'
     {% endcomment %}
     {% for link in linklists.main-menu.links %}
+        {% if link.handle == 'explore-products' %}
+            {% if link.links != blank %}
+                {%- for childlink in link.links -%}
+                    {% if childlink.handle == 'acura' %}
+                        {% if childlink.links != blank %}
+                            {%- for grandchildlink in childlink.links -%}
+                                <p>{{ grandchildlink.title }}</p>
+                            {% endfor %}
+                        {%  endif %}
+
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% comment %}
+    End step 3
+    {% endcomment %}
+    {% for link in linklists.main-menu.links %}
         <p style="color: yellow">
         ACTIVE: {{ link.active }}<br />
         CHILD ACTIVE: {{ link.child_active }}<br />
