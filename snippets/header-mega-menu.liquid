@@ -39,7 +39,7 @@
         {% if link.handle == 'explore-products' %}
             {% if link.links != blank %}
                 {%- for childlink in link.links -%}
-                    {% if childlink.handle == 'acura' %}
+                    {% if childlink.handle == 'toyota' %}
                         {% if childlink.links != blank %}
                             {%- for grandchildlink in childlink.links -%}
                                 <p>{{ grandchildlink.title }}</p>
