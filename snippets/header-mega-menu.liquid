@@ -19,6 +19,18 @@
     {% comment %}
     Step 2:  Retrieve sub level items for link with handle 'explore-products'
     {% endcomment %}
+    {% for link in linklists.main-menu.links %}
+        {% if link.links != blank %}
+            {% if link.handle == 'explore-products' %}
+                {%- for childlink in link.links -%}
+                    <p>childlink.title</p>
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% comment %}
+    End step 2
+    {% endcomment %}
 
     {% comment %}
     Step 3:  Get sub level items for link with handle 'acura'
