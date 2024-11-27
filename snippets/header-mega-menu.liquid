@@ -109,7 +109,32 @@
         {%- endfor -%}
     </ul>
 </nav>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const brands = document.querySelectorAll('.brand-item'); // Left panel items
+        const models = document.querySelectorAll('.model-item'); // Right panel items
 
+        brands.forEach((brand) => {
+            brand.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent default link behavior if needed
+
+// Get the brand's handle (data-brand attribute)
+                const selectedBrand = this.getAttribute('data-brand');
+
+// Hide all model items
+                models.forEach((model) => {
+                    model.classList.add('hidden');
+                });
+
+// Show the model item that matches the selected brand
+                const correspondingModel = document.querySelector(`.model-item[data-model="${selectedBrand}"]`);
+                if (correspondingModel) {
+                    correspondingModel.classList.remove('hidden');
+                }
+            });
+        });
+    });
+</script>
 {% stylesheet %}
 .hidden {
 display: none;
