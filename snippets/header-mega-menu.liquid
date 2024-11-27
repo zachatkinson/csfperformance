@@ -7,6 +7,49 @@
 
 <nav class="header__inline-menu">
 
+    {% comment %}
+    Step 2:  Retrieve sub level items for link with handle 'explore-products'
+    {% endcomment %}
+    {% for link in linklists.main-menu.links %}
+        {% if link.handle == 'explore-products' %}
+            {% if link.links != blank %}
+                {%- for childlink in link.links -%}
+                    {% comment %}
+                    <p>{{ childlink.title }}</p>
+                    {% endcomment %}
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% comment %}
+    End step 2
+    {% endcomment %}
+
+    {% comment %}
+    Step 3:  Get sub level items for link with handle 'acura'
+    {% endcomment %}
+    {% for link in linklists.main-menu.links %}
+        {% if link.handle == 'explore-products' %}
+            {% if link.links != blank %}
+                {%- for childlink in link.links -%}
+                    {% if childlink.handle == 'acura' %}
+                        {% if childlink.links != blank %}
+                            {%- for grandchildlink in childlink.links -%}
+                                {% comment %}
+                                <p>{{ grandchildlink.title }}</p>
+                                {% endcomment %}
+                            {% endfor %}
+                        {% endif %}
+
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    {% comment %}
+    End step 3
+    {% endcomment %}
+
     <ul class="list-menu list-menu--inline" role="list">
         {%- for link in section.settings.menu.links -%}
             <li>
@@ -33,7 +76,6 @@
                             >
                                 <div class="wrapper-sub-menu"
                                      style="display: grid; grid-template-columns: min-content 1fr;">
-                                    <!-- Left Panel -->
                                     <div style="background-color: blueviolet; grid-template-columns: 1fr; height: 100%;">
                                         <ul
                                                 class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
@@ -41,7 +83,7 @@
                                                 style="display: block;"
                                         >
                                             {%- for childlink in link.links -%}
-                                                <li class="Zach brand-item" data-brand="{{ childlink.handle }}">
+                                                <li class="Zach">
                                                     <a
                                                             id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                                                             href="{{ childlink.url }}"
@@ -50,20 +92,15 @@
                                                                 aria-current="page"
                                                             {% endif %}
                                                     >
-                                                        ZZ {{ childlink.title | escape }}
+                                                        {{ childlink.title | escape }}
                                                     </a>
                                                 </li>
                                             {%- endfor -%}
                                         </ul>
                                     </div>
-                                    <!-- Right Panel -->
                                     <div style="background-color: yellow">
                                         {%- for childlink in link.links -%}
-                                            <div
-                                                    class="model-item hidden"
-                                                    data-model="{{ childlink.handle }}"
-                                                    style="background-color: mediumaquamarine; height: 100%;"
-                                            >
+                                            <div style="background-color: mediumaquamarine; height: 100%;" class="hidden">
                                                 <ul class="list-unstyled" role="list">
                                                     {%- for grandchildlink in childlink.links -%}
                                                         <li>
@@ -104,39 +141,13 @@
               {{- link.title | escape -}}
             </span>
                     </a>
-                {%- endif %}
+                {%- endif -%}
             </li>
         {%- endfor -%}
     </ul>
 </nav>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const brands = document.querySelectorAll('.brand-item'); // Left panel items
-        const models = document.querySelectorAll('.model-item'); // Right panel items
-
-        brands.forEach((brand) => {
-            brand.addEventListener('click', function (event) {
-                event.preventDefault(); // Prevent default link behavior if needed
-
-// Get the brand's handle (data-brand attribute)
-                const selectedBrand = this.getAttribute('data-brand');
-
-// Hide all model items
-                models.forEach((model) => {
-                    model.classList.add('hidden');
-                });
-
-// Show the model item that matches the selected brand
-                const correspondingModel = document.querySelector(`.model-item[data-model="${selectedBrand}"]`);
-                if (correspondingModel) {
-                    correspondingModel.classList.remove('hidden');
-                }
-            });
-        });
-    });
-</script>
 {% stylesheet %}
-.hidden {
+.hidden{
 display: none;
 }
 {% endstylesheet %}
