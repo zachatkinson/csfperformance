@@ -94,15 +94,13 @@
                                                     >
                                                        ZZ {{ childlink.title | escape }}
                                                     </a>
-                                                    {%- if childlink.links != blank -%}
-                                                    {%- endif -%}
                                                 </li>
                                             {%- endfor -%}
                                         </ul>
                                     </div>
                                     <div style="background-color: yellow">
                                         {%- for childlink in link.links -%}
-                                            <div style="background-color: mediumaquamarine; height: 100%;" class="showme">
+                                            <div style="background-color: mediumaquamarine; height: 100%;" class="hidden">
                                                 <ul class="list-unstyled" role="list">
                                                     {%- for grandchildlink in childlink.links -%}
                                                         <li>
