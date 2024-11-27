@@ -100,9 +100,11 @@
                                             {%- endfor -%}
                                         </ul>
                                     </div>
-                                    <div style="background-color: mediumaquamarine">
-                                        BRAND
-                                    </div>
+                                    {%- for childlink in link.links -%}
+                                        <div style="background-color: mediumaquamarine">
+                                            {{ childlink.title }}
+                                        </div>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </details>
