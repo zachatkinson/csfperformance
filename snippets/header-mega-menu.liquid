@@ -132,6 +132,9 @@
 
                 // Get the selected brand's data attribute
                 const selectedBrand = this.getAttribute('data-brand');
+                brands.forEach((model) => {
+                    model.classList.remove('underline');
+                });
                 brand.classList.add('underline');
 
                 // Hide all model items
