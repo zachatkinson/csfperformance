@@ -6,50 +6,6 @@
 {% endcomment %}
 
 <nav class="header__inline-menu">
-
-    {% comment %}
-    Step 2:  Retrieve sub level items for link with handle 'explore-products'
-    {% endcomment %}
-    {% for link in linklists.main-menu.links %}
-        {% if link.handle == 'explore-products' %}
-            {% if link.links != blank %}
-                {%- for childlink in link.links -%}
-                    {% comment %}
-                    <p>{{ childlink.title }}</p>
-                    {% endcomment %}
-                {% endfor %}
-            {% endif %}
-        {% endif %}
-    {% endfor %}
-    {% comment %}
-    End step 2
-    {% endcomment %}
-
-    {% comment %}
-    Step 3:  Get sub level items for link with handle 'acura'
-    {% endcomment %}
-    {% for link in linklists.main-menu.links %}
-        {% if link.handle == 'explore-products' %}
-            {% if link.links != blank %}
-                {%- for childlink in link.links -%}
-                    {% if childlink.handle == 'acura' %}
-                        {% if childlink.links != blank %}
-                            {%- for grandchildlink in childlink.links -%}
-                                {% comment %}
-                                <p>{{ grandchildlink.title }}</p>
-                                {% endcomment %}
-                            {% endfor %}
-                        {% endif %}
-
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-        {% endif %}
-    {% endfor %}
-    {% comment %}
-    End step 3
-    {% endcomment %}
-
     <ul class="list-menu list-menu--inline" role="list">
         {%- for link in section.settings.menu.links -%}
             <li>
