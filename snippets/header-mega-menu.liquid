@@ -100,7 +100,10 @@
                                     </div>
                                     <div style="background-color: yellow">
                                         {%- for childlink in link.links -%}
-                                            <div style="background-color: mediumaquamarine; height: 100%;" class="hide_me" data-model="{{ childlink.handle }}">
+                                            {% if forloop.index0 > 0 %}
+                                                {% assign hidden_class = 'hide_me' %}
+                                            {% endif %}
+                                            <div style="background-color: mediumaquamarine; height: 100%;" class="{{ hidden_class }}" data-model="{{ childlink.handle }}">
                                                 <ul class="list-unstyled" role="list">
                                                     {%- for grandchildlink in childlink.links -%}
                                                         <li>
