@@ -152,5 +152,26 @@
 }
 </style>
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const brands = document.querySelectorAll('.brand-item');
+        const models = document.querySelectorAll('.model-item');
 
+        brands.forEach((brand) => {
+            brand.addEventListener('click', function () {
+                // Get the selected brand's data attribute
+                const selectedBrand = this.getAttribute('data-brand');
+
+                // Hide all model items
+                models.forEach((model) => {
+                    model.classList.add('hide_me');
+                });
+
+                // Show the models corresponding to the selected brand
+                const correspondingModel = document.querySelector(`.model-item[data-model="${selectedBrand}"]`);
+                if (correspondingModel) {
+                    correspondingModel.classList.remove('hide_me');
+                }
+            });
+        });
+    });
 </script>
