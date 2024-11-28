@@ -136,20 +136,11 @@
                 // Remove underline and chevron from all brands
                 brands.forEach((otherBrand) => {
                     otherBrand.classList.remove('underline');
-                    const chevron = otherBrand.querySelector('.chevron');
-                    if (chevron) {
-                        chevron.remove();
-                    }
                 });
 
                 // Add underline to the selected brand
                 brand.classList.add('underline');
 
-                // Add a chevron to the selected brand
-                const chevronIcon = document.createElement('span');
-                chevronIcon.classList.add('chevron');
-                chevronIcon.innerHTML = '  >>'; // Replace with SVG if needed
-                brand.querySelector('a').appendChild(chevronIcon);
 
                 // Hide all model items
                 models.forEach((model) => {
