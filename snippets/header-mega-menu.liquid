@@ -83,7 +83,7 @@
                                                 style="display: block;"
                                         >
                                             {%- for childlink in link.links -%}
-                                                <li class="test" data-brand="{{ childlink.handle }}">
+                                                <li class="brand-item" data-brand="{{ childlink.handle }}">
                                                     <a
                                                             id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                                                             href="{{ childlink.url }}"
@@ -103,7 +103,7 @@
                                             {% if forloop.index0 > 0 %}
                                                 {% assign hidden_class = 'hide_me' %}
                                             {% endif %}
-                                            <div style="background-color: mediumaquamarine; height: 100%; padding-left: 1em; padding-right: 1em;" class="{{ hidden_class }}" data-model="{{ childlink.handle }}">
+                                            <div style="background-color: mediumaquamarine; height: 100%; padding-left: 1em; padding-right: 1em;" class=" model-item {{ hidden_class }}" data-model="{{ childlink.handle }}">
                                                 <ul class="list-unstyled" role="list">
                                                     {%- for grandchildlink in childlink.links -%}
                                                         <li>
