@@ -100,7 +100,7 @@
                                     </div>
                                     <div style="background-color: yellow">
                                         {%- for childlink in link.links -%}
-                                            <div style="background-color: mediumaquamarine; height: 100%;" class="hide_me">
+                                            <div style="background-color: mediumaquamarine; height: 100%;" class="hide_me" data-model="{{ childlink.handle }}">
                                                 <ul class="list-unstyled" role="list">
                                                     {%- for grandchildlink in childlink.links -%}
                                                         <li>
