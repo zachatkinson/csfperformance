@@ -83,7 +83,7 @@
                                                 style="display: block;"
                                         >
                                             {%- for childlink in link.links -%}
-                                                <li class="test_class" data-brand="{{ link.handle }}">
+                                                <li class="test_class" data-brand="{{ childlink.handle }}">
                                                     <a
                                                             id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                                                             href="{{ childlink.url }}"
