@@ -160,7 +160,10 @@
         const models = document.querySelectorAll('.model-item');
 
         brands.forEach((brand) => {
-            brand.addEventListener('click', function () {
+            brand.addEventListener('click', function (event) {
+                // Prevent the default navigation behavior
+                event.preventDefault();
+
                 // Get the selected brand's data attribute
                 const selectedBrand = this.getAttribute('data-brand');
 
