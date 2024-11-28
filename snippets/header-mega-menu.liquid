@@ -148,8 +148,8 @@
                 // Add a chevron to the selected brand
                 const chevronIcon = document.createElement('span');
                 chevronIcon.classList.add('chevron');
-                chevronIcon.innerHTML = ' ▼'; // You can replace this with an actual SVG or custom icon
-                brand.appendChild(chevronIcon);
+                chevronIcon.innerHTML = '▼'; // Replace with SVG if needed
+                brand.querySelector('a').appendChild(chevronIcon);
 
                 // Hide all model items
                 models.forEach((model) => {
