@@ -70,7 +70,7 @@
                                                     {% if linklists[dynamic_list_handle] and linklists[dynamic_list_handle].links.size > 0 %}
                                                     {% for model-group in linklists[dynamic_list_handle].links %}
                                                         <!-- Render each model link -->
-                                                        <a href="{{ model-group.url }}">{{ model-group.title }}</a>
+                                                        <strong>{{ model-group.title }}</strong>
                                                     {% endfor %}
                                                     {% endif %}
 
