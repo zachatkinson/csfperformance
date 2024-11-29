@@ -66,9 +66,12 @@
                                             <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em;" class=" model-item {{ hidden_class }}" data-model="{{ childlink.handle }}">
                                                 <ul class="list-unstyled" role="list" >
                                                    RIGHT PANEL
-                                                    {% for link in linklists[childlink.handle | append "-models"].links %}
-                                                        <li>{{ link.title }}</li>
+                                                    {% assign dynamic_list_handle = childlink.handle | append: "-models" %}
+                                                    {% for link in linklists[dynamic_list_handle].links %}
+                                                        <!-- Render the link -->
+                                                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
                                                     {% endfor %}
+
                                                 </ul>
                                             </div>
                                         {% endfor %}
