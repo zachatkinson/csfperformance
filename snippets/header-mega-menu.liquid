@@ -135,6 +135,15 @@
         const brands = document.querySelectorAll('.brand-item');
         const models = document.querySelectorAll('.model-item');
 
+        // Initial State: Show the first model-item and hide others
+        models.forEach((model, index) => {
+            if (index === 0) {
+                model.classList.remove('hide_me');
+            } else {
+                model.classList.add('hide_me');
+            }
+        });
+
         brands.forEach((brand) => {
             brand.addEventListener('click', function (event) {
                 // Prevent the default navigation behavior
@@ -143,14 +152,13 @@
                 // Get the selected brand's data attribute
                 const selectedBrand = this.getAttribute('data-brand');
 
-                // Remove highlight and chevron from all brands
+                // Remove highlight from all brands
                 brands.forEach((otherBrand) => {
                     otherBrand.classList.remove('highlight');
                 });
 
                 // Add highlight to the selected brand
                 brand.classList.add('highlight');
-
 
                 // Hide all model items
                 models.forEach((model) => {
