@@ -66,6 +66,9 @@
                                             <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em;" class=" model-item {{ hidden_class }}" data-model="{{ childlink.handle }}">
                                                 <ul class="list-unstyled" role="list" >
                                                    RIGHT PANEL
+                                                    {% for link in linklist[childlink.handle] %}
+                                                        <li>{{ link.title }}</li>
+                                                    {% endfor %}
                                                 </ul>
                                             </div>
                                         {% endfor %}
