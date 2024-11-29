@@ -39,6 +39,7 @@
                                                 style="display: block;"
                                         >
                                             {%- for childlink in link.links -%}
+                                                {% assign highlight_class="" %}
                                                 {% if forloop.index0 == 0 %}
                                                     {% assign highlight_class="highlight" %}
                                                 {% endif %}
