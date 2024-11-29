@@ -71,6 +71,9 @@
                                                     {% for model-group in linklists[dynamic_list_handle].links %}
                                                         <!-- Render each model link -->
                                                         <strong>{{ model-group.title }}</strong>
+                                                        {% for model in model-group.links %}
+                                                            {{ model }}
+                                                        {% endfor %}
                                                     {% endfor %}
                                                     {% endif %}
 
