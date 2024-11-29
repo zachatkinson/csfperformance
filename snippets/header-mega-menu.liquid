@@ -67,10 +67,12 @@
                                                 <ul class="list-unstyled" role="list" >
                                                     {% assign dynamic_list_handle = childlink.handle | append: "-models" %}
                                                     <p>Dynamic List Handle: {{ dynamic_list_handle }}</p>
+                                                    {% if linklists[dynamic_list_handle] and linklists[dynamic_list_handle].links.size > 0 %}
                                                     {% for model-group in linklists[dynamic_list_handle].links %}
                                                         <!-- Render each model link -->
                                                         <a href="{{ model-group.url }}">{{ model-group.title }}</a>
                                                     {% endfor %}
+                                                    {% endif %}
 
                                                 </ul>
                                             </div>
