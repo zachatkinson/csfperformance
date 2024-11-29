@@ -68,7 +68,9 @@
                                                     {% if linklists[dynamic_list_handle] and linklists[dynamic_list_handle].links.size > 0 %}
                                                     {% for model-group in linklists[dynamic_list_handle].links %}
                                                         <!-- Render each model link -->
-                                                        <strong>{{ model-group.title }}</strong>
+                                                        <div style="background-color: pink;">
+                                                            <strong>{{ model-group.title }}</strong>
+                                                        </div>
                                                         {% for model in model-group.links %}
                                                             {{ model.title }}
                                                         {% endfor %}
