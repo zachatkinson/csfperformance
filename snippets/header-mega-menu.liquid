@@ -67,6 +67,7 @@
                                                 <ul class="list-unstyled" role="list" >
                                                     {% assign dynamic_list_handle = childlink.handle | append: "-models" %}
                                                     {% for model in linklists[dynamic_list_handle].links %}
+                                                       MODEL: {{ model }}
                                                         <!-- Render the link -->
                                                         <li><a href="{{ model.url }}">{{ model.title }}</a></li>
                                                     {% endfor %}
