@@ -39,7 +39,10 @@
                                                 style="display: block;"
                                         >
                                             {%- for childlink in link.links -%}
-                                                <li class="brand-item" data-brand="{{ childlink.handle }}">
+                                                {% if forloop.index0 == 0 %}
+                                                    {% assign highlight_class="highlight" %}
+                                                {% endif %}
+                                                <li class="brand-item {{ highlight_class }}" data-brand="{{ childlink.handle }}">
                                                     <a
                                                             id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                                                             href="{{ childlink.url }}"
@@ -116,7 +119,7 @@
     padding-left: 8px;
     padding-right: 8px;
 }
-.underline{
+.highlight{
     background-color: #e54242;
     color: #fff;
 }
@@ -135,13 +138,13 @@
                 // Get the selected brand's data attribute
                 const selectedBrand = this.getAttribute('data-brand');
 
-                // Remove underline and chevron from all brands
+                // Remove highlight and chevron from all brands
                 brands.forEach((otherBrand) => {
-                    otherBrand.classList.remove('underline');
+                    otherBrand.classList.remove('highlight');
                 });
 
-                // Add underline to the selected brand
-                brand.classList.add('underline');
+                // Add highlight to the selected brand
+                brand.classList.add('highlight');
 
 
                 // Hide all model items
