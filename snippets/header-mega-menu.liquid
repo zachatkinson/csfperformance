@@ -72,7 +72,11 @@
                                                             <h2>{{ model-group.title }}</h2>
                                                             <ul class="list-unstyled" role="list">
                                                         {% for model in model-group.links %}
-                                                            <li><a href="{{ model.url }}">{{ model.title }}</a></li>
+                                                            <li><a href="{{ model.url }}" class="mega-menu__link link{% if model.current %} mega-menu__link--active{% endif %}"
+                                                                        {% if model.current %}
+                                                                            aria-current="page"
+                                                                        {% endif %}
+                                                                   style="font-size: 1em;">{{ model.title }}</a></li>
                                                         {% endfor %}
                                                             </ul>
                                                         </div>
