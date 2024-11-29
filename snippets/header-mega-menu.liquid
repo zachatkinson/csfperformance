@@ -64,9 +64,7 @@
                                                 {% assign hidden_class = 'hide_me' %}
                                             {% endif %}
                                             <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em;" class=" model-item {{ hidden_class }}" data-model="{{ childlink.handle }}">
-                                                <ul class="list-unstyled" role="list" >
                                                     {% assign dynamic_list_handle = childlink.handle | append: "-models" %}
-                                                    <p>Dynamic List Handle: {{ dynamic_list_handle }}</p>
                                                     {% if linklists[dynamic_list_handle] and linklists[dynamic_list_handle].links.size > 0 %}
                                                     {% for model-group in linklists[dynamic_list_handle].links %}
                                                         <!-- Render each model link -->
@@ -77,7 +75,7 @@
                                                     {% endfor %}
                                                     {% endif %}
 
-                                                </ul>
+
                                             </div>
                                         {% endfor %}
                                     </div>
