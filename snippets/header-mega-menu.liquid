@@ -70,9 +70,11 @@
                                                         <!-- Render each model link -->
                                                         <div style="background-color: pink;">
                                                             <h2>{{ model-group.title }}</h2>
+                                                            <ul class="list-unstyled" role="list">
                                                         {% for model in model-group.links %}
-                                                            {{ model.title }}
+                                                            <li><a href="{{ model.url }}">{{ model.title }}</a></li>
                                                         {% endfor %}
+                                                            </ul>
                                                         </div>
                                                     {% endfor %}
                                                     {% endif %}
