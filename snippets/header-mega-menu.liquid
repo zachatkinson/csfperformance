@@ -143,7 +143,7 @@
                 // Get the selected brand's data attribute
                 const selectedBrand = this.getAttribute('data-brand');
 
-                // Remove highlight and chevron from all brands
+                // Remove highlight from all brands
                 brands.forEach((otherBrand) => {
                     otherBrand.classList.remove('highlight');
                 });
@@ -151,16 +151,17 @@
                 // Add highlight to the selected brand
                 brand.classList.add('highlight');
 
-
                 // Hide all model items
                 models.forEach((model) => {
                     model.classList.add('hide_me');
                 });
 
-                // Show the models corresponding to the selected brand
+                // Show the model panel corresponding to the selected brand
                 const correspondingModel = document.querySelector(`.model-item[data-model="${selectedBrand}"]`);
                 if (correspondingModel) {
                     correspondingModel.classList.remove('hide_me');
+                } else {
+                    console.warn(`No model found for brand: ${selectedBrand}`);
                 }
             });
         });
