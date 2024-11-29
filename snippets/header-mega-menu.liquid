@@ -63,7 +63,7 @@
                                             {% if forloop.index0 > 0 %}
                                                 {% assign hidden_class = 'hide_me' %}
                                             {% endif %}
-                                            <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em; display: inline-grid; grid-template-columns: 1fr 1fr 1fr 1fr;" class="model-item hide_me" data-model="{{ childlink.handle }}">
+                                            <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em;" class="model-item hide_me" data-model="{{ childlink.handle }}">
                                                     {% assign dynamic_list_handle = childlink.handle | append: "-models" %}
                                                     {% if linklists[dynamic_list_handle] and linklists[dynamic_list_handle].links.size > 0 %}
                                                     {% for model-group in linklists[dynamic_list_handle].links %}
@@ -130,6 +130,7 @@
 }
 .model-item{
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 </style>
