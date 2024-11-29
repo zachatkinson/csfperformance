@@ -63,7 +63,7 @@
                                             {% if forloop.index0 > 0 %}
                                                 {% assign hidden_class = 'hide_me' %}
                                             {% endif %}
-                                            <div style="height: 100%; padding-left: 1em; padding-right: 1em;" class=" model-item {{ hidden_class }}" data-model="{{ childlink.handle }}">
+                                            <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em;" class=" model-item {{ hidden_class }}" data-model="{{ childlink.handle }}">
                                                 <ul class="list-unstyled" role="list" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
                                                     {%- for grandchildlink in childlink.links -%}
                                                         <li>
