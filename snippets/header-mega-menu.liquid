@@ -63,24 +63,27 @@
                                             {% if forloop.index0 > 0 %}
                                                 {% assign hidden_class = 'hide_me' %}
                                             {% endif %}
-                                            <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em;" class=" model-item {{ hidden_class }}" data-model="{{ childlink.handle }}">
-                                                <ul class="list-unstyled" role="list" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
-                                                    {%- for grandchildlink in childlink.links -%}
-                                                        <li>
-                                                            <a
-                                                                    id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                                                    href="{{ grandchildlink.url }}"
-                                                                    class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                                                    {% if grandchildlink.current %}
-                                                                        aria-current="page"
-                                                                    {% endif %}
-                                                                    style="font-size: 1em;"
-                                                            >
-                                                                {{ grandchildlink.title | escape }}
-                                                            </a>
-                                                        </li>
+                                            <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em;" class="model-item hide_me" data-model="{{ childlink.handle }}">
+                                                {% assign dynamic_list_handle = childlink.handle | append: "-models" %}
+                                                {% if linklists[dynamic_list_handle] and linklists[dynamic_list_handle].links.size > 0 %}
+                                                    {% for model-group in linklists[dynamic_list_handle].links %}
+                                                        <!-- Render each model link -->
+                                                        <div>
+                                                            <h2 style="margin-bottom: 0;">{{ model-group.title }}</h2>
+                                                            <ul class="list-unstyled" role="list">
+                                                                {% for model in model-group.links %}
+                                                                    <li><a href="{{ model.url }}" class="mega-menu__link link{% if model.current %} mega-menu__link--active{% endif %}"
+                                                                                {% if model.current %}
+                                                                                    aria-current="page"
+                                                                                {% endif %}
+                                                                           style="font-size: 1em;">{{ model.title }}</a></li>
+                                                                {% endfor %}
+                                                            </ul>
+                                                        </div>
                                                     {% endfor %}
-                                                </ul>
+                                                {% endif %}
+
+
                                             </div>
                                         {% endfor %}
                                     </div>
@@ -112,7 +115,7 @@
 </nav>
 <style>
     .hide_me{
-        display: none;
+        display: none !important;
     }
     .mega-menu__link--level-2 {
         font-size: 1.0em;
@@ -125,12 +128,26 @@
         background-color: #e54242;
         color: #fff;
     }
+    .model-item{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: max-content;
+    }
 
 </style>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const brands = document.querySelectorAll('.brand-item');
         const models = document.querySelectorAll('.model-item');
+
+        // Initial State: Show the first model-item and hide others
+        models.forEach((model, index) => {
+            if (index === 0) {
+                model.classList.remove('hide_me');
+            } else {
+                model.classList.add('hide_me');
+            }
+        });
 
         brands.forEach((brand) => {
             brand.addEventListener('click', function (event) {
@@ -140,14 +157,13 @@
                 // Get the selected brand's data attribute
                 const selectedBrand = this.getAttribute('data-brand');
 
-                // Remove highlight and chevron from all brands
+                // Remove highlight from all brands
                 brands.forEach((otherBrand) => {
                     otherBrand.classList.remove('highlight');
                 });
 
                 // Add highlight to the selected brand
                 brand.classList.add('highlight');
-
 
                 // Hide all model items
                 models.forEach((model) => {
