@@ -151,30 +151,6 @@
           "custom_css": ""
         }
       },
-      "12645029315662244871": {
-        "type": "shopify://apps/meteor-mega-menu/blocks/app_embed/9412d6a7-f8f8-4d65-b9ae-2737c2f0f45b",
-        "disabled": false,
-        "settings": {
-          "navigation_link_caret_style": "outline",
-          "navigation_link_spacing": 16,
-          "menu_vertical_padding": 0,
-          "menu_justify_content": "flex-start",
-          "menu_font_size": 16,
-          "menu_font_weight": "400",
-          "menu_text_transform": "none",
-          "menu_center_in_viewport": false,
-          "menu_vertical_offset": 10,
-          "menu_display_action": "hover",
-          "menu_display_delay": "0",
-          "menu_display_animation": "none",
-          "disable_desktop": false,
-          "mobile_breakpoint": 0,
-          "disable_mobile": false,
-          "desktop_nav_selector": "",
-          "mobile_nav_selector": "",
-          "addons_enabled": false
-        }
-      },
       "14877840126407362364": {
         "type": "shopify://apps/c-year-make-model-search/blocks/app-embed-ymm-script-new/ce35ea35-ef50-4f43-8cb6-7c34cae4c285",
         "disabled": false,
@@ -249,12 +225,12 @@
       },
       "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b": {
         "settings": {
-          "background": "#202020",
+          "background": "#000000",
           "background_gradient": "",
           "text": "#f5f5f5",
-          "button": "#e54242",
+          "button": "#e32a37",
           "button_label": "#f5f5f5",
-          "secondary_button_label": "#e54242",
+          "secondary_button_label": "#e32a37",
           "shadow": "#494949"
         }
       }
