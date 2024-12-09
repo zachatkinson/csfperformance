@@ -1,0 +1,607 @@
+{% comment %} New App Embed Block [key: "show_app_embed_new"] - Version (2.0.0) (NOTE: It is due to manage upgrade work not creates an issue for old users) - 786/92/313/ASKMPF. {% endcomment %}
+
+<!-- Cli 3.0 Migrated with Simplified Deployment [New App Embed] - 786/92/313/ASKMPF -->
+
+{% comment %} Fetch required metafields data - 786/92 {% endcomment %}
+{%- liquid
+	assign curr_locale_key = request.locale.iso_code | prepend: "lang_"
+	assign curr_lang_found = shop.metafields.cws_ymm[curr_locale_key].value
+   
+	if curr_lang_found == blank
+	assign primary_lang = "lang_en"
+	assign primary_lang_found = shop.metafields.cws_ymm[primary_lang].value	
+	assign searchbox_title = primary_lang_found.searchbox_title | escape | replace: '&quot;', '\"' | replace: '&#39;', "'" 
+	assign select_label = primary_lang_found.select_label
+	assign none_txt = primary_lang_found.none_txt | default: "None"
+	assign search_button = primary_lang_found.search_button | default: "Search"
+	assign reset_button = primary_lang_found.reset_button | default: "Reset"
+	assign no_results = primary_lang_found.no_results | default: "There are No Products found."
+	assign ymm_products = primary_lang_found.products | default: "Products"
+	assign ymm_product = primary_lang_found.product | default: "Product"
+	assign sale_lbl = primary_lang_found.sale_lbl | default: "Sale"
+	assign soldout_lbl = primary_lang_found.soldout_lbl | default: "Soldout"
+	assign product_pagetitle = primary_lang_found.product_pagetitle
+	assign no_results_slct = primary_lang_found.no_results_slct | default: "No results found."
+else
+	assign searchbox_title = curr_lang_found.searchbox_title | escape | replace: '&quot;', '\"' | replace: '&#39;', "'" 
+
+	assign select_label = curr_lang_found.select_label
+	assign none_txt = curr_lang_found.none_txt | default: "None"
+	assign search_button = curr_lang_found.search_button | default: "Search"
+	assign reset_button = curr_lang_found.reset_button | default: "Reset"
+	assign no_results = curr_lang_found.no_results | default: "There are No Products found."
+	assign ymm_products = curr_lang_found.products | default: "Products"
+	assign ymm_product = curr_lang_found.product | default: "Product"
+	assign sale_lbl = curr_lang_found.sale_lbl | default: "Sale"
+	assign soldout_lbl = curr_lang_found.soldout_lbl | default: "Soldout"
+	assign product_pagetitle = curr_lang_found.product_pagetitle
+	assign no_results_slct = curr_lang_found.no_results_slct | default: "No results found."
+    assign ymm_fields_trans_obj = curr_lang_found.ymm_fields_json
+endif
+
+assign ymm_srchbx_colors = shop.metafields.cws_ymm.ymm_searchbox_colors.value
+assign ymm_fitment_colors = shop.metafields.cws_ymm.ymm_fitment_colors.value
+assign ymm_result_pg_colors = shop.metafields.cws_ymm.ymm_result_pg_colors.value
+
+assign show_basic_plan_blocks_new = app.metafields.cws_ymm.show_basic_plan_blocks_new | default: show_basic_plan_blocks_new
+assign show_pro_plan_blocks_new = app.metafields.cws_ymm.show_pro_plan_blocks_new | default: show_pro_plan_blocks_new
+-%}
+
+<!-- When client has disabled theme app ext. then App will be running from theme side then below will cause double time JS/CSS call type of issue. So, prevent it. - 786/92 -->
+<script type="text/javascript">
+var shop_domain = '{{ shop.permanent_domain }}';
+var front_domain = '{{ shop.domain }}';
+var img_src= '{{ "loader.png" | asset_url }}';
+var data_url = 'https://www.ymmshopify.capacitywebservices.com/ajax/get_dropdowns_version3.php';	
+var template_name = "{{ template.name }}";
+var speed_up_mode = "{{ shop.metafields.cws_ymm.speedup_mode }}";
+var ymm_paging_js = "{{ 'ymm-products-paging.js' | asset_url }}";
+var shop_currency = "{{ shop.currency }}";
+var theme_id = "{{ theme.id }}";
+var ymm_money_format = "{{ shop.money_format | strip_html }}";
+window.shopify_ajaxapi = "{{ 'api.jquery.js' | shopify_asset_url }}";
+
+{% if shop.metafields.cws_ymm.ymm_searchbox_use == "no" %}
+	var ymm_searchbox_use = false;
+{% else %}
+	var ymm_searchbox_use = true;
+{% endif %}
+
+var ymmbox_css = "{{ 'ymm-searchbox.css' | asset_url }}";
+var ymm_result_css = "{{ 'ymm-custompage.css' | asset_url }}";
+
+//For 'Use new type of dropdown' settings - 786
+var use_new_type_dropdowns = "{{ shop.metafields.cws_ymm.use_new_type_dropdowns | default: 'no' }}";
+var no_searchbox = "{{ shop.metafields.cws_ymm.no_searchbox | default: 'no' }}";
+var min_res_search = "";
+  
+if(no_searchbox == "yes"){
+var min_res_search = Infinity;
+}
+
+//Lang. Labels - 786
+var select_lbl = "{{ select_label | escape | replace: '&quot;', '\"' | replace: '&#39;', "'" }}";
+select_lbl += " "; //Add space between 'select' and 'ymm field label' - 786
+var none_lbl = "{{ none_txt | escape | replace: '&quot;', '\"' | replace: '&#39;', "'" }}";
+var search_bttn = "{{ search_button | escape | replace: '&quot;', '\"' | replace: '&#39;', "'" }}";
+var reset_bttn = "{{ reset_button | escape | replace: '&quot;', '\"' | replace: '&#39;', "'" }}";
+var no_results = "{{ no_results | escape | replace: '&quot;', '\"' | replace: '&#39;', "'" }}";
+var ymm_products = "{{ ymm_products | escape | replace: '&quot;', '\"' | replace: '&#39;', "'" }}";
+var ymm_product = "{{ ymm_product | escape | replace: '&quot;', '\"' | replace: '&#39;', "'" }}";
+var sale_lbl = "{{ sale_lbl | escape | replace: '&quot;', '\"' | replace: '&#39;', "'" }}";
+var soldout_lbl = "{{ soldout_lbl | escape | replace: '&quot;', '\"' | replace: '&#39;', "'" }}";
+var product_pagetitle = "{{ product_pagetitle | escape | replace: '&quot;', '\"' | replace: '&#39;', "'" }}";
+var no_results_slct = "{{ no_results_slct | escape | replace: '&quot;', '\"' | replace: '&#39;', "'" }}";
+//Ends here - 786
+
+//Multi Currency conversion by Shopify Market - 786
+var enable_market_feature =  '{{ shop.metafields.cws_ymm.enable_market_feature | default: "no" }}';
+var dis_currency_with_code = '{{ shop.metafields.cws_ymm.dis_currency_with_code | default: "no" }}';
+var lang_code = "{{ request.locale.iso_code }}";
+var pri_lang_code = "{{ primary_lang | replace: 'lang_', '' }}"
+window.my_route_url = "{{ routes.root_url }}";
+window.my_market_id = "{{ localization.market.id }}";
+window.my_curr_code = "{{ cart.currency.iso_code }}";
+window.my_country = "{{ localization.country.iso_code }}";
+var searchURL = '/pages/product-result';
+
+//If market feature is enabled then set Search page URL as per the route of market - 786.
+if(enable_market_feature == "yes" && window.my_route_url != "/") {
+   searchURL = window.my_route_url+'/pages/product-result';
+}
+//Ended Here - 786
+
+//Setting products limit per page. - 786
+var products_limit = '{{ shop.metafields.cws_ymm.products_limit | strip | default: "20" }}';
+products_limit = parseInt(products_limit);
+
+//Img dimension
+var ymm_img_dimension = '{{ shop.metafields.cws_ymm.img_dimension | strip | default: "240x240" }}';
+
+//Show sku
+var show_sku = '{{ shop.metafields.cws_ymm.show_sku | strip | default: "no" }}';
+
+//Show vendor
+var show_vendor = '{{ shop.metafields.cws_ymm.show_vendor | strip | default: "no" }}';
+
+//Enable Skip None Dynamic Field in Chaining - 786
+var enable_skip_none = "{{ shop.metafields.cws_ymm.enable_skip_none | default: 'no' }}";
+var skip_field_list = "{{ shop.metafields.cws_ymm.skip_field_list | default: '-1' }}";
+var skip_fields_arr = [];
+var first_skip_field = "";
+window.prev_field_id = "";
+
+//For new feature - Required Fields Settings - 786.
+var show_star_sign_for_req_field = "{{ shop.metafields.cws_ymm.show_star_sign_for_req_field | default: 'no' }}";
+var req_field_list = "{{ shop.metafields.cws_ymm.req_field_list | default: '-1' }}";
+var req_last_field = "-1";
+
+if(req_field_list != "-1"){
+  var req_fields_arr = req_field_list.toString().split(",");
+  var req_last_field = req_fields_arr[req_fields_arr.length-1]; 
+}
+//ends - 786.
+
+//For new feature - URL settings - 786.
+var enable_url_ftr = "{{ shop.metafields.cws_ymm.enable_url_ftr | default: 'no' }}";
+var use_url_ftr_for_filter = "{{ shop.metafields.cws_ymm.use_url_ftr_for_filter | default: 'no' }}";
+
+//For new feature - Infinite Scroll Settings - 786.
+var en_ymm_infinite_scroll = "{{ shop.metafields.cws_ymm.ymm_infinite_scroll | default: 'no' }}";
+
+//For old user > page-width class issue fix - 786
+var ymm_cont_class = "{{ shop.metafields.cws_ymm.ymm_cont_class | default: '-1' }}";
+  
+//Pro Plan Configurations Start Here - 786
+var pro_plan = "";
+var item_fit_icon = "{{ 'ymm_exact_fit.png' | asset_img_url: '20X' }}";
+var item_not_fit_icon = "{{ 'ymm_not_fit.png' | asset_img_url: '20X' }}";
+var uni_item_fit_icon = "{{ 'ymm_universal_fit.png' | asset_img_url: '20X' }}";
+var ymm_product_id = "{{ product.id }}";
+var ymmcomp_css = "{{ 'ymm-compatible.css' | asset_url }}";
+
+//Cart info feature - 786
+{% assign use_cart_info_ftr = shop.metafields.cws_ymm.use_cart_info_ftr | default: 'no' %}
+var use_cart_info_feature = "{{ use_cart_info_ftr }}"; 
+
+{% if show_basic_plan_blocks_new == true %}
+pro_plan = use_cart_info_feature = "no";
+{% endif %}
+
+{% if show_pro_plan_blocks_new == true %}
+pro_plan = "yes";
+{% endif %}
+
+//Ends Here - 786
+
+//Get Colors - 786
+var ymmbox_title_color = "{{ ymm_srchbx_colors.ymmbox_title_color | default: '#000000' }}";
+var ymmbox_border_color = "{{ ymm_srchbx_colors.ymmbox_border_color | default: '#ffffff' }}";
+var ymmbox_font_color = "{{ ymm_srchbx_colors.ymmbox_font_color | default: '#000000' }}";
+var ymmbox_bg_color = "{{ ymm_srchbx_colors.ymmbox_bg_color | default: '#ffffff' }}";
+//Search btn border color - 786
+var btns_border_color = "{{ ymm_srchbx_colors.btns_border_color | default: '#000000' }}"; 
+//Reset btn border color - 786
+var reset_btn_border_color = "{{ ymm_srchbx_colors.reset_btn_border_color | default: '#dddddd' }}"; 
+var search_btn_font_color = "{{ ymm_srchbx_colors.search_btn_font_color | default: '#ffffff' }}";
+var search_btn_bg_color = "{{ ymm_srchbx_colors.search_btn_bg_color | default: '#000000' }}";
+var reset_btn_font_color = "{{ ymm_srchbx_colors.reset_btn_font_color | default: '#3d4246' }}";
+var reset_btn_bg_color = "{{ ymm_srchbx_colors.reset_btn_bg_color | default: '#dddddd' }}";
+//786 - dropdown color options
+var slct_drop_bg_clr = "{{ ymm_srchbx_colors.slct_drop_bg_clr | default: '#ffffff' }}";
+var slct_drop_font_clr = "{{ ymm_srchbx_colors.slct_drop_font_clr | default: '#000000' }}";
+var slct_drop_border_clr = "{{ ymm_srchbx_colors.slct_drop_border_clr | default: '#dfdfdf' }}";
+var ymmbox_bg_img = "";
+var search_btn_img = "";
+var reset_btn_img = "";
+var ymmbox_logo_img = "";
+var ymmbox_logo_position = "{{ ymm_srchbx_colors.ymmbox_logo_position }}";
+
+{% if ymm_srchbx_colors.ymmbox_bg_img != blank %}
+ymmbox_bg_img = "{{ ymm_srchbx_colors.ymmbox_bg_img | file_url }}";
+{% endif %}
+
+{% if ymm_srchbx_colors.search_btn_img != blank %}
+search_btn_img = "{{ ymm_srchbx_colors.search_btn_img | file_url }}";
+{% endif %}
+
+{% if ymm_srchbx_colors.reset_btn_img != blank %}
+reset_btn_img = "{{ ymm_srchbx_colors.reset_btn_img | file_url }}";
+{% endif %}
+
+{% if ymm_srchbx_colors.ymmbox_logo_img != blank %}
+ymmbox_logo_img = "{{ ymm_srchbx_colors.ymmbox_logo_img | file_url }}";
+{% endif %}
+
+//YMMBOX dynamic CSS - 786
+var ymm_dyn_css = "#ymm_searchbox h2 { color: "+ymmbox_title_color+"; }#ymm_searchbox { border: 1px solid "+ymmbox_border_color+";} #ymm_searchbox label { color: "+ymmbox_font_color+"; } #ymm_searchbox .btn.ymm_search,#ymm_searchbox .btn.ymm_search[disabled] { border-color: "+btns_border_color+"; } #ymm_searchbox .btn.ymm_search { background-color: "+search_btn_bg_color+"; color: "+search_btn_font_color+"; } #ymm_searchbox .btn.ymm_reset { border-color: "+reset_btn_border_color+"; background-color: "+reset_btn_bg_color+"; color: "+reset_btn_font_color+"; } #ymm_searchbox select, #ymm_searchbox .select2-container--default .select2-selection--single { color: "+slct_drop_font_clr+"; background-color: "+slct_drop_bg_clr+"; border-color: "+slct_drop_border_clr+";} #ymm_searchbox .select2-container--default .select2-selection--single .select2-selection__arrow b { border-color: "+slct_drop_font_clr+"; } .ymm_app .select2-container .select2-dropdown { color: "+slct_drop_font_clr+"; background-color: "+slct_drop_bg_clr+"; border-color: "+slct_drop_border_clr+"; } .ymm_app .select2-container .select2-results__option { border-top: 1px solid "+slct_drop_border_clr+";}";
+
+//For Old user > page-width class issue fix - 786
+if(ymm_cont_class == "-1") {
+   ymm_dyn_css += ".page-width { width: 100%; max-width:1200px; padding-left:15px; padding-right:15px; margin:0 auto; }.page-width:after { content: ''; display: block; clear: both; }.page-width .page-width { max-width: 100%; padding-left: 0; padding-right: 0; }.page-content .page-width,.wrapper .page-width { max-width: 100%; width: auto; padding: 0; margin: 0; }";
+} 
+  
+if(ymmbox_bg_img != "") {
+	ymm_dyn_css += "#ymm_searchbox { background-image:url("+ymmbox_bg_img+"); }"; //786 
+} else {
+	ymm_dyn_css += "#ymm_searchbox { background-color: "+ymmbox_bg_color+"; }"; //786 
+}
+
+//Show '*' sign in front of required fields list - 786
+if(show_star_sign_for_req_field == "yes") {
+   ymm_dyn_css += "#ymm_searchbox label.required:after { content: ' * '; color: red; }"; 
+}
+
+//Swap it - 786
+var ymm_box_css = ymm_dyn_css; 
+
+//YMM result page CSS - 786
+var ymm_paging_bg_color = "{{ ymm_result_pg_colors.ymm_paging_bg_color | default: '#ffffff' }}"; 
+var ymm_paging_border_color = "{{ ymm_result_pg_colors.ymm_paging_border_color | default: '#000000' }}"; 
+var ymm_paging_font_color = "{{ ymm_result_pg_colors.ymm_paging_font_color | default: '#000000' }}"; 
+var ymm_paging_active_bg_color = "{{ ymm_result_pg_colors.ymm_paging_active_bg_color | default: '#000000' }}"; 
+var ymm_paging_active_font_color = "{{ ymm_result_pg_colors.ymm_paging_active_font_color | default: '#ffffff' }}"; 
+var ymm_result_pg_heading_color = "{{ ymm_result_pg_colors.ymm_result_pg_heading_color | default: '#000000' }}"; 
+var prd_separator_border_clr = "{{ ymm_result_pg_colors.prd_separator_border_clr | default: '#dddddd' }}"; 
+var prd_count_color = "{{ ymm_result_pg_colors.prd_count_color | default: '#000000' }}"; 
+var prd_title_color = "{{ ymm_result_pg_colors.prd_title_color | default: '#000000' }}"; 
+var prd_price_color = "{{ ymm_result_pg_colors.prd_price_color | default: '#000000' }}"; 
+var prd_sale_price_color = "{{ ymm_result_pg_colors.prd_sale_price_color | default: '#000000' }}"; 
+var ymm_result_pg_fitment_text_color = "{{ ymm_result_pg_colors.ymm_result_pg_fitment_text_color | default: '#000000' }}"; 
+var sale_badge_font_color = "{{ ymm_result_pg_colors.sale_badge_font_color | default: '#ffffff' }}"; 
+var sale_badge_bg_color = "{{ ymm_result_pg_colors.sale_badge_bg_color | default: '#68bc65' }}"; 
+var soldout_badge_font_color = "{{ ymm_result_pg_colors.soldout_badge_font_color | default: '#ffffff' }}"; 
+var soldout_badge_bg_color = "{{ ymm_result_pg_colors.soldout_badge_bg_color | default: '#fc0b0b' }}"; 
+
+//NEW - 786
+var prd_sku_vendor_color = "{{ ymm_result_pg_colors.prd_sku_vendor_color | default: '#000000' }}"; 
+
+var ymm_res_css = ".ymm-grid .section-header h1 { color: "+ymm_result_pg_heading_color+"; } .ymm-grid .section-header h4 { color: "+prd_count_color+"; } .ymm-grid .section-header { border-color: "+prd_separator_border_clr+"; } .ymm-grid .grid-view-item__title a { color: "+prd_title_color+"; } .ymm-grid .ymm-product-price { color: "+prd_price_color+"; } .ymm-grid .compare_price { color: "+prd_sale_price_color+"; } .ymm_fitment_type { color: "+ymm_result_pg_fitment_text_color+"; } .ymm-soldout { background-color: "+soldout_badge_bg_color+"; color: "+soldout_badge_font_color+";} .ymm-salebox { background-color: "+sale_badge_bg_color+"; color: "+sale_badge_font_color+";} .ymm-grid  .paging-outr ul.pagination,.ymm-grid .paging-outr ul.pagination > li > a { color: "+ymm_paging_font_color+"; } .ymm-grid .paging-outr ul.pagination > li.active > a, .ymm-grid  .paging-outr ul.pagination > li.active > a:hover, .ymm-grid .paging-outr ul.pagination > li.active > a:focus { background-color: "+ymm_paging_active_bg_color+"; color: "+ymm_paging_active_font_color+"; border-color: "+ymm_paging_active_bg_color+";} .ymm-grid .paging-outr ul.pagination > li > a { background-color: "+ymm_paging_bg_color+"; border-color: "+ymm_paging_border_color+"; } .ymm-grid .ymm-product-vendor a,.ymm-grid .ymm-product-sku { color: "+prd_sku_vendor_color+"; }";
+
+//For Old user > page-width class issue fix - 786
+if(ymm_cont_class == "-1") {
+ymm_res_css += ".page-width .page-width { max-width: 100%; padding-left: 0; padding-right: 0; }";
+}
+//ends - 786
+
+//Fitment and Compatible Dynamic CSS needed to add on product page only - 786.
+if(template_name == "product" && pro_plan == "yes") {
+	//Compatible Tbl CSS - 786
+	var chart_heading_font_color = "{{ ymm_fitment_colors.chart_heading_font_color | default: '#000000' }}"; 
+	var chart_header_row_font_color = "{{ ymm_fitment_colors.chart_header_row_font_color | default: '#000000' }}"; 
+	var chart_header_row_bg_color = "{{ ymm_fitment_colors.chart_header_row_bg_color | default: '#f0f0f0' }}"; 
+	var chart_tbl_font_color = "{{ ymm_fitment_colors.chart_tbl_font_color | default: '#000000' }}"; 
+	var chart_tbl_bg_color = "{{ ymm_fitment_colors.chart_tbl_bg_color | default: '#ffffff' }}"; 
+	var go_back_btn_bg_color = "{{ ymm_fitment_colors.go_back_btn_bg_color | default: '#4f4f4f' }}"; 
+	var go_back_btn_font_color = "{{ ymm_fitment_colors.go_back_btn_font_color | default: '#ffffff' }}"; 
+	var next_arrow_bg_color = "{{ ymm_fitment_colors.next_arrow_bg_color | default: '#dddddd' }}"; 
+	var next_arrow_font_color = "{{ ymm_fitment_colors.next_arrow_font_color | default: '#000000' }}"; 
+
+	var ymm_comp_css = ".ymm_comptbl_list h3{ color: "+chart_heading_font_color+"; } .ymm-table-data { background-color: "+chart_tbl_bg_color+"; } .ymm_comptbl_list thead th, .ymm_comptbl_list tfoot th { background-color: "+chart_header_row_bg_color+"; color: "+chart_header_row_font_color+"; } .ymm_comptbl_list tbody th, .ymm_comptbl_list tbody td { color: "+chart_tbl_font_color+"; border: 1px solid "+chart_header_row_bg_color+"; } #ymm_data_mobile .next_ymm:after { border-color: "+next_arrow_font_color+"; } #ymm_data_mobile .next_ymm { background: "+next_arrow_bg_color+"; } #ymm_data_mobile .prev_ymm { background-color: "+go_back_btn_bg_color+"; color: "+go_back_btn_font_color+"; } #ymm_data_mobile .ymm_nested_header { background-color: "+chart_header_row_bg_color+"; color: "+chart_header_row_font_color+"; border-color: "+chart_header_row_bg_color+"; } #ymm_data_mobile ul { background-color: "+chart_tbl_bg_color+"; border-color: "+chart_header_row_bg_color+"; } #ymm_data_mobile li { color: "+chart_tbl_font_color+"; } #ymm_data_mobile li:not(:last-child) { border-color: "+chart_header_row_bg_color+"; } .paging-outr ul.pagination,.paging-outr ul.pagination > li > a { color: "+ymm_paging_font_color+"; } .paging-outr ul.pagination > li.active > a, .paging-outr ul.pagination > li.active > a:hover, .paging-outr ul.pagination > li.active > a:focus { background-color: "+ymm_paging_active_bg_color+"; color: "+ymm_paging_active_font_color+"; border-color: "+ymm_paging_active_bg_color+";} .paging-outr ul.pagination > li > a { background-color: "+ymm_paging_bg_color+"; border-color: "+ymm_paging_border_color+"; }"; //786
+
+    //For Old user > page-width class issue fix - 786
+    if(ymm_cont_class == "-1") {
+       ymm_comp_css += ".page-width .page-width { max-width: 100%; padding-left: 0; padding-right: 0; }";
+    }
+  
+	//Get Fitment Colors - 786
+	var fitment_block_bg_color = "{{ ymm_fitment_colors.fitment_block_bg_color | default: '#ffffff' }}"; 
+	var fitment_block_border_color = "{{ ymm_fitment_colors.fitment_block_border_color | default: '#eaeaea' }}"; 
+	var item_fit_block_text_color = "{{ ymm_fitment_colors.item_fit_block_text_color | default: '#000000' }}"; 
+	var item_uni_fit_block_text_color = "{{ ymm_fitment_colors.item_uni_fit_block_text_color | default: '#000000' }}"; 
+	var item_do_not_fit_block_text_color = "{{ ymm_fitment_colors.item_do_not_fit_block_text_color | default: '#000000' }}"; 
+	var check_diff_vehicle_btn_bg_color = "{{ ymm_fitment_colors.check_diff_vehicle_btn_bg_color | default: '#4f4f4f' }}"; 
+	var check_diff_vehicle_btn_font_color = "{{ ymm_fitment_colors.check_diff_vehicle_btn_font_color | default: '#ffffff' }}"; 
+	var check_diff_vehicle_btn_hover_font_color = "{{ ymm_fitment_colors.check_diff_vehicle_btn_hover_font_color | default: '#ffffff' }}"; 
+	var check_diff_vehicle_btn_hover_bg_color = "{{ ymm_fitment_colors.check_diff_vehicle_btn_hover_bg_color | default: '#242424' }}"; 
+	var view_all_btn_font_color = "{{ ymm_fitment_colors.view_all_btn_font_color | default: '#ffffff' }}"; 
+	var view_all_btn_bg_color = "{{ ymm_fitment_colors.view_all_btn_bg_color | default: '#000000' }}"; 
+	var view_all_btn_font_hover_color = "{{ ymm_fitment_colors.view_all_btn_font_hover_color | default: '#ffffff' }}"; 
+	var view_all_btn_hover_bg_color = "{{ ymm_fitment_colors.view_all_btn_hover_bg_color | default: '#444444' }}"; 
+	
+	ymm_dyn_css = ".ymm_fitment_block { background-color: "+fitment_block_bg_color+"; border: 1px solid "+fitment_block_border_color+"; } .ymm_fitment_block .item_fits_cont p,.ymm_fitment_block .item_fits_cont div { color: "+item_fit_block_text_color+"; } .item_unfits_cont { color: "+item_do_not_fit_block_text_color+"; } .ymm_fitment_block .item_fits_cont.uni_fit p,.ymm_fitment_block .item_fits_cont.uni_fit div{ color: "+item_uni_fit_block_text_color+"; } #reset_ymm_fitment { color: "+check_diff_vehicle_btn_font_color+"; background-color: "+check_diff_vehicle_btn_bg_color+";  } #reset_ymm_fitment:hover { color: "+check_diff_vehicle_btn_hover_font_color+"; background-color: "+check_diff_vehicle_btn_hover_bg_color+"; } #view_fitments:hover { background-color: "+view_all_btn_hover_bg_color+"; color: "+view_all_btn_font_hover_color+"; } #view_fitments { background-color: "+view_all_btn_bg_color+"; color: "+view_all_btn_font_color+"; }"; //Overwrite here - 786
+
+    //786
+	var ymm_fitment_css = ymm_dyn_css; 
+}
+//Ends Here - 786
+			
+//Define Load Javascript Function If Not Exists
+if(typeof ymmLoadScript === 'undefined') {
+window.ymmLoadScript = function(url,id,callback){
+  	var script = document.createElement("script")
+  	script.type = "text/javascript";
+
+  	if (script.readyState) { //IE
+   		 	script.onreadystatechange = function () {
+      		if (script.readyState == "loaded" || script.readyState == "complete" || script.readyState == "loading" || dom.readyState == "uninitialized") {
+        		script.onreadystatechange = null;
+        		callback();
+     	 	}
+    		};
+  	} else { //Others
+    		script.onload = function () {
+      			callback();
+    		};
+  	}
+
+  	script.type = 'text/javascript';
+  	script.defer = true;
+  	script.src = url;
+	
+	if(id != "") {
+	script.id = id;
+	}
+	
+  	var head = document.getElementsByTagName('head')[0];
+  	head.appendChild(script);
+}; 
+}
+
+//URL Func. - 786
+window.getYMMParameter = function(name,url) {
+   if (!url) url = window.location.href;
+     name = name.replace(/[\[\]]/g, "\\$&");
+     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+         results = regex.exec(url);
+     if (!results) return null;
+     if (!results[2]) return '';
+     return decodeURIComponent(results[2].replace(/\+/g, " "));
+};
+  
+//Main ymm function - 786/92
+function ymmCall()
+{
+{% comment %} If on ymm result page - show ymmbox setting is NO then do not include ymm JS - 786/92 {% endcomment %}
+{% if page.url and page.handle == "product-result" and shop.metafields.cws_ymm.ymm_searchbox_use == "no" %}
+	jQuery("div.ymm_res_pg").remove();
+{% else %}
+			//Find out first skip field if skip none is enabled - 786
+			if(skip_field_list != "-1") {
+				skip_fields_arr = skip_field_list.toString().split(",");
+
+				jQuery.each(skip_fields_arr, function (index, value){
+					if(index == 0){
+						first_skip_field =  "."+value; //First skip field is used as a pointer to manage thing to display required fields before this field. - 786
+					}
+      
+					skip_fields_arr[index] = "."+value;
+				});
+    
+				skip_field_list = skip_fields_arr.join(","); 
+			}
+			
+			//YMMBOX now append with JS for 2023-04 API (0 File PUT) Solution for Vintage Clients. - 786
+			if(jQuery("#ymm_searchbox_cont").length > 0) {
+
+            {% comment %} YMM Label Translations Part - 786 {% endcomment %}
+			{% liquid
+			assign ymm_data_json_obj = shop.metafields.cws_ymm.first_field_json.value
+			assign ymm_fields_obj = shop.metafields.cws_ymm.ymm_fields_json.value
+            assign first_field_lbl = ymm_fields_obj.first_field.field_lbl
+            assign second_field_lbl = ymm_fields_obj.second_field.field_lbl
+            assign first_field_key = ymm_fields_obj.first_field.field_key
+            assign second_field_key = ymm_fields_obj.second_field.field_key
+
+            # Override first field label if corresponding translated text available for "market" feature - 786
+            if shop.metafields.cws_ymm.enable_market_feature == "yes"
+                # For First YMM field find it's correct label by field ID - 786.
+               	assign first_field_lbl_found = ymm_fields_trans_obj["first_field"] | where: "field_key", first_field_key | first
+                assign first_field_lbl_found_in_second_field = ymm_fields_trans_obj["second_field"] | where: "field_key", first_field_key | first
+                assign dyn_field_first_field_lbl_found = ymm_fields_trans_obj["dynamic_fields"] | where: "field_key", first_field_key | first
+              
+                # Label will be targetted based on field id rather than sequence because once field seq. changes in admin area after setting translations then not updated that seq. in trans. metafield - 786.
+                if first_field_lbl_found != blank
+                  assign first_field_lbl = first_field_lbl_found.field_lbl | escape
+                elsif dyn_field_first_field_lbl_found != blank
+                  assign first_field_lbl = dyn_field_first_field_lbl_found.field_lbl | escape
+                elsif first_field_lbl_found_in_second_field != blank
+                  assign first_field_lbl = first_field_lbl_found_in_second_field.field_lbl | escape
+                endif
+
+                # For Second YMM field find it's correct label by field ID - 786.
+                assign second_field_lbl_found = ymm_fields_trans_obj["second_field"] | where: "field_key", second_field_key | first
+                assign second_field_lbl_found_in_first_field = ymm_fields_trans_obj["first_field"] | where: "field_key", second_field_key | first
+                assign dyn_field_second_field_lbl_found = ymm_fields_trans_obj["dynamic_fields"] | where: "field_key", second_field_key | first
+
+                # Label will be targetted based on field id rather than sequence because once field seq. changes in admin area after setting translations then not updated that seq. in trans. metafield - 786.
+                if second_field_lbl_found != blank
+                  assign second_field_lbl = second_field_lbl_found.field_lbl | escape
+                elsif second_field_lbl_found_in_first_field != blank
+                  assign second_field_lbl = second_field_lbl_found_in_first_field.field_lbl | escape
+                elsif dyn_field_second_field_lbl_found != blank
+                  assign second_field_lbl = dyn_field_second_field_lbl_found.field_lbl | escape
+                endif 
+            endif
+			%}
+  
+			//Append First dropdown field with first dropdown Data - 786
+			{% if ymm_fields_obj != blank %}
+					
+			 //Fetch search box title and style to append at block level - 786
+			 var ymm_searchbox_title = "";
+			 var ymm_searchbox_style = "horizontal"; //By default
+		
+			 //Grab title and style details from shortcode - 786
+			 if(jQuery("#ymm_searchbox_cont #ymm_data").length>0) {	
+				if (typeof jQuery("#ymm_searchbox_cont #ymm_data").attr('data-searchbox-style') !== 'undefined') {
+					ymm_searchbox_style = jQuery("#ymm_searchbox_cont #ymm_data").attr('data-searchbox-style');
+				}
+					
+				ymm_searchbox_title = jQuery("#ymm_searchbox_cont #ymm_data").text();
+			}
+				
+			{% comment %} If shortcode is not parametrized and searhbox title is exists in Trans. section then give it 2nd priority. - 786 {% endcomment %} 
+			if(ymm_searchbox_title == "") {
+				ymm_searchbox_title = "{{ searchbox_title }}";
+			}
+			//Ends here - 786
+			
+			var ymm_box_html = '<div id="ymm_searchbox" class="'+ymm_searchbox_style+'">';
+			
+			if(ymm_searchbox_title != "") {
+			ymm_box_html += '<h2 id="ymm_label" style="display: none;">'+ymm_searchbox_title+'</h2>';
+			}
+			
+			ymm_box_html += '<form name="ymm" id="ymm_form" class="ymm_form">';
+			ymm_box_html += '<div class="formFields clearfix"><ul class="dropdowns" style="display: none;">';
+			
+			//IF Speed up mode is set as: ON then fields will be rendered upon page load quickly that is being fetched from metafields. - 786
+			if(speed_up_mode == "on") {		
+			ymm_box_html += "<li class='{{ ymm_fields_obj.first_field.field_key }}'><label class='ymm_label required' for='dropdown-{{ ymm_fields_obj.first_field.field_key }}'>{{ first_field_lbl }}</label><select id='dropdown-{{ ymm_fields_obj.first_field.field_key }}' class='ymm-filter'><option value='-1'>"+select_lbl+"{{ first_field_lbl }}</option>";
+
+			{% for first_ymm_field in ymm_data_json_obj %}
+          	ymm_box_html += '<option value="{{ first_ymm_field.tag_val }}">{{ first_ymm_field.field_val | escape }}</option>';
+    		{% endfor %}
+
+			ymm_box_html += '</select></li>';
+
+			//Append second dropdown field HTML - 786
+			ymm_box_html += "<li class='{{ ymm_fields_obj.second_field.field_key }}'><label class='ymm_label required' for='dropdown-2-{{ ymm_fields_obj.second_field.field_key }}'>{{ second_field_lbl }}</label><select id='dropdown-2-{{ ymm_fields_obj.second_field.field_key }}' class='ymm-filter' disabled='disabled'><option value='-1'>"+select_lbl+"{{ second_field_lbl }}</option></select></li>";
+	  
+			//Append rest of dynamic fields - 786
+			{% for dyn_field in ymm_fields_obj.dynamic_fields %}
+    		{% liquid
+			assign j = forloop.index | plus: 2
+            assign dyn_field_lbl = dyn_field.field_lbl
+            assign dyn_field_id = dyn_field.field_key
+
+            # Override dynamic field label with corresponding translated text if its available for "market" feature - 786
+            if shop.metafields.cws_ymm.enable_market_feature == "yes"
+                assign found_lbl_in_first_fld = ymm_fields_trans_obj["first_field"] | where: "field_key", dyn_field_id | first
+                assign found_lbl_in_second_fld = ymm_fields_trans_obj["second_field"] | where: "field_key", dyn_field_id | first
+                assign dyn_field_trans = ymm_fields_trans_obj["dynamic_fields"] | where: "field_key", dyn_field_id | first
+
+                # Label will be targetted based on field id rather than sequence because once field seq. changes in admin area after setting translations then not updated that seq. in trans. metafield - 786.
+                if found_lbl_in_first_fld != blank
+                  assign dyn_field_lbl = found_lbl_in_first_fld.field_lbl | escape
+                elsif found_lbl_in_second_fld != blank
+                  assign dyn_field_lbl =  found_lbl_in_second_fld.field_lbl | escape
+                elsif dyn_field_trans != blank
+				  assign dyn_field_lbl =  dyn_field_trans.field_lbl | escape
+                endif
+            endif  
+			%}
+			
+			ymm_box_html += "<li class='{{ dyn_field_id }}'><label class='ymm_label{% if shop.metafields.cws_ymm.req_field_list contains dyn_field_id or use_cart_info_ftr == "yes" %} required{% endif %}' for='dropdown-{{ j }}-{{ dyn_field_id }}'>{{ dyn_field_lbl }}</label><select id='dropdown-{{ j }}-{{ dyn_field_id }}' class='ymm-filter' disabled='disabled'><option value='-1'>"+select_lbl+"{{ dyn_field_lbl }}</option></select></li>";			
+			{% endfor %}
+
+			//Start btns - 786
+			ymm_box_html += '<li class="ymm_bttns"><div id="ymm_actions" class="button-action" align="center">';
+			
+			//Search btn - 786
+			ymm_box_html += '<button type="button" name="submit" id="ymm_search" class="btn ymm_search" disabled="disabled">';
+			
+			{% if ymm_srchbx_colors.search_btn_img != blank %}
+			ymm_box_html += '<img src="{{ ymm_srchbx_colors.search_btn_img | file_url }}" class="ymm_btn_img" alt="icon" loading="lazy" width="" height="" />';
+			{% endif %}
+		  
+			ymm_box_html += '<span class="ymm_btn_lbl">'+search_bttn+'</span></button>';
+			
+			//Reset btn - 786
+			ymm_box_html += '<button type="button" name="reset" id="ymm_reset" class="btn btn--secondary ymm_reset">';
+			
+			{% if ymm_srchbx_colors.reset_btn_img != blank %}
+			ymm_box_html += '<img src="{{ ymm_srchbx_colors.reset_btn_img | file_url }}" class="ymm_btn_img" alt="icon" loading="lazy" width="" height="" />';
+			{% endif %}
+			
+			ymm_box_html +='<span class="ymm_btn_lbl">'+reset_bttn+'</span></button>';
+			
+			ymm_box_html += '</div></li>';
+			//Ends btns - 786			
+			}
+			
+			ymm_box_html += '</ul></div></form></div>';
+			
+			//Append YMM fitment block via JS on product details page underneath YMMBOX. - 786
+			{% if template.name == "product" and show_pro_plan_blocks_new == true %}
+				ymm_box_html += '<div class="ymm_fitment_block" style="display: none;"><div class="ymm-fitment-loading" style="display: none;"></div><div class="ymm_fitment_inner"><div class="item_fits"></div><div class="item_unfits"></div></div></div>';
+			{% endif %}
+			
+			jQuery("#ymm_searchbox_cont").html(ymm_box_html);	
+			
+			{% endif %}
+			}
+			//Ends of YMMBOX now with JS for 2023-04 API upgrade - 786
+			  
+			//If ymmbox app block/shortcode is set on page then only include ymmbox JS to prevent JS inclusion on every page even on those pages whre ymmbox is not set or needed. - 786
+			if(jQuery("#ymm_searchbox").length > 0) {		
+				jQuery("head").append("<link rel='stylesheet' href='"+ymmbox_css+"' type='text/css' media='all'>");
+				jQuery("head").append('<style type="text/css" id="ymm_css">'+ymm_dyn_css+'</style>'); 
+                
+				//NEW TYPE DROPDOWNS FEATURE JS STARTS BELOW - 786
+				if(use_new_type_dropdowns != "no") {
+  				jQuery("head").append("<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css' type='text/css' media='all'>");
+				}
+				
+				//If select2 plugin JS not included in theme side then only include it - 786
+				var ymm_sel_script1 = jQuery('script[src*="select2.min.js"]').length;
+				
+				if(ymm_sel_script1 == 0) {
+				ymm_sel_script1 = jQuery('script[src*="select2.js"]').length;
+				}
+
+				//If use new type dropdowns setting is set as NO then skip to include script - 786
+				if(use_new_type_dropdowns == "no") {
+				ymm_sel_script1 = 1;  
+				}
+				
+				if(ymm_sel_script1 == 0) { 
+					window.ymmLoadScript("https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js","ymm_select2", function (){ 
+						window.ymmLoadScript("{{ 'ymm-searchbox-new-version.js' | asset_url }}","", function (){ });
+					});
+				 } else {
+					window.ymmLoadScript("{{ 'ymm-searchbox-new-version.js' | asset_url }}","", function (){ });
+				 }
+			}
+			//Ends of > [If ymmbox app block/shortcode is set on page then only include ymmbox JS to prevent JS inclusion on every page even on those pages whre ymmbox is not set or needed.] - 786 
+{% endif %}
+
+{% comment %} JS which runs on YMM product results page - 786. {% endcomment %}
+{% if page.url and page.handle == "product-result" %}
+	//Hide page title for ymm result page only - 786.
+	jQuery("body").addClass("ymm_prd_res_pg"); 
+	
+	//If client has set app block in header then YMMBOX just shown once only - 786/ALLAH
+	if(jQuery(".ymm_app").length > 1) {
+		jQuery(".ymm_app.ymm_res_pg").remove(); 
+	}
+	 
+	//["rte", "page-content" theme classes overriding ymm css, so better thing is to remove it for ymm page grid only.] - 786/92/ASK/313
+    jQuery(".ymm-result-page").parents().removeClass("rte page-content");
+   
+	jQuery("head").append("<link rel='stylesheet' href='"+ymm_result_css+"' type='text/css'>");
+	
+	jQuery("head").append('<style type="text/css" id="ymm_result_css">'+ymm_res_css+'</style>'); 
+	
+	//Check if shopify AJAX API lib. is not included then only include it.[It's require to add below line after jQuery has been loaded.]
+	var check_api_exist = jQuery('script[src*="api.jquery"]').length;
+ 
+	if(check_api_exist == 0) {
+		window.ymmLoadScript(window.shopify_ajaxapi,"", function (){ });
+	}
+  
+	window.ymmLoadScript("{{ 'ymm-products-result.js' | asset_url }}","", function (){ });
+{% endif %}
+
+{% comment %} Pro Plan have compatible feature for the Product Details Page - 786. {% endcomment %}
+{% if template.name == "product" and show_pro_plan_blocks_new == true %}
+	jQuery("head").append("<link rel='stylesheet' href='"+ymmcomp_css+"' type='text/css'>");
+    jQuery("head").append('<style type="text/css" id="ymm_comp_css">'+ymm_comp_css+'</style>'); 		
+	window.ymmLoadScript("{{ 'ymm-compatible-list.js' | asset_url }}","", function (){ });
+{% endif %}
+}
+
+//Check jquery lib. is already included or not and if version is less then call jquery lib through our App. - 786
+if ((typeof jQuery === "undefined") || (jQuery.fn.jquery.replace(/\.(\d)/g,".0$1").replace(/\.0(\d{2})/g,".$1") < "1.08.01")) {
+	window.ymmLoadScript("https://code.jquery.com/jquery-1.12.4.min.js","ymm_script", function (){
+     	jQuery.noConflict();
+
+        //786
+		ymmCall();
+	});
+} else { 
+    //313
+	ymmCall();
+}
+</script>

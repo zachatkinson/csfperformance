@@ -382,5 +382,18 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <!-- Start YMM short code -->
+    {%- unless template.name == "password" -%}
+      {% if shop.metafields.cws_ymm.enable_app == "yes" and shop.metafields.cws_ymm.disable_theme_app_ext == "yes" %}
+        {%- capture the_script_content -%}
+          {% render 'ymm-app-script' %}
+        {%- endcapture -%}
+        {% unless the_script_content contains "Liquid error" %}
+          {% render 'ymm-app-script', show_basic_plan_blocks_new: true %}
+        {%- endunless -%}
+      {% endif %}
+    {%- endunless -%}
+    <!-- End YMM short code -->
   </body>
 </html>

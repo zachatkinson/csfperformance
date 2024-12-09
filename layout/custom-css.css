@@ -3,13 +3,12 @@
     color: #f5f5f5 !important;
     max-width: 1100px;
     text-align: center;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
-#ymm_label h2 {
+#ymm_searchbox h2 {
     margin: 0 !important;
 }
-
 #ymm_searchbox,
 .ymm_app {
     background-color: #e32a37;
@@ -46,4 +45,7 @@
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
+}
+.grid-view-item__title{
+    font-weight: 400;
 }
