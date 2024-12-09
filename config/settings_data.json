@@ -436,7 +436,8 @@
       "#ymm_searchbox {width: 100%;}",
       "@keyframes fadeInAnimation {0% {opacity: 0; } 100% {opacity: 1; }}",
       ".slideshow__controls {display: none !important;}",
-      ".card__heading {font-weight: normal; font-size: 1.3em !important;}"
+      ".card__heading {font-weight: normal; font-size: 1.3em !important;}",
+      ".ymm-page-width{max-width: 100%;}"
     ]
   }
 }
