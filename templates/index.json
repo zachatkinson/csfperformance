@@ -55,7 +55,7 @@
           "settings": {
             "image": "shopify://shop_images/iccores_title-1.jpg",
             "side-link-alt-text": "Intercooler Cores",
-            "side-link-url": "#"
+            "side-link-url": "shopify://collections/universal-intercooler-cores"
           }
         },
         "side_link_kcAT8Y": {
@@ -230,6 +230,7 @@
             "title_color": "",
             "alignment": "center",
             "background_color": "",
+            "feed_id": "",
             "html_area": ""
           }
         }
