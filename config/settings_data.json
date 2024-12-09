@@ -430,13 +430,14 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "#ymm_label {font-weight: 400 !important; color: #f5f5f5 !important;}",
-      "#ymm_searchbox {margin: 0px auto;}",
-      "#ymm_searchbox,.ymm_app {background-color: #e32a37; border: 0; color: #f5f5f5; border-radius: 8px; min-height: 200px; animation: fadeInAnimation ease 3s; opacity: 0; animation-iteration-count: 1; animation-fill-mode: forwards; min-width: 100%; max-width: 1100px;}",
-      "#ymm_searchbox {width: 100%;}",
+      "#ymm_label {font-weight: 400 !important; color: #f5f5f5 !important; max-width: 1100px; text-align: center; margin-left: 0; margin-right: 0;}",
+      "#ymm_label h2 {margin: 0 !important;}",
+      "#ymm_searchbox,.ymm_app {background-color: #e32a37; border: 0; color: #f5f5f5; min-height: 200px; animation: fadeInAnimation ease 3s; opacity: 0; animation-iteration-count: 1; animation-fill-mode: forwards; min-width: 100%; max-width: 1100px;}",
+      "#ymm_searchbox {width: 100%; margin: 0 !important;}",
       "@keyframes fadeInAnimation {0% {opacity: 0; } 100% {opacity: 1; }}",
       ".slideshow__controls {display: none !important;}",
-      ".card__heading {font-weight: normal; font-size: 1.3em !important;}"
+      ".card__heading {font-weight: normal; font-size: 1.3em !important;}",
+      ".ymm-page-width {max-width: 100%; padding-left: 0; padding-right: 0;}"
     ]
   }
 }
