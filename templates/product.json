@@ -50,14 +50,13 @@
         },
         "complementary_xqbWeQ": {
           "type": "complementary",
-          "disabled": true,
           "settings": {
             "block_heading": "Also available in other finishes:",
             "make_collapsible_row": false,
-            "icon": "price_tag",
+            "icon": "none",
             "product_list_limit": 10,
             "products_per_page": 3,
-            "pagination_style": "counter",
+            "pagination_style": "dots",
             "image_ratio": "square",
             "enable_quick_add": false
           }
