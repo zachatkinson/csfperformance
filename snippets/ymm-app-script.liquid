@@ -437,7 +437,7 @@ function ymmCall()
 			}
 			//Ends here - 786
 			
-			var ymm_box_html = '<div id="ymm_searchbox" class="'+ymm_searchbox_style+'">';
+			var ymm_box_html = '<div id="ymm_searchbox" class="'+ymm_searchbox_style+'"><div style="max-width: 1100px; width: 100%; margin-left: auto; margin-rightL auto:">';
 			
 			if(ymm_searchbox_title != "") {
 			ymm_box_html += '<h2 id="ymm_label" style="display: none;">'+ymm_searchbox_title+'</h2>';
@@ -515,7 +515,7 @@ function ymmCall()
 			
 			//Append YMM fitment block via JS on product details page underneath YMMBOX. - 786
 			{% if template.name == "product" and show_pro_plan_blocks_new == true %}
-				ymm_box_html += '<div class="ymm_fitment_block" style="display: none;"><div class="ymm-fitment-loading" style="display: none;"></div><div class="ymm_fitment_inner"><div class="item_fits"></div><div class="item_unfits"></div></div></div>';
+				ymm_box_html += '<div class="ymm_fitment_block" style="display: none;"><div class="ymm-fitment-loading" style="display: none;"></div><div class="ymm_fitment_inner"><div class="item_fits"></div><div class="item_unfits"></div></div></div></div>';
 			{% endif %}
 			
 			jQuery("#ymm_searchbox_cont").html(ymm_box_html);	
