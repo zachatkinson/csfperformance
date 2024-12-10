@@ -43,7 +43,7 @@ function format_ymm_prd_prices()
           ymm_prd_price = ymm_prd_price+" "+window.my_curr_code;
         }
                   
-        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(ymm_prd_price);
+        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(ymm_prd_price + " test3");
     }  
   });            
 }
