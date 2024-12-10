@@ -26,8 +26,8 @@ function format_ymm_prd_prices()
             ymm_prd_price = ymm_prd_price+" "+window.my_curr_code;
             ymm_comp_price = ymm_comp_price+" "+window.my_curr_code;
         }
-                  
-        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(ymm_prd_price);
+
+            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(ymm_prd_price + "testing");
         jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span[data-ymm-compare-price]").html(ymm_comp_price);              
     } else {
         var ymm_prd_price = jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").attr("data-ymm-price"); 
