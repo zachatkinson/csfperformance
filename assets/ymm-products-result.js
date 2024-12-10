@@ -6,6 +6,7 @@ function format_ymm_prd_prices()
   jQuery("div[class*='ymm_price_box_']").each(function() {
     var ymm_prd_id_str = jQuery(this).attr("class").split(' ');
     var ymm_prd_id_val = ymm_prd_id_str[1].replace("ymm_price_box_", "");
+    var ymm_prd_msrp = "MSRP"
               
     //Price - Sale price-786/ASK.
     var ymm_comp_price = jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.comp_price").attr("data-ymm-compare-price");
@@ -43,7 +44,7 @@ function format_ymm_prd_prices()
           ymm_prd_price = ymm_prd_price+" "+window.my_curr_code;
         }
         //price info displayed in card TEST
-        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html("<strong>" +ymm_prd_price + "</strong>" + " MAP");
+        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html("<em>" + " MSRP" + "</em>" + "<strong>" +ymm_prd_price + "</strong>" + " MAP");
     }  
   });            
 }
