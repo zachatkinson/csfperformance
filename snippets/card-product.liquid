@@ -203,7 +203,7 @@
                 </span>
               </p>
             {%- endif -%}
-              <p>{{ card_product.sku }}</p>
+              <p>SKU# {{ card_product.sku }}</p>
               {% if  card_product.metafields.custom.msrp.value == card_product.price %}
               <p><strong>{{ card_product.price | money_with_currency }}</strong> MSRP/MAP
               {% else %}
