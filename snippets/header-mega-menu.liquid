@@ -69,7 +69,7 @@
                                                     {% for model-group in linklists[dynamic_list_handle].links %}
                                                         <!-- Render each model link -->
                                                         <div>
-                                                            <h2 style="margin-bottom: 0;">{{ model-group.title }}</h2>
+                                                            <h2 style="margin-bottom: 0; madding-top: 6px;">{{ model-group.title }}</h2>
                                                             <ul class="list-unstyled" role="list">
                                                                 {% for model in model-group.links %}
                                                                     <li><a href="{{ model.url }}" class="mega-menu__link link{% if model.current %} mega-menu__link--active{% endif %}"
