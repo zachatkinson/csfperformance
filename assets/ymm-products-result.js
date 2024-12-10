@@ -83,7 +83,7 @@ jQuery('#paginate').pagination({
 			jQuery('.ymm-prd-loader').hide();
           
 			if(typeof res.prd_res != "undefined") {
-			
+			console.log(res.ymm_products);
             if(action == "loaded") {
 				jQuery('html, body').animate({ scrollTop: eval(jQuery('.ymm-grid h1').offset().top-120)}, 270); //786
             }
