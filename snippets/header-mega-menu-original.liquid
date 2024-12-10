@@ -1,0 +1,165 @@
+{% comment %}
+  Renders a megamenu for the header.
+
+  Usage:
+  {% render 'header-mega-menu' %}
+{% endcomment %}
+
+<nav class="header__inline-menu">
+    <ul class="list-menu list-menu--inline" role="list">
+        {%- for link in section.settings.menu.links -%}
+            <li>
+                {%- if link.links != blank -%}
+                    <header-menu>
+                        <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+                            <summary
+                                    id="HeaderMenu-{{ link.handle }}"
+                                    class="header__menu-item list-menu__item link focus-inset"
+                            >
+                <span
+                  {%- if link.child_active %}
+                      class="header__active-menu-item"
+                  {% endif %}
+                >
+                  {{- link.title | escape -}}
+                </span>
+                                {{- 'icon-caret.svg' | inline_asset_content -}}
+                            </summary>
+                            <div
+                                    id="MegaMenu-Content-{{ forloop.index }}"
+                                    class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+                                    tabindex="-1"
+                            >
+                                <div class="wrapper-sub-menu"
+                                     style="display: grid; grid-template-columns: min-content 1fr;">
+                                    <div style="grid-template-columns: 1fr; height: 100%; font-family: var(--font-heading-family); font-size: 2em;">
+                                        <ul
+                                                class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                                                role="list"
+                                                style="display: block;"
+                                        >
+                                            {%- for childlink in link.links -%}
+                                                {% assign highlight_class="" %}
+                                                {% if forloop.index0 == 0 %}
+                                                    {% assign highlight_class="highlight" %}
+                                                {% endif %}
+                                                <li class="brand-item {{ highlight_class }}" data-brand="{{ childlink.handle }}">
+                                                    <a
+                                                            id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                                                            href="{{ childlink.url }}"
+                                                            class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                                                            {% if childlink.current %}
+                                                                aria-current="page"
+                                                            {% endif %}
+                                                    >
+                                                        {{ childlink.title | escape }}
+                                                    </a>
+                                                </li>
+                                            {%- endfor -%}
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        {%- for childlink in link.links -%}
+                                            {% if forloop.index0 > 0 %}
+                                                {% assign hidden_class = 'hide_me' %}
+                                            {% endif %}
+                                            <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em;" class=" model-item {{ hidden_class }}" data-model="{{ childlink.handle }}">
+                                                <ul class="list-unstyled" role="list" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+                                                    {%- for grandchildlink in childlink.links -%}
+                                                        <li>
+                                                            <a
+                                                                    id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                                                    href="{{ grandchildlink.url }}"
+                                                                    class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                                                    {% if grandchildlink.current %}
+                                                                        aria-current="page"
+                                                                    {% endif %}
+                                                                    style="font-size: 1em;"
+                                                            >
+                                                                {{ grandchildlink.title | escape }}
+                                                            </a>
+                                                        </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+                    </header-menu>
+                {%- else -%}
+                    <a
+                            id="HeaderMenu-{{ link.handle }}"
+                            href="{{ link.url }}"
+                            class="header__menu-item list-menu__item link link--text focus-inset"
+                            {% if link.current %}
+                                aria-current="page"
+                            {% endif %}
+                    >
+            <span
+              {%- if link.current %}
+                  class="header__active-menu-item"
+              {% endif %}
+            >
+              {{- link.title | escape -}}
+            </span>
+                    </a>
+                {%- endif -%}
+            </li>
+        {%- endfor -%}
+    </ul>
+</nav>
+<style>
+    .hide_me{
+        display: none;
+    }
+    .mega-menu__link--level-2 {
+        font-size: 1.0em;
+        text-decoration-color: #e54242;
+        text-decoration-thickness: 6px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .highlight{
+        background-color: #e54242;
+        color: #fff;
+    }
+
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const brands = document.querySelectorAll('.brand-item');
+        const models = document.querySelectorAll('.model-item');
+
+        brands.forEach((brand) => {
+            brand.addEventListener('click', function (event) {
+                // Prevent the default navigation behavior
+                event.preventDefault();
+
+                // Get the selected brand's data attribute
+                const selectedBrand = this.getAttribute('data-brand');
+
+                // Remove highlight and chevron from all brands
+                brands.forEach((otherBrand) => {
+                    otherBrand.classList.remove('highlight');
+                });
+
+                // Add highlight to the selected brand
+                brand.classList.add('highlight');
+
+
+                // Hide all model items
+                models.forEach((model) => {
+                    model.classList.add('hide_me');
+                });
+
+                // Show the models corresponding to the selected brand
+                const correspondingModel = document.querySelector(`.model-item[data-model="${selectedBrand}"]`);
+                if (correspondingModel) {
+                    correspondingModel.classList.remove('hide_me');
+                }
+            });
+        });
+    });
+</script>
