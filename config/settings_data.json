@@ -438,7 +438,7 @@
       ".slideshow__controls {display: none !important;}",
       ".card__heading {font-weight: normal; font-size: 1.3em !important;}",
       ".ymm-page-width {padding-left: 0; padding-right: 0;}",
-      ".grid-view-item__title {font-weight: 400 !important; font-size: 1.3em !important;}",
+      ".grid-view-item__title a {font-weight: 400 !important; font-size: 1.3em !important;}",
       ".ymm-product-price {font-size: 16px; line-height: 16px;}",
       ".ymm-grid .grid__item {text-align: left;}"
     ]
