@@ -74,7 +74,7 @@ jQuery('#paginate').pagination({
         data: prd_ajax_url,
         dataType: 'jsonp',
     	beforeSend: function() {
-        	jQuery('.ymm-prd-loader-box').html(' TEST <img src="'+img_src+'">');
+        	jQuery('.ymm-prd-loader-box').html('<img src="'+img_src+'">');
             jQuery('.ymm-prd-loader').show(); 
 		}
       }).done(function(res){
