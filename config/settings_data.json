@@ -437,7 +437,7 @@
       "@keyframes fadeInAnimation {0% {opacity: 0; } 100% {opacity: 1; }}",
       ".slideshow__controls {display: none !important;}",
       ".card__heading {font-weight: normal; font-size: 1.3em !important;}",
-      ".ymm-page-width {max-width: 100%; padding-left: 0; padding-right: 0;}",
+      ".ymm-page-width {padding-left: 0; padding-right: 0;}",
       ".grid-view-item__title {font-weight: 400 !important;}"
     ]
   }
