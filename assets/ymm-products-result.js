@@ -43,7 +43,7 @@ function format_ymm_prd_prices()
           ymm_prd_price = ymm_prd_price+" "+window.my_curr_code;
         }
         //price info displayed in card TEST
-        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(ymm_prd_price + "MAP");
+        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(<strong>ymm_prd_price</strong> + "MAP");
     }  
   });            
 }
