@@ -42,8 +42,8 @@ function format_ymm_prd_prices()
         if(typeof dis_currency_with_code !== "undefined" &&dis_currency_with_code == "yes" && ymm_prd_price.indexOf(window.my_curr_code) == -1) {
           ymm_prd_price = ymm_prd_price+" "+window.my_curr_code;
         }
-                  
-        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(ymm_prd_price + " test3");
+        //price info displayed in card TEST
+        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(ymm_prd_price);
     }  
   });            
 }
