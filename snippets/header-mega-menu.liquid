@@ -66,13 +66,13 @@
                                             <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em;" class="model-item hide_me" data-model="{{ childlink.handle }}">
 
                                                 {% assign dynamic_list_handle = childlink.handle | append: "-" %}
+                                                <h3>{{ dynamic_list_handle }}</h3>
                                                 {% assign dynamic_list_handle = dynamic_list_handle | append: link.handle %}
 
                                                 {% if linklists[dynamic_list_handle] and linklists[dynamic_list_handle].links.size > 0 %}
                                                     {% for model-group in linklists[dynamic_list_handle].links %}
                                                         <!-- Render each model link -->
                                                         <div>
-                                                            {{ dynamic_link_handle }}
                                                             <h2 style="margin-bottom: 0; padding-top: 6px; margin-top: 0;">{{ model-group.title }}</h2>
                                                             <ul class="list-unstyled" role="list">
                                                                 {% for model in model-group.links %}
