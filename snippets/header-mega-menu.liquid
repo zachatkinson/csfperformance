@@ -66,7 +66,11 @@
                                             <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em;" class="model-item hide_me" data-model="{{ childlink.handle }}">
 
                                                 {% assign dynamic_list_handle = childlink.handle | append: "-" %}
-                                                {% assign dynamic_list_handle = dynamic_list_handle | append: link.handle %}
+                                                {% if link.handle == 'explore-products' %}
+                                                    {% assign dynamic_list_handle = dynamic_list_handle |  append: "models" %}
+                                                {% else %}
+                                                    {% assign dynamic_list_handle = dynamic_list_handle | append: link.handle %}
+                                                {% endif %}
                                                 <h3>{{ dynamic_list_handle }}</h3>
 
                                                 {% if linklists[dynamic_list_handle] and linklists[dynamic_list_handle].links.size > 0 %}
