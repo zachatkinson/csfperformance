@@ -146,40 +146,64 @@
 </style>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const brands = document.querySelectorAll('.brand-item');
-        const models = document.querySelectorAll('.model-item');
+        const menus = document.querySelectorAll('.mega-menu');
 
-        // Initial State: Show the first model-item and hide others
-        models.forEach((model, index) => {
-            if (index === 0) {
-                model.classList.remove('hide_me');
-            } else {
-                model.classList.add('hide_me');
-            }
-        });
+        menus.forEach((menu) => {
+            const brands = menu.querySelectorAll('.brand-item');
+            const models = menu.querySelectorAll('.model-item');
+            const menuId = menu.getAttribute('id');
 
-        brands.forEach((brand) => {
-            brand.addEventListener('click', function (event) {
-                event.preventDefault();
+            // At the start, show the brand and model selected last time (if any)
+            let savedBrand = localStorage.getItem('selectedBrand-' + menuId);
 
-
-                const menuContainer = this.closest('.mega-menu'); // Limit to current mega menu
-                const models = menuContainer.querySelectorAll('.model-item');
-
-
-                brand.classList.add('highlight');
-                brands.forEach((otherBrand) => {
-                    otherBrand.classList.remove('highlight');
+            // If we have a saved brand, highlight it; otherwise, highlight the first brand
+            if (savedBrand) {
+                brands.forEach((brand) => {
+                    brand.classList.remove('highlight');
                 });
-
-                // Reset other items within the same menu
-                models.forEach((model) => model.classList.add('hide_me'));
-
-                const selectedBrand = this.getAttribute('data-brand');
-                const correspondingModel = menuContainer.querySelector(`.model-item[data-model="${selectedBrand}"]`);
-                if (correspondingModel) {
-                    correspondingModel.classList.remove('hide_me');
+                const savedBrandItem = menu.querySelector('.brand-item[data-brand="' + savedBrand + '"]');
+                if (savedBrandItem) {
+                    savedBrandItem.classList.add('highlight');
                 }
+            } else {
+                // No saved brand, so highlight the first one by default
+                if (brands.length > 0) {
+                    brands[0].classList.add('highlight');
+                    savedBrand = brands[0].getAttribute('data-brand');
+                }
+            }
+
+            // Show the models for the highlighted brand
+            models.forEach((model) => {
+                model.classList.add('hide_me');
+            });
+            const initialModel = menu.querySelector(`.model-item[data-model="${savedBrand}"]`);
+            if (initialModel) {
+                initialModel.classList.remove('hide_me');
+            }
+
+            // Add click events for brand items
+            brands.forEach((brand) => {
+                brand.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    // Remove highlight from others and add to the clicked one
+                    brands.forEach((otherBrand) => {
+                        otherBrand.classList.remove('highlight');
+                    });
+                    this.classList.add('highlight');
+
+                    // Hide all models, then show the one for the selected brand
+                    models.forEach((model) => model.classList.add('hide_me'));
+                    const selectedBrand = this.getAttribute('data-brand');
+                    const correspondingModel = menu.querySelector(`.model-item[data-model="${selectedBrand}"]`);
+                    if (correspondingModel) {
+                        correspondingModel.classList.remove('hide_me');
+                    }
+
+                    // Save the selected brand for this menu
+                    localStorage.setItem('selectedBrand-' + menuId, selectedBrand);
+                });
             });
         });
     });
