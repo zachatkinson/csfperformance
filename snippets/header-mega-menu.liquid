@@ -65,7 +65,7 @@
                                             {% if forloop.index0 > 0 %}
                                                 {% assign hidden_class = 'hide_me' %}
                                             {% endif %}
-                                            <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em;" class="model-item {{ hide_me }}" data-model="{{ childlink.handle }}">
+                                            <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em;" class="model-item" data-model="{{ childlink.handle }}">
 
                                                 {% assign dynamic_list_handle = childlink.handle | append: "-" %}
                                                 {% if link.handle == 'explore-products' %}
