@@ -64,7 +64,9 @@
                                                 {% assign hidden_class = 'hide_me' %}
                                             {% endif %}
                                             <div style="height: 100%; padding-left: 1em; padding-right: 1em; font-size: 1.2em;" class="model-item hide_me" data-model="{{ childlink.handle }}">
+                                                {% if link.handle == 'explore-products'  %}
                                                 {% assign dynamic_list_handle = childlink.handle | append: "-models" %}
+                                                {% endif %}
                                                 {% if linklists[dynamic_list_handle] and linklists[dynamic_list_handle].links.size > 0 %}
                                                     {% for model-group in linklists[dynamic_list_handle].links %}
                                                         <!-- Render each model link -->
