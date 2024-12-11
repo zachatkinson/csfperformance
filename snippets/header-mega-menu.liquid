@@ -11,7 +11,7 @@
             <li>
                 {%- if link.links != blank -%}
                     <header-menu>
-                        <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+                        <details id="Details-HeaderMenu-{{ forloop.index }}-{{ section.id }}" class="mega-menu">
                             <summary
                                     id="HeaderMenu-{{ link.handle }}"
                                     class="header__menu-item list-menu__item link focus-inset"
@@ -178,7 +178,7 @@
 
                 // Hide all model items
                 models.forEach((model) => {
-                    //model.classList.add('hide_me');
+                    model.classList.add('hide_me');
                 });
 
                 // Show the models corresponding to the selected brand
