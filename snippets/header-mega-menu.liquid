@@ -165,6 +165,8 @@
                 const menuContainer = this.closest('.mega-menu'); // Limit to current mega menu
                 const models = menuContainer.querySelectorAll('.model-item');
 
+                brand.classList.add('highlight');
+
                 // Reset other items within the same menu
                 models.forEach((model) => model.classList.add('hide_me'));
 
