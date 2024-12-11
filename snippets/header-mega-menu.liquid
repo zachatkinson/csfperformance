@@ -74,6 +74,7 @@
                                                     {% assign dynamic_list_handle = dynamic_list_handle | append: link.handle %}
                                                 {% endif %}
                                                 <h3>{{ dynamic_list_handle }}</h3>
+                                                <p>{{ linklists[dynamic_list_handle].links.size }}</p>
 
                                                 {% if linklists[dynamic_list_handle] and linklists[dynamic_list_handle].links.size > 0 %}
                                                     {% for model-group in linklists[dynamic_list_handle].links %}
