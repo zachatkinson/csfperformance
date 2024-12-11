@@ -160,25 +160,20 @@
             }
         });
 
-        brands.forEach((brand) => {
-            brand.addEventListener('click', function (event) {
-                // Prevent the default navigation behavior
-                event.preventDefault();
+        brand.addEventListener('click', function (event) {
+            event.preventDefault();
 
-                // Get the selected brand's data attribute
-                const selectedBrand = this.getAttribute('data-brand');
+            const menuContainer = this.closest('.mega-menu'); // Limit to current mega menu
+            const models = menuContainer.querySelectorAll('.model-item');
 
-                // Remove highlight from all brands
-                brands.forEach((otherBrand) => {
-                    otherBrand.classList.remove('highlight');
-                });
+            // Reset other items within the same menu
+            models.forEach((model) => model.classList.add('hide_me'));
 
-                // Add highlight to the selected brand
-                brand.classList.add('highlight');
-
-                // Hide all model items
-                models.forEach((model) => {
-                    model.classList.add('hide_me');
+            const selectedBrand = this.getAttribute('data-brand');
+            const correspondingModel = menuContainer.querySelector(`.model-item[data-model="${selectedBrand}"]`);
+            if (correspondingModel) {
+                correspondingModel.classList.remove('hide_me');
+            }
                 });
 
                 // Show the models corresponding to the selected brand
