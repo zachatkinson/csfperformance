@@ -149,35 +149,36 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const brands = document.querySelectorAll('.brand-item');
-        const menuContainer = this.closest('.mega-menu'); // Limit to current menu
-        const models = menuContainer.querySelectorAll('.model-item');
+        const models = document.querySelectorAll('.model-item');
 
         // Initial State: Show the first model-item and hide others
-        document.querySelectorAll('.mega-menu').forEach((menu) => {
-            const models = menu.querySelectorAll('.model-item');
-            models.forEach((model, index) => {
-                if (index === 0) {
-                    model.classList.remove('hide_me');
-                } else {
-                    model.classList.add('hide_me');
-                }
-            });
+        models.forEach((model, index) => {
+            if (index === 0) {
+                model.classList.remove('hide_me');
+            } else {
+                model.classList.add('hide_me');
+            }
         });
 
-        brand.addEventListener('click', function (event) {
-            event.preventDefault();
+        brands.forEach((brand) => {
+            brand.addEventListener('click', function (event) {
+                // Prevent the default navigation behavior
+                event.preventDefault();
 
-            const menuContainer = this.closest('.mega-menu'); // Limit to current mega menu
-            const models = menuContainer.querySelectorAll('.model-item');
+                // Get the selected brand's data attribute
+                const selectedBrand = this.getAttribute('data-brand');
 
-            // Reset other items within the same menu
-            models.forEach((model) => model.classList.add('hide_me'));
+                // Remove highlight from all brands
+                brands.forEach((otherBrand) => {
+                    otherBrand.classList.remove('highlight');
+                });
 
-            const selectedBrand = this.getAttribute('data-brand');
-            const correspondingModel = menuContainer.querySelector(`.model-item[data-model="${selectedBrand}"]`);
-            if (correspondingModel) {
-                correspondingModel.classList.remove('hide_me');
-            }
+                // Add highlight to the selected brand
+                brand.classList.add('highlight');
+
+                // Hide all model items
+                models.forEach((model) => {
+                    model.classList.add('hide_me');
                 });
 
                 // Show the models corresponding to the selected brand
