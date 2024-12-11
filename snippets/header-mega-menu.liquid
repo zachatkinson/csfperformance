@@ -73,6 +73,7 @@
                                                     {% for model-group in linklists[dynamic_list_handle].links %}
                                                         <!-- Render each model link -->
                                                         <div>
+                                                            {{ dynamic_list_handle }}
                                                             <h2 style="margin-bottom: 0; padding-top: 6px; margin-top: 0;">{{ model-group.title }}</h2>
                                                             <ul class="list-unstyled" role="list">
                                                                 {% for model in model-group.links %}
