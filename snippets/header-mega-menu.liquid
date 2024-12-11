@@ -152,12 +152,15 @@
         const models = document.querySelectorAll('.model-item');
 
         // Initial State: Show the first model-item and hide others
-        models.forEach((model, index) => {
-            if (index === 0) {
-                model.classList.remove('hide_me');
-            } else {
-                model.classList.add('hide_me');
-            }
+        document.querySelectorAll('.mega-menu').forEach((menu) => {
+            const models = menu.querySelectorAll('.model-item');
+            models.forEach((model, index) => {
+                if (index === 0) {
+                    model.classList.remove('hide_me');
+                } else {
+                    model.classList.add('hide_me');
+                }
+            });
         });
 
         brand.addEventListener('click', function (event) {
