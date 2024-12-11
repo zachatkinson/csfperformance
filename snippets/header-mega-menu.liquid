@@ -149,7 +149,8 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const brands = document.querySelectorAll('.brand-item');
-        const models = document.querySelectorAll('.model-item');
+        const menuContainer = this.closest('.mega-menu'); // Limit to current menu
+        const models = menuContainer.querySelectorAll('.model-item');
 
         // Initial State: Show the first model-item and hide others
         document.querySelectorAll('.mega-menu').forEach((menu) => {
