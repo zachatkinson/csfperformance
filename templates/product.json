@@ -51,7 +51,7 @@
         "complementary_xqbWeQ": {
           "type": "complementary",
           "settings": {
-            "block_heading": "Also available in other finishes:",
+            "block_heading": "Also available in other finishes or configurations:",
             "make_collapsible_row": false,
             "icon": "none",
             "product_list_limit": 10,
