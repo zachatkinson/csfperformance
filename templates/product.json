@@ -23,10 +23,10 @@
           "type": "title",
           "settings": {}
         },
-        "sku_F4Eihx": {
-          "type": "sku",
+        "custom_liquid_egxByy": {
+          "type": "custom_liquid",
           "settings": {
-            "text_style": "body"
+            "custom_liquid": "{%- assign current_variant = product.selected_or_first_available_variant -%}\n<span>CSF {{ current_variant.sku }}</span>"
           }
         },
         "price": {
@@ -71,7 +71,7 @@
       "block_order": [
         "vendor",
         "title",
-        "sku_F4Eihx",
+        "custom_liquid_egxByy",
         "price",
         "variant_picker",
         "featured_buttons_NDDLN4",
