@@ -23,10 +23,10 @@
           "type": "title",
           "settings": {}
         },
-        "custom_liquid_NezRQe": {
-          "type": "custom_liquid",
+        "sku_F4Eihx": {
+          "type": "sku",
           "settings": {
-            "custom_liquid": "TEST"
+            "text_style": "body"
           }
         },
         "price": {
@@ -71,7 +71,7 @@
       "block_order": [
         "vendor",
         "title",
-        "custom_liquid_NezRQe",
+        "sku_F4Eihx",
         "price",
         "variant_picker",
         "featured_buttons_NDDLN4",
