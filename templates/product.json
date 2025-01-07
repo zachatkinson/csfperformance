@@ -26,7 +26,7 @@
         "custom_liquid_egxByy": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{%- assign current_variant = product.selected_or_first_available_variant -%}\n<span>CSF {{ current_variant.sku }}</span>"
+            "custom_liquid": "{%- assign current_variant = product.selected_or_first_available_variant -%}\n<span>SKU# {{ current_variant.sku }}</span>"
           }
         },
         "price": {
