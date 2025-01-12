@@ -23,6 +23,12 @@
           "type": "title",
           "settings": {}
         },
+        "custom_liquid_egxByy": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- assign current_variant = product.selected_or_first_available_variant -%}\n<span>SKU# {{ current_variant.sku }}</span>"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {}
@@ -51,7 +57,7 @@
         "complementary_xqbWeQ": {
           "type": "complementary",
           "settings": {
-            "block_heading": "Also available in other finishes:",
+            "block_heading": "Also available in other finishes or configurations:",
             "make_collapsible_row": false,
             "icon": "none",
             "product_list_limit": 10,
@@ -65,6 +71,7 @@
       "block_order": [
         "vendor",
         "title",
+        "custom_liquid_egxByy",
         "price",
         "variant_picker",
         "featured_buttons_NDDLN4",
@@ -92,7 +99,7 @@
       "type": "apps",
       "blocks": {
         "tinytabs_tabs_block_Enqkcf": {
-          "type": "shopify://apps/tinytabs/blocks/tabs-block/cd5da974-394e-41cb-b448-0c9a6d16a42d",
+          "type": "shopify://apps/trusted-tabs/blocks/tabs-block/cd5da974-394e-41cb-b448-0c9a6d16a42d",
           "settings": {
             "css_selector": "",
             "custom_css": "#tiny-tabs-global-wrapper{\nmax-width: 1100px;\nmargin-left: auto;\nmargin-right: auto;\npadding: 10px;\n}"
