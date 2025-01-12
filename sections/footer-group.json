@@ -59,12 +59,26 @@
             "menu": "footer-contact-menu"
           }
         },
+        "text_nekLAg": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": ""
+          }
+        },
         "image_PdVptE": {
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/logos.svg",
             "image_width": 345,
             "alignment": "center"
+          }
+        },
+        "text_EPDEQP": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "subtext": ""
           }
         }
       },
@@ -75,7 +89,9 @@
         "link_list_QAbYtt",
         "link_list_g6MYyV",
         "link_list_8d4xxy",
-        "image_PdVptE"
+        "text_nekLAg",
+        "image_PdVptE",
+        "text_EPDEQP"
       ],
       "settings": {
         "color_scheme": "scheme-4",
