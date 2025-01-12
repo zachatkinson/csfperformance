@@ -53,11 +53,11 @@
         {%- if section.blocks.size > 0 -%}
           {%- liquid
             if section.blocks.size == 9
-              assign footer_grid_class = 'grid--3-col-tablet'
+              assign footer_grid_class = 'grid--3-col-tablet grid--3-col-desktop'
             elsif section.blocks.size > 6
-              assign footer_grid_class = 'grid--3-col-tablet'
+              assign footer_grid_class = 'grid--3-col-tablet grid--3-col-desktop'
             elsif section.blocks.size > 4
-              assign footer_grid_class = 'grid--3-col-tablet'
+              assign footer_grid_class = 'grid--3-col-tablet grid--3-col-desktop'
             endif
           -%}
           <div
