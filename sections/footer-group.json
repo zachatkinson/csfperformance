@@ -14,6 +14,30 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "image_xx9MQG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/porsche_1-copy.jpg",
+            "image_width": 550,
+            "alignment": "center"
+          }
+        },
+        "image_d3QHFY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/bmw_1.jpg",
+            "image_width": 550,
+            "alignment": "center"
+          }
+        },
+        "image_ypTM6J": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/other_1.jpg",
+            "image_width": 550,
+            "alignment": "center"
+          }
+        },
         "link_list_QAbYtt": {
           "type": "link_list",
           "settings": {
@@ -45,6 +69,9 @@
         }
       },
       "block_order": [
+        "image_xx9MQG",
+        "image_d3QHFY",
+        "image_ypTM6J",
         "link_list_QAbYtt",
         "link_list_g6MYyV",
         "link_list_8d4xxy",
