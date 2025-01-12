@@ -226,7 +226,7 @@
         "youtube_video_HJB7ew"
       ],
       "settings": {
-        "include_margins": true,
+        "include_margins": false,
         "color_scheme": "scheme-3"
       }
     },
