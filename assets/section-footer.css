@@ -157,7 +157,8 @@
 
 @media screen and (min-width: 990px) {
   .footer-block__heading {
-    font-size: calc(var(--font-heading-scale) * 2.8rem);
+    /*font-size: calc(var(--font-heading-scale) * 2.8rem);*/
+    font-size: 2.8rem;
   }
 }
 
