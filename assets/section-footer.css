@@ -317,6 +317,7 @@
 .footer-block__details-content {
   margin-bottom: 4rem;
   font-family: var(--font-heading-family);
+  font-size: 1em;
 }
 
 @media screen and (min-width: 750px) {
