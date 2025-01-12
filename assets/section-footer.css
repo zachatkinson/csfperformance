@@ -319,7 +319,7 @@
   font-family: var(--font-heading-family);
 }
 .footer-block__details-content ul li a{
-  font-size: 2em;
+  font-size: 2em !important;
 }
 
 @media screen and (min-width: 750px) {
