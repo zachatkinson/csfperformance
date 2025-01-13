@@ -115,6 +115,9 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "custom_css": [
+        ".card-information{display: none;}"
+      ],
       "settings": {
         "title": "Featured Products",
         "heading_size": "h2",
