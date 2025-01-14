@@ -109,6 +109,12 @@
   .product__info-wrapper .ymm_fitment_block .item_unfits_cont .unfit_desc { flex-direction: column; justify-content: flex-start; align-items: self-start; text-align: left; margin: 0; width: 100%; }
   .product__info-wrapper .ymm_fitment_block .item_unfits_cont .ymm_text { margin: 10px 0; }
   .product__info-wrapper .ymm_fitment_block .item_unfits_cont { justify-content: flex-start; align-items: flex-start; }
+
+  /*custom ymm code*/
+  #ymm_search_fields{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 990px) {

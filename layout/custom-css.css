@@ -11,7 +11,7 @@
 }
 #ymm_searchbox,
 .ymm_app {
-    background-color: #e32a37;
+    background-color: #fe3125;
     border: 0;
     color: #f5f5f5;
     min-height: 200px;
@@ -42,10 +42,25 @@
     font-size: 1.3em !important;
 }
 .ymm-page-width {
-    max-width: 100%;
     padding-left: 0;
     padding-right: 0;
 }
-.grid-view-item__title{
-    font-weight: 400;
+.grid-view-item__title a {
+    font-weight: 400 !important;
+    font-size: 1.3em !important;
+}
+.grid-view-item__title a:hover {
+    text-decoration: underline;
+}
+.ymm-product-price {
+    font-size: 16px;
+    line-height: 16px;
+}
+.ymm-grid .grid__item {
+    text-align: left;
+}
+.section-template--17780370309293__page_LCm77t-padding {
+}
+.video-iframe {
+    padding: 0 !important;
 }
