@@ -218,7 +218,7 @@ var ymm_dyn_css = "#ymm_searchbox h2 { color: "+ymmbox_title_color+"; }#ymm_sear
 
 //For Old user > page-width class issue fix - 786
 if(ymm_cont_class == "-1") {
-   ymm_dyn_css += ".page-width { width: 100%; max-width:1200px; padding-left:15px; padding-right:15px; margin:0 auto; }.page-width:after { content: ''; display: block; clear: both; }.page-width .page-width { max-width: 100%; padding-left: 0; padding-right: 0; }.page-content .page-width,.wrapper .page-width { max-width: 100%; width: auto; padding: 0; margin: 0; }";
+   ymm_dyn_css += ".page-width { width: 100%; padding-left:15px; padding-right:15px; margin:0 auto; }.page-width:after { content: ''; display: block; clear: both; }.page-width .page-width { max-width: 100%; padding-left: 0; padding-right: 0; }.page-content .page-width,.wrapper .page-width { max-width: 100%; width: auto; padding: 0; margin: 0; }";
 } 
   
 if(ymmbox_bg_img != "") {
@@ -437,7 +437,7 @@ function ymmCall()
 			}
 			//Ends here - 786
 			
-			var ymm_box_html = '<div id="ymm_searchbox" class="'+ymm_searchbox_style+'"><div style="max-width: 1100px; width: 100%; margin-left: auto; margin-right: auto;">';
+			var ymm_box_html = '<div id="ymm_searchbox" class="'+ymm_searchbox_style+'"><div style="width: 100%; margin-left: auto; margin-right: auto;">';
 			
 			if(ymm_searchbox_title != "") {
 			ymm_box_html += '<h2 id="ymm_label" style="display: none;">'+ymm_searchbox_title+'</h2>';
