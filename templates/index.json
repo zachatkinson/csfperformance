@@ -116,7 +116,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "custom_css": [
-        ".card-information{display: none;}"
+        ".card-information {display: none;}"
       ],
       "settings": {
         "title": "Featured Products",
@@ -201,6 +201,13 @@
         "padding_bottom": 36
       }
     },
+    "our_story_cta_83ExhD": {
+      "type": "our-story-cta",
+      "settings": {
+        "include_margins": true,
+        "color_scheme": "scheme-3"
+      }
+    },
     "featured_youtube_home_KNK3Pc": {
       "type": "featured-youtube-home",
       "blocks": {
@@ -262,6 +269,7 @@
     "featured_collection",
     "image_with_text_xzk4iE",
     "page_LCm77t",
+    "our_story_cta_83ExhD",
     "featured_youtube_home_KNK3Pc",
     "17300794767b502cec"
   ]
