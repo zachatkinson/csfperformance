@@ -1,0 +1,43 @@
+<div class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
+    <div class="{% if section.settings.include_margins %}page-width{% endif %}">
+        Zach Test
+    </div>
+</div>
+{% schema %}
+{
+  "name": "Our Story CTA",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "include_margins",
+      "default": true,
+      "label": "t:sections.featured-youtube.settings.include_margins.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our Story CTA"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "story_cta",
+      "name": "Our Story CTA",
+      "settings": [
+        {
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}
