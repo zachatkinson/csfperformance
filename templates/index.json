@@ -147,7 +147,7 @@
     "our_story_cta_83ExhD": {
       "type": "our-story-cta",
       "settings": {
-        "include_margins": false,
+        "include_margins": true,
         "color_scheme": "scheme-3"
       }
     },
