@@ -6,7 +6,7 @@
 .clearfix:before, .clearfix:after { content:''; clear:both; display:block; }
 
 /* Container Size */
-.ymm-page-width { width: 100%; max-width:1200px; padding-left:15px; padding-right:15px; margin:0 auto; }
+.ymm-page-width { width: 100%; padding-left:15px; padding-right:15px; margin:0 auto; }
 .ymm-page-width:after { content: ""; display: block; clear: both; }
 
 .page-width .ymm-page-width,
