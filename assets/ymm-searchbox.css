@@ -54,7 +54,7 @@
 #ymm_searchbox .btn img { width:22px; margin-right:10px; }
 
 /* Searchbox Horizontal */
-#ymm_searchbox.horizontal ul li:not(.ymm_bttns) { width:25%; } 
+/*#ymm_searchbox.horizontal ul li:not(.ymm_bttns) { width:25%; } */
 #ymm_searchbox.horizontal ul li.ymm_bttns { width:auto; } 
 #ymm_searchbox.horizontal ul li:nth-child(n+4) + li.ymm_bttns { width:100%; }
 #ymm_searchbox.horizontal:not([data-select2-id]) ul { justify-content: center; }
