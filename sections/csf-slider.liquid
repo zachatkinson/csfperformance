@@ -1,27 +1,29 @@
-<div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-scheme-3">
-  <div class="slider-grid container">
-    <div class="csf-slider-left">
-      {% for block in section.blocks %}
-        {%  assign link = '#' %}
-        {% if block.type == 'side-link' %}
-          {% if block.settings.side-link-url %}
-            {% assign link = block.settings.side-link-url %}
+<div class="color-scheme-3">
+  <div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="slider-grid container">
+      <div class="csf-slider-left">
+        {% for block in section.blocks %}
+          {%  assign link = '#' %}
+          {% if block.type == 'side-link' %}
+            {% if block.settings.side-link-url %}
+              {% assign link = block.settings.side-link-url %}
+            {% endif %}
+            <a href="{{ link }}" class="slider-anchor">{{  block.settings.image | image_url: height: 100 | image_tag: alt: block.settings.side-link-alt-text }}</a>
           {% endif %}
-          <a href="{{ link }}" class="slider-anchor">{{  block.settings.image | image_url: height: 100 | image_tag: alt: block.settings.side-link-alt-text }}</a>
-        {% endif %}
-      {% endfor %}
-    </div>
-    <div class="csf-slider-right">
-      {% assign slide-count = 0 %}
-      {% for block in section.blocks %}
-        {%  assign link = block.settings.slide-url %}
-        {% if block.type == 'slide' %}
-          <a href="{{ block.settings.slide-url }}" class="slider-anchor slide-{{ slide-count }}">
-            {{  block.settings.slide-image | image_url: width: 1100 | image_tag: alt: block.settings.slide-alt-text }}
-          </a>
-          {% assign slide-count = slide-count |  plus: 1 %}
-        {% endif %}
-      {% endfor %}
+        {% endfor %}
+      </div>
+      <div class="csf-slider-right">
+        {% assign slide-count = 0 %}
+        {% for block in section.blocks %}
+          {%  assign link = block.settings.slide-url %}
+          {% if block.type == 'slide' %}
+            <a href="{{ block.settings.slide-url }}" class="slider-anchor slide-{{ slide-count }}">
+              {{  block.settings.slide-image | image_url: width: 1100 | image_tag: alt: block.settings.slide-alt-text }}
+            </a>
+            {% assign slide-count = slide-count |  plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
