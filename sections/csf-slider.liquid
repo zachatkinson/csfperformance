@@ -6,7 +6,7 @@
         {% if block.type == 'side-link' %}
           {% if block.settings.side-link-url %}
             {% assign link = block.settings.side-link-url %}
-            {% endif %}
+          {% endif %}
           <a href="{{ link }}" class="slider-anchor">{{  block.settings.image | image_url: height: 100 | image_tag: alt: block.settings.side-link-alt-text }}</a>
         {% endif %}
       {% endfor %}
@@ -16,7 +16,7 @@
       {% for block in section.blocks %}
         {%  assign link = block.settings.slide-url %}
         {% if block.type == 'slide' %}
-          <a href="{{ block.settings.slide-url }}" class="slider-anchor slide-{{ slide-count }} slide-anchor">
+          <a href="{{ block.settings.slide-url }}" class="slider-anchor slide-{{ slide-count }}">
             {{  block.settings.slide-image | image_url: height: 1200 | image_tag: alt: block.settings.slide-alt-text }}
           </a>
           {% assign slide-count = slide-count |  plus: 1 %}
@@ -90,21 +90,20 @@
 {% endschema %}
 {% stylesheet %}
 .slider-grid{
-  display: grid;
-  grid-template-columns: 1fr;
+display: grid;
+grid-template-columns: 1fr;
 }
 .csf-slider-left{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  order: 1;
+display: grid;
+grid-template-columns: 1fr 1fr;
+order: 1;
 }
 .csf-slider-left img{
 width: 100%;
 height: auto;
 }
 .csf-slider-right{
-  order: 0;
-  aspect-ratio: 1/1;
+order: 0;
 
 }
 .csf-slider-right a {
@@ -118,44 +117,36 @@ display: block;
 opacity: 1;
 }
 .csf-slider-right img{
-  object-fit: contain;
-  width: 100%;
-}
-
-
-.slider-anchor{
-  line-height: 0;
-  font-size: 0;
-width: 100%;
-height: 100%;
-}
-.slide-anchor{
 object-fit: contain;
+width: 100%;
 aspect-ratio: 1/1;
 }
 
+.slider-anchor{
+line-height: 0;
+font-size: 0;
+}
 
 @media screen and (min-width: 768px) {
-  .slider-grid{
-  grid-template-columns: 1fr;
-  }
-  .csf-slider-left{
-  grid-template-columns: 1fr 1fr 1fr;
-  order: 1;
-  }
-  .csf-slider-left img{
-  width: 100%;
-  }
-  .csf-slider-right{
-  order: 0;
+.slider-grid{
+grid-template-columns: 1fr;
+}
+.csf-slider-left{
+grid-template-columns: 1fr 1fr 1fr;
+order: 1;
+}
+.csf-slider-left img{
 width: 100%;
-  }
+}
+.csf-slider-right{
+order: 0;
+width: 100%;
+}
 
 .csf-slider-right img{
+aspect-ratio: 2/1;
 max-height: 1200px;
 }
-.slide-anchor{
-aspect-ratio: 2/1;
 }
 
 {% endstylesheet %}
