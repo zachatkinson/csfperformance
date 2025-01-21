@@ -110,7 +110,7 @@
         "slide_irFVUi"
       ],
       "settings": {
-        "include_margins": false
+        "include_margins": true
       }
     },
     "featured_collection": {
