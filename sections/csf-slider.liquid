@@ -17,7 +17,7 @@
         {%  assign link = block.settings.slide-url %}
         {% if block.type == 'slide' %}
           <a href="{{ block.settings.slide-url }}" class="slider-anchor slide-{{ slide-count }}">
-            {{  block.settings.slide-image | image_url: height: 200 | image_tag: alt: block.settings.slide-alt-text }}
+            {{  block.settings.slide-image | image_url: width: 1100 | image_tag: alt: block.settings.slide-alt-text }}
           </a>
           {% assign slide-count = slide-count |  plus: 1 %}
         {% endif %}
@@ -145,7 +145,6 @@ width: 100%;
 }
 
 .csf-slider-right img{
-max-height: 600px;
 }
 }
 
