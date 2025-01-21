@@ -15,12 +15,22 @@
       <div class="csf-slider-right">
         {% assign slide-count = 0 %}
         {% for block in section.blocks %}
-          {%  assign link = block.settings.slide-url %}
           {% if block.type == 'slide' %}
             <a href="{{ block.settings.slide-url }}" class="slider-anchor slide-{{ slide-count }}">
-              {{  block.settings.slide-image | image_url: width: 1100 | image_tag: alt: block.settings.slide-alt-text }}
+              <picture>
+                <!-- The mobile source loads when the screen is 767px wide or less -->
+                <source
+                        media="(max-width: 767px)"
+                        srcset="{{ block.settings.mobile-image | image_url: width: 600 }}"
+                >
+                <!-- Fallback/desktop image -->
+                <img
+                        src="{{ block.settings.slide-image | image_url: width: 1100 }}"
+                        alt="{{ block.settings.slide-alt-text }}"
+                >
+              </picture>
             </a>
-            {% assign slide-count = slide-count |  plus: 1 %}
+            {% assign slide-count = slide-count | plus: 1 %}
           {% endif %}
         {% endfor %}
       </div>
