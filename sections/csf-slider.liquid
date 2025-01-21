@@ -1,6 +1,6 @@
 <div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-  <div class="slider-grid color-scheme-3">
-    <div class="csf-slider-left element-margin-top color-scheme-3">
+  <div class="slider-grid">
+    <div class="csf-slider-left">
       {% for block in section.blocks %}
         {%  assign link = '#' %}
         {% if block.type == 'side-link' %}
@@ -17,7 +17,7 @@
         {%  assign link = block.settings.slide-url %}
         {% if block.type == 'slide' %}
           <a href="{{ block.settings.slide-url }}" class="slider-anchor slide-{{ slide-count }}">
-            {{  block.settings.slide-image | image_url: width: 1100 | image_tag: alt: block.settings.slide-alt-text }}
+            {{  block.settings.slide-image | image_url: height: 1200 | image_tag: alt: block.settings.slide-alt-text }}
           </a>
           {% assign slide-count = slide-count |  plus: 1 %}
         {% endif %}
@@ -110,7 +110,6 @@ order: 0;
 display: none;
 opacity: 0;
 transition: all 1s ease-in-out;
-aspect-ratio: 1/1;
 }
 
 .csf-slider-right a.active {
@@ -118,8 +117,9 @@ display: block;
 opacity: 1;
 }
 .csf-slider-right img{
-object-fit: contain;
+object-fit: cover;
 width: 100%;
+aspect-ratio: 5/4;
 }
 
 .slider-anchor{
@@ -127,20 +127,29 @@ line-height: 0;
 font-size: 0;
 }
 
+
 @media screen and (min-width: 768px) {
 .slider-grid{
-grid-template-columns: 1fr;
+grid-template-columns: 300px 1fr;
+max-height: 600px;
 }
 .csf-slider-left{
-grid-template-columns: 1fr 1fr 1fr;
-order: 1;
+grid-template-rows: 1fr;
+grid-template-columns: 1fr;
+order: 0;
+max-height: 100px;
 }
 .csf-slider-left img{
 width: 100%;
+height: 100px;
 }
 .csf-slider-right{
-order: 0;
+order: 1;
 width: 100%;
+}
+
+.csf-slider-right img{
+max-height: 600px;
 }
 }
 
