@@ -1,0 +1,53 @@
+<div class="color-{{ section.settings.color_scheme }}">
+    <div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        Hi Zach
+    </div>
+</div>
+{% schema %}
+{
+  "name": "Featured Logos",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "include_margins",
+      "default": true,
+      "label": "t:sections.feat-logo.settings.include_margins.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.feat-logo.settings.color_scheme.info",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Logos"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Logo Link",
+      "type": "logo-link",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "logo-link-url",
+          "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+        }
+      ]
+    }
+  ]
+
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}
