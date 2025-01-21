@@ -87,8 +87,8 @@
           "settings": {
             "slide-image": "shopify://shop_images/31-opt.jpg",
             "mobile-image": "shopify://shop_images/54-opt.jpg",
-            "slide-alt-text": "",
-            "slide-url": ""
+            "slide-alt-text": "Demo Slide",
+            "slide-url": "#"
           }
         }
       },
