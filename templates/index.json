@@ -151,6 +151,13 @@
         "color_scheme": "scheme-3"
       }
     },
+    "featured_logos_x6YHdh": {
+      "type": "featured-logos",
+      "settings": {
+        "include_margins": true,
+        "color_scheme": "scheme-3"
+      }
+    },
     "featured_youtube_home_KNK3Pc": {
       "type": "featured-youtube-home",
       "blocks": {
@@ -211,6 +218,7 @@
     "csf_slider_FqbCDD",
     "featured_collection",
     "our_story_cta_83ExhD",
+    "featured_logos_x6YHdh",
     "featured_youtube_home_KNK3Pc",
     "17300794767b502cec"
   ]
