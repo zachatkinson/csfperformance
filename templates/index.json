@@ -145,6 +145,18 @@
     },
     "featured_logos_x6YHdh": {
       "type": "featured-logos",
+      "blocks": {
+        "logo_link_mKM3BX": {
+          "type": "logo-link",
+          "settings": {
+            "image": "shopify://shop_images/TRD-Series-Logo-Transparent-Background-PNG.png",
+            "logo-link-url": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_link_mKM3BX"
+      ],
       "settings": {
         "include_margins": true,
         "color_scheme": "scheme-3"
