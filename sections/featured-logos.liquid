@@ -10,7 +10,7 @@
                   {% if block.settings['logo-link'] %}
                     {% assign link = block.settings['logo-link'] %}
                   {% endif %}
-                <div>
+                <div style="max-width: 200px">
                   <a href="{{ link }}" class="blaze-slide">
                     <img src="{{ block.settings.image | img_url: '100x100' }}" alt="{{ block.settings.image.alt }}">
                   </a>
