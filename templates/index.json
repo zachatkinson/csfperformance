@@ -85,8 +85,8 @@
         "slide_GAzVyQ": {
           "type": "slide",
           "settings": {
-            "slide-image": "shopify://shop_images/31-opt.jpg",
-            "mobile-image": "shopify://shop_images/45-opt.jpg",
+            "slide-image": "shopify://shop_images/slide_desktop-skyline.jpg",
+            "mobile-image": "shopify://shop_images/slide_mobile-skyline.jpg",
             "slide-alt-text": "Demo Slide",
             "slide-url": "#"
           }
