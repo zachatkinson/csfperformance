@@ -385,13 +385,15 @@
           "label": "Heading",
           "default": "Featured logos"
         },
-        "link": {
-            "label": "Link",
-            "default": ""
+        "color_scheme": {
+            "label": "Color Scheme"
         },
         "include_margins": {
           "label": "Include margins"
         }
+      },
+      "blocks": {
+
       }
     }
   },
