@@ -265,6 +265,11 @@
     }
   },
   "sections": {
+    "all": {
+      "colors": {
+        "label": "Color scheme"
+      }
+    },
     "announcements": {
       "previous_announcement": "Previous announcement",
       "next_announcement": "Next announcement",
@@ -379,6 +384,10 @@
         "heading": {
           "label": "Heading",
           "default": "Featured logos"
+        },
+        "link": {
+            "label": "Link",
+            "default": ""
         },
         "include_margins": {
           "label": "Include margins"
