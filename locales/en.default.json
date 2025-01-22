@@ -525,5 +525,13 @@
       "send_on": "YYYY-MM-DD",
       "send_on_label": "Send on (optional)"
     }
+  },
+  "feat-logo": {
+    "name": "Featured logos",
+    "settings": {
+      "heading": {
+        "label": "Heading"
+      }
+    }
   }
 }
