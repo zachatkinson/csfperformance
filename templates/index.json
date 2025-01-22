@@ -152,10 +152,28 @@
             "image": "shopify://shop_images/TRD-Series-Logo-Transparent-Background-PNG.png",
             "logo-link-url": ""
           }
+        },
+        "logo_link_re8XJT": {
+          "type": "logo-link",
+          "settings": {
+            "image": "shopify://shop_images/bmw-invasion.png",
+            "logo-link-url": "",
+            "side-link-alt-text": ""
+          }
+        },
+        "logo_link_JL6CeD": {
+          "type": "logo-link",
+          "settings": {
+            "image": "shopify://shop_images/overcrest.png",
+            "logo-link-url": "",
+            "side-link-alt-text": ""
+          }
         }
       },
       "block_order": [
-        "logo_link_mKM3BX"
+        "logo_link_mKM3BX",
+        "logo_link_re8XJT",
+        "logo_link_JL6CeD"
       ],
       "settings": {
         "include_margins": true,
