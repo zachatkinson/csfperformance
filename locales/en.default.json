@@ -377,7 +377,8 @@
       "name": "Featured logos",
       "settings": {
         "heading": {
-          "label": "Heading"
+          "label": "Heading",
+          "default": "Featured logos"
         },
         "include_margins": {
           "label": "Include margins"
