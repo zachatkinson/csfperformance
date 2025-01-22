@@ -192,6 +192,22 @@
             "logo-link-url": "",
             "side-link-alt-text": ""
           }
+        },
+        "logo_link_Q3Nb8q": {
+          "type": "logo-link",
+          "settings": {
+            "image": "shopify://shop_images/MotoIQ.svg",
+            "logo-link-url": "",
+            "side-link-alt-text": ""
+          }
+        },
+        "logo_link_PHWim7": {
+          "type": "logo-link",
+          "settings": {
+            "image": "shopify://shop_images/Stanceworks.svg",
+            "logo-link-url": "",
+            "side-link-alt-text": ""
+          }
         }
       },
       "block_order": [
@@ -200,7 +216,9 @@
         "logo_link_JL6CeD",
         "logo_link_HQetxh",
         "logo_link_aCYG4t",
-        "logo_link_mqjRAM"
+        "logo_link_mqjRAM",
+        "logo_link_Q3Nb8q",
+        "logo_link_PHWim7"
       ],
       "settings": {
         "include_margins": true,
