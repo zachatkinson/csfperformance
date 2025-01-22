@@ -176,13 +176,31 @@
             "logo-link-url": "",
             "side-link-alt-text": ""
           }
+        },
+        "logo_link_aCYG4t": {
+          "type": "logo-link",
+          "settings": {
+            "image": "shopify://shop_images/Ultrace-500.png",
+            "logo-link-url": "",
+            "side-link-alt-text": ""
+          }
+        },
+        "logo_link_mqjRAM": {
+          "type": "logo-link",
+          "settings": {
+            "image": "shopify://shop_images/SpeedHunters-1.svg",
+            "logo-link-url": "",
+            "side-link-alt-text": ""
+          }
         }
       },
       "block_order": [
         "logo_link_mKM3BX",
         "logo_link_re8XJT",
         "logo_link_JL6CeD",
-        "logo_link_HQetxh"
+        "logo_link_HQetxh",
+        "logo_link_aCYG4t",
+        "logo_link_mqjRAM"
       ],
       "settings": {
         "include_margins": true,
