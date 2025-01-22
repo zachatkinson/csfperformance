@@ -531,6 +531,9 @@
     "settings": {
       "heading": {
         "label": "Heading"
+      },
+      "include_margins": {
+        "label": "Include margins"
       }
     }
   }
