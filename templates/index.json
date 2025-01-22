@@ -168,12 +168,21 @@
             "logo-link-url": "",
             "side-link-alt-text": ""
           }
+        },
+        "logo_link_HQetxh": {
+          "type": "logo-link",
+          "settings": {
+            "image": "shopify://shop_images/SDC-logo-white-1x1-500.png",
+            "logo-link-url": "",
+            "side-link-alt-text": ""
+          }
         }
       },
       "block_order": [
         "logo_link_mKM3BX",
         "logo_link_re8XJT",
-        "logo_link_JL6CeD"
+        "logo_link_JL6CeD",
+        "logo_link_HQetxh"
       ],
       "settings": {
         "include_margins": true,
