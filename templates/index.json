@@ -454,6 +454,23 @@
         "desktop-item-count": 6,
         "desktop-item-gap": 50
       }
+    },
+    "creative_carousel_tp47Uf": {
+      "type": "creative-carousel",
+      "settings": {
+        "heading": "Race Team & Engineering Partners",
+        "color_scheme": "scheme-3",
+        "include_margins": true,
+        "autoplay": true,
+        "interval": 6000,
+        "duration": 300,
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "desktop-item-count": 6,
+        "desktop-item-gap": 50
+      }
     }
   },
   "order": [
@@ -464,6 +481,7 @@
     "featured_youtube_home_KNK3Pc",
     "17300794767b502cec",
     "creative_carousel_fLLeLV",
-    "creative_carousel_kVf9td"
+    "creative_carousel_kVf9td",
+    "creative_carousel_tp47Uf"
   ]
 }
