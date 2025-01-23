@@ -205,7 +205,7 @@
       ],
       "settings": {
         "include_margins": true,
-        "autoplay": false,
+        "autoplay": true,
         "color_scheme": "scheme-3",
         "heading": "Test"
       }
