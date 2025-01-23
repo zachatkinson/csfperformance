@@ -343,7 +343,7 @@
         "color_scheme": "scheme-3",
         "include_margins": false,
         "autoplay": true,
-        "interval": 6000,
+        "interval": 100,
         "duration": 300,
         "mobile-item-count": 1,
         "mobile-item-gap": 25,
