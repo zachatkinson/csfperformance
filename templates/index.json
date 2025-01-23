@@ -289,14 +289,18 @@
         "color_scheme": "scheme-3",
         "include_margins": true,
         "autoplay": true,
+        "direction": "to left",
         "interval": 5000,
         "duration": 300,
         "mobile-item-count": 2,
         "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
         "tablet-item-count": 3,
         "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
         "desktop-item-count": 4,
-        "desktop-item-gap": 50
+        "desktop-item-gap": 50,
+        "desktop-item-scroll": 1
       }
     },
     "creative_carousel_kVf9td": {
@@ -391,14 +395,18 @@
         "color_scheme": "scheme-3",
         "include_margins": true,
         "autoplay": true,
+        "direction": "to left",
         "interval": 5400,
         "duration": 300,
         "mobile-item-count": 1,
         "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
         "tablet-item-count": 3,
         "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
         "desktop-item-count": 4,
-        "desktop-item-gap": 50
+        "desktop-item-gap": 50,
+        "desktop-item-scroll": 1
       }
     },
     "creative_carousel_tp47Uf": {
@@ -457,14 +465,18 @@
         "color_scheme": "scheme-3",
         "include_margins": true,
         "autoplay": true,
+        "direction": "to left",
         "interval": 6000,
         "duration": 300,
         "mobile-item-count": 1,
         "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
         "tablet-item-count": 3,
         "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
         "desktop-item-count": 4,
-        "desktop-item-gap": 50
+        "desktop-item-gap": 50,
+        "desktop-item-scroll": 1
       }
     },
     "featured_youtube_home_KNK3Pc": {
