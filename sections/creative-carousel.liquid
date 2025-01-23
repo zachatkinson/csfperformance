@@ -33,6 +33,7 @@
     all: {
       enableAutoplay: {{section.settings.autoplay | json }},
       autoplayInterval: {{ section.settings.interval }},
+      autoplayDirection: {{ section.settings.direction }},
       transitionDuration: {{ section.settings.duration }},
       slidesToShow: {{ section.settings.mobile-item-count }},
       slideGap: {{ section.settings.mobile-item-gap }} + "px",
@@ -77,6 +78,22 @@
       "id": "autoplay",
       "default": true,
       "label": "t:sections.creative-carousel.settings.autoplay.label"
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "to left",
+          "label": "Left"
+        },
+        {
+          "value": "to right",
+          "label": "Right"
+        }
+      ],
+      "default": "to left"
     },
     {
       "type": "range",
