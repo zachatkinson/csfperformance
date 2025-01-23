@@ -136,7 +136,6 @@
     },
     "creative_carousel_fLLeLV": {
       "type": "creative-carousel",
-      "name": "Media & Race Team Partners",
       "blocks": {
         "item_cR9mTX": {
           "type": "item",
@@ -347,7 +346,6 @@
     },
     "creative_carousel_kVf9td": {
       "type": "creative-carousel",
-      "name": "Industry Partners",
       "blocks": {
         "item_83Tpcd": {
           "type": "item",
@@ -450,7 +448,6 @@
     },
     "creative_carousel_tp47Uf": {
       "type": "creative-carousel",
-      "name": "Race Team & Engineering Partners",
       "blocks": {
         "item_rEKWDc": {
           "type": "item",
