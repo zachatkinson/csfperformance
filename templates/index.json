@@ -343,13 +343,13 @@
         "color_scheme": "scheme-3",
         "include_margins": false,
         "autoplay": true,
-        "interval": 100,
+        "interval": 5000,
         "duration": 300,
-        "mobile-item-count": 1,
+        "mobile-item-count": 2,
         "mobile-item-gap": 25,
         "tablet-item-count": 4,
         "tablet-item-gap": 50,
-        "desktop-item-count": 4,
+        "desktop-item-count": 5,
         "desktop-item-gap": 50
       }
     }
