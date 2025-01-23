@@ -28,8 +28,8 @@
 </div>
 {{ 'blaze-slider.js' | asset_url | script_tag }}
 <script>
-  const el = document.querySelector('.blaze-slider-{{ unique_class }}')
-  new BlazeSlider(el, {
+  const el_{{ unique_class }} = document.querySelector('.blaze-slider-{{ unique_class }}')
+  new BlazeSlider(el_{{ unique_class }}, {
     all: {
       enableAutoplay: {{section.settings.autoplay | json }},
       autoplayInterval: {{ section.settings.interval }},
