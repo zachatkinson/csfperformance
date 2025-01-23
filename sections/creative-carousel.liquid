@@ -35,15 +35,18 @@
       autoplayInterval: {{ section.settings.interval }},
       transitionDuration: {{ section.settings.duration }},
       slidesToShow: {{ section.settings.mobile-item-count }},
-      slideGap: {{ section.settings.mobile-item-gap }} + "px"
+      slideGap: {{ section.settings.mobile-item-gap }} + "px",
+      slidesToScroll: {{ section.settings.mobile-item-scroll }}
     },
     '(min-width: 768px)': {
       slidesToShow: {{ section.settings.tablet-item-count }},
-      slideGap: {{ section.settings.tablet-item-gap }}+ "px"
+      slideGap: {{ section.settings.tablet-item-gap }}+ "px",
+      slidesToScroll: {{ section.settings.tablet-item-scroll }}
     },
     '(min-width: 1200px)': {
       slidesToShow: {{ section.settings.desktop-item-count }},
-      slideGap: {{ section.settings.desktop-item-gap }}+ "px"
+      slideGap: {{ section.settings.desktop-item-gap }}+ "px",
+      slidesToScroll: {{ section.settings.desktop-item-scroll }}
     },
   })
 </script>
@@ -116,6 +119,15 @@
     },
     {
       "type": "range",
+      "id": "mobile-item-scroll",
+      "label": "Item Scroll (Mobile)",
+      "default": 1,
+      "max": 2,
+      "min": 1,
+      "step": 1
+    },
+    {
+      "type": "range",
       "id": "tablet-item-count",
       "label": "Items Shown (Tablet)",
       "default": 4,
@@ -132,6 +144,15 @@
       "min": 0,
       "step": 5,
       "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "tablet-item-scroll",
+      "label": "Item Scroll (Tablet)",
+      "default": 1,
+      "max": 6,
+      "min": 1,
+      "step": 1
     },
     {
       "type": "range",
@@ -152,7 +173,15 @@
       "step": 5,
       "unit": "px"
     }
-
+    {
+      "type": "range",
+      "id": "desktop-item-scroll",
+      "label": "Item Scroll (Desktop)",
+      "default": 1,
+      "max": 6,
+      "min": 1,
+      "step": 1
+    }
   ],
   "presets": [
     {
