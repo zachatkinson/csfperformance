@@ -445,7 +445,7 @@
         "color_scheme": "scheme-3",
         "include_margins": true,
         "autoplay": true,
-        "interval": 6000,
+        "interval": 5400,
         "duration": 300,
         "mobile-item-count": 1,
         "mobile-item-gap": 25,
