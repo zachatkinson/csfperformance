@@ -10,8 +10,8 @@
             <div class="blaze-track">
               {% for block in section.blocks %}
                 {% assign link = '#' %}
-                  {% if block.settings['logo-link'] %}
-                    {% assign link = block.settings['logo-link'] %}
+                  {% if block.settings['link'] %}
+                    {% assign link = block.settings['link'] %}
                   {% endif %}
                 <div>
                   <a href="{{ link }}" class="blaze-slide">
