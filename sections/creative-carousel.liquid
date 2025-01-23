@@ -39,7 +39,8 @@
       slideGap: {{ section.settings.mobile-item-gap }} + "px",
       slidesToScroll: {{ section.settings.mobile-item-scroll }},
       stopAutoplayOnInteraction: {{ section.settings.interaction-pause | json }},
-      transitionTimingFunction: "{{ section.settings.transition-timing }}"
+      transitionTimingFunction: "{{ section.settings.transition-timing }}",
+      draggable:  {{section.settings.draggable | json }}
     },
     '(min-width: 768px)': {
       slidesToShow: {{ section.settings.tablet-item-count }},
@@ -86,6 +87,12 @@
       "id": "interaction-pause",
       "default": true,
       "label": "Interaction Pause"
+    },
+    {
+      "type": "checkbox",
+      "id": "draggable",
+      "default": true,
+      "label": "Draggable"
     },
     {
       "type": "select",
