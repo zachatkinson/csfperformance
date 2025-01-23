@@ -38,7 +38,8 @@
       slidesToShow: {{ section.settings.mobile-item-count }},
       slideGap: {{ section.settings.mobile-item-gap }} + "px",
       slidesToScroll: {{ section.settings.mobile-item-scroll }},
-      stopAutoplayOnInteraction: {{ section.settings['interaction-pause'] | json }}
+      stopAutoplayOnInteraction: {{ section.settings.interaction-pause | json }},
+      transitionTimingFunction: "{{ section.settings.transition-timing }}"
     },
     '(min-width: 768px)': {
       slidesToShow: {{ section.settings.tablet-item-count }},
@@ -121,6 +122,26 @@
       "min": 100,
       "step": 100,
       "unit": "ms"
+    },
+    {
+      "type": "select",
+      "id": "transition-timing",
+      "label": "Transition Timing",
+      "options": [
+        {
+          "value": "ease",
+          "label": "Ease"
+        },
+        {
+          "value": "linear",
+          "label": "Linear"
+        },
+        {
+          "value": "cubic-bezier(.18,.74,.2,1.27)",
+          "label": "Bounce"
+        }
+      ],
+      "default": "ease"
     },
     {
       "type": "range",
