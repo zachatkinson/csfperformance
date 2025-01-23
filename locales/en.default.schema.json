@@ -1010,6 +1010,9 @@
         },
         "include_margins": {
           "label": "Include margins"
+        },
+        "autoplay": {
+          "label": "Autoplay"
         }
       },
       "blocks": {
