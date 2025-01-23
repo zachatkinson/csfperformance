@@ -31,13 +31,13 @@
   new BlazeSlider(el, {
     all: {
       enableAutoplay: {{section.settings.autoplay | json }},
-      autoplayInterval: 6000,
-      transitionDuration: 300,
-      slidesToShow: 3,
+      autoplayInterval: {{ section.settings.interval }},
+      transitionDuration: {{ section.settings.duration }},
+      slidesToShow: 2,
       slideGap: '50px'
     },
-    '(max-width: 768px)': {
-      slidesToShow: 2,
+    '(min-width: 768px)': {
+      slidesToShow: 3,
     },
     '(min-width: 1200px)': {
       slidesToShow: 4,
@@ -78,7 +78,16 @@
       "label": "Carousel Interval",
       "default": 6000,
       "max": 9900,
-
+      "min": 100,
+      "step": 100,
+      "unit": "ms"
+    },
+    {
+      "type": "range",
+      "id": "duration",
+      "label": "Transition Duration",
+      "default": 300,
+      "max": 9900,
       "min": 100,
       "step": 100,
       "unit": "ms"
