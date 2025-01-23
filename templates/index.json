@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "1729007960e8d42a51": {
@@ -145,7 +136,7 @@
     },
     "creative_carousel_fLLeLV": {
       "type": "creative-carousel",
-      "name": "Media and Race Team Partners",
+      "name": "Media & Race Team Partners",
       "blocks": {
         "item_cR9mTX": {
           "type": "item",
@@ -356,6 +347,7 @@
     },
     "creative_carousel_kVf9td": {
       "type": "creative-carousel",
+      "name": "Industry Partners",
       "blocks": {
         "item_83Tpcd": {
           "type": "item",
@@ -458,6 +450,7 @@
     },
     "creative_carousel_tp47Uf": {
       "type": "creative-carousel",
+      "name": "Race Team & Engineering Partners",
       "blocks": {
         "item_rEKWDc": {
           "type": "item",
