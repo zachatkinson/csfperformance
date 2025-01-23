@@ -1,17 +1,18 @@
 {{ 'blaze.css' | asset_url | stylesheet_tag }}
+{% assign unique_class =  section.id | slice: -5, 5   %}
 <div class="color-{{ section.settings.color_scheme }}">
     <div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       {% if section.settings.heading %}
         <h2 style="text-align: center; margin-top: 0; padding-top: 2em;">{{ section.settings.heading }}</h2>
       {% endif %}
-      <div class="blaze-slider">
+      <div class="blaze-slider-{{ unique_class }}">
         <div class="blaze-container">
           <div class="blaze-track-container">
             <div class="blaze-track">
               {% for block in section.blocks %}
                 {% assign link = '#' %}
-                  {% if block.settings['link'] %}
-                    {% assign link = block.settings['link'] %}
+                  {% if block.settings.link %}
+                    {% assign link = block.settings.link %}
                   {% endif %}
                 <div>
                   <a href="{{ link }}" class="blaze-slide">
@@ -27,7 +28,7 @@
 </div>
 {{ 'blaze-slider.js' | asset_url | script_tag }}
 <script>
-  const el = document.querySelector('.blaze-slider')
+  const el = document.querySelector('.blaze-slider-{{ unique_class }}')
   new BlazeSlider(el, {
     all: {
       enableAutoplay: {{section.settings.autoplay | json }},
@@ -150,7 +151,7 @@
       "min": 0,
       "step": 5,
       "unit": "px"
-    },
+    }
 
   ],
   "presets": [
