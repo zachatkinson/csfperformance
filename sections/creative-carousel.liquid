@@ -33,7 +33,7 @@
     all: {
       enableAutoplay: {{section.settings.autoplay | json }},
       autoplayInterval: {{ section.settings.interval }},
-      autoplayDirection: {{ section.settings.direction }},
+      autoplayDirection: {{ section.settings.direction.value }},
       transitionDuration: {{ section.settings.duration }},
       slidesToShow: {{ section.settings.mobile-item-count }},
       slideGap: {{ section.settings.mobile-item-gap }} + "px",
