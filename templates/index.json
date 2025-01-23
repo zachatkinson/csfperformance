@@ -341,7 +341,7 @@
       "settings": {
         "heading": "Media & Race Partners",
         "color_scheme": "scheme-3",
-        "include_margins": false,
+        "include_margins": true,
         "autoplay": true,
         "interval": 5000,
         "duration": 300,
