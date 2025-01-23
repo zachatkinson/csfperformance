@@ -457,6 +457,55 @@
     },
     "creative_carousel_tp47Uf": {
       "type": "creative-carousel",
+      "blocks": {
+        "item_rEKWDc": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/GMG.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_6CjXMD": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/VF_Engineering.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_pUQNXH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/M_Engineering.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_cDAXaL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/T1.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_QH4L48": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Graves_Motorsports.png",
+            "link": "",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_rEKWDc",
+        "item_6CjXMD",
+        "item_pUQNXH",
+        "item_cDAXaL",
+        "item_QH4L48"
+      ],
       "settings": {
         "heading": "Race Team & Engineering Partners",
         "color_scheme": "scheme-3",
