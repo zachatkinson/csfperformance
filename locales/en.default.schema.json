@@ -999,8 +999,8 @@
           }
         }
     },
-    "feat-logo": {
-      "name": "Featured logos",
+    "creative-carousel": {
+      "name": "Creative Carousel",
       "settings": {
         "heading": {
           "label": "Heading"
@@ -1009,14 +1009,27 @@
           "label": "Color Scheme"
         },
         "include_margins": {
-          "label": "Include margins"
+          "label": "Include Margins"
         },
         "autoplay": {
           "label": "Autoplay"
         }
       },
       "blocks": {
-
+        "item": {
+            "name": "Item",
+            "settings": {
+                "image": {
+                "label": "Carousel Item"
+                },
+                "alt-text": {
+                "label": "Alt Text"
+                },
+                "link": {
+                "label": "Link"
+                }
+            }
+        }
       }
     },
     "footer": {

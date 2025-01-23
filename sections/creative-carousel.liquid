@@ -46,58 +46,58 @@
 </script>
 {% schema %}
 {
-  "name": "t:sections.feat-logo.name",
+  "name": "t:sections.creative-carousel.name",
   "settings": [
     {
       "type": "checkbox",
       "id": "include_margins",
       "default": true,
-      "label": "t:sections.feat-logo.settings.include_margins.label"
+      "label": "t:sections.creative-carousel.settings.include_margins.label"
     },
     {
       "type": "checkbox",
       "id": "autoplay",
       "default": true,
-      "label": "t:sections.feat-logo.settings.autoplay.label"
+      "label": "t:sections.creative-carousel.settings.autoplay.label"
     },
     {
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
-      "info": "t:sections.feat-logo.settings.color_scheme.info",
+      "info": "t:sections.creative-carousel.settings.color_scheme.info",
       "default": "scheme-1"
     },
     {
       "type": "inline_richtext",
       "id": "heading",
-      "label": "t:sections.feat-logo.settings.heading.label"
+      "label": "t:sections.creative-carousel.settings.heading.label"
     }
   ],
   "presets": [
     {
-      "name": "Featured Logos"
+      "name": "Creative Carousel"
     }
   ],
   "blocks": [
     {
-      "name": "Logo Link",
-      "type": "feat-logo",
+      "name": "Item",
+      "type": "item",
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "t.sections.create-carousel.blocks.item.image.label"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "t:sections.feat-logo.settings.link.label",
-          "default": "t:sections.feat-logo.settings.link.default"
+          "label": "t:sections.creative-carousel.blocks.item.link.label",
+          "default": "t:sections.feat-logo.blocks.item.link.default"
         },
         {
           "type": "text",
-          "id": "logo-link-alt-text",
-          "label": "Alt Text"
+          "id": "alt-text",
+          "label": "t:sections.creative-carousel.blocks.item.alt-text.label"
         }
       ]
     }
