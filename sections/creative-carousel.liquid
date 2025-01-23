@@ -37,7 +37,8 @@
       transitionDuration: {{ section.settings.duration }},
       slidesToShow: {{ section.settings.mobile-item-count }},
       slideGap: {{ section.settings.mobile-item-gap }} + "px",
-      slidesToScroll: {{ section.settings.mobile-item-scroll }}
+      slidesToScroll: {{ section.settings.mobile-item-scroll }},
+      stopAutoplayOnInteraction: {{ section.settings['interaction-pause'] | json }}
     },
     '(min-width: 768px)': {
       slidesToShow: {{ section.settings.tablet-item-count }},
@@ -78,6 +79,12 @@
       "id": "autoplay",
       "default": true,
       "label": "t:sections.creative-carousel.settings.autoplay.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "interaction-pause",
+      "default": true,
+      "label": "Interaction Pause"
     },
     {
       "type": "select",
