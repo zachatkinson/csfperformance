@@ -30,7 +30,7 @@
   const el = document.querySelector('.blaze-slider')
   new BlazeSlider(el, {
     all: {
-      enableAutoplay: true,
+      enableAutoplay: {{section.settings.autoplay | json }},
       autoplayInterval: 6000,
       transitionDuration: 300,
       slidesToShow: 3,
