@@ -9,6 +9,7 @@
               {% assign link = block.settings.side-link-url %}
             {% endif %}
             <a href="{{ link }}" class="slider-anchor">{{  block.settings.image | image_url: height: 125 | image_tag: alt: block.settings.side-link-alt-text }}</a>
+
           {% endif %}
         {% endfor %}
       </div>
