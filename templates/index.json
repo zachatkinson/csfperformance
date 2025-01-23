@@ -145,6 +145,64 @@
     },
     "featured_logos_x6YHdh": {
       "type": "featured-logos",
+      "blocks": {
+        "feat_logo_H3nTnE": {
+          "type": "feat-logo",
+          "settings": {
+            "image": "shopify://shop_images/Speed_Academy.png",
+            "link": "",
+            "logo-link-alt-text": ""
+          }
+        },
+        "feat_logo_7yrFXX": {
+          "type": "feat-logo",
+          "settings": {
+            "image": "shopify://shop_images/CSF_Bimmer_Challenge.png",
+            "link": "",
+            "logo-link-alt-text": ""
+          }
+        },
+        "feat_logo_LYHppP": {
+          "type": "feat-logo",
+          "settings": {
+            "image": "shopify://shop_images/Ultrace.png",
+            "link": "",
+            "logo-link-alt-text": ""
+          }
+        },
+        "feat_logo_iQXBJh": {
+          "type": "feat-logo",
+          "settings": {
+            "image": "shopify://shop_images/Stanceworks.png",
+            "link": "",
+            "logo-link-alt-text": ""
+          }
+        },
+        "feat_logo_UFp6CP": {
+          "type": "feat-logo",
+          "settings": {
+            "image": "shopify://shop_images/Overcrest.png",
+            "link": "",
+            "logo-link-alt-text": ""
+          }
+        },
+        "feat_logo_HtTL9z": {
+          "type": "feat-logo",
+          "settings": {
+            "image": "shopify://shop_images/TRD_Series.png",
+            "link": "",
+            "logo-link-alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "feat_logo_H3nTnE",
+        "feat_logo_7yrFXX",
+        "feat_logo_LYHppP",
+        "feat_logo_iQXBJh",
+        "feat_logo_UFp6CP",
+        "feat_logo_HtTL9z"
+      ],
       "settings": {
         "include_margins": true,
         "autoplay": true,
