@@ -4,7 +4,7 @@
       {% if section.settings.heading %}
         <h2 style="text-align: center; margin-top: 0; padding-top: 2em;">{{ section.settings.heading }}</h2>
       {% endif %}
-      <div class="blaze-slider">
+      <div class="blaze-slider-{{section.id}}">
         <div class="blaze-container">
           <div class="blaze-track-container">
             <div class="blaze-track">
@@ -27,7 +27,7 @@
 </div>
 {{ 'blaze-slider.js' | asset_url | script_tag }}
 <script>
-  const el = document.querySelector('.blaze-slider')
+  const el = document.querySelector('.blaze-slider-{{section.id}}')
   new BlazeSlider(el, {
     all: {
       enableAutoplay: {{section.settings.autoplay | json }},
