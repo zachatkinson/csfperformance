@@ -352,6 +352,108 @@
         "desktop-item-count": 5,
         "desktop-item-gap": 50
       }
+    },
+    "creative_carousel_kVf9td": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_83Tpcd": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Vortech.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_79rxqm": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Bimmerworld.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_LRcnBK": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Cobb.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_h3FaNq": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Rywire.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_fTj8kY": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Magnuson.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_FWmDUx": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Full_Race.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_NrrcbX": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Mountune.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_9aPKyD": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Honda_Performance_Division.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_pV3W3D": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/ECS_Tuning.png",
+            "link": "",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_83Tpcd",
+        "item_79rxqm",
+        "item_LRcnBK",
+        "item_h3FaNq",
+        "item_fTj8kY",
+        "item_FWmDUx",
+        "item_NrrcbX",
+        "item_9aPKyD",
+        "item_pV3W3D"
+      ],
+      "settings": {
+        "heading": "Industry Partners",
+        "color_scheme": "scheme-3",
+        "include_margins": true,
+        "autoplay": true,
+        "interval": 6000,
+        "duration": 300,
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "desktop-item-count": 6,
+        "desktop-item-gap": 50
+      }
     }
   },
   "order": [
@@ -361,6 +463,7 @@
     "our_story_cta_83ExhD",
     "featured_youtube_home_KNK3Pc",
     "17300794767b502cec",
-    "creative_carousel_fLLeLV"
+    "creative_carousel_fLLeLV",
+    "creative_carousel_kVf9td"
   ]
 }
