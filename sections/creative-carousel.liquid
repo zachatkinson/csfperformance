@@ -37,10 +37,10 @@
       slideGap: '50px'
     },
     '(min-width: 768px)': {
-      slidesToShow: 3,
+      slidesToShow: {{ section.settings.tablet-item-count }},
     },
     '(min-width: 1200px)': {
-      slidesToShow: 4,
+      slidesToShow: {{ section.settings.desktop-item-count }},
     },
   })
 </script>
@@ -98,6 +98,24 @@
       "label": "Items Shown (Mobile)",
       "default": 1,
       "max": 3,
+      "min": 1,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "tablet-item-count",
+      "label": "Items Shown (Tablet)",
+      "default": 4,
+      "max": 6,
+      "min": 1,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "desktop-item-count",
+      "label": "Items Shown (Desktop)",
+      "default": 6,
+      "max": 8,
       "min": 1,
       "step": 1
     }
