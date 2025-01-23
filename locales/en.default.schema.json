@@ -1002,7 +1002,12 @@
     "csf-slider": {
       "name": "CSF Slider",
       "settings": {
-
+        "include_margins": {
+          "label": "Include margins"
+        },
+        "reveal_on_scroll": {
+          "label": "Reveal on scroll"
+        }
       }
     },
     "creative-carousel": {
