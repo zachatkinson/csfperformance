@@ -1003,8 +1003,7 @@
       "name": "Featured logos",
       "settings": {
         "heading": {
-          "label": "Heading",
-          "default": "Featured logos"
+          "label": "Heading"
         },
         "color_scheme": {
           "label": "Color Scheme"
