@@ -957,25 +957,8 @@
               "content": "To display a rating, add a product rating app. [Learn more](https://help.shopify.com/manual/online-store/themes/theme-structure/theme-features#featured-product-rating)"
             }
           }
-        },
-        "feat-logo": {
-          "name": "Featured logos",
-          "settings": {
-            "heading": {
-              "label": "Heading",
-              "default": "Featured logos"
-            },
-            "color_scheme": {
-              "label": "Color Scheme"
-            },
-            "include_margins": {
-              "label": "Include margins"
-            }
-          },
-          "blocks": {
-
-          }
         }
+
       },
       "settings": {
         "product": {
@@ -1015,6 +998,24 @@
             "label": "Make section margins the same as theme"
           }
         }
+    },
+    "feat-logo": {
+      "name": "Featured logos",
+      "settings": {
+        "heading": {
+          "label": "Heading",
+          "default": "Featured logos"
+        },
+        "color_scheme": {
+          "label": "Color Scheme"
+        },
+        "include_margins": {
+          "label": "Include margins"
+        }
+      },
+      "blocks": {
+
+      }
     },
     "footer": {
       "name": "Footer",
