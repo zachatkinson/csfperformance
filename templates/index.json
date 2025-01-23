@@ -143,154 +143,6 @@
         "color_scheme": "scheme-3"
       }
     },
-    "featured_logos_x6YHdh": {
-      "type": "featured-logos",
-      "blocks": {
-        "feat_logo_H3nTnE": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/Speed_Academy.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_7yrFXX": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/CSF_Bimmer_Challenge.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_LYHppP": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/Ultrace.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_iQXBJh": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/Stanceworks.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_UFp6CP": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/Overcrest.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_HtTL9z": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/TRD_Series.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_rkY6wX": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/Global_Time_Attack.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_b9gkFp": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/Players.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_UteQJi": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/Panorama_Porsche_Club.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_LP6gAH": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/Social_Drivers_Club.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_EMR9Na": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/Speedhunters.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_xRwUMn": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/BMW_Invasion.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_paXecx": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/Impact_Motorsports_Festival.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_QrX3yw": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/Pit_Paddock.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        },
-        "feat_logo_mdtecL": {
-          "type": "feat-logo",
-          "settings": {
-            "image": "shopify://shop_images/MotoIQ.png",
-            "link": "",
-            "logo-link-alt-text": ""
-          }
-        }
-      },
-      "block_order": [
-        "feat_logo_H3nTnE",
-        "feat_logo_7yrFXX",
-        "feat_logo_LYHppP",
-        "feat_logo_iQXBJh",
-        "feat_logo_UFp6CP",
-        "feat_logo_HtTL9z",
-        "feat_logo_rkY6wX",
-        "feat_logo_b9gkFp",
-        "feat_logo_UteQJi",
-        "feat_logo_LP6gAH",
-        "feat_logo_EMR9Na",
-        "feat_logo_xRwUMn",
-        "feat_logo_paXecx",
-        "feat_logo_QrX3yw",
-        "feat_logo_mdtecL"
-      ],
-      "settings": {
-        "include_margins": true,
-        "autoplay": true,
-        "color_scheme": "scheme-3",
-        "heading": "Test"
-      }
-    },
     "featured_youtube_home_KNK3Pc": {
       "type": "featured-youtube-home",
       "blocks": {
@@ -344,6 +196,27 @@
       "settings": {
         "include_margins": false
       }
+    },
+    "creative_carousel_fLLeLV": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_cR9mTX": {
+          "type": "item",
+          "settings": {
+            "link": "",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_cR9mTX"
+      ],
+      "settings": {
+        "include_margins": true,
+        "autoplay": true,
+        "color_scheme": "",
+        "heading": "Media & Race Partners"
+      }
     }
   },
   "order": [
@@ -351,8 +224,8 @@
     "csf_slider_FqbCDD",
     "featured_collection",
     "our_story_cta_83ExhD",
-    "featured_logos_x6YHdh",
     "featured_youtube_home_KNK3Pc",
-    "17300794767b502cec"
+    "17300794767b502cec",
+    "creative_carousel_fLLeLV"
   ]
 }
