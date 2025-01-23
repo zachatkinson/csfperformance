@@ -34,13 +34,15 @@
       autoplayInterval: {{ section.settings.interval }},
       transitionDuration: {{ section.settings.duration }},
       slidesToShow: {{ section.settings.mobile-item-count }},
-      slideGap: '50px'
+      slideGap: {{ section.settings.mobile-item-gap }}
     },
     '(min-width: 768px)': {
       slidesToShow: {{ section.settings.tablet-item-count }},
+      slideGap: {{ section.settings.tablet-item-gap }}
     },
     '(min-width: 1200px)': {
       slidesToShow: {{ section.settings.desktop-item-count }},
+      slideGap: {{ section.settings.desktop-item-gap }}
     },
   })
 </script>
