@@ -203,19 +203,154 @@
         "item_cR9mTX": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/Speed_Academy.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_dXDkyp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/CSF_Bimmer_Challenge.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_eEwtxW": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Ultrace.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_wJJp4Y": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Stanceworks.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_NWY3bR": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Overcrest.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_TJekje": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/TRD_Series.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_mb9DrK": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Global_Time_Attack.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_WPKyfw": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Players.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_twUQwM": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Panorama_Porsche_Club.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_ALTAhr": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Social_Drivers_Club.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_n6r6Hj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Speedhunters.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_aCL8m9": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/BMW_Invasion.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_FbGeaz": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Impact_Motorsports_Festival.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_NtE3WK": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Pit_Paddock.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_HPnLBC": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/MotoIQ.png",
             "link": "",
             "alt-text": ""
           }
         }
       },
       "block_order": [
-        "item_cR9mTX"
+        "item_cR9mTX",
+        "item_dXDkyp",
+        "item_eEwtxW",
+        "item_wJJp4Y",
+        "item_NWY3bR",
+        "item_TJekje",
+        "item_mb9DrK",
+        "item_WPKyfw",
+        "item_twUQwM",
+        "item_ALTAhr",
+        "item_n6r6Hj",
+        "item_aCL8m9",
+        "item_FbGeaz",
+        "item_NtE3WK",
+        "item_HPnLBC"
       ],
       "settings": {
-        "include_margins": true,
-        "autoplay": true,
+        "heading": "Media & Race Partners",
         "color_scheme": "scheme-3",
-        "heading": "Media & Race Partners"
+        "include_margins": false,
+        "autoplay": true,
+        "interval": 6000,
+        "duration": 300,
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "desktop-item-count": 4,
+        "desktop-item-gap": 50
       }
     }
   },
