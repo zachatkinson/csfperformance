@@ -33,7 +33,7 @@
       enableAutoplay: {{section.settings.autoplay | json }},
       autoplayInterval: {{ section.settings.interval }},
       transitionDuration: {{ section.settings.duration }},
-      slidesToShow: 2,
+      slidesToShow: {{ section.settings.mobile-item-count }},
       slideGap: '50px'
     },
     '(min-width: 768px)': {
@@ -91,6 +91,16 @@
       "min": 100,
       "step": 100,
       "unit": "ms"
+    },
+    {
+      "type": "range",
+      "id": "mobile-item-count",
+      "label": "Items Shown (Mobile)",
+      "default": 1,
+      "max": 3,
+      "min": 1,
+      "step": 1,
+      "unit": "items"
     }
 
   ],
