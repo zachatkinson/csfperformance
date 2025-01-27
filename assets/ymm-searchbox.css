@@ -46,7 +46,7 @@
 .ymm_app .select2-container--default .select2-results__option--highlighted[aria-selected] { background-color: #5897fb; color: #ffffff; }
 
 /* Button */
-#ymm_searchbox .button-action { display: flex; align-items: center; justify-content: center; }
+#ymm_searchbox .button-action { display: grid; grid-template-columns: 1fr 1fr; align-items: center; justify-content: center; }
 #ymm_searchbox .btn { font-family:inherit; font-size:15px; font-weight:600; padding:10px 20px; margin: 0; line-height:normal; letter-spacing:normal; white-space:normal; border-style:solid; border-width:1px; height:auto; width:auto; min-height:45px; min-width:100px; border-radius:2px; cursor:pointer; display:flex; align-items:center; justify-content:center; text-align:center; -webkit-transition:all .3s ease-in-out 0s; transition:all .3s ease-in-out 0s; }
 #ymm_searchbox .btn:hover { opacity:0.8; }
 #ymm_searchbox .btn[disabled] { cursor: not-allowed; opacity:0.6; }
