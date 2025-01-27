@@ -30,8 +30,7 @@
                                     class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
                                     tabindex="-1"
                             >
-                                <div class="wrapper-sub-menu"
-                                     style="display: grid; grid-template-columns: min-content 1fr;">
+                                <div class="wrapper-sub-menu">
                                     <div style="grid-template-columns: 1fr; height: 100%; font-family: var(--font-heading-family); font-size: 2em;">
                                         <ul
                                                 class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
@@ -148,6 +147,8 @@
     }
     .wrapper-sub-menu{
         max-height: 400px;
+        display: grid;
+        grid-template-columns: min-content 1fr;
     }
 
 </style>
