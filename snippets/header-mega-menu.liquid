@@ -32,7 +32,7 @@
                             >
                                 <div class="wrapper-sub-menu"
                                      style="display: grid; grid-template-columns: min-content 1fr;">
-                                    <div style="grid-template-columns: 1fr; height: 100%; font-family: var(--font-heading-family); font-size: 2em;">
+                                    <div style="grid-template-columns: 1fr; height: 100%; font-family: var(--font-heading-family); font-size: 2em; max-height: 300px; overflow: scroll;">
                                         <ul
                                                 class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                                                 role="list"
@@ -146,9 +146,7 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: max-content;
     }
-    .wrapper-sub-menu{
-        max-height: 300px; overflow: scroll;
-    }
+
 
 </style>
 <script>
