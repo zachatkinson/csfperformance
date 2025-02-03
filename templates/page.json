@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -6,9 +15,28 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "173861739649cd6a4a": {
+      "type": "apps",
+      "blocks": {
+        "mappy_store_locator_page_embed_block_pyAfBy": {
+          "type": "shopify://apps/mappy-store-locator/blocks/page-embed-block/edfca2bd-82ad-413c-b32c-580d239b17ab",
+          "settings": {
+            "is_show_heading_map": true,
+            "is_show_description_map": true
+          }
+        }
+      },
+      "block_order": [
+        "mappy_store_locator_page_embed_block_pyAfBy"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "173861739649cd6a4a"
   ]
 }
