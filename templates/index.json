@@ -293,7 +293,7 @@
         "interaction-pause": true,
         "draggable": true,
         "direction": "to left",
-        "interval": 5000,
+        "interval": 9900,
         "duration": 300,
         "transition-timing": "ease",
         "mobile-item-count": 1,
