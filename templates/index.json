@@ -297,7 +297,7 @@
         "duration": 300,
         "transition-timing": "ease",
         "mobile-item-count": 1,
-        "mobile-item-gap": 100,
+        "mobile-item-gap": 50,
         "mobile-item-scroll": 1,
         "tablet-item-count": 3,
         "tablet-item-gap": 50,
