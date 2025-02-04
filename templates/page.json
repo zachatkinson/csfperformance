@@ -19,7 +19,7 @@
     "173861739649cd6a4a": {
       "type": "apps",
       "blocks": {
-        "mappy_store_locator_page_embed_block_z3DiPG": {
+        "mappy_store_locator_page_embed_block_7VkHaL": {
           "type": "shopify://apps/mappy-store-locator/blocks/page-embed-block/edfca2bd-82ad-413c-b32c-580d239b17ab",
           "settings": {
             "is_show_heading_map": true,
@@ -28,7 +28,7 @@
         }
       },
       "block_order": [
-        "mappy_store_locator_page_embed_block_z3DiPG"
+        "mappy_store_locator_page_embed_block_7VkHaL"
       ],
       "settings": {
         "include_margins": true
