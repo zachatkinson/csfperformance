@@ -19,16 +19,13 @@
     "173861739649cd6a4a": {
       "type": "apps",
       "blocks": {
-        "mappy_store_locator_page_embed_block_pyAfBy": {
-          "type": "shopify://apps/mappy-store-locator/blocks/page-embed-block/edfca2bd-82ad-413c-b32c-580d239b17ab",
-          "settings": {
-            "is_show_heading_map": true,
-            "is_show_description_map": true
-          }
+        "store_locator_supreme_app_map_cH3AR8": {
+          "type": "shopify://apps/store-locator-supreme/blocks/app-map/048779a7-a22c-4c1f-80f2-a99cd0dc0ffd",
+          "settings": {}
         }
       },
       "block_order": [
-        "mappy_store_locator_page_embed_block_pyAfBy"
+        "store_locator_supreme_app_map_cH3AR8"
       ],
       "settings": {
         "include_margins": true
