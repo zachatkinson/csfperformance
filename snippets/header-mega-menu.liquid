@@ -36,7 +36,7 @@
                                         <ul
                                                 class="mega-menu__list {% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
                                                 role="list"
-                                                style="display: block;"
+                                                style="display: block; min-width: 200px;"
                                         >
                                             {%- for childlink in link.links -%}
                                                 {% assign highlight_class="" %}
