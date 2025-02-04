@@ -112,12 +112,12 @@
         ".card-information {display: none;}"
       ],
       "settings": {
-        "title": "Featured Products",
+        "title": "Latest Products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "latest-products",
         "products_to_show": 9,
         "columns_desktop": 3,
         "full_width": false,
