@@ -9,7 +9,6 @@
   background-image: url("{{ collection.image | image_url }}");
   background-size: cover;
   background-repeat: no-repeat;
-  aspect-ratio: 3/1;
   }
   @media screen and (min-width: 749px) {
     .collection-hero{
@@ -17,7 +16,7 @@
     }
   }
 {%- endstyle -%}
-
+<div class="hero-wrap">
 <div class="collection-hero color-{{ section.settings.color_scheme }} gradient">
   <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     <div class="collection-hero__text-wrapper">
@@ -30,6 +29,7 @@
 
   </div>
 
+</div>
 </div>
 {%- if section.settings.show_collection_description -%}
   <div class="collection-hero__description rte">{{ collection.description }}</div>
