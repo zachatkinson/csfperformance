@@ -2,18 +2,18 @@
 {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .collection-hero{
-  background-image: url("{{ collection.image | image_url }}");
-  background-size: cover;
-  background-repeat: no-repeat;
-  aspect-ratio: 3/1;
+  .collection-hero--with-image .collection-hero__inner {
+  padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
   }
-  @media screen and (max-width: 749px) {
-    .collection-hero--with-image .collection-hero__inner {
-      padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
-    }
   .collection-hero{
-    aspect-ratio: 1/1 !important;
+  aspect-ratio: 1/1;
+  }
+  @media screen and (min-width: 749px) {
+    .collection-hero{
+      background-image: url("{{ collection.image | image_url }}");
+      background-size: cover;
+      background-repeat: no-repeat;
+      aspect-ratio: 3/1;
     }
   }
 {%- endstyle -%}
