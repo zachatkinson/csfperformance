@@ -6,13 +6,14 @@
   padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
   }
   .collection-hero{
+  background-image: url("{{ collection.image | image_url }}");
+  background-size: cover;
+  background-repeat: no-repeat;
   aspect-ratio: 1/1;
   }
   @media screen and (min-width: 749px) {
     .collection-hero{
-      background-image: url("{{ collection.image | image_url }}");
-      background-size: cover;
-      background-repeat: no-repeat;
+
       aspect-ratio: 3/1;
     }
   }
