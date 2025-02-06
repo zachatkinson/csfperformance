@@ -36,11 +36,13 @@
       "settings": {
         "show_collection_description": true,
         "show_collection_image": true,
-        "color_scheme": "scheme-1"
+        "hero_color_scheme": "scheme-3",
+        "body_color_scheme": ""
       }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "custom_css": [
         "#product-grid {display: none;}",
         "#main-collection-filters {display: none;}"
