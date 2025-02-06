@@ -14,7 +14,8 @@
       "settings": {
         "show_collection_description": true,
         "show_collection_image": true,
-        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b"
+        "hero_color_scheme": "scheme-3",
+        "body_color_scheme": ""
       }
     },
     "product-grid": {
