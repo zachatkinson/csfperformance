@@ -3595,3 +3595,26 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+
+
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+
+.model-grid li {
+  list-style: none;
+}
+
+.model-grid li img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 749px) {
+  .model-grid{
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
