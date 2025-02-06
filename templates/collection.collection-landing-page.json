@@ -33,7 +33,7 @@
       "custom_css": [],
       "settings": {
         "show_collection_description": true,
-        "show_collection_image": false,
+        "show_collection_image": true,
         "hero_color_scheme": "scheme-3",
         "body_color_scheme": ""
       }
