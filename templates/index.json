@@ -102,7 +102,7 @@
         "slide_GAzVyQ"
       ],
       "settings": {
-        "include_margins": true,
+        "include_margins": false,
         "reveal_on_scroll": false
       }
     },
