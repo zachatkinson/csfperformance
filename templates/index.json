@@ -288,7 +288,7 @@
       "settings": {
         "heading": "Media & Race Partners",
         "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
-        "include_margins": true,
+        "include_margins": false,
         "autoplay": true,
         "interaction-pause": true,
         "draggable": true,
@@ -470,7 +470,7 @@
       "settings": {
         "heading": "Race Team & Engineering Partners",
         "color_scheme": "scheme-4",
-        "include_margins": true,
+        "include_margins": false,
         "autoplay": true,
         "interaction-pause": true,
         "draggable": true,
