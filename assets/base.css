@@ -3613,6 +3613,9 @@ details-disclosure > details {
   width: 100%;
   height: auto;
 }
+.model-grid li .model-title{
+  margin-top: 0;
+}
 @media screen and (min-width: 749px) {
   .model-grid{
     grid-template-columns: repeat(6, 1fr);
