@@ -31,7 +31,7 @@
   }
 {%- endstyle -%}
 <div class="hero-wrap">
-<div class="collection-hero color-{{ section.settings.color_scheme }}">
+<div class="collection-hero color-{{ section.settings.hero_color_scheme }}">
     <h1 class="collection-hero__title">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{ collection.title | escape }}
@@ -43,7 +43,7 @@
 </div>
 </div>
 {%- if section.settings.show_collection_description -%}
-  <div class="page-width">{{ collection.description }}</div>
+  <div class="page-width color-{{ section.settings.body_color_scheme }}">{{ collection.description }}</div>
 {%- endif -%}
 
 {% schema %}
@@ -70,7 +70,13 @@
     },
     {
       "type": "color_scheme",
-      "id": "color_scheme",
+      "id": "hero_color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "body_color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
     }
