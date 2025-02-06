@@ -3616,6 +3616,10 @@ details-disclosure > details {
 .model-grid li .model-title{
   margin-top: 0;
 }
+.model-link{
+    text-decoration: none;
+    color: black;
+}
 @media screen and (min-width: 749px) {
   .model-grid{
     grid-template-columns: repeat(6, 1fr);
