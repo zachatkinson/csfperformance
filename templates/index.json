@@ -397,7 +397,7 @@
       "settings": {
         "heading": "Industry Partners",
         "color_scheme": "scheme-5",
-        "include_margins": true,
+        "include_margins": false,
         "autoplay": true,
         "interaction-pause": true,
         "draggable": true,
