@@ -8,7 +8,7 @@
             {% if block.settings.side-link-url %}
               {% assign link = block.settings.side-link-url %}
             {% endif %}
-            <a href="{{ link }}" class="slider-anchor">{{  block.settings.image | image_url: height: 125 | image_tag: alt: block.settings.side-link-alt-text }}</a>
+            <a href="{{ link }}" class="slider-anchor">{{  block.settings.image | image_url: width: 300 | image_tag: alt: block.settings.side-link-alt-text }}</a>
 
           {% endif %}
         {% endfor %}
@@ -22,11 +22,11 @@
                 <!-- The mobile source loads when the screen is 767px wide or less -->
                 <source
                         media="(max-width: 767px)"
-                        srcset="{{ block.settings.mobile-image | image_url: width: 600 }}"
+                        srcset="{{ block.settings.mobile-image | image_url: width: 768 }}"
                 >
                 <!-- Fallback/desktop image -->
                 <img
-                        src="{{ block.settings.slide-image | image_url: width: 1100 }}"
+                        src="{{ block.settings.slide-image | image_url: width: 1920 }}"
                         alt="{{ block.settings.slide-alt-text }}"
                 >
               </picture>
