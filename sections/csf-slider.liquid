@@ -8,7 +8,7 @@
             {% if block.settings.side-link-url %}
               {% assign link = block.settings.side-link-url %}
             {% endif %}
-            <a href="{{ link }}" class="slider-anchor">{{  block.settings.image | image_url: width: 300 | image_tag: alt: block.settings.side-link-alt-text }}</a>
+            <a href="{{ link }}" class="slider-anchor">{{  block.settings.image | image_url: width: 600 | image_tag: alt: block.settings.side-link-alt-text }}</a>
 
           {% endif %}
         {% endfor %}
