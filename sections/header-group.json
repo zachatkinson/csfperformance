@@ -37,9 +37,7 @@
     },
     "header": {
       "type": "header",
-      "custom_css": [
-        "span {font-size: 1.45em !important;}"
-      ],
+      "custom_css": [],
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
