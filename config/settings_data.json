@@ -444,7 +444,8 @@
       ".ymm-product-price {font-size: 16px; line-height: 16px;}",
       ".ymm-grid .grid__item {text-align: left;}",
       ".section-template--17780370309293__page_LCm77t-padding {}",
-      ".video-iframe {padding: 0 !important;}"
+      ".video-iframe {padding: 0 !important;}",
+      ".list-menu{text-transform: uppercase;}"
     ]
   }
 }
