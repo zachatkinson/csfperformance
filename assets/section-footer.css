@@ -510,3 +510,30 @@
     }
   }
 }
+
+/* Center the newsletter section and add vertical padding */
+.footer-block__newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Ensure the form itself is also centered */
+.footer__newsletter {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 550px;
+}
+
+/* Make sure the newsletter heading is centered */
+.footer-block__heading {
+  text-align: center;
+}
+
+/* Optional: Add some breathing room between the heading and the form */
+.footer-block__newsletter .footer-block__heading {
+  margin-bottom: 20px;
+}
