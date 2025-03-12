@@ -445,9 +445,7 @@
       ".ymm-grid .grid__item {text-align: left;}",
       ".section-template--17780370309293__page_LCm77t-padding {}",
       ".video-iframe {padding: 0 !important;}",
-      ".list-menu {text-transform: uppercase; font-family: \"Bebas Neue\"; font-size: 2rem !important;}",
-      "@media screen and (min-width: 990px) and (max-width: 1200px) {/* Make mobile menu show up at larger screen sizes */ header-drawer {display: flex !important; } .header__inline-menu {display: none !important; }}",
-      "@media screen and (min-width: 1200px) {.header__inline-menu {display: block; } header-drawer {display: none; } }"
+      ".list-menu {text-transform: uppercase; font-family: \"Bebas Neue\"; font-size: 2rem !important;}"
     ]
   }
 }
