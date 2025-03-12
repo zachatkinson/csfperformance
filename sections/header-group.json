@@ -38,7 +38,7 @@
     "header": {
       "type": "header",
       "custom_css": [
-        "span {font-size: 1.4rem;}"
+        "span {font-size: 1.4rem !important;}"
       ],
       "settings": {
         "logo_position": "middle-left",
