@@ -2208,7 +2208,7 @@ input[type='checkbox'] {
   font-size: calc(var(--font-heading-scale) * 1.3rem);
 }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 990px) {
   body:has(.section-header .header:not(.drawer-menu)) .utility-bar .page-width {
     padding-left: 5rem;
     padding-right: 5rem;
