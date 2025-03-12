@@ -1576,6 +1576,7 @@ details[open] > .share-button__fallback {
   font-weight: var(--font-body-weight);
   font-size: 1.6rem;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   transition: box-shadow var(--duration-short) ease;
   border-radius: var(--inputs-radius);
