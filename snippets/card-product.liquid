@@ -107,7 +107,7 @@
                     </div>
                 {%- else -%}
                     <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
-                        <div class="media media--transparent media--hover-effect">
+                        <div class="media media--transparent media--hover-effect" style="--ratio-percent: 66.66666666666666%;">
                             <img
                                     src="{{ 'no_img.png' | asset_url }}"
                                     sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
@@ -118,7 +118,7 @@
                                     {% endunless %}
                                     width="1920"
                                     height="1280"
-                                    style="object-fit: contain;"
+                                    style="object-fit: contain; position: absolute; width: 100%; height: 100%; top: 0; left: 0;"
                             >
                         </div>
                     </div>
