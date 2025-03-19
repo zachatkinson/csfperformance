@@ -76,7 +76,15 @@
     <div class="page-width">
         <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col grid--2-col-tablet">
             <div class="grid__item product__media-wrapper">
-                {% render 'product-media-gallery', variant_images: variant_images %}
+                {% if product.media.size == 0 %}
+                    <div class="product-media-container media-type-image media-fit-contain global-media-settings gradient" style="--ratio: 1.0; --preview-ratio: 1.0; width: 100%; height: auto; min-height: 400px;">
+                        <div class="product__media media" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <img src="{{ 'no_img.png' | asset_url }}" alt="{{ product.title | escape }}" class="image-magnify-none" style="max-width: 100%; height: auto; max-height: 600px; object-fit: contain;">
+                        </div>
+                    </div>
+                {% else %}
+                    {% render 'product-media-gallery', variant_images: variant_images %}
+                {% endif %}
             </div>
             <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 <section
