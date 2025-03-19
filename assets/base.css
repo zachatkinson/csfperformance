@@ -111,9 +111,9 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
     padding-right: 3.2rem;
   }
 
-  .page-width--narrow {
-    padding: 0 9rem;
-  }
+  /*.page-width--narrow {*/
+  /*  padding: 0 9rem;*/
+  /*}*/
 
   .page-width-desktop {
     padding: 0;
@@ -130,10 +130,10 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
     padding-right: 5rem;
   }
 
-  .page-width--narrow {
-    max-width: 72.6rem;
-    padding: 0;
-  }
+  /*.page-width--narrow {*/
+  /*  max-width: 72.6rem;*/
+  /*  padding: 0;*/
+  /*}*/
 
   .page-width-desktop {
     max-width: var(--page-width);
