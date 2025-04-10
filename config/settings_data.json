@@ -445,7 +445,8 @@
       ".ymm-grid .grid__item {text-align: left;}",
       ".section-template--17780370309293__page_LCm77t-padding {}",
       ".video-iframe {padding: 0 !important;}",
-      ".list-menu {text-transform: uppercase; font-family: \"Bebas Neue\"; font-size: 2rem !important;}"
+      ".list-menu {text-transform: uppercase; font-family: \"Bebas Neue\"; font-size: 2rem !important;}",
+      ".header__submenu {width: max-content;}"
     ]
   }
 }
