@@ -306,6 +306,12 @@
         background-size: 100% auto;
       }
     </style>
+
+    <!-- Page Lightbox for regular pages only (not product pages) -->
+    {%- unless template contains 'product' -%}
+      {{ 'page-lightbox.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'page-lightbox.js' | asset_url }}" defer="defer"></script>
+    {%- endunless -%}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
