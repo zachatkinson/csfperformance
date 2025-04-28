@@ -15,7 +15,7 @@
         "item_F7hfQ6": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/Bimmerworld.png",
+            "image": "shopify://shop_images/Bimmerworld.svg",
             "link": "",
             "alt-text": ""
           }
@@ -23,7 +23,39 @@
         "item_94BUyL": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/ECS_Tuning.png",
+            "image": "shopify://shop_images/ECS-Tuning-1.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_VKKi3K": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/FCP-Euro.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_nbmVyi": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Pelican-Parts.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_BUHDTj": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/IND.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_7FqQaR": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Quadratec.svg",
             "link": "",
             "alt-text": ""
           }
@@ -31,7 +63,11 @@
       },
       "block_order": [
         "item_F7hfQ6",
-        "item_94BUyL"
+        "item_94BUyL",
+        "item_VKKi3K",
+        "item_nbmVyi",
+        "item_BUHDTj",
+        "item_7FqQaR"
       ],
       "name": "Creative Carousel",
       "settings": {
