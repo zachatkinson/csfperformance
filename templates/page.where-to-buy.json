@@ -62,6 +62,7 @@
         },
         "item_teMgxP": {
           "type": "item",
+          "name": "Rennline",
           "settings": {
             "image": "shopify://shop_images/rennline-logo.svg",
             "link": "",
