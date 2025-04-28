@@ -59,6 +59,14 @@
             "link": "",
             "alt-text": ""
           }
+        },
+        "item_teMgxP": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/rennline-logo.svg",
+            "link": "",
+            "alt-text": ""
+          }
         }
       },
       "block_order": [
@@ -67,7 +75,8 @@
         "item_VKKi3K",
         "item_nbmVyi",
         "item_BUHDTj",
-        "item_7FqQaR"
+        "item_7FqQaR",
+        "item_teMgxP"
       ],
       "name": "Creative Carousel",
       "settings": {
