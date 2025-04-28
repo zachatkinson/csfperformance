@@ -14,6 +14,7 @@
       "blocks": {
         "item_F7hfQ6": {
           "type": "item",
+          "name": "BimmerWorld",
           "settings": {
             "image": "shopify://shop_images/Bimmerworld.svg",
             "link": "",
@@ -22,6 +23,7 @@
         },
         "item_94BUyL": {
           "type": "item",
+          "name": "ECS",
           "settings": {
             "image": "shopify://shop_images/ECS-Tuning-1.svg",
             "link": "",
@@ -30,6 +32,7 @@
         },
         "item_VKKi3K": {
           "type": "item",
+          "name": "FCP",
           "settings": {
             "image": "shopify://shop_images/FCP-Euro.svg",
             "link": "",
@@ -38,6 +41,7 @@
         },
         "item_nbmVyi": {
           "type": "item",
+          "name": "Pelican Parts",
           "settings": {
             "image": "shopify://shop_images/Pelican-Parts.svg",
             "link": "",
@@ -46,8 +50,18 @@
         },
         "item_BUHDTj": {
           "type": "item",
+          "name": "IND",
           "settings": {
             "image": "shopify://shop_images/IND.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_XTQxmK": {
+          "type": "item",
+          "name": "PSI",
+          "settings": {
+            "image": "shopify://shop_images/PSI-Logo-w-Turbo-White.svg",
             "link": "",
             "alt-text": ""
           }
@@ -77,6 +91,7 @@
         "item_VKKi3K",
         "item_nbmVyi",
         "item_BUHDTj",
+        "item_XTQxmK",
         "item_7FqQaR",
         "item_teMgxP"
       ],
