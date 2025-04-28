@@ -9,6 +9,53 @@
  */
 {
   "sections": {
+    "creative_carousel_w7iTLU": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_F7hfQ6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/Bimmerworld.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_94BUyL": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/ECS_Tuning.png",
+            "link": "",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_F7hfQ6",
+        "item_94BUyL"
+      ],
+      "name": "Creative Carousel",
+      "settings": {
+        "heading": "",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "include_margins": true,
+        "autoplay": true,
+        "interaction-pause": true,
+        "draggable": true,
+        "direction": "to right",
+        "interval": 6000,
+        "duration": 300,
+        "transition-timing": "ease",
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
+        "desktop-item-count": 8,
+        "desktop-item-gap": 50,
+        "desktop-item-scroll": 1
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -24,6 +71,7 @@
     }
   },
   "order": [
+    "creative_carousel_w7iTLU",
     "main",
     "173861739649cd6a4a"
   ]
