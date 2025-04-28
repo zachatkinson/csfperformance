@@ -114,7 +114,7 @@
         "tablet-item-gap": 50,
         "tablet-item-scroll": 1,
         "desktop-item-count": 8,
-        "desktop-item-gap": 50,
+        "desktop-item-gap": 150,
         "desktop-item-scroll": 1
       }
     },
