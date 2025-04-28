@@ -54,6 +54,7 @@
         },
         "item_7FqQaR": {
           "type": "item",
+          "name": "Quadratec",
           "settings": {
             "image": "shopify://shop_images/Quadratec.svg",
             "link": "",
