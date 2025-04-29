@@ -82,15 +82,6 @@
             "side-link-url": "#"
           }
         },
-        "slide_GAzVyQ": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/slide_desktop-skyline.jpg",
-            "mobile-image": "shopify://shop_images/slide_mobile-skyline.jpg",
-            "slide-alt-text": "Demo Slide",
-            "slide-url": "#"
-          }
-        },
         "slide_MDmQpw": {
           "type": "slide",
           "settings": {
@@ -98,6 +89,15 @@
             "mobile-image": "shopify://shop_images/1080x1350__8334_copy.jpg",
             "slide-alt-text": "",
             "slide-url": "https://csfrace.com/new-csf-porsche-964-993-fender-oil-cooler/"
+          }
+        },
+        "slide_WnayiF": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640__7089.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350__7089.jpg",
+            "slide-alt-text": "",
+            "slide-url": "https://csfrace.com/new-csf-bmw-f-chassis-gen-1-b58-high-performance-radiator/"
           }
         }
       },
@@ -108,8 +108,8 @@
         "side_link_kcAT8Y",
         "side_link_AAgkMP",
         "side_link_RyLMwd",
-        "slide_GAzVyQ",
-        "slide_MDmQpw"
+        "slide_MDmQpw",
+        "slide_WnayiF"
       ],
       "settings": {
         "include_margins": false,
