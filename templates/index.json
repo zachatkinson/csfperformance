@@ -108,6 +108,15 @@
             "slide-alt-text": "",
             "slide-url": "shopify://products/7239-mk3-ford-focus-rs-high-performance-all-aluminum-radiator"
           }
+        },
+        "slide_mizeRG": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640__7237_copy.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350__7237_copy.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://products/7237-mk6-ford-fiesta-st-high-performance-all-aluminum-radiator"
+          }
         }
       },
       "block_order": [
@@ -119,7 +128,8 @@
         "side_link_RyLMwd",
         "slide_MDmQpw",
         "slide_WnayiF",
-        "slide_HnqNxW"
+        "slide_HnqNxW",
+        "slide_mizeRG"
       ],
       "settings": {
         "include_margins": false,
