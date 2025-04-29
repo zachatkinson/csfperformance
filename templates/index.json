@@ -90,6 +90,15 @@
             "slide-alt-text": "Demo Slide",
             "slide-url": "#"
           }
+        },
+        "slide_MDmQpw": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640_8334_2.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350__8334_copy.jpg",
+            "slide-alt-text": "",
+            "slide-url": "https://csfrace.com/new-csf-porsche-964-993-fender-oil-cooler/"
+          }
         }
       },
       "block_order": [
@@ -99,7 +108,8 @@
         "side_link_kcAT8Y",
         "side_link_AAgkMP",
         "side_link_RyLMwd",
-        "slide_GAzVyQ"
+        "slide_GAzVyQ",
+        "slide_MDmQpw"
       ],
       "settings": {
         "include_margins": false,
@@ -529,11 +539,11 @@
           "settings": {
             "title": "",
             "title_color": "",
-            "title_size": 0,
+            "title_size_v2": 0,
             "alignment": "center",
-            "margin_top": 0,
-            "margin_bottom": 0,
-            "margin_sides": 0,
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
             "show_instagram_link": false,
             "link_alignment": "left",
             "link_color": "#000000",
