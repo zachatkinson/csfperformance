@@ -483,18 +483,9 @@
         },
         "item_xfV4YA": {
           "type": "item",
-          "name": "Meyer",
+          "name": "Worldpac",
           "settings": {
-            "image": "shopify://shop_images/Meyer.svg",
-            "link": "",
-            "alt-text": ""
-          }
-        },
-        "item_bYpAbH": {
-          "type": "item",
-          "name": "MotorState",
-          "settings": {
-            "image": "shopify://shop_images/MSLogo-Cut-Out-500.png",
+            "image": "shopify://shop_images/WorldPac.svg",
             "link": "",
             "alt-text": ""
           }
@@ -516,7 +507,6 @@
         "item_iiXeBH",
         "item_GVbx8Y",
         "item_xfV4YA",
-        "item_bYpAbH",
         "item_x9HG7M"
       ],
       "custom_css": [
