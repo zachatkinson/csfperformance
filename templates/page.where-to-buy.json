@@ -109,7 +109,7 @@
           "name": "Pelican Parts",
           "settings": {
             "image": "shopify://shop_images/Pelican-Parts.svg",
-            "link": "",
+            "link": "https://www.pelicanparts.com/byb-csf",
             "alt-text": ""
           }
         },
@@ -118,7 +118,7 @@
           "name": "IND",
           "settings": {
             "image": "shopify://shop_images/IND.svg",
-            "link": "",
+            "link": "https://ind-distribution.com/collections/csf",
             "alt-text": ""
           }
         },
