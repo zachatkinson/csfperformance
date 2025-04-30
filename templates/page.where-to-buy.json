@@ -173,21 +173,21 @@
     "creative_carousel_MePQfB": {
       "type": "creative-carousel",
       "blocks": {
-        "item_cAXhGK": {
-          "type": "item",
-          "name": "BimmerWorld",
-          "settings": {
-            "image": "shopify://shop_images/Bimmerworld.svg",
-            "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
-            "alt-text": ""
-          }
-        },
         "item_7eTKqj": {
           "type": "item",
           "name": "ECS",
           "settings": {
-            "image": "shopify://shop_images/ECS-Tuning-1.svg",
+            "image": "shopify://shop_images/R44PERFORMANCE_LOGO_WHITE_SVG.svg",
             "link": "https://www.ecstuning.com/b-csf-parts/",
+            "alt-text": ""
+          }
+        },
+        "item_cAXhGK": {
+          "type": "item",
+          "name": "Rennline",
+          "settings": {
+            "image": "shopify://shop_images/rennline-white-500.png",
+            "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
             "alt-text": ""
           }
         },
@@ -247,8 +247,8 @@
         }
       },
       "block_order": [
-        "item_cAXhGK",
         "item_7eTKqj",
+        "item_cAXhGK",
         "item_QzkyX8",
         "item_YFxx4i",
         "item_QjxVax",
