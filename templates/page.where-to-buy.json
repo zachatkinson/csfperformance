@@ -79,6 +79,15 @@
             "alt-text": ""
           }
         },
+        "item_teMgxP": {
+          "type": "item",
+          "name": "XPH",
+          "settings": {
+            "image": "shopify://shop_images/extreme-powerhouse-logo-500.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
         "item_VKKi3K": {
           "type": "item",
           "name": "FCP",
@@ -123,29 +132,20 @@
             "link": "",
             "alt-text": ""
           }
-        },
-        "item_teMgxP": {
-          "type": "item",
-          "name": "Rennline",
-          "settings": {
-            "image": "shopify://shop_images/rennline-logo.svg",
-            "link": "",
-            "alt-text": ""
-          }
         }
       },
       "block_order": [
         "item_F7hfQ6",
         "item_94BUyL",
+        "item_teMgxP",
         "item_VKKi3K",
         "item_nbmVyi",
         "item_BUHDTj",
         "item_XTQxmK",
-        "item_7FqQaR",
-        "item_teMgxP"
+        "item_7FqQaR"
       ],
       "custom_css": [
-        ".blaze-slide img {max-height: 100px}"
+        ".blaze-slide img {max-height: 100px;}"
       ],
       "name": "Creative Carousel",
       "settings": {
