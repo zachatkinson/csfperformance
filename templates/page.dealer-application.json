@@ -22,7 +22,7 @@
         "hulk_form_builder_form_block_RqJyPJ": {
           "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
           "settings": {
-            "form_uuid": "vzPD5ikAwzL1dtzDokYxBw",
+            "form_uuid": "eluVELWCArIKoIw36FBrDg",
             "form_settings": false,
             "font_color": "#000000",
             "size": 14,
@@ -52,6 +52,9 @@
       },
       "block_order": [
         "hulk_form_builder_form_block_RqJyPJ"
+      ],
+      "custom_css": [
+        ".hulk-powered-wrapper {display: none;}"
       ],
       "settings": {
         "include_margins": true
