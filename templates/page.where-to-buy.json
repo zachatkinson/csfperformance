@@ -335,16 +335,16 @@
         },
         "item_TLCpyj": {
           "type": "item",
-          "name": "Studio RSR",
+          "name": "DPPI",
           "settings": {
-            "image": "shopify://shop_images/Studio-RSR-Logo-White.svg",
+            "image": "shopify://shop_images/Diesel-Performance-Parts.svg",
             "link": "",
             "alt-text": ""
           }
         },
         "item_8yVEcD": {
           "type": "item",
-          "name": "Titan",
+          "name": "EAH",
           "settings": {
             "image": "shopify://shop_images/titan-ms-logo-white.svg",
             "link": "https://www.ecstuning.com/b-csf-parts/",
