@@ -40,10 +40,10 @@
         "column_UMUBbn": {
           "type": "column",
           "settings": {
-            "title": "Product Updates + Company News",
-            "text": "<p>Sign up for our newsletter today to receive occasional product and corporate updates.</p><p></p>",
-            "link_label": "",
-            "link": ""
+            "title": "Where To Buy",
+            "text": "<p>CSF does not sell directly to the public. CSF Racing & High Performance products are available through a worldwide network of authorized dealers and distributors to service you.</p>",
+            "link_label": "Find a Dealer/ Distributor",
+            "link": "shopify://pages/store-locator"
           }
         }
       },
