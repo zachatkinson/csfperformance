@@ -58,6 +58,13 @@
         "show_text_below": false
       }
     },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
     "creative_carousel_w7iTLU": {
       "type": "creative-carousel",
       "blocks": {
@@ -289,7 +296,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Preferred Authorized Dealers",
-            "icon": "none",
+            "icon": "heart",
             "row_content": "",
             "page": "preferred-authorized-dealers"
           }
@@ -305,7 +312,7 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
-        "color_scheme": "",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
         "container_color_scheme": "",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
@@ -314,11 +321,116 @@
         "padding_bottom": 36
       }
     },
-    "main": {
-      "type": "main-page",
+    "creative_carousel_zYbEyt": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_ArWT9P": {
+          "type": "item",
+          "name": "Rennline",
+          "settings": {
+            "image": "shopify://shop_images/rennline-white-500.png",
+            "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
+            "alt-text": ""
+          }
+        },
+        "item_TLCpyj": {
+          "type": "item",
+          "name": "Studio RSR",
+          "settings": {
+            "image": "shopify://shop_images/Studio-RSR-Logo-White.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_8yVEcD": {
+          "type": "item",
+          "name": "Titan",
+          "settings": {
+            "image": "shopify://shop_images/titan-ms-logo-white.svg",
+            "link": "https://www.ecstuning.com/b-csf-parts/",
+            "alt-text": ""
+          }
+        },
+        "item_nLPmMQ": {
+          "type": "item",
+          "name": "Throtl",
+          "settings": {
+            "image": "shopify://shop_images/THROTL-Razor-Script-White.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_mnzVnG": {
+          "type": "item",
+          "name": "Turner MS",
+          "settings": {
+            "image": "shopify://shop_images/turner-ex.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_WpXE3K": {
+          "type": "item",
+          "name": "VV",
+          "settings": {
+            "image": "shopify://shop_images/Vehicle_Virals_logo-White.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_pHDG7C": {
+          "type": "item",
+          "name": "Vivid",
+          "settings": {
+            "image": "shopify://shop_images/vivid-racing-logo-white-500.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_Vq6dqR": {
+          "type": "item",
+          "name": "XDP",
+          "settings": {
+            "image": "shopify://shop_images/XDP.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_ArWT9P",
+        "item_TLCpyj",
+        "item_8yVEcD",
+        "item_nLPmMQ",
+        "item_mnzVnG",
+        "item_WpXE3K",
+        "item_pHDG7C",
+        "item_Vq6dqR"
+      ],
+      "custom_css": [
+        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
+      ],
+      "name": "Creative Carousel",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "heading": "North American Distributors",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "include_margins": true,
+        "autoplay": true,
+        "interaction-pause": true,
+        "draggable": true,
+        "direction": "to right",
+        "interval": 6000,
+        "duration": 300,
+        "transition-timing": "ease",
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
+        "desktop-item-count": 8,
+        "desktop-item-gap": 25,
+        "desktop-item-scroll": 1
       }
     },
     "173861739649cd6a4a": {
@@ -330,10 +442,11 @@
   },
   "order": [
     "image_banner_tbpUpq",
+    "main",
     "creative_carousel_w7iTLU",
     "creative_carousel_MePQfB",
     "collapsible_content_EfAxxy",
-    "main",
+    "creative_carousel_zYbEyt",
     "173861739649cd6a4a"
   ]
 }
