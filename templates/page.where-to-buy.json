@@ -296,7 +296,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Preferred Authorized Dealers",
-            "icon": "heart",
+            "icon": "star",
             "row_content": "",
             "page": "preferred-authorized-dealers"
           }
