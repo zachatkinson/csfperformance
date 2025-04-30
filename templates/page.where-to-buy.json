@@ -91,7 +91,7 @@
           "name": "XPH",
           "settings": {
             "image": "shopify://shop_images/extreme-powerhouse-logo.svg",
-            "link": "",
+            "link": "https://x-ph.com/brands/CSF-Race.html",
             "alt-text": ""
           }
         },
@@ -100,7 +100,7 @@
           "name": "FCP",
           "settings": {
             "image": "shopify://shop_images/FCP-Euro.svg",
-            "link": "",
+            "link": "https://www.fcpeuro.com/CSF-parts/",
             "alt-text": ""
           }
         },
