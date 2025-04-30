@@ -573,13 +573,23 @@
             "row_content": "",
             "page": ""
           }
+        },
+        "collapsible_row_RzeTxm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
         "collapsible_row_h7nJhH",
         "collapsible_row_fmik7P",
         "collapsible_row_7qHcYE",
-        "collapsible_row_wyXaGY"
+        "collapsible_row_wyXaGY",
+        "collapsible_row_RzeTxm"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
