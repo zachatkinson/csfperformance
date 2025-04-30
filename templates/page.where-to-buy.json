@@ -202,9 +202,9 @@
         },
         "item_YFxx4i": {
           "type": "item",
-          "name": "FCP",
+          "name": "Throtl",
           "settings": {
-            "image": "shopify://shop_images/FCP-Euro.svg",
+            "image": "shopify://shop_images/THROTL-Razor-Script-White.svg",
             "link": "",
             "alt-text": ""
           }
