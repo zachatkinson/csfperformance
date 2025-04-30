@@ -374,7 +374,7 @@
           "name": "Meyer",
           "settings": {
             "image": "shopify://shop_images/Meyer.svg",
-            "link": "",
+            "link": "https://www.meyerdistributing.com/",
             "alt-text": ""
           }
         },
@@ -383,7 +383,7 @@
           "name": "MotorState",
           "settings": {
             "image": "shopify://shop_images/MSLogo-Cut-Out-500.png",
-            "link": "",
+            "link": "https://www.motorstate.com/",
             "alt-text": ""
           }
         },
@@ -392,7 +392,7 @@
           "name": "P1",
           "settings": {
             "image": "shopify://shop_images/P1-Performance.svg",
-            "link": "",
+            "link": "https://p1performance.com/",
             "alt-text": ""
           }
         }
