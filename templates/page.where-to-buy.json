@@ -456,9 +456,9 @@
         },
         "item_hC8qhK": {
           "type": "item",
-          "name": "EAH",
+          "name": "SSF",
           "settings": {
-            "image": "shopify://shop_images/eah_logo_emblem-bw.png",
+            "image": "shopify://shop_images/SSF.svg",
             "link": "https://www.ecstuning.com/b-csf-parts/",
             "alt-text": ""
           }
