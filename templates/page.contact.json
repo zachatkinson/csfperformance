@@ -173,6 +173,9 @@
         "column_jpxc4R",
         "column_LPEizR"
       ],
+      "custom_css": [
+        ".hulk-powered-wrapper {display: none}"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "",
