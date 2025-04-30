@@ -282,6 +282,38 @@
         "desktop-item-scroll": 1
       }
     },
+    "collapsible_content_EfAxxy": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_raDXCF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Preferred Authorized Dealers",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_raDXCF"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -294,76 +326,14 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "collapsible_content_EfAxxy": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_raDXCF": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_ezjVw7": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_fdARtB": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_mJgcMA": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_raDXCF",
-        "collapsible_row_ezjVw7",
-        "collapsible_row_fdARtB",
-        "collapsible_row_mJgcMA"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
-      "settings": {
-        "caption": "",
-        "heading": "Collapsible content",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "color_scheme": "",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "image_banner_tbpUpq",
     "creative_carousel_w7iTLU",
     "creative_carousel_MePQfB",
+    "collapsible_content_EfAxxy",
     "main",
-    "173861739649cd6a4a",
-    "collapsible_content_EfAxxy"
+    "173861739649cd6a4a"
   ]
 }
