@@ -144,6 +144,9 @@
         "item_7FqQaR",
         "item_teMgxP"
       ],
+      "custom_css": [
+        ".blaze-slide img {max-height: 100px}"
+      ],
       "name": "Creative Carousel",
       "settings": {
         "heading": "Preferred Online Retailers",
