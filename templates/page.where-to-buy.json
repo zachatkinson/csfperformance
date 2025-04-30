@@ -356,7 +356,7 @@
           "name": "JRP",
           "settings": {
             "image": "shopify://shop_images/JRP.svg",
-            "link": "",
+            "link": "http://store.jrponline.com/webstore/",
             "alt-text": ""
           }
         },
@@ -365,7 +365,7 @@
           "name": "Keystone",
           "settings": {
             "image": "shopify://shop_images/Keystone-Automotive-Operations.svg",
-            "link": "",
+            "link": "https://www.keystoneautomotive.com/",
             "alt-text": ""
           }
         },
