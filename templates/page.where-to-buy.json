@@ -239,7 +239,7 @@
           "name": "Vivid",
           "settings": {
             "image": "shopify://shop_images/vivid-racing-logo-white-500.png",
-            "link": "",
+            "link": "https://www.vividracing.com/",
             "alt-text": ""
           }
         },
@@ -248,7 +248,7 @@
           "name": "XDP",
           "settings": {
             "image": "shopify://shop_images/XDP.svg",
-            "link": "",
+            "link": "https://www.xtremediesel.com/xdp-manufacturers/csf#/showFilters",
             "alt-text": ""
           }
         }
