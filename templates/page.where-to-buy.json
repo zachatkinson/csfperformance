@@ -389,9 +389,9 @@
         },
         "item_Vq6dqR": {
           "type": "item",
-          "name": "XDP",
+          "name": "P1",
           "settings": {
-            "image": "shopify://shop_images/XDP.svg",
+            "image": "shopify://shop_images/P1-Performance.svg",
             "link": "",
             "alt-text": ""
           }
@@ -433,6 +433,115 @@
         "desktop-item-scroll": 1
       }
     },
+    "creative_carousel_Y4nCCW": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_UmPbdB": {
+          "type": "item",
+          "name": "Atech",
+          "settings": {
+            "image": "shopify://shop_images/Atech.svg",
+            "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
+            "alt-text": ""
+          }
+        },
+        "item_qmfB8A": {
+          "type": "item",
+          "name": "DPPI",
+          "settings": {
+            "image": "shopify://shop_images/Diesel-Performance-Parts.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_hC8qhK": {
+          "type": "item",
+          "name": "EAH",
+          "settings": {
+            "image": "shopify://shop_images/eah_logo_emblem-bw.png",
+            "link": "https://www.ecstuning.com/b-csf-parts/",
+            "alt-text": ""
+          }
+        },
+        "item_iiXeBH": {
+          "type": "item",
+          "name": "JRP",
+          "settings": {
+            "image": "shopify://shop_images/JRP.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_GVbx8Y": {
+          "type": "item",
+          "name": "Keystone",
+          "settings": {
+            "image": "shopify://shop_images/Keystone-Automotive-Operations.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_xfV4YA": {
+          "type": "item",
+          "name": "Meyer",
+          "settings": {
+            "image": "shopify://shop_images/Meyer.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_bYpAbH": {
+          "type": "item",
+          "name": "MotorState",
+          "settings": {
+            "image": "shopify://shop_images/MSLogo-Cut-Out-500.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_x9HG7M": {
+          "type": "item",
+          "name": "XDP",
+          "settings": {
+            "image": "shopify://shop_images/XDP.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_UmPbdB",
+        "item_qmfB8A",
+        "item_hC8qhK",
+        "item_iiXeBH",
+        "item_GVbx8Y",
+        "item_xfV4YA",
+        "item_bYpAbH",
+        "item_x9HG7M"
+      ],
+      "name": "Creative Carousel",
+      "settings": {
+        "heading": "North American Distributors",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "include_margins": true,
+        "autoplay": true,
+        "interaction-pause": true,
+        "draggable": true,
+        "direction": "to right",
+        "interval": 6000,
+        "duration": 300,
+        "transition-timing": "ease",
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
+        "desktop-item-count": 8,
+        "desktop-item-gap": 25,
+        "desktop-item-scroll": 1
+      }
+    },
     "173861739649cd6a4a": {
       "type": "apps",
       "settings": {
@@ -447,6 +556,7 @@
     "creative_carousel_MePQfB",
     "collapsible_content_EfAxxy",
     "creative_carousel_zYbEyt",
+    "creative_carousel_Y4nCCW",
     "173861739649cd6a4a"
   ]
 }
