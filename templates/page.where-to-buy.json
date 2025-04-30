@@ -9,6 +9,54 @@
  */
 {
   "sections": {
+    "image_banner_tbpUpq": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_kDWbn6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Before Purchasing…",
+            "heading_size": "h1"
+          }
+        },
+        "text_HxHT6x": {
+          "type": "text",
+          "settings": {
+            "text": "Please review our policies. To protect our brand, we take our distributor and reseller policies seriously.",
+            "text_style": "body"
+          }
+        },
+        "buttons_daDRGD": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kDWbn6",
+        "text_HxHT6x",
+        "buttons_daDRGD"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "creative_carousel_w7iTLU": {
       "type": "creative-carousel",
       "blocks": {
@@ -133,6 +181,7 @@
     }
   },
   "order": [
+    "image_banner_tbpUpq",
     "creative_carousel_w7iTLU",
     "main",
     "173861739649cd6a4a"
