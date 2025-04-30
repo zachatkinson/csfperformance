@@ -312,7 +312,7 @@
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
-        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "color_scheme": "scheme-4",
         "container_color_scheme": "",
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
@@ -326,9 +326,9 @@
       "blocks": {
         "item_ArWT9P": {
           "type": "item",
-          "name": "Rennline",
+          "name": "Atech",
           "settings": {
-            "image": "shopify://shop_images/rennline-white-500.png",
+            "image": "shopify://shop_images/Atech.svg",
             "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
             "alt-text": ""
           }
