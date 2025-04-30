@@ -18,27 +18,20 @@
             "heading": "Become a CSF Dealer / Distributor",
             "heading_size": "h1"
           }
-        },
-        "text_CxYLPP": {
-          "type": "text",
-          "settings": {
-            "text": "Interested in becoming an official authorized CSF Dealer/Distributor? Please fill out the form below. Include as much information as possible to expedite the process.",
-            "text_style": "body"
-          }
         }
       },
       "block_order": [
-        "heading_7eWxgF",
-        "text_CxYLPP"
+        "heading_7eWxgF"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image_overlay_opacity": 0,
+        "image": "shopify://shop_images/become-a-dealer-header_1.jpg",
+        "image_overlay_opacity": 50,
         "image_height": "small",
         "desktop_content_position": "middle-center",
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
