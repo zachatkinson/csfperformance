@@ -338,7 +338,7 @@
           "name": "DPPI",
           "settings": {
             "image": "shopify://shop_images/Diesel-Performance-Parts.svg",
-            "link": "",
+            "link": "https://www.dieselperformanceparts.com/",
             "alt-text": ""
           }
         },
@@ -347,7 +347,7 @@
           "name": "EAH",
           "settings": {
             "image": "shopify://shop_images/eah_logo_emblem-bw.png",
-            "link": "https://www.ecstuning.com/b-csf-parts/",
+            "link": "https://www.enthusiastautoholdings.com/",
             "alt-text": ""
           }
         },
