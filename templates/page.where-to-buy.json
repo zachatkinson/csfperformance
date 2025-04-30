@@ -465,9 +465,9 @@
         },
         "item_iiXeBH": {
           "type": "item",
-          "name": "JRP",
+          "name": "Titan",
           "settings": {
-            "image": "shopify://shop_images/JRP.svg",
+            "image": "shopify://shop_images/titan-ms-logo-white.svg",
             "link": "",
             "alt-text": ""
           }
