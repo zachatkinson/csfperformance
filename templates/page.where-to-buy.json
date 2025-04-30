@@ -371,9 +371,9 @@
         },
         "item_WpXE3K": {
           "type": "item",
-          "name": "VV",
+          "name": "Meyer",
           "settings": {
-            "image": "shopify://shop_images/Vehicle_Virals_logo-White.svg",
+            "image": "shopify://shop_images/Meyer.svg",
             "link": "",
             "alt-text": ""
           }
