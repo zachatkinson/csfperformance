@@ -203,7 +203,7 @@
           "name": "Titan",
           "settings": {
             "image": "shopify://shop_images/titan-ms-logo-white.svg",
-            "link": "https://www.ecstuning.com/b-csf-parts/",
+            "link": "https://titanmotorsports.com/collections/csf",
             "alt-text": ""
           }
         },
@@ -212,7 +212,7 @@
           "name": "Throtl",
           "settings": {
             "image": "shopify://shop_images/THROTL-Razor-Script-White.svg",
-            "link": "",
+            "link": "https://throtl.com/collections/csf",
             "alt-text": ""
           }
         },
