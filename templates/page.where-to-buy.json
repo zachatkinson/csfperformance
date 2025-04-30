@@ -193,9 +193,9 @@
         },
         "item_7eTKqj": {
           "type": "item",
-          "name": "R44",
+          "name": "Titan",
           "settings": {
-            "image": "shopify://shop_images/R44-P-Logo-1x1-500.png",
+            "image": "shopify://shop_images/titan-ms-logo-white.svg",
             "link": "https://www.ecstuning.com/b-csf-parts/",
             "alt-text": ""
           }
