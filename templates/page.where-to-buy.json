@@ -468,7 +468,7 @@
           "name": "Titan",
           "settings": {
             "image": "shopify://shop_images/titan-ms-logo-white.svg",
-            "link": "",
+            "link": "https://titanmotorsports.com/collections/csf",
             "alt-text": ""
           }
         },
@@ -477,7 +477,7 @@
           "name": "T14",
           "settings": {
             "image": "shopify://shop_images/Turn-14.svg",
-            "link": "",
+            "link": "https://www.turn14.com/",
             "alt-text": ""
           }
         },
@@ -486,7 +486,7 @@
           "name": "Worldpac",
           "settings": {
             "image": "shopify://shop_images/WorldPac.svg",
-            "link": "",
+            "link": "http://www.worldpac.com/",
             "alt-text": ""
           }
         },
@@ -495,7 +495,7 @@
           "name": "XDP",
           "settings": {
             "image": "shopify://shop_images/XDP.svg",
-            "link": "",
+            "link": "https://www.xtremediesel.com/",
             "alt-text": ""
           }
         }
