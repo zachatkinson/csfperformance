@@ -175,9 +175,9 @@
       "blocks": {
         "item_7eTKqj": {
           "type": "item",
-          "name": "ECS",
+          "name": "R44",
           "settings": {
-            "image": "shopify://shop_images/R44PERFORMANCE_LOGO_WHITE_SVG.svg",
+            "image": "shopify://shop_images/R44-P-Logo-1x1-500.png",
             "link": "https://www.ecstuning.com/b-csf-parts/",
             "alt-text": ""
           }
@@ -193,9 +193,9 @@
         },
         "item_QzkyX8": {
           "type": "item",
-          "name": "XPH",
+          "name": "Studio RSR",
           "settings": {
-            "image": "shopify://shop_images/extreme-powerhouse-logo.svg",
+            "image": "shopify://shop_images/Studio-RSR-Logo-White.svg",
             "link": "",
             "alt-text": ""
           }
