@@ -438,9 +438,9 @@
       "blocks": {
         "item_UmPbdB": {
           "type": "item",
-          "name": "Atech",
+          "name": "Premier",
           "settings": {
-            "image": "shopify://shop_images/Atech.svg",
+            "image": "shopify://shop_images/premier.svg",
             "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
             "alt-text": ""
           }
