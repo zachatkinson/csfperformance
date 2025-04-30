@@ -83,7 +83,7 @@
           "type": "column",
           "settings": {
             "title": "Private Label + Custom manufacturing",
-            "text": "<p>For inquiries regarding private label products and short to medium-run custom cooling manufacturing, please contact CSF Race at info@csfrace.com<br/><br/>* CSF does not make custom one-off products.*</p>",
+            "text": "<p>For inquiries regarding private label products and short to medium-run custom cooling manufacturing, please contact CSF Race at <a href=\"mailto:info@csfrace.com\">info@csfrace.com</a><br/><br/>* CSF does <span style=\"text-decoration:underline\">NOT</span> make custom one-off products.*</p>",
             "link_label": "Learn More About Private Label",
             "link": "https://csfrace.com/csf_products/private-label/"
           }
@@ -120,11 +120,56 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "multicolumn_CGBMah": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_jpxc4R": {
+          "type": "column",
+          "settings": {
+            "title": "Address & Contact Info:",
+            "text": "<p><strong>CSF, INC - Racing & High-performance Division</strong><br/><strong>9560 Buffalo Ave. #150<br/>Rancho Cucamonga, CA 91730</strong><a href=\"mailto:info@csfrace.com\"><br/><br/></a></p><p>Phone: <a href=\"tel:18008271991\">(800) 827-1991</a><br/>Fax: (909) 355-2149</p><p><a href=\"mailto:info@csfrace.com\">info@csfrace.com<br/><br/></a><strong>Hours of Operation:</strong></p><ul><li>Monday: 8:00am - 5:00pm (PST)</li><li>Tuesday: 8:00am - 5:00pm (PST)</li><li>Wednesday: 8:00am - 5:00pm (PST)</li><li>Thursday: 8:00am - 5:00pm (PST)</li><li>Friday: 8:00am - 5:00pm (PST)</li><li>Saturday: Closed</li><li>Sunday: Closed</li></ul><p><em>CSF, Inc is closed for most major holidays.</em></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_LPEizR": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_jpxc4R",
+        "column_LPEizR"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "image_banner_kwAJXj",
-    "multicolumn_xeKFjM"
+    "multicolumn_xeKFjM",
+    "multicolumn_CGBMah"
   ]
 }
