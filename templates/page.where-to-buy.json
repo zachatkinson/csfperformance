@@ -447,9 +447,9 @@
         },
         "item_qmfB8A": {
           "type": "item",
-          "name": "DPPI",
+          "name": "RSD",
           "settings": {
-            "image": "shopify://shop_images/Diesel-Performance-Parts.svg",
+            "image": "shopify://shop_images/Rallysportdirect.svg",
             "link": "",
             "alt-text": ""
           }
