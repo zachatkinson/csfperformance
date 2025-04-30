@@ -154,7 +154,7 @@
       "custom_css": [
         ".blaze-slide img {max-height: 100px; max-width: 100px;}"
       ],
-      "name": "Creative Carousel",
+      "name": "Creative Carousel - Pref Dealers 1",
       "settings": {
         "heading": "Preferred Online Retailers",
         "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
@@ -266,7 +266,7 @@
       "custom_css": [
         ".blaze-slide img {max-height: 100px; max-width: 100px;}"
       ],
-      "name": "Creative Carousel",
+      "name": "Creative Carousel - Pref Dealers 2",
       "settings": {
         "heading": "",
         "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
@@ -410,7 +410,7 @@
       "custom_css": [
         ".blaze-slide img {max-height: 100px; max-width: 100px;}"
       ],
-      "name": "Creative Carousel",
+      "name": "Creative Carousel - NA Dist 1",
       "settings": {
         "heading": "North American Distributors",
         "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
@@ -519,9 +519,12 @@
         "item_bYpAbH",
         "item_x9HG7M"
       ],
-      "name": "Creative Carousel",
+      "custom_css": [
+        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
+      ],
+      "name": "Creative Carousel - NA Dist 2",
       "settings": {
-        "heading": "North American Distributors",
+        "heading": "",
         "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
         "include_margins": true,
         "autoplay": true,
