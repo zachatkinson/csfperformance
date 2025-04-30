@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -7,12 +16,56 @@
         "padding_bottom": 36
       }
     },
-    "form": {
-      "type": "contact-form",
+    "multicolumn_xeKFjM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_9ttjhj": {
+          "type": "column",
+          "settings": {
+            "title": "Technical Questions, Warranty Claims + Order Status",
+            "text": "<p>For any technical questions, warranty claims, or other status requests please contact the dealer or distributor you purchased your CSF product from.<br/></p>",
+            "link_label": "Learn More About Our Warranty Here",
+            "link": "shopify://pages/warranty"
+          }
+        },
+        "column_nb7UEt": {
+          "type": "column",
+          "settings": {
+            "title": "Private Label + Custom manufacturing",
+            "text": "<p>For inquiries regarding private label products and short to medium-run custom cooling manufacturing, please contact CSF Race at info@csfrace.com<br/><br/>* CSF does not make custom one-off products.*</p>",
+            "link_label": "Learn More About Private Label Options",
+            "link": ""
+          }
+        },
+        "column_UMUBbn": {
+          "type": "column",
+          "settings": {
+            "title": "Product Updates + Company News",
+            "text": "<p>Sign up for our newsletter today to receive occasional product and corporate updates.</p><p></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_9ttjhj",
+        "column_nb7UEt",
+        "column_UMUBbn"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "heading": "",
+        "title": "Multicolumn",
         "heading_size": "h1",
-        "color_scheme": "scheme-1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -20,6 +73,6 @@
   },
   "order": [
     "main",
-    "form"
+    "multicolumn_xeKFjM"
   ]
 }
