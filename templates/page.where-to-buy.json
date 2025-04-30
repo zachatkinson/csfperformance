@@ -65,7 +65,7 @@
           "type": "item",
           "name": "BimmerWorld",
           "settings": {
-            "image": "shopify://shop_images/Bimmerworld.svg",
+            "image": "shopify://shop_images/bimmerworld_logo_white-500.png",
             "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
             "alt-text": ""
           }
@@ -74,7 +74,7 @@
           "type": "item",
           "name": "ECS",
           "settings": {
-            "image": "shopify://shop_images/ECS-Tuning-1.svg",
+            "image": "shopify://shop_images/ECS-logo-white-220x220.png",
             "link": "https://www.ecstuning.com/b-csf-parts/",
             "alt-text": ""
           }
@@ -83,7 +83,7 @@
           "type": "item",
           "name": "FCP",
           "settings": {
-            "image": "shopify://shop_images/FCP-Euro.svg",
+            "image": "shopify://shop_images/FCP-Euro-Logo-Full-white-500x500.png",
             "link": "",
             "alt-text": ""
           }
