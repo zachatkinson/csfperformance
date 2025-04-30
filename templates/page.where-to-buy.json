@@ -221,7 +221,7 @@
           "name": "Turner MS",
           "settings": {
             "image": "shopify://shop_images/turner-ex.svg",
-            "link": "",
+            "link": "https://www.turnermotorsport.com/BMW-E39-Parts/m-361-csf",
             "alt-text": ""
           }
         },
@@ -230,7 +230,7 @@
           "name": "VV",
           "settings": {
             "image": "shopify://shop_images/Vehicle_Virals_logo-White.svg",
-            "link": "",
+            "link": "https://vehiclevirals.com/collections/csf-1",
             "alt-text": ""
           }
         },
