@@ -65,7 +65,7 @@
           "type": "item",
           "name": "BimmerWorld",
           "settings": {
-            "image": "shopify://shop_images/bimmerworld_logo_white-500.png",
+            "image": "shopify://shop_images/Bimmerworld.svg",
             "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
             "alt-text": ""
           }
