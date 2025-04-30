@@ -441,7 +441,7 @@
           "name": "Premier",
           "settings": {
             "image": "shopify://shop_images/premier.svg",
-            "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
+            "link": "https://premierwd.com/",
             "alt-text": ""
           }
         },
@@ -450,7 +450,7 @@
           "name": "RSD",
           "settings": {
             "image": "shopify://shop_images/Rallysportdirect.svg",
-            "link": "",
+            "link": "https://www.rallysportdirect.com/",
             "alt-text": ""
           }
         },
