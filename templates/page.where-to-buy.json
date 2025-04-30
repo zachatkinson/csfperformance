@@ -185,7 +185,7 @@
           "name": "Rennline",
           "settings": {
             "image": "shopify://shop_images/rennline-white-500.png",
-            "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
+            "link": "https://www.rennline.com/",
             "alt-text": ""
           }
         },
@@ -194,7 +194,7 @@
           "name": "Studio RSR",
           "settings": {
             "image": "shopify://shop_images/Studio-RSR-Logo-White.svg",
-            "link": "",
+            "link": "https://studiorsr.com/collections/vendors?q=CSF",
             "alt-text": ""
           }
         },
