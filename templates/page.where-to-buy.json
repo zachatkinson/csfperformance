@@ -145,7 +145,7 @@
         "item_7FqQaR"
       ],
       "custom_css": [
-        ".blaze-slide img {max-height: 100px;}"
+        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
       ],
       "name": "Creative Carousel",
       "settings": {
