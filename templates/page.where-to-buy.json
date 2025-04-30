@@ -74,7 +74,7 @@
           "type": "item",
           "name": "ECS",
           "settings": {
-            "image": "shopify://shop_images/ECS-logo-white-220x220.png",
+            "image": "shopify://shop_images/ECS-Tuning-1.svg",
             "link": "https://www.ecstuning.com/b-csf-parts/",
             "alt-text": ""
           }
@@ -83,7 +83,7 @@
           "type": "item",
           "name": "XPH",
           "settings": {
-            "image": "shopify://shop_images/extreme-powerhouse-logo-500.png",
+            "image": "shopify://shop_images/extreme-powerhouse-logo.svg",
             "link": "",
             "alt-text": ""
           }
@@ -92,7 +92,7 @@
           "type": "item",
           "name": "FCP",
           "settings": {
-            "image": "shopify://shop_images/FCP-Euro-Logo-Full-white-500x500.png",
+            "image": "shopify://shop_images/FCP-Euro.svg",
             "link": "",
             "alt-text": ""
           }
