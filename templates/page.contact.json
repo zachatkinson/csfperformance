@@ -11,9 +11,60 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "image_banner_kwAJXj": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_8rCi3T": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact CSF RACE",
+            "heading_size": "h1"
+          }
+        },
+        "text_x6HTPw": {
+          "type": "text",
+          "settings": {
+            "text": "Information + Help",
+            "text_style": "body"
+          }
+        },
+        "buttons_eXKV8M": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_8rCi3T",
+        "text_x6HTPw",
+        "buttons_eXKV8M"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/CSF-Contact-Us-header_1.jpg",
+        "image_overlay_opacity": 60,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
     "multicolumn_xeKFjM": {
@@ -73,6 +124,7 @@
   },
   "order": [
     "main",
+    "image_banner_kwAJXj",
     "multicolumn_xeKFjM"
   ]
 }
