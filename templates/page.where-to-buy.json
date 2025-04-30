@@ -380,9 +380,9 @@
         },
         "item_pHDG7C": {
           "type": "item",
-          "name": "Vivid",
+          "name": "MotorState",
           "settings": {
-            "image": "shopify://shop_images/vivid-racing-logo-white-500.png",
+            "image": "shopify://shop_images/MSLogo-Cut-Out-500.png",
             "link": "",
             "alt-text": ""
           }
