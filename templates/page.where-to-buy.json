@@ -211,36 +211,36 @@
         },
         "item_QjxVax": {
           "type": "item",
-          "name": "Pelican Parts",
+          "name": "Turner MS",
           "settings": {
-            "image": "shopify://shop_images/Pelican-Parts.svg",
+            "image": "shopify://shop_images/turner-ex.svg",
             "link": "",
             "alt-text": ""
           }
         },
         "item_mVgmrJ": {
           "type": "item",
-          "name": "IND",
+          "name": "VV",
           "settings": {
-            "image": "shopify://shop_images/IND.svg",
+            "image": "shopify://shop_images/Vehicle_Virals_logo-White.svg",
             "link": "",
             "alt-text": ""
           }
         },
         "item_tmm3hE": {
           "type": "item",
-          "name": "PSI",
+          "name": "Vivid",
           "settings": {
-            "image": "shopify://shop_images/PSI-SQ-Logo.svg",
+            "image": "shopify://shop_images/vivid-racing-logo-white-500.png",
             "link": "",
             "alt-text": ""
           }
         },
         "item_AGaynk": {
           "type": "item",
-          "name": "Quadratec",
+          "name": "XDP",
           "settings": {
-            "image": "shopify://shop_images/Quadratec.svg",
+            "image": "shopify://shop_images/XDP.svg",
             "link": "",
             "alt-text": ""
           }
