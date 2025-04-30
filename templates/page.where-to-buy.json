@@ -353,18 +353,18 @@
         },
         "item_nLPmMQ": {
           "type": "item",
-          "name": "Throtl",
+          "name": "JRP",
           "settings": {
-            "image": "shopify://shop_images/THROTL-Razor-Script-White.svg",
+            "image": "shopify://shop_images/JRP.svg",
             "link": "",
             "alt-text": ""
           }
         },
         "item_mnzVnG": {
           "type": "item",
-          "name": "Turner MS",
+          "name": "Keystone",
           "settings": {
-            "image": "shopify://shop_images/turner-ex.svg",
+            "image": "shopify://shop_images/Keystone-Automotive-Operations.svg",
             "link": "",
             "alt-text": ""
           }
