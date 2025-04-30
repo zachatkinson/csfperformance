@@ -474,9 +474,9 @@
         },
         "item_GVbx8Y": {
           "type": "item",
-          "name": "Keystone",
+          "name": "T14",
           "settings": {
-            "image": "shopify://shop_images/Keystone-Automotive-Operations.svg",
+            "image": "shopify://shop_images/Turn-14.svg",
             "link": "",
             "alt-text": ""
           }
