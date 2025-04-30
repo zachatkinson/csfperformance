@@ -128,7 +128,7 @@
           "type": "item",
           "name": "Quadratec",
           "settings": {
-            "image": "shopify://shop_images/Quadratec.svg",
+            "image": "shopify://shop_images/R44-P-Logo-1x1-500.png",
             "link": "",
             "alt-text": ""
           }
@@ -173,15 +173,6 @@
     "creative_carousel_MePQfB": {
       "type": "creative-carousel",
       "blocks": {
-        "item_7eTKqj": {
-          "type": "item",
-          "name": "R44",
-          "settings": {
-            "image": "shopify://shop_images/R44-P-Logo-1x1-500.png",
-            "link": "https://www.ecstuning.com/b-csf-parts/",
-            "alt-text": ""
-          }
-        },
         "item_cAXhGK": {
           "type": "item",
           "name": "Rennline",
@@ -197,6 +188,15 @@
           "settings": {
             "image": "shopify://shop_images/studio_rsr_white_500x500_d04930f2-d18a-4bbe-881c-d43ff28f5c2c.png",
             "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_7eTKqj": {
+          "type": "item",
+          "name": "R44",
+          "settings": {
+            "image": "shopify://shop_images/R44-P-Logo-1x1-500.png",
+            "link": "https://www.ecstuning.com/b-csf-parts/",
             "alt-text": ""
           }
         },
@@ -247,9 +247,9 @@
         }
       },
       "block_order": [
-        "item_7eTKqj",
         "item_cAXhGK",
         "item_QzkyX8",
+        "item_7eTKqj",
         "item_YFxx4i",
         "item_QjxVax",
         "item_mVgmrJ",
