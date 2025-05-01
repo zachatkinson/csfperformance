@@ -61,7 +61,7 @@
     "main": {
       "type": "main-page",
       "custom_css": [
-        ".gm-style .gm-style-iw {font-size: 12px !important; max-width: 300px !important; max-height: 300px !important;}",
+        ".gm-style .gm-style-iw {font-size: 12px !important; max-width: 300px !important; max-height: 350px !important;}",
         ".gm-style-iw-d {margin: 0 15px 15px !important;}",
         ".bss-store-image {max-height: 50px !important; padding-top: 5px;}",
         ".ggm-iw-con__image {display: none;}",
