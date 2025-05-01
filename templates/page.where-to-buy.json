@@ -65,7 +65,7 @@
         ".bss-store-image {max-height: 50px !important;}",
         ".ggm-iw-con__image {display: none;}",
         ".ggm-iw__content--store-name {padding: 0 !important;}",
-        ".bss-map-search-box {max-width: 350px;}"
+        "#bss-map-search-box {max-width: 350px;}"
       ],
       "settings": {
         "padding_top": 28,
