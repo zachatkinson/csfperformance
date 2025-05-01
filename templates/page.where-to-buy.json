@@ -583,6 +583,15 @@
             "page": "middle-east-international-dealers-distributors"
           }
         },
+        "collapsible_row_6expdD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "North America",
+            "icon": "map_pin",
+            "row_content": "",
+            "page": "north-america-international-dealers-distributors"
+          }
+        },
         "collapsible_row_RzeTxm": {
           "type": "collapsible_row",
           "settings": {
@@ -599,6 +608,7 @@
         "collapsible_row_7qHcYE",
         "collapsible_row_wyXaGY",
         "collapsible_row_DLbMh7",
+        "collapsible_row_6expdD",
         "collapsible_row_RzeTxm"
       ],
       "name": "t:sections.collapsible_content.presets.name",
