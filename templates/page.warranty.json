@@ -21,73 +21,10 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "collapsible_content_6Phti4": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_6tzcJN": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How Do I File a Warranty Claim?",
-            "icon": "check_mark",
-            "row_content": "<p>Please contact the dealer or distributor you purchased your CSF product from to file a warranty claim.</p><p>The dealer, distributor, and/or CSF will require the following items to begin to process your claim. Preparing these beforehand may assist in expediting the warranty process.</p><ol><li>Photo of Serial Number Sticker (9 Digit Code, Starts with a Letter)</li><li>Photos and Description of the Manufacturer’s Defect</li><li>Original Invoice/Receipt, That Adheres to our Buyer’s Policy</li><li>Full Name, Contact Information, Email Address, and Shipping Address</li></ol>",
-            "page": ""
-          }
-        },
-        "collapsible_row_mE3qn8": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What Products are Covered?",
-            "icon": "check_mark",
-            "row_content": "<p>Most all CSF Racing & High-Performance products are covered under our 2-year limited warranty listed above.</p><ul><li>High-Performance Radiators – 2-Year Limited Warranty</li><li>High-Performance Intercoolers – 2-Year Limited Warranty</li><li>High-Performance Charge-Air-Coolers</li><li>CSF #8200 – 2-Year Limited Warranty</li><li>CSF #8233 – 2-Year Limited Warranty</li><li>CSF #8300 – 2-Year Limited Warranty</li><li>CSF #8400 – 2-Year Limited Warranty</li><li>High-Performance Oil Coolers – 2-Year Limited Warranty</li><li>OEM Replacement Cooling Systems – 1-Year Limited Warranty</li></ul><p>Some products have longer warranties and, a few products, as listed on their individual product pages, are not warrantied. Those part numbers are listed below.</p><ul><li>CSF #8075 – Limited Lifetime Warranty</li><li>CSF #8082 – Limited Lifetime Warranty</li><li>CSF #8112 – Limited Lifetime Warranty</li><li>CSF #8166 – Limited Lifetime Warranty</li><li>CSF #8168 – Limited Lifetime Warranty</li><li>CSF #8186 – Not Warrantied</li><li>CSF #8188 – Limited Lifetime Warranty</li><li>CSF #8194 – Limited Lifetime Warranty</li><li>CSF #8210 – Limited Lifetime Warranty</li><li>CSF #8211 – Limited Lifetime Warranty</li><li>CSF #8217 – Limited Lifetime Warranty</li><li>CSF #8219 – Limited Lifetime Warranty</li><li>CSF #8242 – 10 Year Limited Warranty</li><li>CSF #8260 – 10 Year Limited Warranty</li></ul>",
-            "page": ""
-          }
-        },
-        "collapsible_row_r7kAVA": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_HYgfLb": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_6tzcJN",
-        "collapsible_row_mE3qn8",
-        "collapsible_row_r7kAVA",
-        "collapsible_row_HYgfLb"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
-      "settings": {
-        "caption": "",
-        "heading": "FAQs",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "color_scheme": "",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "main",
-    "173861739649cd6a4a",
-    "collapsible_content_6Phti4"
+    "173861739649cd6a4a"
   ]
 }
