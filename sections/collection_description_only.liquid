@@ -1,6 +1,38 @@
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 {{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+  .collection-hero--with-image .collection-hero__inner {
+  padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);
+  }
+  .hero-wrap{
+  aspect-ratio: 3/1;
+  display: block;
+  }
+  .collection-hero{
+  background-image: url("{{ collection.image | image_url }}");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  aspect-ratio: 3/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: brightness(0.75);
+  }
+  .collection-hero__title{
+  margin: 0;
+  text-shadow: #000 1px 0 10px;
+  font-size: 5rem;
+  }
+  @media screen and (min-width: 749px) {
+    .collection-hero{
+
+    }
+  }
+{%- endstyle -%}
+
 {%- if section.settings.show_collection_description -%}
   <div class="page-width color-{{ section.settings.body_color_scheme }}">{{ collection.description }}</div>
 {%- endif -%}
