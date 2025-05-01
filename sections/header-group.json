@@ -38,7 +38,10 @@
     "header": {
       "type": "header",
       "custom_css": [
-        "* {font-size: 18px;}"
+        "* {font-size: 18px;}",
+        "#cart-icon-bubble {display: none;}",
+        ".header__icon--account {display: none;}",
+        ".header__icon--cart {display: none}"
       ],
       "settings": {
         "logo_position": "middle-left",
