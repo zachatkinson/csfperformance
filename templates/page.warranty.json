@@ -21,10 +21,73 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "collapsible_content_6Phti4": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_6tzcJN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How Do I File a Warranty Claim?",
+            "icon": "check_mark",
+            "row_content": "<p>Please contact the dealer or distributor you purchased your CSF product from to file a warranty claim.</p><p>The dealer, distributor, and/or CSF will require the following items to begin to process your claim. Preparing these beforehand may assist in expediting the warranty process.</p><ol><li>Photo of Serial Number Sticker (9 Digit Code, Starts with a Letter)</li><li>Photos and Description of the Manufacturer’s Defect</li><li>Original Invoice/Receipt, That Adheres to our Buyer’s Policy</li><li>Full Name, Contact Information, Email Address, and Shipping Address</li></ol>",
+            "page": ""
+          }
+        },
+        "collapsible_row_mE3qn8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_r7kAVA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_HYgfLb": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_6tzcJN",
+        "collapsible_row_mE3qn8",
+        "collapsible_row_r7kAVA",
+        "collapsible_row_HYgfLb"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "173861739649cd6a4a"
+    "173861739649cd6a4a",
+    "collapsible_content_6Phti4"
   ]
 }
