@@ -574,6 +574,15 @@
             "page": "europe-international-dealers-distributors"
           }
         },
+        "collapsible_row_DLbMh7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
         "collapsible_row_RzeTxm": {
           "type": "collapsible_row",
           "settings": {
@@ -589,6 +598,7 @@
         "collapsible_row_fmik7P",
         "collapsible_row_7qHcYE",
         "collapsible_row_wyXaGY",
+        "collapsible_row_DLbMh7",
         "collapsible_row_RzeTxm"
       ],
       "name": "t:sections.collapsible_content.presets.name",
