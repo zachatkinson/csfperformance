@@ -37,10 +37,21 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_liquid_6QnPUk": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{%- if section.settings.show_collection_description -%}\n  <div class=\"page-width color-{{ section.settings.body_color_scheme }}\">{{ collection.description }}</div>\n{%- endif -%}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "custom_liquid_6QnPUk"
   ]
 }
