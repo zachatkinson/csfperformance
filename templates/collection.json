@@ -42,7 +42,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{%- if section.settings.show_collection_description -%}\n  <div class=\"page-width color-{{ section.settings.body_color_scheme }}\">{{ collection.description }}</div>\n{%- endif -%}",
+        "custom_liquid": "{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}\n\n{%- style -%}\n  .collection-hero--with-image .collection-hero__inner {\n  padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);\n  }\n  .hero-wrap{\n  aspect-ratio: 3/1;\n  display: block;\n  }\n  .collection-hero{\n  background-image: url(\"{{ collection.image | image_url }}\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n  position: relative;\n  aspect-ratio: 3/1;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  filter: brightness(0.75);\n  }\n  .collection-hero__title{\n  margin: 0;\n  text-shadow: #000 1px 0 10px;\n  font-size: 5rem;\n  }\n  @media screen and (min-width: 749px) {\n    .collection-hero{\n\n    }\n  }\n{%- endstyle -%}\n\n{%- if section.settings.show_collection_description -%}\n  <div class=\"page-width color-{{ section.settings.body_color_scheme }}\">{{ collection.description }}</div>\n{%- endif -%}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
