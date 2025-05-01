@@ -60,6 +60,9 @@
     },
     "main": {
       "type": "main-page",
+      "custom_css": [
+        ".gm-style .gm-style-iw {font-size: 12px; max-width: 300px; max-height: 300px}"
+      ],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
