@@ -219,6 +219,7 @@
       "blocks": {
         "item_cR9mTX": {
           "type": "item",
+          "name": "Speed Academy",
           "settings": {
             "image": "shopify://shop_images/Speed_Academy.png",
             "link": "",
