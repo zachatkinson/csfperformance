@@ -595,10 +595,10 @@
         "collapsible_row_RzeTxm": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
+            "heading": "South America",
+            "icon": "map_pin",
             "row_content": "",
-            "page": ""
+            "page": "south-america-international-dealers-distributors"
           }
         }
       },
