@@ -568,10 +568,10 @@
         "collapsible_row_wyXaGY": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
+            "heading": "Europe",
+            "icon": "map_pin",
             "row_content": "",
-            "page": ""
+            "page": "europe-international-dealers-distributors"
           }
         },
         "collapsible_row_RzeTxm": {
