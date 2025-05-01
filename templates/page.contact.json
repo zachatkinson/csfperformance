@@ -120,7 +120,7 @@
             "title": "Where To Buy",
             "text": "<p>CSF does not sell directly to the public. CSF Racing & High Performance products are available through a worldwide network of authorized dealers and distributors to service you.</p>",
             "link_label": "Find a Dealer/ Distributor",
-            "link": "shopify://pages/store-locator"
+            "link": "shopify://pages/dealer-distributor-locator"
           }
         }
       },
