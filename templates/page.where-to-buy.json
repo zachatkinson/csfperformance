@@ -61,7 +61,7 @@
     "main": {
       "type": "main-page",
       "custom_css": [
-        ".gm-style .gm-style-iw {font-size: 12px; max-width: 300px; max-height: 300px}"
+        ".gm-style .gm-style-iw {font-size: 12px !important; max-width: 300px !important; max-height: 300px !important;}"
       ],
       "settings": {
         "padding_top": 28,
