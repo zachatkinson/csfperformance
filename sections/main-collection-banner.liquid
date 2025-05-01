@@ -45,11 +45,11 @@
 </div>
 </div>
 
-{% comment %}Removed to place at bottom of Collection page - after collection grid. See custom Liquid on Default Collection Page...{% endcomment %}
+{% comment %}Removed to place at bottom of Collection page - after collection grid. See custom Liquid on Default Collection Page...
 {%- if section.settings.show_collection_description -%}
   <div class="page-width color-{{ section.settings.body_color_scheme }}">{{ collection.description }}</div>
 {%- endif -%}
-
+{% endcomment %}
 
 {% schema %}
 {
