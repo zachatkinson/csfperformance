@@ -64,7 +64,8 @@
         ".gm-style .gm-style-iw {font-size: 12px !important; max-width: 300px !important; max-height: 300px !important;}",
         ".bss-store-image {max-height: 50px !important;}",
         ".ggm-iw-con__image {display: none;}",
-        ".ggm-iw__content--store-name {padding: 0 !important}"
+        ".ggm-iw__content--store-name {padding: 0 !important;}",
+        ".bss-map-search-box {max-width: 350px;}"
       ],
       "settings": {
         "padding_top": 28,
