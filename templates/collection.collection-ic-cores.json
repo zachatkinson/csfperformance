@@ -21,8 +21,7 @@
     "custom_liquid_6QnPUk": {
       "type": "custom-liquid",
       "custom_css": [
-        ".grid-template-columns {padding: 1em 0; align-items: center;}",
-        ".section-template--18537161883821__custom_liquid_6QnPUk-padding {padding-bottom: 0px !important;}"
+        ".grid-template-columns {padding: 1em 0; align-items: center;}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
