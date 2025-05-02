@@ -79,6 +79,7 @@
         "item_WVp7Tm": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/Full-Race.svg",
             "link": "",
             "alt-text": ""
           }
@@ -90,7 +91,7 @@
       "name": "Creative Carousel",
       "settings": {
         "heading": "trusted by some of the largest names in motorsports",
-        "color_scheme": "",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
         "include_margins": true,
         "autoplay": true,
         "interaction-pause": true,
