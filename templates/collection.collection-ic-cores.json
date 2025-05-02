@@ -134,6 +134,7 @@
           "type": "item",
           "name": "DMS",
           "settings": {
+            "image": "shopify://shop_images/DMS-logo-white-1x1-1.png",
             "link": "",
             "alt-text": ""
           }
@@ -142,6 +143,7 @@
           "type": "item",
           "name": "TP",
           "settings": {
+            "image": "shopify://shop_images/tick_performance_v2_logo_bw.png",
             "link": "",
             "alt-text": ""
           }
