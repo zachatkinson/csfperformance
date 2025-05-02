@@ -27,9 +27,9 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/intercooler-welding.jpg",
-        "image_overlay_opacity": 50,
-        "image_height": "small",
+        "image": "shopify://shop_images/Black_Series_Parts_1920_x_640-2025.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
