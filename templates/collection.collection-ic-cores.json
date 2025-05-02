@@ -108,13 +108,45 @@
             "link": "",
             "alt-text": ""
           }
+        },
+        "item_KVxAkh": {
+          "type": "item",
+          "settings": {
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_jrQqtD": {
+          "type": "item",
+          "settings": {
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_krYgyY": {
+          "type": "item",
+          "settings": {
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_CW9et7": {
+          "type": "item",
+          "settings": {
+            "link": "",
+            "alt-text": ""
+          }
         }
       },
       "block_order": [
         "item_WVp7Tm",
         "item_PA3xrA",
         "item_mnnW8D",
-        "item_ybAm9b"
+        "item_ybAm9b",
+        "item_KVxAkh",
+        "item_jrQqtD",
+        "item_krYgyY",
+        "item_CW9et7"
       ],
       "name": "Creative Carousel",
       "settings": {
