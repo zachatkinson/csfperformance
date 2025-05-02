@@ -89,6 +89,7 @@
           "type": "item",
           "name": "KLM",
           "settings": {
+            "image": "shopify://shop_images/KLM-Race.svg",
             "link": "",
             "alt-text": ""
           }
