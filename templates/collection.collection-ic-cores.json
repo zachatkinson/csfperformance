@@ -52,6 +52,9 @@
         "text_8bHmUf",
         "buttons_pMrCza"
       ],
+      "custom_css": [
+        ".banner__buttons {max-width: 80rem;}"
+      ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/intercooler-welding.jpg",
