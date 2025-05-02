@@ -92,11 +92,29 @@
             "link": "",
             "alt-text": ""
           }
+        },
+        "item_mnnW8D": {
+          "type": "item",
+          "name": "Sheepey",
+          "settings": {
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_ybAm9b": {
+          "type": "item",
+          "name": "Rampage",
+          "settings": {
+            "link": "",
+            "alt-text": ""
+          }
         }
       },
       "block_order": [
         "item_WVp7Tm",
-        "item_PA3xrA"
+        "item_PA3xrA",
+        "item_mnnW8D",
+        "item_ybAm9b"
       ],
       "name": "Creative Carousel",
       "settings": {
