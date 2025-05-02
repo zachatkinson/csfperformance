@@ -1,0 +1,283 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "hero_color_scheme": "scheme-3",
+        "body_color_scheme": ""
+      }
+    },
+    "image_banner_xYRV8T": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_pyMtcq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Universal Intercooler Cores",
+            "heading_size": "h1"
+          }
+        },
+        "text_8bHmUf": {
+          "type": "text",
+          "settings": {
+            "text": "Home of the 1400HP #MAGNUMCOOLER Series – The World’s Thickest Intercooler Cores at 6″ Thick",
+            "text_style": "body"
+          }
+        },
+        "buttons_pMrCza": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Custom Size Inquiries",
+            "button_link_1": "#custom-sizing",
+            "button_style_secondary_1": false,
+            "button_label_2": "See all Intercooler Cores",
+            "button_link_2": "#ProductGridContainer",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_pyMtcq",
+        "text_8bHmUf",
+        "buttons_pMrCza"
+      ],
+      "custom_css": [
+        ".banner__buttons {max-width: 80rem;}",
+        ".button {min-width: 25rem;}"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/intercooler-welding.jpg",
+        "image_overlay_opacity": 50,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "custom_liquid_6QnPUk": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".grid-template-columns {padding: 1em 0; align-items: center;}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}\n\n{%- style -%}\n  .collection-hero--with-image .collection-hero__inner {\n  padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);\n  }\n  .hero-wrap{\n  aspect-ratio: 3/1;\n  display: block;\n  }\n  .collection-hero{\n  background-image: url(\"{{ collection.image | image_url }}\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n  position: relative;\n  aspect-ratio: 3/1;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  filter: brightness(0.75);\n  }\n  .collection-hero__title{\n  margin: 0;\n  text-shadow: #000 1px 0 10px;\n  font-size: 5rem;\n  }\n  @media screen and (min-width: 749px) {\n    .collection-hero{\n\n    }\n  }\n{%- endstyle -%}\n\n<div class=\"page-width color-{{ section.settings.body_color_scheme }}\">{{ collection.description }}</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_4r3arp": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_LRFD8g": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "CSF Intercooler Core Size & Spec Table",
+            "icon": "clipboard",
+            "row_content": "",
+            "page": "csf-intercooler-core-spec-table"
+          }
+        },
+        "collapsible_row_Ch49Y8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Don’t see the size you’re looking for?",
+            "icon": "question_mark",
+            "row_content": "",
+            "page": "custom-intercooler-core-sizing"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_LRFD8g",
+        "collapsible_row_Ch49Y8"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Intercooler Core Sizes",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "creative_carousel_7ed8YT": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_WVp7Tm": {
+          "type": "item",
+          "name": "Full Race",
+          "settings": {
+            "image": "shopify://shop_images/Full-Race.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_PA3xrA": {
+          "type": "item",
+          "name": "KLM",
+          "settings": {
+            "image": "shopify://shop_images/KLM-Race.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_mnnW8D": {
+          "type": "item",
+          "name": "Sheepey",
+          "settings": {
+            "image": "shopify://shop_images/Sheepey-Race.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_ybAm9b": {
+          "type": "item",
+          "name": "Rampage",
+          "settings": {
+            "image": "shopify://shop_images/Rampage-Fabrication.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_KVxAkh": {
+          "type": "item",
+          "name": "Rabbit",
+          "settings": {
+            "image": "shopify://shop_images/Silly-Rabbit-stacked.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_jrQqtD": {
+          "type": "item",
+          "name": "PRL",
+          "settings": {
+            "image": "shopify://shop_images/PRL-Motorsports.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_krYgyY": {
+          "type": "item",
+          "name": "DMS",
+          "settings": {
+            "image": "shopify://shop_images/DMS-logo-white-1x1-1.png",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_CW9et7": {
+          "type": "item",
+          "name": "TP",
+          "settings": {
+            "image": "shopify://shop_images/tick_performance_v2_logo_bw.png",
+            "link": "",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_WVp7Tm",
+        "item_PA3xrA",
+        "item_mnnW8D",
+        "item_ybAm9b",
+        "item_KVxAkh",
+        "item_jrQqtD",
+        "item_krYgyY",
+        "item_CW9et7"
+      ],
+      "custom_css": [
+        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
+      ],
+      "name": "Creative Carousel",
+      "settings": {
+        "heading": "trusted by some of the largest names in motorsports",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "include_margins": true,
+        "autoplay": true,
+        "interaction-pause": true,
+        "draggable": true,
+        "direction": "to right",
+        "interval": 6000,
+        "duration": 300,
+        "transition-timing": "ease",
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
+        "desktop-item-count": 8,
+        "desktop-item-gap": 50,
+        "desktop-item-scroll": 1
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 36,
+        "columns_desktop": 3,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "page_7CE8tQ": {
+      "type": "page",
+      "name": "t:sections.page.presets.name",
+      "settings": {
+        "page": "custom-intercooler-core-sizing",
+        "heading_size": "h1",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "image_banner_xYRV8T",
+    "custom_liquid_6QnPUk",
+    "collapsible_content_4r3arp",
+    "creative_carousel_7ed8YT",
+    "product-grid",
+    "page_7CE8tQ"
+  ]
+}
