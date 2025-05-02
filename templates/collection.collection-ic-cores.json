@@ -21,7 +21,8 @@
     "custom_liquid_6QnPUk": {
       "type": "custom-liquid",
       "custom_css": [
-        ".grid-template-columns {padding: 1em 0; align-items: center;}"
+        ".grid-template-columns {padding: 1em 0; align-items: center;}",
+        ".section-template--18537161883821__custom_liquid_6QnPUk-padding {padding-bottom: 0 !important;}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
@@ -48,7 +49,7 @@
           "settings": {
             "heading": "Don’t see the size you’re looking for?",
             "icon": "question_mark",
-            "row_content": "<h1>Custom Sizing</h1><p>For orders of at least 30 pieces at a time, contact CSF to discuss custom intercooler cores.<br/>Need less? Still feel free to contact us with your inquiry – maybe we’ll add the core to our range in the future.</p><ul><li>Different Core Configurations Available</li><li>Bar/Plate & Tube/Fin Options Available</li><li>Ability to Produce Complete Intercooler Assemblies with Cast Endtanks (MOQ 50)</li><li>Quality Control – Leak Pressure Tested Before Packaging to Ensure a Defect-Free Product</li><li>Design, Engineering, and Testing Services Also Available to Help Bring Your Project to Market</li></ul><p><a href=\"mailto:info@csfrace.com\">Contact Us For More Information &gt;</a></p>",
+            "row_content": "<h3>Custom Sizing</h3><p>For orders of at least 30 pieces at a time, contact CSF to discuss custom intercooler cores.<br/>Need less? Still feel free to contact us with your inquiry – maybe we’ll add the core to our range in the future.</p><ul><li>Different Core Configurations Available</li><li>Bar/Plate & Tube/Fin Options Available</li><li>Ability to Produce Complete Intercooler Assemblies with Cast Endtanks (MOQ 50)</li><li>Quality Control – Leak Pressure Tested Before Packaging to Ensure a Defect-Free Product</li><li>Design, Engineering, and Testing Services Also Available to Help Bring Your Project to Market</li></ul><p><a href=\"mailto:info@csfrace.com\">Contact Us For More Information &gt;</a></p>",
             "page": ""
           }
         }
