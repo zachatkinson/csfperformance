@@ -98,6 +98,7 @@
           "type": "item",
           "name": "Sheepey",
           "settings": {
+            "image": "shopify://shop_images/Sheepey-Race.svg",
             "link": "",
             "alt-text": ""
           }
@@ -171,7 +172,7 @@
         "tablet-item-count": 4,
         "tablet-item-gap": 50,
         "tablet-item-scroll": 1,
-        "desktop-item-count": 6,
+        "desktop-item-count": 8,
         "desktop-item-gap": 50,
         "desktop-item-scroll": 1
       }
