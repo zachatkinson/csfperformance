@@ -78,15 +78,25 @@
       "blocks": {
         "item_WVp7Tm": {
           "type": "item",
+          "name": "Full Race",
           "settings": {
             "image": "shopify://shop_images/Full-Race.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
+        "item_PA3xrA": {
+          "type": "item",
+          "name": "KLM",
+          "settings": {
             "link": "",
             "alt-text": ""
           }
         }
       },
       "block_order": [
-        "item_WVp7Tm"
+        "item_WVp7Tm",
+        "item_PA3xrA"
       ],
       "name": "Creative Carousel",
       "settings": {
