@@ -111,6 +111,7 @@
         },
         "item_KVxAkh": {
           "type": "item",
+          "name": "Rabbit",
           "settings": {
             "link": "",
             "alt-text": ""
@@ -118,6 +119,7 @@
         },
         "item_jrQqtD": {
           "type": "item",
+          "name": "PRL",
           "settings": {
             "link": "",
             "alt-text": ""
@@ -125,6 +127,7 @@
         },
         "item_krYgyY": {
           "type": "item",
+          "name": "DMS",
           "settings": {
             "link": "",
             "alt-text": ""
@@ -132,6 +135,7 @@
         },
         "item_CW9et7": {
           "type": "item",
+          "name": "TP",
           "settings": {
             "link": "",
             "alt-text": ""
