@@ -113,7 +113,7 @@
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "caption": "",
-        "heading": "",
+        "heading": "Intercooler Core Sizes",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
