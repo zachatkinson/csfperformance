@@ -73,6 +73,43 @@
         "padding_bottom": 36
       }
     },
+    "creative_carousel_7ed8YT": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_WVp7Tm": {
+          "type": "item",
+          "settings": {
+            "link": "",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_WVp7Tm"
+      ],
+      "name": "Creative Carousel",
+      "settings": {
+        "heading": "trusted by some of the largest names in motorsports",
+        "color_scheme": "",
+        "include_margins": true,
+        "autoplay": true,
+        "interaction-pause": true,
+        "draggable": true,
+        "direction": "to right",
+        "interval": 6000,
+        "duration": 300,
+        "transition-timing": "ease",
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
+        "desktop-item-count": 6,
+        "desktop-item-gap": 50,
+        "desktop-item-scroll": 1
+      }
+    },
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
@@ -98,6 +135,7 @@
     "banner",
     "custom_liquid_6QnPUk",
     "collapsible_content_4r3arp",
+    "creative_carousel_7ed8YT",
     "product-grid"
   ]
 }
