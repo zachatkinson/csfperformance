@@ -116,6 +116,7 @@
           "type": "item",
           "name": "Rabbit",
           "settings": {
+            "image": "shopify://shop_images/Silly-Rabbit-stacked.svg",
             "link": "",
             "alt-text": ""
           }
@@ -124,6 +125,7 @@
           "type": "item",
           "name": "PRL",
           "settings": {
+            "image": "shopify://shop_images/PRL-Motorsports.svg",
             "link": "",
             "alt-text": ""
           }
