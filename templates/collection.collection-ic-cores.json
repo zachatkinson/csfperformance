@@ -154,6 +154,9 @@
         "item_krYgyY",
         "item_CW9et7"
       ],
+      "custom_css": [
+        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
+      ],
       "name": "Creative Carousel",
       "settings": {
         "heading": "trusted by some of the largest names in motorsports",
