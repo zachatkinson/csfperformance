@@ -107,6 +107,7 @@
           "type": "item",
           "name": "Rampage",
           "settings": {
+            "image": "shopify://shop_images/Rampage-Fabrication.svg",
             "link": "",
             "alt-text": ""
           }
