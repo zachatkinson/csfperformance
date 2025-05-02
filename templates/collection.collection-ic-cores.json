@@ -51,31 +51,11 @@
             "row_content": "<h1>Custom Sizing</h1><p>For orders of at least 30 pieces at a time, contact CSF to discuss custom intercooler cores.<br/>Need less? Still feel free to contact us with your inquiry – maybe we’ll add the core to our range in the future.</p><ul><li>Different Core Configurations Available</li><li>Bar/Plate & Tube/Fin Options Available</li><li>Ability to Produce Complete Intercooler Assemblies with Cast Endtanks (MOQ 50)</li><li>Quality Control – Leak Pressure Tested Before Packaging to Ensure a Defect-Free Product</li><li>Design, Engineering, and Testing Services Also Available to Help Bring Your Project to Market</li></ul><p><a href=\"mailto:info@csfrace.com\">Contact Us For More Information &gt;</a></p>",
             "page": ""
           }
-        },
-        "collapsible_row_8hFjwd": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_qbVFUt": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
         }
       },
       "block_order": [
         "collapsible_row_LRFD8g",
-        "collapsible_row_Ch49Y8",
-        "collapsible_row_8hFjwd",
-        "collapsible_row_qbVFUt"
+        "collapsible_row_Ch49Y8"
       ],
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
