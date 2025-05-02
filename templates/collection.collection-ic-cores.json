@@ -38,12 +38,12 @@
         "buttons_pMrCza": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
+            "button_label_1": "Custom Size Inquiries",
             "button_link_1": "",
             "button_style_secondary_1": false,
-            "button_label_2": "Intercooler Cores",
+            "button_label_2": "See all Cores",
             "button_link_2": "#ProductGridContainer",
-            "button_style_secondary_2": true
+            "button_style_secondary_2": false
           }
         }
       },
