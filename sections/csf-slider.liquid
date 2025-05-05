@@ -39,6 +39,13 @@
           <button class="csf-slider-arrow csf-slider-arrow--prev" aria-label="Previous slide" tabindex="0" type="button"><span aria-hidden="true">&#10094;</span></button>
           <button class="csf-slider-arrow csf-slider-arrow--next" aria-label="Next slide" tabindex="0" type="button"><span aria-hidden="true">&#10095;</span></button>
         {% endif %}
+        {% if section.settings.show_dots and total_slides > 1 %}
+          <div class="csf-slider-dots-wrapper" aria-label="Slide navigation" role="tablist">
+            {% for i in (0..total_slides-1) %}
+              <button class="csf-slider-dot" role="tab" aria-label="Go to slide {{ i | plus: 1 }}" aria-selected="false" tabindex="-1" data-slide="{{ i }}"></button>
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -64,6 +71,12 @@
       "id": "show_arrows",
       "default": true,
       "label": "Show navigation arrows (desktop only)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "default": true,
+      "label": "Show navigation dots (desktop only)"
     }
   ],
   "presets": [
@@ -216,6 +229,46 @@ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 }
 
+.csf-slider-dots-wrapper {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  min-height: 2.5rem;
+}
+.csf-slider-dot {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  margin: 0 0.25rem;
+  outline: none;
+  box-shadow: 0 0 0 2px transparent;
+}
+.csf-slider-dot.active,
+.csf-slider-dot[aria-selected="true"] {
+  background: rgb(227, 42, 55);
+  box-shadow: 0 0 0 2px #fff;
+}
+.csf-slider-dot:focus {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgb(227, 42, 55);
+}
+@media (max-width: 1024px) {
+  .csf-slider-dots-wrapper { display: none !important; }
+}
+
 {% endstylesheet %}
 {% javascript %}
 document.addEventListener("DOMContentLoaded", function() {
@@ -223,11 +276,17 @@ document.addEventListener("DOMContentLoaded", function() {
   const slides = slider.querySelectorAll('.slider-anchor');
   const prevArrow = slider.querySelector('.csf-slider-arrow--prev');
   const nextArrow = slider.querySelector('.csf-slider-arrow--next');
+  const dots = slider.querySelectorAll('.csf-slider-dot');
   let currentIndex = 0;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
       slide.classList.toggle('active', i === index);
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+      dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
+      dot.setAttribute('tabindex', i === index ? '0' : '-1');
     });
     currentIndex = index;
   }
@@ -243,6 +302,18 @@ document.addEventListener("DOMContentLoaded", function() {
     prevArrow.addEventListener('click', prevSlide);
     nextArrow.addEventListener('click', nextSlide);
   }
+
+  // Dots navigation
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      showSlide(i);
+    });
+    dot.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        showSlide(i);
+      }
+    });
+  });
 
   // Initial state
   showSlide(0);
