@@ -36,6 +36,7 @@
           {% endif %}
         {% endfor %}
         {% assign total_slides = slide_count | plus: 0 %}
+        {% assign dots_max = total_slides | minus: 1 %}
         <!-- DEBUG: total_slides = {{ total_slides }} -->
         {% if section.settings.show_arrows and total_slides > 1 %}
           <button class="csf-slider-arrow csf-slider-arrow--prev" aria-label="Previous slide" tabindex="0" type="button"><span aria-hidden="true">&#10094;</span></button>
@@ -43,7 +44,7 @@
         {% endif %}
         {% if section.settings.show_dots and total_slides > 1 %}
           <div class="csf-slider-dots-wrapper" aria-label="Slide navigation" role="tablist">
-            {% for i in (0..7) %}
+            {% for i in (0..dots_max) %}
               <button class="csf-slider-dot" role="tab" aria-label="Go to slide {{ i | plus: 1 }}" aria-selected="false" tabindex="-1" data-slide="{{ i }}"></button>
             {% endfor %}
           </div>
