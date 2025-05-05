@@ -97,7 +97,7 @@
                         {%- case block.type -%}
                             {%- when 'featured-buttons' -%}
                                 <h3>Where to buy</h3>
-                                {% if block.settings.show_dealer_button %}
+                                {% if block.settings.show_dealer_button and product.vendor == 'CSF' %}
                                     <a href="#" class="button button--full-width button--secondary" target="_blank">
                                         Find a Dealer
                                     </a>
