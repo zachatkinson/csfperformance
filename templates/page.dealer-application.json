@@ -53,7 +53,7 @@
         "text_Yayhik": {
           "type": "text",
           "settings": {
-            "text": ""
+            "text": "{{ page.content }}"
           }
         }
       },
