@@ -297,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let isDragging = false;
   let isMouseDown = false;
   let mouseStartX = 0;
-  let autoRotateInterval = {{ section.settings.auto_rotate_interval }};
+  let autoRotateInterval = {% if section.settings.auto_rotate_interval %}{{ section.settings.auto_rotate_interval | times: 1000 }}{% else %}5000{% endif %};
   let autoRotateTimer = null;
 
   function showSlide(index) {
