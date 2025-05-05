@@ -153,6 +153,14 @@
             "slide-alt-text": "",
             "slide-url": "shopify://products/7233-gr-corolla-gr-yaris-high-performance-all-aluminum-radiator"
           }
+        },
+        "slide_fViE97": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/intercooler-welding.jpg",
+            "slide-alt-text": "",
+            "slide-url": ""
+          }
         }
       },
       "block_order": [
@@ -169,7 +177,8 @@
         "slide_qGb8Ac",
         "slide_j89VYC",
         "slide_A7rMUd",
-        "slide_TfcfhV"
+        "slide_TfcfhV",
+        "slide_fViE97"
       ],
       "settings": {
         "include_margins": false,
