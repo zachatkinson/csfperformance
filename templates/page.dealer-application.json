@@ -118,6 +118,9 @@
         "text_Yayhik",
         "button_V6Kn6C"
       ],
+      "custom_css": [
+        ".hulk-powered-wrapper {display: none;}"
+      ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
