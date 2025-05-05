@@ -393,7 +393,7 @@
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/Bimmerworld.png",
-            "link": "",
+            "link": "https://www.bimmerworld.com",
             "alt-text": ""
           }
         },
