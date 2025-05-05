@@ -3629,3 +3629,7 @@ details-disclosure > details {
     grid-template-columns: repeat(6, 1fr);
   }
 }
+
+html, body {
+  scroll-behavior: smooth;
+}
