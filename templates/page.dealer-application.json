@@ -49,52 +49,44 @@
         "padding_bottom": 28
       }
     },
-    "173861739649cd6a4a": {
-      "type": "apps",
+    "multicolumn_iB6xei": {
+      "type": "multicolumn",
       "blocks": {
-        "hulk_form_builder_form_block_RqJyPJ": {
-          "type": "shopify://apps/hulk-form-builder/blocks/form-block/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+        "column_td9jdt": {
+          "type": "column",
           "settings": {
-            "form_uuid": "eluVELWCArIKoIw36FBrDg",
-            "form_settings": false,
-            "font_color": "#000000",
-            "size": 14,
-            "input_background_color": "#ffffff",
-            "input_background_color_focus": "#f4dada",
-            "input_border_radius": 1,
-            "input_border_color": "#ebe9e9",
-            "input_border_color_focus": "#2d2727",
-            "input_font_color": "#3d3131",
-            "input_size": 14,
-            "border_color": "#121212",
-            "border_radius": 2,
-            "border": 1,
-            "fill_color": "#ebe9e9",
-            "padding": 35,
-            "form_width": 600,
-            "btn_text": "Submit",
-            "sub_btn_txt_color": "#f3f3f3",
-            "sub_btn_bg_color": "#3f3333",
-            "sub_btn_font_size": 14,
-            "sub_btn_bdr_color": "#ffffff",
-            "sub_btn_bdr_rad": 3,
-            "sub_btn_bdr_width": 1,
-            "fonts": "Times New Roman"
+            "title": "Column",
+            "text": "{{ page.content }}",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "hulk_form_builder_form_block_RqJyPJ"
+        "column_td9jdt"
       ],
-      "custom_css": [],
+      "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "include_margins": true
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
     "image_banner_FwwghG",
     "main",
-    "173861739649cd6a4a"
+    "multicolumn_iB6xei"
   ]
 }
