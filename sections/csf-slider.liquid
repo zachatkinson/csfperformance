@@ -14,10 +14,10 @@
         {% endfor %}
       </div>
       <div class="csf-slider-right">
-        {% assign slide-count = 0 %}
+        {% assign slide_count = 0 %}
         {% for block in section.blocks %}
           {% if block.type == 'slide' %}
-            <a href="{{ block.settings.slide-url }}" class="slider-anchor slide-{{ slide-count }}">
+            <a href="{{ block.settings.slide-url }}" class="slider-anchor slide-{{ slide_count }}">
               <picture>
                 <!-- The mobile source loads when the screen is 767px wide or less -->
                 <source
@@ -31,10 +31,10 @@
                 >
               </picture>
             </a>
-            {% assign slide-count = slide-count | plus: 1 %}
+            {% assign slide_count = slide_count | plus: 1 %}
           {% endif %}
         {% endfor %}
-        {% assign total_slides = slide-count %}
+        {% assign total_slides = slide_count %}
         {% if section.settings.show_arrows and total_slides > 1 %}
           <button class="csf-slider-arrow csf-slider-arrow--prev" aria-label="Previous slide" tabindex="0" type="button"><span aria-hidden="true">&#10094;</span></button>
           <button class="csf-slider-arrow csf-slider-arrow--next" aria-label="Next slide" tabindex="0" type="button"><span aria-hidden="true">&#10095;</span></button>
@@ -152,7 +152,7 @@ height: auto;
 }
 .csf-slider-right{
 order: 0;
-
+position: relative;
 }
 .csf-slider-right a {
 display: none;
@@ -231,7 +231,7 @@ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
 .csf-slider-dots-wrapper {
   position: absolute;
-  top: 2rem;
+  top: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   background: #000;
@@ -244,6 +244,7 @@ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
   min-width: 120px;
   min-height: 2.5rem;
+  pointer-events: auto;
 }
 .csf-slider-dot {
   width: 1.25rem;
