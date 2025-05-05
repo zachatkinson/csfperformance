@@ -229,6 +229,12 @@
                                 </p>
                             {%- when 'custom_liquid' -%}
                                 {{ block.settings.custom_liquid }}
+                            {%- when 'button' -%}
+                                <div class="product__button">
+                                    <a href="{{ block.settings.button_url }}" class="button button--primary">
+                                        {{ block.settings.button_text }}
+                                    </a>
+                                </div>
                             {%- when 'collapsible_tab' -%}
                                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                                     <details id="Details-{{ block.id }}-{{ section.id }}">
@@ -2110,6 +2116,23 @@
           "default": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.default",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Button"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button link"
         }
       ]
     }
