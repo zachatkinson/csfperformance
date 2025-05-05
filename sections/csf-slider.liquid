@@ -34,6 +34,11 @@
             {% assign slide-count = slide-count | plus: 1 %}
           {% endif %}
         {% endfor %}
+        {% assign total_slides = slide-count %}
+        {% if section.settings.show_arrows and total_slides > 1 %}
+          <button class="csf-slider-arrow csf-slider-arrow--prev" aria-label="Previous slide" tabindex="0" type="button"><span aria-hidden="true">&#10094;</span></button>
+          <button class="csf-slider-arrow csf-slider-arrow--next" aria-label="Next slide" tabindex="0" type="button"><span aria-hidden="true">&#10095;</span></button>
+        {% endif %}
       </div>
     </div>
   </div>
@@ -53,6 +58,12 @@
       "id": "reveal_on_scroll",
       "default": true,
       "label": "t:sections.csf-slider.settings.reveal_on_scroll.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "default": true,
+      "label": "Show navigation arrows (desktop only)"
     }
   ],
   "presets": [
@@ -152,6 +163,28 @@ line-height: 0;
 font-size: 0;
 }
 
+.csf-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.csf-slider-arrow--prev { left: 1rem; }
+.csf-slider-arrow--next { right: 1rem; }
+@media (max-width: 1024px) {
+  .csf-slider-arrow { display: none !important; }
+}
 
 @media screen and (min-width: 768px) {
 .slider-grid{
@@ -186,29 +219,32 @@ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 {% endstylesheet %}
 {% javascript %}
 document.addEventListener("DOMContentLoaded", function() {
-const slides = document.querySelectorAll(".csf-slider-right .slider-anchor");
-let currentIndex = 0;
-const slideInterval = 9000; // 9 seconds for each slide
+  const slider = document.querySelector('.csf-slider-right');
+  const slides = slider.querySelectorAll('.slider-anchor');
+  const prevArrow = slider.querySelector('.csf-slider-arrow--prev');
+  const nextArrow = slider.querySelector('.csf-slider-arrow--next');
+  let currentIndex = 0;
 
-function showSlide(index) {
-slides.forEach((slide, i) => {
-if (i === index) {
-slide.classList.add("active");
-} else {
-slide.classList.remove("active");
-}
-});
-}
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+    currentIndex = index;
+  }
 
-function nextSlide() {
-currentIndex = (currentIndex + 1) % slides.length;
-showSlide(currentIndex);
-}
+  function nextSlide() {
+    showSlide((currentIndex + 1) % slides.length);
+  }
+  function prevSlide() {
+    showSlide((currentIndex - 1 + slides.length) % slides.length);
+  }
 
-// Initially show the first slide
-showSlide(currentIndex);
+  if (prevArrow && nextArrow) {
+    prevArrow.addEventListener('click', prevSlide);
+    nextArrow.addEventListener('click', nextSlide);
+  }
 
-// Set an interval to automatically cycle through slides
-setInterval(nextSlide, slideInterval);
+  // Initial state
+  showSlide(0);
 });
 {% endjavascript %}
