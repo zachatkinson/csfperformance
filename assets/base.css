@@ -3634,6 +3634,6 @@ html, body {
   scroll-behavior: smooth;
 }
 
-#wizard-validation-form .formContainer .hulk-powered-wrapper {
+.hulk-powered-wrapper {
   display: none !important;
 }
