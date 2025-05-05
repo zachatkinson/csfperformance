@@ -64,7 +64,7 @@
         "column_td9jdt"
       ],
       "custom_css": [
-        ".hulk-powered-wrapper {display: none;}"
+        ".hulk-powered-wrapper .text-right {display: none;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
