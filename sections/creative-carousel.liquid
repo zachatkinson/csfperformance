@@ -10,14 +10,14 @@
           <div class="blaze-track-container">
             <div class="blaze-track">
               {% for block in section.blocks %}
-                {% assign link = '#' %}
-                  {% if block.settings.link %}
-                    {% assign link = block.settings.link %}
-                  {% endif %}
                 <div>
-                  <a href="{{ link }}" target="_blank" class="blaze-slide">
-                    <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.image.alt }}">
-                  </a>
+                  {% if block.settings.link %}
+                    <a href="{{ link }}" target="_blank" class="blaze-slide">
+                      <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.image.alt }}">
+                    </a>
+                  {% else %}
+                      <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.image.alt }}">
+                  {% endif %}
                 </div>
               {% endfor %}
             </div>
