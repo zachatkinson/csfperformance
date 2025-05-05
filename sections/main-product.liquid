@@ -101,10 +101,11 @@
                                     <a href="#" class="button button--full-width button--secondary" target="_blank">
                                         Find a Dealer
                                     </a>
+                                        <hr />
                                 {% endif %}
                                 {% if product.metafields.custom.featured_dealer_links %}
                                     {% assign featured_links = product.metafields.custom.featured_dealer_links %}
-                                    <hr />
+                                
                                     {% for item in featured_links.value %}
                                         <a href="{{ item.url }}" class="button button--full-width" target="_blank" style="color:white;">
                                             Shop {{ item.text }}
