@@ -55,7 +55,7 @@
         "column_td9jdt": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "title": "",
             "text": "{{ page.content }}",
             "link_label": "",
             "link": ""
@@ -67,7 +67,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
+        "title": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
