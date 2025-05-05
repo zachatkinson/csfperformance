@@ -3633,3 +3633,7 @@ details-disclosure > details {
 html, body {
   scroll-behavior: smooth;
 }
+
+.hulk-powered-wrapper {
+  display: none !important;
+}
