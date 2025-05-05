@@ -63,6 +63,7 @@
       "block_order": [
         "column_td9jdt"
       ],
+      "disabled": true,
       "custom_css": [
         ".hulk-powered-wrapper {display: none;}"
       ],
