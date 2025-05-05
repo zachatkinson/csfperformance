@@ -97,9 +97,11 @@
                         {%- case block.type -%}
                             {%- when 'featured-buttons' -%}
                                 <h3>Where to buy</h3>
-                                <a href="#" class="button button--full-width button--secondary" target="_blank">
-                                    Find a Dealer
-                                </a>
+                                {% if block.settings.show_dealer_button %}
+                                    <a href="#" class="button button--full-width button--secondary" target="_blank">
+                                        Find a Dealer
+                                    </a>
+                                {% endif %}
                                 {% if product.metafields.custom.featured_dealer_links %}
                                     {% assign featured_links = product.metafields.custom.featured_dealer_links %}
                                     <hr />
@@ -755,7 +757,15 @@
   "blocks": [
     {
       "type": "featured-buttons",
-      "name": "Featured Buy Buttons"
+      "name": "Featured Buy Buttons",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_dealer_button",
+          "label": "Show Find a Dealer button",
+          "default": true
+        }
+      ]
     },
     {
       "type": "@app"
