@@ -11,12 +11,18 @@
             <div class="blaze-track">
               {% for block in section.blocks %}
                 <div>
-                  {% if block.settings.link %}
+                  {% if block.settings.link != blank %}
                     <a href="{{ block.settings.link }}" target="_blank" class="blaze-slide">
-                      <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.image.alt }}">
+                      <div class="blaze-slide-content">
+                        <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.image.alt }}">
+                      </div>
                     </a>
                   {% else %}
-                      <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.image.alt }}">
+                    <div class="blaze-slide">
+                      <div class="blaze-slide-content">
+                        <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.image.alt }}">
+                      </div>
+                    </div>
                   {% endif %}
                 </div>
               {% endfor %}
@@ -268,12 +274,23 @@
 }
 {% endschema %}
 {% stylesheet %}
-.blaze-slide img{
-  max-width: 200px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.blaze-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.blaze-slide-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blaze-slide img {
+  display: block;
+  margin: 0 auto;
+}
+
 .blaze-track{
   margin-bottom: 2rem;
 }
