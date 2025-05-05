@@ -14,8 +14,8 @@ class PageLightbox {
   }
 
   init() {
-    // Skip initialization on product pages and collection pages
-    if (document.querySelector('main-product') || document.querySelector('main-collection')) {
+    // Skip initialization on product pages
+    if (document.querySelector('main-product')) {
       return;
     }
     
@@ -30,13 +30,14 @@ class PageLightbox {
       '.main-page-title + div img' // Images after page title
     ];
     
-    // Exclude product media
+    // Exclude product media and model grid
     const excludeSelectors = [
       'product-media img',
       '[data-media-id] img',
       '.product__media img',
       '.product__media-item img',
-      '.product-media-modal img'
+      '.product-media-modal img',
+      '.model-grid img' // Exclude model grid images
     ];
     
     // Build the query selector
