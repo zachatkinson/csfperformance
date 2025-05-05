@@ -40,17 +40,17 @@
             "swatch_shape": "square"
           }
         },
+        "featured_buttons_NDDLN4": {
+          "type": "featured-buttons",
+          "settings": {
+            "show_dealer_button": true
+          }
+        },
         "button_mVVrB9": {
           "type": "button",
           "settings": {
             "button_text": "View Press Release",
             "button_url": "{{ product.metafields.custom.press_release.value }}"
-          }
-        },
-        "featured_buttons_NDDLN4": {
-          "type": "featured-buttons",
-          "settings": {
-            "show_dealer_button": true
           }
         },
         "description": {
@@ -83,8 +83,8 @@
         "custom_liquid_egxByy",
         "price",
         "variant_picker",
-        "button_mVVrB9",
         "featured_buttons_NDDLN4",
+        "button_mVVrB9",
         "description",
         "share",
         "complementary_xqbWeQ"
