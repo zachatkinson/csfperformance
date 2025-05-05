@@ -42,7 +42,7 @@
         {% endif %}
         {% if section.settings.show_dots and total_slides > 1 %}
           <div class="csf-slider-dots-wrapper" aria-label="Slide navigation" role="tablist">
-            {% for i in (0..7) %}
+            {% for i in (0..total_slides | minus: 1) %}
               <button class="csf-slider-dot" role="tab" aria-label="Go to slide {{ i | plus: 1 }}" aria-selected="false" tabindex="-1" data-slide="{{ i }}"></button>
             {% endfor %}
           </div>
