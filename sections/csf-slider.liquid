@@ -285,6 +285,8 @@ document.addEventListener("DOMContentLoaded", function() {
   let currentIndex = 0;
   let startX = 0;
   let isDragging = false;
+  let isMouseDown = false;
+  let mouseStartX = 0;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -341,6 +343,32 @@ document.addEventListener("DOMContentLoaded", function() {
   slider.addEventListener('touchend', () => {
     isDragging = false;
   });
+
+  // Mouse drag navigation for desktop
+  function isTouchDevice() {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  }
+  if (!isTouchDevice()) {
+    slider.addEventListener('mousedown', (e) => {
+      isMouseDown = true;
+      mouseStartX = e.clientX;
+    });
+    slider.addEventListener('mousemove', (e) => {
+      if (!isMouseDown) return;
+      let diff = e.clientX - mouseStartX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) prevSlide();
+        else nextSlide();
+        isMouseDown = false;
+      }
+    });
+    slider.addEventListener('mouseup', () => {
+      isMouseDown = false;
+    });
+    slider.addEventListener('mouseleave', () => {
+      isMouseDown = false;
+    });
+  }
 
   // Initial state
   showSlide(0);
