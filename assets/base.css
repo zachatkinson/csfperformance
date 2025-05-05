@@ -3634,6 +3634,6 @@ html, body {
   scroll-behavior: smooth;
 }
 
-iframe .hulk-powered-wrapper {
+.pxFormGenerator .hulk-powered-wrapper {
   display: none !important;
 }
