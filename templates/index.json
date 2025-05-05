@@ -174,7 +174,7 @@
       "settings": {
         "include_margins": false,
         "reveal_on_scroll": false,
-        "show_arrows": true
+        "show_arrows": false
       }
     },
     "featured_collection": {
