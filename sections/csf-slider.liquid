@@ -283,6 +283,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const nextArrow = slider.querySelector('.csf-slider-arrow--next');
   const dots = slider.querySelectorAll('.csf-slider-dot');
   let currentIndex = 0;
+  let startX = 0;
+  let isDragging = false;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -318,6 +320,26 @@ document.addEventListener("DOMContentLoaded", function() {
         showSlide(i);
       }
     });
+  });
+
+  // Touch/Swipe/Drag support for mobile/tablet
+  slider.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 1) {
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    }
+  });
+  slider.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    let diff = e.touches[0].clientX - startX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) prevSlide();
+      else nextSlide();
+      isDragging = false;
+    }
+  });
+  slider.addEventListener('touchend', () => {
+    isDragging = false;
   });
 
   // Initial state
