@@ -3639,5 +3639,5 @@ html, body {
 }
 
 .pxFormGenerator .hulk-powered-wrapper {
-  display: none;
+  display: none !important;
 }
