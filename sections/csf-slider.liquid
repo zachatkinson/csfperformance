@@ -16,7 +16,7 @@
       <div class="csf-slider-right">
         {% assign slide_count = 0 %}
         {% for block in section.blocks %}
-          <p>Block type: {{ block.type }}</p>
+      
           {% if block.type == 'slide' %}
             <a href="{{ block.settings.slide-url }}" class="slider-anchor slide-{{ slide_count }}">
               <picture>
@@ -35,7 +35,6 @@
             {% assign slide_count = slide_count | plus: 1 %}
           {% endif %}
         {% endfor %}
-        <p>Slide count: {{ slide_count }}</p>
         {% assign total_slides = slide_count | plus: 0 %}
         {% if section.settings.show_arrows and total_slides > 1 %}
           <button class="csf-slider-arrow csf-slider-arrow--prev" aria-label="Previous slide" tabindex="0" type="button"><span aria-hidden="true">&#10094;</span></button>
