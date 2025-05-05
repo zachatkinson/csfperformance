@@ -81,6 +81,15 @@
       "id": "show_dots",
       "default": true,
       "label": "Show navigation dots (desktop only)"
+    },
+    {
+      "type": "range",
+      "id": "auto_rotate_interval",
+      "label": "Auto-rotate interval (seconds)",
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "default": 5
     }
   ],
   "presets": [
@@ -288,6 +297,8 @@ document.addEventListener("DOMContentLoaded", function() {
   let isDragging = false;
   let isMouseDown = false;
   let mouseStartX = 0;
+  let autoRotateInterval = {{ section.settings.auto_rotate_interval | default: 5 | times: 1000 }};
+  let autoRotateTimer = null;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -308,6 +319,16 @@ document.addEventListener("DOMContentLoaded", function() {
     showSlide((currentIndex - 1 + slides.length) % slides.length);
   }
 
+  function startAutoRotate() {
+    if (slides.length > 1) {
+      autoRotateTimer = setInterval(nextSlide, autoRotateInterval);
+    }
+  }
+  function stopAutoRotate() {
+    if (autoRotateTimer) clearInterval(autoRotateTimer);
+    autoRotateTimer = null;
+  }
+
   if (prevArrow && nextArrow) {
     prevArrow.addEventListener('click', prevSlide);
     nextArrow.addEventListener('click', nextSlide);
@@ -317,10 +338,14 @@ document.addEventListener("DOMContentLoaded", function() {
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
       showSlide(i);
+      stopAutoRotate();
+      startAutoRotate();
     });
     dot.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         showSlide(i);
+        stopAutoRotate();
+        startAutoRotate();
       }
     });
   });
@@ -339,6 +364,8 @@ document.addEventListener("DOMContentLoaded", function() {
       if (diff > 0) prevSlide();
       else nextSlide();
       isDragging = false;
+      stopAutoRotate();
+      startAutoRotate();
     }
   });
   slider.addEventListener('touchend', () => {
@@ -361,6 +388,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (diff > 0) prevSlide();
         else nextSlide();
         isMouseDown = false;
+        stopAutoRotate();
+        startAutoRotate();
       }
     });
     slider.addEventListener('mouseup', () => {
@@ -377,5 +406,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Initial state
   showSlide(0);
+  startAutoRotate();
 });
 {% endjavascript %}
