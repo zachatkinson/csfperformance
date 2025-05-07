@@ -482,6 +482,14 @@
             "alt-text": ""
           }
         },
+        "item_tgUJHf": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/titan-ms-logo-white_2d6339d6-942d-4c90-a6c3-f153f9cbccb2.svg",
+            "link": "",
+            "alt-text": ""
+          }
+        },
         "item_GVbx8Y": {
           "type": "item",
           "name": "T14",
@@ -515,6 +523,7 @@
         "item_qmfB8A",
         "item_hC8qhK",
         "item_iiXeBH",
+        "item_tgUJHf",
         "item_GVbx8Y",
         "item_xfV4YA",
         "item_x9HG7M"
