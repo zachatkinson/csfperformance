@@ -477,7 +477,7 @@
           "type": "item",
           "name": "Titan",
           "settings": {
-            "image": "shopify://shop_images/titan-ms-logo-white_2d6339d6-942d-4c90-a6c3-f153f9cbccb2.svg",
+            "image": "shopify://shop_images/titan-ms-logo-white.svg",
             "link": "https://titanmotorsports.com/collections/csf",
             "alt-text": ""
           }
