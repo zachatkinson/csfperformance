@@ -175,7 +175,8 @@
         "include_margins": false,
         "reveal_on_scroll": false,
         "show_arrows": true,
-        "show_dots": true
+        "show_dots": true,
+        "auto_rotate_interval": 5
       }
     },
     "featured_collection": {
@@ -184,12 +185,12 @@
         ".card-information {display: none;}"
       ],
       "settings": {
-        "title": "Latest Products",
+        "title": "New Products",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "latest-products",
+        "collection": "new-products",
         "products_to_show": 9,
         "columns_desktop": 3,
         "full_width": false,
