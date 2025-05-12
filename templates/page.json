@@ -12,7 +12,7 @@
     "main": {
       "type": "main-page",
       "custom_css": [
-        ".grid-template-columns {padding: 1em 0; align-items: center;}"
+        ".columns-center {padding: 1em 0; align-items: center;}"
       ],
       "settings": {
         "padding_top": 28,
