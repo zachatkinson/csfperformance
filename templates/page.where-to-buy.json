@@ -82,7 +82,7 @@
           "type": "item",
           "name": "BimmerWorld",
           "settings": {
-            "image": "shopify://shop_images/Bimmerworld.svg",
+            "image": "shopify://shop_images/Bimmerworld_9b16edff-f08e-4ff8-8cbe-923d186399f0.png",
             "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
             "alt-text": ""
           }
@@ -91,7 +91,7 @@
           "type": "item",
           "name": "ECS",
           "settings": {
-            "image": "shopify://shop_images/ECS-Tuning-1.svg",
+            "image": "shopify://shop_images/ECS_Tuning_9c2146d0-03be-443b-a49a-1e029afe22bb.png",
             "link": "https://www.ecstuning.com/b-csf-parts/",
             "alt-text": ""
           }
@@ -100,7 +100,7 @@
           "type": "item",
           "name": "XPH",
           "settings": {
-            "image": "shopify://shop_images/extreme-powerhouse-logo.svg",
+            "image": "shopify://shop_images/Extreme_Power_House.png",
             "link": "https://x-ph.com/brands/CSF-Race.html",
             "alt-text": ""
           }
@@ -109,7 +109,7 @@
           "type": "item",
           "name": "FCP",
           "settings": {
-            "image": "shopify://shop_images/FCP-Euro.svg",
+            "image": "shopify://shop_images/FCP_Euro.png",
             "link": "https://www.fcpeuro.com/CSF-parts/",
             "alt-text": ""
           }
@@ -118,7 +118,7 @@
           "type": "item",
           "name": "Pelican Parts",
           "settings": {
-            "image": "shopify://shop_images/Pelican-Parts.svg",
+            "image": "shopify://shop_images/Pelican_Parts.png",
             "link": "https://www.pelicanparts.com/byb-csf",
             "alt-text": ""
           }
@@ -127,7 +127,7 @@
           "type": "item",
           "name": "IND",
           "settings": {
-            "image": "shopify://shop_images/IND.svg",
+            "image": "shopify://shop_images/IND.png",
             "link": "https://ind-distribution.com/collections/csf",
             "alt-text": ""
           }
@@ -136,7 +136,7 @@
           "type": "item",
           "name": "PSI",
           "settings": {
-            "image": "shopify://shop_images/PSI-SQ-Logo.svg",
+            "image": "shopify://shop_images/PSI.png",
             "link": "https://precision-sport.com/collections/all/csf",
             "alt-text": ""
           }
@@ -145,7 +145,7 @@
           "type": "item",
           "name": "R44",
           "settings": {
-            "image": "shopify://shop_images/R44PERFORMANCE_LOGO_WHITE_SVG.svg",
+            "image": "shopify://shop_images/R44_Performance.png",
             "link": "https://r44performance.com/collections/csf-radiators-vehicle-cooling-parts",
             "alt-text": ""
           }
