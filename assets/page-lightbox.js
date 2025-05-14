@@ -14,8 +14,8 @@ class PageLightbox {
   }
 
   init() {
-    // Skip initialization on product pages
-    if (document.querySelector('main-product')) {
+    // Skip initialization on product and collection pages
+    if (document.querySelector('.product') || document.querySelector('.collection')) {
       return;
     }
     
