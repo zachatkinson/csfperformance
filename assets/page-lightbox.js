@@ -14,8 +14,8 @@ class PageLightbox {
   }
 
   init() {
-    // Skip initialization on product and collection pages
-    if (document.querySelector('.product') || window.location.pathname.includes('/collections/')) {
+    // Skip initialization on product pages only
+    if (document.querySelector('.product')) {
       return;
     }
     
