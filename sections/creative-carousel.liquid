@@ -14,13 +14,13 @@
                   {% if block.settings.link != blank %}
                     <a href="{{ block.settings.link }}" target="_blank" class="blaze-slide">
                       <div class="blaze-slide-content">
-                        <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.image.alt }}">
+                      <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.image.alt }}">
                       </div>
                     </a>
                   {% else %}
                     <div class="blaze-slide">
                       <div class="blaze-slide-content">
-                        <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.image.alt }}">
+                      <img src="{{ block.settings.image | img_url: '200x200' }}" alt="{{ block.settings.image.alt }}">
                       </div>
                     </div>
                   {% endif %}
