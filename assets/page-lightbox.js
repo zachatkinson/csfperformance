@@ -14,11 +14,6 @@ class PageLightbox {
   }
 
   init() {
-    // Skip initialization on product pages only
-    if (document.querySelector('.product')) {
-      return;
-    }
-    
     // Find all images within page content areas only
     // This selector targets images in page content but excludes product media
     const pageContentSelectors = [
