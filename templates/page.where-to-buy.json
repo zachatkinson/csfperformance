@@ -194,7 +194,7 @@
           "type": "item",
           "name": "Rennline",
           "settings": {
-            "image": "shopify://shop_images/rennline-white-500.png",
+            "image": "shopify://shop_images/Rennline_c058fc56-e49f-4bd5-a8ec-d10aba408f9c.png",
             "link": "https://www.rennline.com/",
             "alt-text": ""
           }
@@ -203,7 +203,7 @@
           "type": "item",
           "name": "Studio RSR",
           "settings": {
-            "image": "shopify://shop_images/Studio-RSR-Logo-White.svg",
+            "image": "shopify://shop_images/Studio_RSR_e5fd262e-d2c8-484a-80dd-2076efb686b7.png",
             "link": "https://studiorsr.com/collections/vendors?q=CSF",
             "alt-text": ""
           }
@@ -212,7 +212,7 @@
           "type": "item",
           "name": "Titan",
           "settings": {
-            "image": "shopify://shop_images/titan-ms-logo-white.svg",
+            "image": "shopify://shop_images/Titan_Motorsports_807d3145-9ab1-4bb8-ae56-c64435e4e4aa.png",
             "link": "https://titanmotorsports.com/collections/csf",
             "alt-text": ""
           }
@@ -221,7 +221,7 @@
           "type": "item",
           "name": "Throtl",
           "settings": {
-            "image": "shopify://shop_images/THROTL-Razor-Script-White.svg",
+            "image": "shopify://shop_images/Throtl.png",
             "link": "https://throtl.com/collections/csf",
             "alt-text": ""
           }
@@ -230,7 +230,7 @@
           "type": "item",
           "name": "Turner MS",
           "settings": {
-            "image": "shopify://shop_images/turner-ex.svg",
+            "image": "shopify://shop_images/Turner_Motorsport.png",
             "link": "https://www.turnermotorsport.com/BMW-E39-Parts/m-361-csf",
             "alt-text": ""
           }
@@ -239,7 +239,7 @@
           "type": "item",
           "name": "VV",
           "settings": {
-            "image": "shopify://shop_images/Vehicle_Virals_logo-White.svg",
+            "image": "shopify://shop_images/Vehicle_Virals.png",
             "link": "https://vehiclevirals.com/collections/csf-1",
             "alt-text": ""
           }
@@ -248,7 +248,7 @@
           "type": "item",
           "name": "Vivid",
           "settings": {
-            "image": "shopify://shop_images/vivid-racing-logo-white-500.png",
+            "image": "shopify://shop_images/Vivid_Racing_bf7e9060-c260-4c7b-99a8-88d78875281b.png",
             "link": "https://www.vividracing.com/",
             "alt-text": ""
           }
@@ -257,7 +257,7 @@
           "type": "item",
           "name": "XDP",
           "settings": {
-            "image": "shopify://shop_images/Extreme_Power_House.png",
+            "image": "shopify://shop_images/XDP_e324f498-c30a-41ed-95af-ac1832f0c8fa.png",
             "link": "https://www.xtremediesel.com/xdp-manufacturers/csf#/showFilters",
             "alt-text": ""
           }
