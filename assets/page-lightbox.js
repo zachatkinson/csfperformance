@@ -5,15 +5,21 @@ class PageLightbox {
     this.currentImage = null;
     this.images = [];
     
-    // Initialize the lightbox when the DOM is fully loaded
+    console.log('PageLightbox: Constructor called');
+    
+    // Initialize when DOM is loaded
     if (document.readyState === 'loading') {
+      console.log('PageLightbox: DOM still loading, waiting for DOMContentLoaded');
       document.addEventListener('DOMContentLoaded', () => this.init());
     } else {
+      console.log('PageLightbox: DOM already loaded, initializing immediately');
       this.init();
     }
   }
 
   init() {
+    console.log('PageLightbox: init() called');
+    
     // Find all images within page content areas only
     // This selector targets images in page content but excludes product media
     const pageContentSelectors = [
@@ -37,28 +43,43 @@ class PageLightbox {
     
     // Build the query selector
     const includeSelector = pageContentSelectors.join(', ');
+    console.log('PageLightbox: Using include selector:', includeSelector);
     
     // Find all qualifying images
     const allPageImages = document.querySelectorAll(includeSelector);
+    console.log('PageLightbox: Found', allPageImages.length, 'total images');
     
     // Filter out images that are in product areas
     this.images = Array.from(allPageImages).filter(img => {
       // Skip if image is too small or a thumbnail or icon
-      if (img.width < 150 || img.height < 150) return false;
+      if (img.width < 150 || img.height < 150) {
+        console.log('PageLightbox: Filtered out small image:', img.src, 'dimensions:', img.width, 'x', img.height);
+        return false;
+      }
       
       // Skip images in excluded areas
       for (const selector of excludeSelectors) {
-        if (img.closest(selector)) return false;
+        if (img.closest(selector)) {
+          console.log('PageLightbox: Filtered out excluded image:', img.src, 'matched selector:', selector);
+          return false;
+        }
       }
       
       // Skip SVG images (likely icons)
-      if (img.src.toLowerCase().endsWith('.svg')) return false;
+      if (img.src.toLowerCase().endsWith('.svg')) {
+        console.log('PageLightbox: Filtered out SVG image:', img.src);
+        return false;
+      }
       
+      console.log('PageLightbox: Keeping image:', img.src);
       return true;
     });
     
+    console.log('PageLightbox: After filtering,', this.images.length, 'images remain');
+    
     // If no suitable images found, don't initialize
     if (this.images.length === 0) {
+      console.log('PageLightbox: No suitable images found, not initializing');
       return;
     }
     
@@ -69,12 +90,14 @@ class PageLightbox {
     this.images.forEach(img => {
       img.style.cursor = 'pointer';
       img.addEventListener('click', (e) => {
+        console.log('PageLightbox: Image clicked:', img.src);
         e.preventDefault();
         this.openLightbox(img);
       });
     });
     
     this.initialized = true;
+    console.log('PageLightbox: Initialization complete');
   }
   
   createLightbox() {
