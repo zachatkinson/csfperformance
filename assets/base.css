@@ -3650,6 +3650,11 @@ details-disclosure > details {
     column-gap: 1em;
     row-gap: 0em;
   }
+  .media-grid{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    column-gap: 3em;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -3658,11 +3663,6 @@ details-disclosure > details {
     grid-template-columns: 1fr 1fr 1fr; 
     column-gap: 1em;
     row-gap: 0em;
-  }
-  .media-grid{
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    column-gap: 3em;
   }
 }
 
