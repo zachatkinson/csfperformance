@@ -3599,9 +3599,9 @@ details-disclosure > details {
 }
 .content-menu-grid{
   display: grid; 
-  grid-template-columns: 1fr 1fr 1fr; 
-  column-gap: 1em;
-  row-gap: 0em;
+  grid-template-columns: 1fr; 
+  column-gap: 0em;
+  row-gap: 1em;
 }
 
 
@@ -3635,9 +3635,9 @@ details-disclosure > details {
   }
   .content-menu-grid{
     display: grid; 
-    grid-template-columns: 1fr; 
-    column-gap: 0em;
-    row-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr; 
+    column-gap: 1em;
+    row-gap: 0em;
   }
 }
 
