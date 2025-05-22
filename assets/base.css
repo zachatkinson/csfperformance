@@ -3633,6 +3633,8 @@ details-disclosure > details {
   .model-grid{
     grid-template-columns: repeat(6, 1fr);
   }
+}
+media screen and (min-width: 480px) {
   .content-menu-grid{
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
@@ -3640,6 +3642,7 @@ details-disclosure > details {
     row-gap: 0em;
   }
 }
+
 
 html, body {
   scroll-behavior: smooth;
