@@ -3604,7 +3604,7 @@ details-disclosure > details {
   column-gap: 0em;
   row-gap: 1em;
 }
-.media-grid{
+.media-grid, .media-grid-4{
   display: grid; 
   grid-template-columns: 1fr; 
   column-gap: 0em;
@@ -3651,8 +3651,11 @@ details-disclosure > details {
     row-gap: 0em;
   }
   .media-grid{
-    display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
+    column-gap: 3em;
+  }
+  .media-grid-4{
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
     column-gap: 3em;
   }
 }
