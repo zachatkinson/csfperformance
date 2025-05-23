@@ -4,6 +4,8 @@ class PageLightbox {
     this.initialized = false;
     this.currentImage = null;
     this.images = [];
+    this.touchStartX = 0;
+    this.touchEndX = 0;
     
     console.log('PageLightbox: Constructor called');
     
@@ -89,11 +91,19 @@ class PageLightbox {
     // Add click event listeners to images
     this.images.forEach(img => {
       img.style.cursor = 'pointer';
+      
+      // Add both click and touch events
       img.addEventListener('click', (e) => {
         console.log('PageLightbox: Image clicked:', img.src);
         e.preventDefault();
         this.openLightbox(img);
       });
+      
+      img.addEventListener('touchstart', (e) => {
+        console.log('PageLightbox: Image touched:', img.src);
+        e.preventDefault();
+        this.openLightbox(img);
+      }, { passive: false });
     });
     
     this.initialized = true;
@@ -112,7 +122,13 @@ class PageLightbox {
       closeButton.className = 'page-lightbox__close';
       closeButton.setAttribute('aria-label', 'Close lightbox');
       closeButton.innerHTML = '<span>&times;</span>';
+      
+      // Add both click and touch events for close button
       closeButton.addEventListener('click', () => this.closeLightbox());
+      closeButton.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        this.closeLightbox();
+      }, { passive: false });
       
       // Create image container
       const imageContainer = document.createElement('div');
@@ -124,13 +140,25 @@ class PageLightbox {
         prevButton.className = 'page-lightbox__nav page-lightbox__nav--prev';
         prevButton.setAttribute('aria-label', 'Previous image');
         prevButton.innerHTML = '&lsaquo;';
+        
+        // Add both click and touch events for navigation
         prevButton.addEventListener('click', () => this.navigate(-1));
+        prevButton.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          this.navigate(-1);
+        }, { passive: false });
         
         const nextButton = document.createElement('button');
         nextButton.className = 'page-lightbox__nav page-lightbox__nav--next';
         nextButton.setAttribute('aria-label', 'Next image');
         nextButton.innerHTML = '&rsaquo;';
+        
+        // Add both click and touch events for navigation
         nextButton.addEventListener('click', () => this.navigate(1));
+        nextButton.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          this.navigate(1);
+        }, { passive: false });
         
         this.lightboxContainer.appendChild(prevButton);
         this.lightboxContainer.appendChild(nextButton);
@@ -152,6 +180,16 @@ class PageLightbox {
         }
       });
       
+      // Add touch swipe support
+      this.lightboxContainer.addEventListener('touchstart', (e) => {
+        this.touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      
+      this.lightboxContainer.addEventListener('touchend', (e) => {
+        this.touchEndX = e.changedTouches[0].screenX;
+        this.handleSwipe();
+      }, { passive: true });
+      
       // Add click outside to close
       this.lightboxContainer.addEventListener('click', (e) => {
         if (e.target === this.lightboxContainer) {
@@ -161,6 +199,21 @@ class PageLightbox {
       
       // Append to body
       document.body.appendChild(this.lightboxContainer);
+    }
+  }
+  
+  handleSwipe() {
+    const swipeThreshold = 50; // Minimum distance for a swipe
+    const swipeDistance = this.touchEndX - this.touchStartX;
+    
+    if (Math.abs(swipeDistance) > swipeThreshold) {
+      if (swipeDistance > 0) {
+        // Swipe right - previous image
+        this.navigate(-1);
+      } else {
+        // Swipe left - next image
+        this.navigate(1);
+      }
     }
   }
   
