@@ -1517,25 +1517,25 @@ th {
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 
-	table, thead, tbody, th, td, tr { 
+	#tiny-tabs-global-wrapper table, thead, tbody, th, td, tr { 
 		display: block; 
 	}
-	thead tr { 
+	#tiny-tabs-global-wrapper thead tr { 
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
 	
-	tr { border: 1px solid #ccc; }
+	#tiny-tabs-global-wrapper tr { border: 1px solid #ccc; }
 	
-	td { 
+	#tiny-tabs-global-wrapper td { 
 		border: none;
 		border-bottom: 1px solid #eee; 
 		position: relative;
 		padding-left: 50%; 
 	}
 	
-	td:before { 
+	#tiny-tabs-global-wrapper td:before { 
 		position: absolute;
 		top: 6px;
 		left: 6px;
@@ -1543,11 +1543,11 @@ only screen and (max-width: 760px),
 		padding-right: 10px; 
 		white-space: nowrap;
 	}
-	td:nth-of-type(1):before { content: "Year Range"; }
-	td:nth-of-type(2):before { content: "Make"; }
-	td:nth-of-type(3):before { content: "Chassis Code"; }
-	td:nth-of-type(4):before { content: "Model"; }
-	td:nth-of-type(5):before { content: "Submodel"; }
-	td:nth-of-type(6):before { content: "Engine / Trans / Position"; }
-	td:nth-of-type(7):before { content: "Notes"; }
+	#tiny-tabs-global-wrapper td:nth-of-type(1):before { content: "Year Range"; }
+	#tiny-tabs-global-wrapper td:nth-of-type(2):before { content: "Make"; }
+	#tiny-tabs-global-wrapper td:nth-of-type(3):before { content: "Chassis Code"; }
+	#tiny-tabs-global-wrapper td:nth-of-type(4):before { content: "Model"; }
+	#tiny-tabs-global-wrapper td:nth-of-type(5):before { content: "Submodel"; }
+	#tiny-tabs-global-wrapper td:nth-of-type(6):before { content: "Engine / Trans / Position"; }
+	#tiny-tabs-global-wrapper td:nth-of-type(7):before { content: "Notes"; }
 }
