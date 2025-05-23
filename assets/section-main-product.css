@@ -1514,6 +1514,7 @@ th {
   text-align: left;
 }
 
+/* Application Chart Table CSS for product listings
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
@@ -1554,3 +1555,4 @@ only screen and (max-width: 760px),
 	#tiny-tabs-global-wrapper td:nth-of-type(6):before { content: "Engine / Trans / Position"; }
 	#tiny-tabs-global-wrapper td:nth-of-type(7):before { content: "Notes"; }
 }
+*/
