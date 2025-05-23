@@ -1529,10 +1529,10 @@ only screen and (max-width: 760px),
 	#tiny-tabs-global-wrapper tr { border: 1px solid #ccc; }
 	
 	#tiny-tabs-global-wrapper td { 
-		border: none;
-		border-bottom: 1px solid #eee; 
-		position: relative;
-		padding-left: 50%; 
+		border: none !important;
+		border-bottom: 1px solid #eee !important; 
+		position: relative !important;
+		padding-left: 50% !important; 
 	}
 	
 	#tiny-tabs-global-wrapper td:before { 
