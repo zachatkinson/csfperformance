@@ -1518,11 +1518,11 @@ th {
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)
 
-#tiny-tabs-global-wrapper table {
+#tiny-tabs-global-wrapper table, thead, tbody, th, td, tr {
   font-size: 1rem !important;
 }
 
-#tiny-tabs-global-wrapper table th, table td,{
+#tiny-tabs-global-wrapper table:not([class]) td, table:not([class]) th {
   padding: 0 !important;
 }
 
