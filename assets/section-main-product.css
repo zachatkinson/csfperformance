@@ -1521,7 +1521,7 @@ th {
   }
   
   #tiny-tabs-global-wrapper table:not([class]) td, table:not([class]) th {
-    padding: 0 !important;
+    padding: 0.5em !important;
   }
 }
 /* Application Chart Table CSS for product listings
