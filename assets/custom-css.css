@@ -66,19 +66,19 @@
 }
 
 /* Application Chart Table CSS for product listings */
-table {
+#tiny-tabs-global-wrapper table {
   width: 100%;
   border-collapse: collapse;
 }
-tr:nth-of-type(odd) {
+#tiny-tabs-global-wrapper tr:nth-of-type(odd) {
   background: #eee;
 }
-th {
+#tiny-tabs-global-wrapper th {
   background: #333;
   color: white;
   font-weight: bold;
 }
-td,
+#tiny-tabs-global-wrapper td,
 th {
   padding: 6px;
   border: 1px solid #ccc;
