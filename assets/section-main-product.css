@@ -1549,6 +1549,5 @@ only screen and (max-width: 760px),
 	td:nth-of-type(4):before { content: "Model"; }
 	td:nth-of-type(5):before { content: "Submodel"; }
 	td:nth-of-type(6):before { content: "Engine / Trans / Position"; }
-	td:nth-of-type(7):before { content: "Date of Birth"; }
-	td:nth-of-type(8):before { content: "Notes"; }
+	td:nth-of-type(7):before { content: "Notes"; }
 }
