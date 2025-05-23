@@ -1518,15 +1518,17 @@ only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
 
 	#tiny-tabs-global-wrapper table, thead, tbody, th, td, tr { 
-		display: block; 
+		display: block !important; 
 	}
 	#tiny-tabs-global-wrapper thead tr { 
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
+		position: absolute !important;
+		top: -9999px !important;
+		left: -9999px !important;
 	}
 	
-	#tiny-tabs-global-wrapper tr { border: 1px solid #ccc; }
+	#tiny-tabs-global-wrapper tr { 
+      border: 1px solid #ccc !important;
+    }
 	
 	#tiny-tabs-global-wrapper td { 
 		border: none !important;
@@ -1536,12 +1538,12 @@ only screen and (max-width: 760px),
 	}
 	
 	#tiny-tabs-global-wrapper td:before { 
-		position: absolute;
-		top: 6px;
-		left: 6px;
-		width: 45%; 
-		padding-right: 10px; 
-		white-space: nowrap;
+		position: absolute !important;
+		top: 6px !important;
+		left: 6px !important;
+		width: 45% !important; 
+		padding-right: 10px !important; 
+		white-space: nowrap !important;
 	}
 	#tiny-tabs-global-wrapper td:nth-of-type(1):before { content: "Year Range"; }
 	#tiny-tabs-global-wrapper td:nth-of-type(2):before { content: "Make"; }
