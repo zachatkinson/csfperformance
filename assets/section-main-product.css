@@ -1497,6 +1497,7 @@ a.product__text {
 #tiny-tabs-global-wrapper table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: unset;
 }
 #tiny-tabs-global-wrapper tr:nth-of-type(odd) {
   background: #eee;
