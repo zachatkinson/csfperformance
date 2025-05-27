@@ -192,6 +192,7 @@ class PageLightbox {
       
       // Add click outside to close
       this.lightboxContainer.addEventListener('click', (e) => {
+        // Only close if clicking the background (not the image, buttons, or container)
         if (e.target === this.lightboxContainer) {
           this.closeLightbox();
         }
@@ -236,9 +237,11 @@ class PageLightbox {
     container.innerHTML = '';
     container.appendChild(lightboxImg);
     
-    // Show the lightbox
-    this.lightboxContainer.classList.add('active');
-    this.lightboxContainer.setAttribute('aria-hidden', 'false');
+    // Show the lightbox with a fade effect
+    requestAnimationFrame(() => {
+      this.lightboxContainer.classList.add('active');
+      this.lightboxContainer.setAttribute('aria-hidden', 'false');
+    });
     
     // Disable scrolling on body
     document.body.style.overflow = 'hidden';
@@ -248,16 +251,21 @@ class PageLightbox {
   }
   
   closeLightbox() {
+    // Start fade out animation
     this.lightboxContainer.classList.remove('active');
-    this.lightboxContainer.setAttribute('aria-hidden', 'true');
     
-    // Re-enable scrolling
-    document.body.style.overflow = '';
-    
-    // Return focus to the image that was clicked
-    if (this.currentImage) {
-      this.currentImage.focus();
-    }
+    // Wait for animation to complete before hiding
+    setTimeout(() => {
+      this.lightboxContainer.setAttribute('aria-hidden', 'true');
+      
+      // Re-enable scrolling
+      document.body.style.overflow = '';
+      
+      // Return focus to the image that was clicked
+      if (this.currentImage) {
+        this.currentImage.focus();
+      }
+    }, 300); // Match the CSS transition duration
   }
   
   navigate(direction) {

@@ -27,6 +27,14 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.page-lightbox.active .page-lightbox__image-container {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .page-lightbox__image {
