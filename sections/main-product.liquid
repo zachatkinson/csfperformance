@@ -113,6 +113,12 @@
                                     {% endfor %}
                                       <hr />
                                 {% endif %}
+                                  {% if block.settings.show_dealer_button and product.vendor == 'CSF' %}
+                                    <a href="#" class="button button--full-width button--secondary" target="_blank">
+                                        Find a Dealer
+                                    </a>
+                                        <hr />
+                                {% endif %}
                             {%- when '@app' -%}
                                 {% render block %}
                             {%- when 'text' -%}
