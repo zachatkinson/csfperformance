@@ -307,3 +307,36 @@ class PageLightbox {
 
 // Initialize the page lightbox
 new PageLightbox(); 
+
+function showImage(index) {
+  const image = images[index];
+  const imageContainer = document.querySelector('.page-lightbox__image-container');
+  const currentImage = imageContainer.querySelector('img');
+  
+  // Remove any existing animation classes
+  if (currentImage) {
+    currentImage.classList.remove('sliding-in-left', 'sliding-in-right');
+  }
+  
+  // Create new image element
+  const newImage = document.createElement('img');
+  newImage.src = image.src;
+  newImage.alt = image.alt;
+  newImage.className = 'page-lightbox__image';
+  
+  // Add appropriate animation class based on direction
+  if (currentIndex < index) {
+    newImage.classList.add('sliding-in-left');
+  } else {
+    newImage.classList.add('sliding-in-right');
+  }
+  
+  // Replace the image
+  if (currentImage) {
+    imageContainer.removeChild(currentImage);
+  }
+  imageContainer.appendChild(newImage);
+  
+  currentIndex = index;
+  updateNavigation();
+} 
