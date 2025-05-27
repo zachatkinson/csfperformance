@@ -271,7 +271,7 @@ class PageLightbox {
     const currentImg = this.lightboxContainer.querySelector('.page-lightbox__image');
     
     // Add sliding animation class based on direction
-    currentImg.classList.add(direction > 0 ? 'sliding-left' : 'sliding-right');
+    currentImg.classList.add(direction > 0 ? 'sliding-right' : 'sliding-left');
     
     // Wait for the slide-out animation to complete
     setTimeout(() => {
@@ -281,8 +281,8 @@ class PageLightbox {
       lightboxImg.alt = newImage.alt;
       lightboxImg.className = 'page-lightbox__image';
       
-      // Add sliding-in animation class
-      lightboxImg.classList.add(direction > 0 ? 'sliding-in-right' : 'sliding-in-left');
+      // Add sliding-in animation class - reversed from the slide-out direction
+      lightboxImg.classList.add(direction > 0 ? 'sliding-in-left' : 'sliding-in-right');
       
       // If image has data-full-size attribute, use that instead
       if (newImage.dataset.fullSize) {
