@@ -10,15 +10,55 @@ function initLightbox() {
   let currentX = 0;
   let isSwiping = false;
 
+  // Create a container for smooth transitions
+  const imageContainer = document.createElement('div');
+  imageContainer.style.position = 'relative';
+  imageContainer.style.width = '100%';
+  imageContainer.style.height = '100%';
+  imageContainer.style.overflow = 'hidden';
+  lightboxImage.parentNode.insertBefore(imageContainer, lightboxImage);
+  imageContainer.appendChild(lightboxImage);
+
   // Add transition class for smooth animations
   lightboxImage.style.transition = 'transform 0.3s ease-out';
+  lightboxImage.style.position = 'absolute';
+  lightboxImage.style.width = '100%';
+  lightboxImage.style.height = '100%';
+  lightboxImage.style.objectFit = 'contain';
 
   function showImage(index) {
     const image = images[index];
     const imageUrl = image.getAttribute('data-image');
-    lightboxImage.src = imageUrl;
-    currentIndex = index;
-    lightboxImage.style.transform = 'translateX(0)';
+    
+    // Create a new image element for the transition
+    const newImage = document.createElement('img');
+    newImage.src = imageUrl;
+    newImage.style.position = 'absolute';
+    newImage.style.width = '100%';
+    newImage.style.height = '100%';
+    newImage.style.objectFit = 'contain';
+    newImage.style.transition = 'transform 0.3s ease-out';
+    
+    // Position the new image based on the direction
+    const direction = index > currentIndex ? 1 : -1;
+    newImage.style.transform = `translateX(${direction * 100}%)`;
+    
+    // Add the new image to the container
+    imageContainer.appendChild(newImage);
+    
+    // Trigger the transition
+    requestAnimationFrame(() => {
+      lightboxImage.style.transform = `translateX(${-direction * 100}%)`;
+      newImage.style.transform = 'translateX(0)';
+    });
+    
+    // Update current image after transition
+    setTimeout(() => {
+      lightboxImage.remove();
+      newImage.id = 'lightbox-image';
+      newImage.classList.add('lightbox-image');
+      currentIndex = index;
+    }, 300);
   }
 
   function handleTouchStart(e) {
