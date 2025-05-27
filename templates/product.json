@@ -46,13 +46,6 @@
             "show_dealer_button": true
           }
         },
-        "button_mVVrB9": {
-          "type": "button",
-          "settings": {
-            "button_text": "View Press Release",
-            "button_url": "{{ product.metafields.custom.press_release.value }}"
-          }
-        },
         "description": {
           "type": "description",
           "settings": {}
@@ -84,7 +77,6 @@
         "price",
         "variant_picker",
         "featured_buttons_NDDLN4",
-        "button_mVVrB9",
         "description",
         "share",
         "complementary_xqbWeQ"
