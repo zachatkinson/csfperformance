@@ -27,6 +27,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
 .page-lightbox__image {
@@ -37,6 +39,9 @@
   transform: translateX(0);
   transition: transform 0.3s ease;
   will-change: transform;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .page-lightbox.active .page-lightbox__image {
@@ -45,40 +50,40 @@
 
 /* Swipe animation classes */
 .page-lightbox__image.sliding-left {
-  transform: translateX(-100vw);
+  transform: translateX(-150vw);
   transition: transform 0.3s ease-out;
 }
 
 .page-lightbox__image.sliding-right {
-  transform: translateX(100vw);
+  transform: translateX(50vw);
   transition: transform 0.3s ease-out;
 }
 
 .page-lightbox__image.sliding-in-left {
-  transform: translateX(100vw);
+  transform: translateX(50vw);
   animation: flyInLeft 0.3s ease-out forwards;
 }
 
 .page-lightbox__image.sliding-in-right {
-  transform: translateX(-100vw);
+  transform: translateX(-150vw);
   animation: flyInRight 0.3s ease-out forwards;
 }
 
 @keyframes flyInLeft {
   from {
-    transform: translateX(100vw);
+    transform: translateX(50vw);
   }
   to {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
 }
 
 @keyframes flyInRight {
   from {
-    transform: translateX(-100vw);
+    transform: translateX(-150vw);
   }
   to {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
 }
 
