@@ -36,12 +36,11 @@
   max-height: 85vh;
   object-fit: contain;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  transform: translateX(0);
-  transition: transform 0.3s ease;
-  will-change: transform;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .page-lightbox.active .page-lightbox__image {
@@ -50,28 +49,28 @@
 
 /* Swipe animation classes */
 .page-lightbox__image.sliding-left {
-  transform: translateX(-150vw);
+  transform: translateX(-150%);
   transition: transform 0.3s ease-out;
 }
 
 .page-lightbox__image.sliding-right {
-  transform: translateX(50vw);
+  transform: translateX(50%);
   transition: transform 0.3s ease-out;
 }
 
 .page-lightbox__image.sliding-in-left {
-  transform: translateX(50vw);
+  transform: translateX(150%);
   animation: flyInLeft 0.3s ease-out forwards;
 }
 
 .page-lightbox__image.sliding-in-right {
-  transform: translateX(-150vw);
+  transform: translateX(-150%);
   animation: flyInRight 0.3s ease-out forwards;
 }
 
 @keyframes flyInLeft {
   from {
-    transform: translateX(50vw);
+    transform: translateX(150%);
   }
   to {
     transform: translateX(-50%);
@@ -80,7 +79,7 @@
 
 @keyframes flyInRight {
   from {
-    transform: translateX(-150vw);
+    transform: translateX(-150%);
   }
   to {
     transform: translateX(-50%);
