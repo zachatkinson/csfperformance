@@ -3687,12 +3687,18 @@ html, body {
 }
 
 .press-release-button {
-
   background-color: #000;
   color: #fff;
+  border: 1px solid #000;
 }
 
 .press-release-button:hover {
   opacity: 0.8;
   color: #fff;
+  border: 1px solid #000;
+}
+
+.press-release-button:after,
+.press-release-button:before {
+  display: none !important;
 }
