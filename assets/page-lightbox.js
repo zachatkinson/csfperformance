@@ -208,11 +208,11 @@ class PageLightbox {
     
     if (Math.abs(swipeDistance) > swipeThreshold) {
       if (swipeDistance > 0) {
-        // Swipe right - previous image
-        this.navigate(-1);
-      } else {
-        // Swipe left - next image
+        // Swipe right - next image
         this.navigate(1);
+      } else {
+        // Swipe left - previous image
+        this.navigate(-1);
       }
     }
   }
