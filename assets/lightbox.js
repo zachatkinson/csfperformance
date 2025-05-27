@@ -20,11 +20,12 @@ function initLightbox() {
   imageContainer.appendChild(lightboxImage);
 
   // Add transition class for smooth animations
-  lightboxImage.style.transition = 'transform 0.3s ease-out';
+  lightboxImage.style.transition = 'all 0.3s ease-out';
   lightboxImage.style.position = 'absolute';
   lightboxImage.style.width = '100%';
   lightboxImage.style.height = '100%';
   lightboxImage.style.objectFit = 'contain';
+  lightboxImage.style.opacity = '1';
 
   function showImage(index) {
     const image = images[index];
@@ -37,19 +38,19 @@ function initLightbox() {
     newImage.style.width = '100%';
     newImage.style.height = '100%';
     newImage.style.objectFit = 'contain';
-    newImage.style.transition = 'transform 0.3s ease-out';
-    
-    // Position the new image based on the direction
-    const direction = index > currentIndex ? 1 : -1;
-    newImage.style.transform = `translateX(${direction * 100}%)`;
+    newImage.style.transition = 'all 0.3s ease-out';
+    newImage.style.opacity = '0';
     
     // Add the new image to the container
     imageContainer.appendChild(newImage);
     
     // Trigger the transition
     requestAnimationFrame(() => {
-      lightboxImage.style.transform = `translateX(${-direction * 100}%)`;
-      newImage.style.transform = 'translateX(0)';
+      // Fade out current image
+      lightboxImage.style.opacity = '0';
+      
+      // Fade in new image
+      newImage.style.opacity = '1';
     });
     
     // Update current image after transition
@@ -80,9 +81,11 @@ function initLightbox() {
       // Add resistance at the edges
       const resistance = 0.3;
       lightboxImage.style.transform = `translateX(${diff * resistance}px)`;
+      lightboxImage.style.opacity = 1 - Math.abs(diff * resistance) / 500;
     } else {
       // Normal swipe
       lightboxImage.style.transform = `translateX(${diff}px)`;
+      lightboxImage.style.opacity = 1 - Math.abs(diff) / 500;
     }
   }
 
@@ -90,7 +93,7 @@ function initLightbox() {
     if (!isSwiping) return;
     
     isSwiping = false;
-    lightboxImage.style.transition = 'transform 0.3s ease-out';
+    lightboxImage.style.transition = 'all 0.3s ease-out';
     
     const diff = currentX - startX;
     const threshold = 100; // Minimum distance to trigger swipe
@@ -105,10 +108,12 @@ function initLightbox() {
       } else {
         // Return to current position
         lightboxImage.style.transform = 'translateX(0)';
+        lightboxImage.style.opacity = '1';
       }
     } else {
       // Return to current position
       lightboxImage.style.transform = 'translateX(0)';
+      lightboxImage.style.opacity = '1';
     }
   }
 
