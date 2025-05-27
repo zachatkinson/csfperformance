@@ -261,19 +261,47 @@ class PageLightbox {
   }
   
   navigate(direction) {
-    if (this.images.length <= 1) return;
+    if (!this.currentImage) return;
     
-    // Find the index of the current image
     const currentIndex = this.images.indexOf(this.currentImage);
-    if (currentIndex === -1) return;
+    const newIndex = (currentIndex + direction + this.images.length) % this.images.length;
+    const newImage = this.images[newIndex];
     
-    // Calculate the new index with wrapping
-    let newIndex = currentIndex + direction;
-    if (newIndex < 0) newIndex = this.images.length - 1;
-    if (newIndex >= this.images.length) newIndex = 0;
+    // Get the current image element
+    const currentImg = this.lightboxContainer.querySelector('.page-lightbox__image');
     
-    // Open the new image
-    this.openLightbox(this.images[newIndex]);
+    // Add sliding animation class based on direction
+    currentImg.classList.add(direction > 0 ? 'sliding-left' : 'sliding-right');
+    
+    // Wait for the slide-out animation to complete
+    setTimeout(() => {
+      // Create and add the new image
+      const lightboxImg = document.createElement('img');
+      lightboxImg.src = newImage.src;
+      lightboxImg.alt = newImage.alt;
+      lightboxImg.className = 'page-lightbox__image';
+      
+      // Add sliding-in animation class
+      lightboxImg.classList.add(direction > 0 ? 'sliding-in-right' : 'sliding-in-left');
+      
+      // If image has data-full-size attribute, use that instead
+      if (newImage.dataset.fullSize) {
+        lightboxImg.src = newImage.dataset.fullSize;
+      }
+      
+      // Replace the current image
+      const container = this.lightboxContainer.querySelector('.page-lightbox__image-container');
+      container.innerHTML = '';
+      container.appendChild(lightboxImg);
+      
+      // Update current image reference
+      this.currentImage = newImage;
+      
+      // Remove animation classes after animation completes
+      setTimeout(() => {
+        lightboxImg.classList.remove('sliding-in-left', 'sliding-in-right');
+      }, 300);
+    }, 300);
   }
 }
 

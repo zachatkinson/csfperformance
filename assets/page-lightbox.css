@@ -26,6 +26,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .page-lightbox__image {
@@ -33,12 +34,52 @@
   max-height: 85vh;
   object-fit: contain;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  transform: scale(0.95);
+  transform: scale(0.95) translateX(0);
   transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .page-lightbox.active .page-lightbox__image {
-  transform: scale(1);
+  transform: scale(1) translateX(0);
+}
+
+/* Swipe animation classes */
+.page-lightbox__image.sliding-left {
+  transform: scale(1) translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.page-lightbox__image.sliding-right {
+  transform: scale(1) translateX(100%);
+  transition: transform 0.3s ease-out;
+}
+
+.page-lightbox__image.sliding-in-left {
+  transform: scale(1) translateX(100%);
+  animation: slideInLeft 0.3s ease-out forwards;
+}
+
+.page-lightbox__image.sliding-in-right {
+  transform: scale(1) translateX(-100%);
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: scale(1) translateX(100%);
+  }
+  to {
+    transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: scale(1) translateX(-100%);
+  }
+  to {
+    transform: scale(1) translateX(0);
+  }
 }
 
 .page-lightbox__close {
