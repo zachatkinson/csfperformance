@@ -113,7 +113,7 @@
                                     {% endfor %}
                                       <hr />
                                 {% endif %}
-                                  {% if block.settings.show_dealer_button and product.vendor == 'CSF' %}
+                                  {% if product.metafields.custom.press_release %}
                                     <a href="#" class="button button--full-width press-release-button" target="_blank">
                                         View Press Release
                                     </a>
