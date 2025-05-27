@@ -8,8 +8,7 @@ function initLightbox() {
   let currentIndex = 0;
   let startX = 0;
   let currentX = 0;
-  let isDragging = false;
-  let animationFrame = null;
+  let isSwiping = false;
 
   // Add transition class for smooth animations
   lightboxImage.style.transition = 'transform 0.3s ease-out';
@@ -24,36 +23,33 @@ function initLightbox() {
 
   function handleTouchStart(e) {
     startX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
-    isDragging = true;
+    isSwiping = true;
     lightboxImage.style.transition = 'none';
-    document.body.style.overflow = 'hidden';
   }
 
   function handleTouchMove(e) {
-    if (!isDragging) return;
+    if (!isSwiping) return;
     
     e.preventDefault();
     currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
     const diff = currentX - startX;
     
-    // Add resistance to the drag
-    const resistance = 0.5;
-    const dragDistance = diff * resistance;
-    
-    // Update image position with smooth animation
-    if (animationFrame) {
-      cancelAnimationFrame(animationFrame);
+    // Only allow swiping if we're at the start or end of the gallery
+    if ((currentIndex === 0 && diff > 0) || 
+        (currentIndex === images.length - 1 && diff < 0)) {
+      // Add resistance at the edges
+      const resistance = 0.3;
+      lightboxImage.style.transform = `translateX(${diff * resistance}px)`;
+    } else {
+      // Normal swipe
+      lightboxImage.style.transform = `translateX(${diff}px)`;
     }
-    
-    animationFrame = requestAnimationFrame(() => {
-      lightboxImage.style.transform = `translateX(${dragDistance}px)`;
-    });
   }
 
   function handleTouchEnd(e) {
-    if (!isDragging) return;
+    if (!isSwiping) return;
     
-    isDragging = false;
+    isSwiping = false;
     lightboxImage.style.transition = 'transform 0.3s ease-out';
     
     const diff = currentX - startX;
@@ -74,8 +70,6 @@ function initLightbox() {
       // Return to current position
       lightboxImage.style.transform = 'translateX(0)';
     }
-    
-    document.body.style.overflow = '';
   }
 
   // Update event listeners to use new handlers
