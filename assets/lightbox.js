@@ -1,3 +1,5 @@
+console.log('LIGHTBOX.JS LOADED - TESTING FILE LOAD');
+
 function initLightbox() {
   console.log('Initializing lightbox...');
   const lightbox = document.querySelector('.lightbox');
@@ -152,4 +154,11 @@ function initLightbox() {
   document.addEventListener('mouseup', handleTouchEnd);
   document.addEventListener('touchend', handleTouchEnd);
   console.log('Event listeners attached');
+}
+
+// Call initLightbox when the DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initLightbox);
+} else {
+  initLightbox();
 } 
