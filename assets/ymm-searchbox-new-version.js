@@ -711,7 +711,8 @@ function ymmInit()
       			url: data_url,
 				data: "domain="+shop_domain+"&front_domain="+front_domain+"&action=get_single_product&tags="+encodeURIComponent(append_tag)+"&route_url="+window.my_route_url,
             	success: function(res) {
-                          if(res.retArr.new_window == "1"){
+                          window.location.href = searchURL+"?rq="+append_tag;
+                          /*if(res.retArr.new_window == "1"){
                               //CUSTOM REDIRECT INTO NEW TAB - 786.
                               var ymm_anchor = document.createElement("a");
                               ymm_anchor.href = res.retArr.redirect_url;
@@ -721,6 +722,7 @@ function ymmInit()
                           } else {
                               window.location.href = res.retArr.redirect_url;
                           }
+                          */
 				}
         	});
 	  }
@@ -788,3 +790,4 @@ if(jQuery(".ymm_app").length>0) {
     jQuery(".cws_ymm_box_cont,.ymm_app").parents("div").removeClass("scroll-trigger animate--slide-in");
 	ymmInit();
 }
+
