@@ -29,64 +29,16 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div id=\"shopify-section-template--17780370047149__product_custom_finishes_4P6ceq\" class=\"shopify-section\"><div class=\"{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}\">\n    <div class=\"{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} yt-padding color-{{ section.settings.color_scheme }}\">\n\n    <h2>Custom Finish Gallery</h2>\n    {% assign finishes = product.metafields.custom.custom_finishes %}\n    <div class=\"finish-grid\">\n            {% for finish in finishes.value %}\n                <div class=\"finish-wrapper\">\n                        <img src=\"{{ finish.url }}\" alt=\"{{ finish.text }}\" class=\"img-responsive\"/>\n                        <p>{{ finish.text }}</p>\n                </div>\n            {% endfor %}\n    </div>\n</div>\n</div></div>",
+        "custom_liquid": "<!-- Working Variant Code -->\n<div class=\"page-width\">\n{% for Custom-Finishes-8233 in shop.metaobjects.Custom-Finishes-8233.values %} \n{% if custom_colors!= blank %}\n  <h2>{{ Custom-Finishes-8233.header }}</h2>\n{% endif %}\n  <div class=\"grid\">\n  {% for Custom-Finishes-8233 in shop.metaobjects.Custom-Finishes-8233.csf-s-58-level-up-manifold-custom-finishes-csf-8233-c.variant.value %} \n  {% if custom_colors!= blank %}\n    <div class=\"grid__item\">\n      <img src=\"{{ custom_colors | image_url }}\" width=\"200\" height=auto /> \n      <h3 class=\"inline-richtext\">{{ custom_colors.title }}</h3>\n    </div>\n  {% endif %}\n  {% endfor %}\n  </div>\n{% endfor %}\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "image_with_text_dp3tmx": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_GBcJct": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "text_WXEpHP": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "text_style": "body"
-          }
-        },
-        "button_DeGkV6": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_GBcJct",
-        "text_WXEpHP",
-        "button_DeGkV6"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
     "173861739649cd6a4a",
-    "custom_liquid_RYx4VF",
-    "image_with_text_dp3tmx"
+    "custom_liquid_RYx4VF"
   ]
 }
