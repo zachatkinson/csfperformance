@@ -438,14 +438,6 @@
             "alt-text": ""
           }
         },
-        "item_NrrcbX": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/Mountune.png",
-            "link": "",
-            "alt-text": ""
-          }
-        },
         "item_9aPKyD": {
           "type": "item",
           "name": "Honda Racing",
@@ -457,9 +449,10 @@
         },
         "item_pV3W3D": {
           "type": "item",
+          "name": "ECS",
           "settings": {
             "image": "shopify://shop_images/ECS_Tuning.png",
-            "link": "",
+            "link": "https://www.ecstuning.com/b-csf-parts/",
             "alt-text": ""
           }
         }
@@ -471,7 +464,6 @@
         "item_h3FaNq",
         "item_fTj8kY",
         "item_FWmDUx",
-        "item_NrrcbX",
         "item_9aPKyD",
         "item_pV3W3D"
       ],
