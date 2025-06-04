@@ -34,12 +34,12 @@
     "csf_slider_FqbCDD": {
       "type": "csf-slider",
       "blocks": {
-        "side_link_apd7xy": {
+        "side_link_RyLMwd": {
           "type": "side-link",
           "settings": {
-            "image": "shopify://shop_images/8400-kadence_1.jpg",
-            "side-link-alt-text": "B58 2nd Generation",
-            "side-link-url": "https://csfrace.com/new-csf-gen-2-b58-race-x-manifold/"
+            "image": "shopify://shop_images/cooling-systems_u-copy.jpg",
+            "side-link-alt-text": "Cooling Systems",
+            "side-link-url": "shopify://collections/explore-products"
           }
         },
         "side_link_VfHCHh": {
@@ -47,6 +47,22 @@
           "settings": {
             "image": "shopify://shop_images/bts-final-compress.jpg",
             "side-link-alt-text": "Private Label",
+            "side-link-url": "https://csfrace.com/csf_products/private-label/"
+          }
+        },
+        "side_link_AAgkMP": {
+          "type": "side-link",
+          "settings": {
+            "image": "shopify://shop_images/custom-finishes-kadence-block.jpg",
+            "side-link-alt-text": "Custom Finishes",
+            "side-link-url": "#"
+          }
+        },
+        "side_link_kcAT8Y": {
+          "type": "side-link",
+          "settings": {
+            "image": "shopify://shop_images/oilcoolers_title-copy-1.jpg",
+            "side-link-alt-text": "Oil Coolers",
             "side-link-url": "#"
           }
         },
@@ -58,28 +74,12 @@
             "side-link-url": "shopify://collections/universal-intercooler-cores"
           }
         },
-        "side_link_kcAT8Y": {
+        "side_link_apd7xy": {
           "type": "side-link",
           "settings": {
-            "image": "shopify://shop_images/oilcoolers_title-copy-1.jpg",
-            "side-link-alt-text": "Oil Coolers",
-            "side-link-url": "#"
-          }
-        },
-        "side_link_AAgkMP": {
-          "type": "side-link",
-          "settings": {
-            "image": "shopify://shop_images/custom-finishes-kadence-block.jpg",
-            "side-link-alt-text": "Custom Finishes",
-            "side-link-url": "#"
-          }
-        },
-        "side_link_RyLMwd": {
-          "type": "side-link",
-          "settings": {
-            "image": "shopify://shop_images/cooling-systems_u-copy.jpg",
-            "side-link-alt-text": "Cooling Systems",
-            "side-link-url": "#"
+            "image": "shopify://shop_images/8400-kadence_1.jpg",
+            "side-link-alt-text": "B58 2nd Generation",
+            "side-link-url": "https://csfrace.com/new-csf-gen-2-b58-race-x-manifold/"
           }
         },
         "slide_MDmQpw": {
@@ -156,12 +156,12 @@
         }
       },
       "block_order": [
-        "side_link_apd7xy",
-        "side_link_VfHCHh",
-        "side_link_zVYVAY",
-        "side_link_kcAT8Y",
-        "side_link_AAgkMP",
         "side_link_RyLMwd",
+        "side_link_VfHCHh",
+        "side_link_AAgkMP",
+        "side_link_kcAT8Y",
+        "side_link_zVYVAY",
+        "side_link_apd7xy",
         "slide_MDmQpw",
         "slide_WnayiF",
         "slide_HnqNxW",
