@@ -10,7 +10,7 @@
   display: block;
   }
   .collection-hero{
-  {% if collection.image.image_url != blank %}
+  {% if collection.image == 'Liquid error (sections/custom-liquid line 12): invalid url input' %}
     background-image: url("{{ collection.image | image_url }}");
   {% else %}
     background-image: url("https://cdn.shopify.com/s/files/1/0677/2893/3037/files/rad-closeup-header.jpg");
