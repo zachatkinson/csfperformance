@@ -404,17 +404,19 @@
         },
         "item_LRcnBK": {
           "type": "item",
+          "name": "COBB",
           "settings": {
             "image": "shopify://shop_images/Cobb.png",
-            "link": "",
+            "link": "https://www.cobbtuning.com/products/cooling",
             "alt-text": ""
           }
         },
         "item_h3FaNq": {
           "type": "item",
+          "name": "Rywire",
           "settings": {
             "image": "shopify://shop_images/Rywire.png",
-            "link": "",
+            "link": "https://www.rywire.com/radiators-s/1843.htm",
             "alt-text": ""
           }
         },
@@ -423,7 +425,7 @@
           "name": "Magnuson",
           "settings": {
             "image": "shopify://shop_images/Magnuson.png",
-            "link": "",
+            "link": "https://magnusonsuperchargers.com/",
             "alt-text": ""
           }
         },
