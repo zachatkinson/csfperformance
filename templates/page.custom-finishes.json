@@ -29,7 +29,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n<div class=\"rte\">\n{% for custom_colors in shop.metaobjects.custom_colors.values %} \n{% if custom_colors!= blank %}\n  <h3>{{ custom_colors.header }}</h3>\n{% endif %}\n  <div class=\"grid-template-columns\" style=\"display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; column-gap: 1em;\">\n  {% for custom_colors in shop.metaobjects.custom_colors.csf-s-58-level-up-manifold-custom-finishes-csf-8233-c.variant.value %} \n  {% if custom_colors!= blank %}\n    <div>\n      <img src=\"{{ custom_colors | image_url }}\"/> \n      <h4 class=\"inline-richtext\">{{ custom_colors.title }}</h4>\n    </div>\n  {% endif %}\n  {% endfor %}\n  </div>\n{% endfor %}\n</div>\n</div>",
+        "custom_liquid": "<!-- 8233 Liquid Section -->\n<div class=\"page-width\">\n\t<div class=\"rte\">\n\t{% for custom_colors in shop.metaobjects.custom_colors.values %} \n\t{% if custom_colors!= blank %}\n\t  <h3>{{ custom_colors.header }}</h3>\n\t{% endif %}\n\t  <div class=\"media-grid-6\">\n\t  {% for custom_colors in shop.metaobjects.custom_colors.csf-s-58-level-up-manifold-custom-finishes-csf-8233-c.variant.value %} \n\t  {% if custom_colors!= blank %}\n\t\t<div>\n\t\t  <img src=\"{{ custom_colors | image_url }}\"/> \n\t\t  <h4 class=\"inline-richtext\">{{ custom_colors.title }}</h4>\n\t\t</div>\n\t  {% endif %}\n\t  {% endfor %}\n\t  </div>\n\t{% endfor %}\n\t</div>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
