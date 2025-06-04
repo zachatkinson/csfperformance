@@ -434,7 +434,7 @@
           "name": "Full Race",
           "settings": {
             "image": "shopify://shop_images/Full_Race.png",
-            "link": "",
+            "link": "https://www.full-race.com/store/csf",
             "alt-text": ""
           }
         },
@@ -448,9 +448,10 @@
         },
         "item_9aPKyD": {
           "type": "item",
+          "name": "Honda Racing",
           "settings": {
             "image": "shopify://shop_images/Honda_Performance_Division.png",
-            "link": "",
+            "link": "https://hondaracing-us.honda.com/",
             "alt-text": ""
           }
         },
