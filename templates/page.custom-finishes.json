@@ -29,7 +29,17 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n<!-- 8233 Liquid Section -->\n\t<div class=\"rte\">\n\t  <h3>CSF S58 Level-Up Manifold Custom Finishes (CSF #8233C)</h3>\n\t  <div class=\"media-grid-6\">\n\t  {% for custom_colors in shop.metaobjects.custom_colors.csf-s-58-level-up-manifold-custom-finishes-csf-8233-c.variant.value %} \n\t  {% if custom_colors!= blank %}\n\t\t<div>\n\t\t  <img src=\"{{ custom_colors | image_url }}\"/> \n\t\t  <h4 class=\"inline-richtext\">{{ custom_colors.title }}</h4>\n\t\t</div>\n\t  {% endif %}\n\t  {% endfor %}\n\t  </div>\n\t</div>\n\t<hr>\n<!-- 8200 & 8300 Liquid Section -->\n\t<div class=\"rte\">\n\t  <h3>CSF B58 \"SUPER\" Manifold Custom Finishes (CSF #8200C &amp; #8300C)</h3>\n\t  <div class=\"media-grid-6\">\n\t  {% for custom_colors in shop.metaobjects.custom_colors.csf-s-58-level-up-manifold-custom-finishes-csf-8233-c.variant.value %} \n\t  {% if custom_colors!= blank %}\n\t\t<div>\n\t\t  <img src=\"{{ custom_colors | image_url }}\"/> \n\t\t  <h4 class=\"inline-richtext\">{{ custom_colors.title }}</h4>\n\t\t</div>\n\t  {% endif %}\n\t  {% endfor %}\n\t  </div>\n\t</div>\n</div>",
+        "custom_liquid": "<div class=\"page-width\">\n<!-- 8233 Liquid Section -->\n\t<div class=\"rte\">\n\t  <h3>CSF S58 Level-Up Manifold Custom Finishes (CSF #8233C)</h3>\n\t  <div class=\"media-grid-6\">\n\t  {% for custom_colors in shop.metaobjects.custom_colors.csf-s-58-level-up-manifold-custom-finishes-csf-8233-c.variant.value %} \n\t  {% if custom_colors!= blank %}\n\t\t<div>\n\t\t  <img src=\"{{ custom_colors | image_url }}\"/> \n\t\t  <h4 class=\"inline-richtext\">{{ custom_colors.title }}</h4>\n\t\t</div>\n\t  {% endif %}\n\t  {% endfor %}\n\t  </div>\n\t</div>\n\t<hr>\n<!-- 8200 & 8300 Liquid Section -->\n\t<div class=\"rte\">\n\t  <h3>CSF B58 \"SUPER\" Manifold Custom Finishes (CSF #8200C &amp; #8300C)</h3>\n\t  <div class=\"media-grid-6\">\n\t  {% for custom_colors in shop.metaobjects.custom_colors.csf-b-58-super-manifold-custom-finishes-csf-8200-c-8300-c.variant.value %} \n\t  {% if custom_colors!= blank %}\n\t\t<div>\n\t\t  <img src=\"{{ custom_colors | image_url }}\"/> \n\t\t  <h4 class=\"inline-richtext\">{{ custom_colors.title }}</h4>\n\t\t</div>\n\t  {% endif %}\n\t  {% endfor %}\n\t  </div>\n\t</div>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_CXkQWp": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% if product.metafields.custom.custom_finishes %}\n<div class=\"{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}\">\n    <div class=\"{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} yt-padding color-{{ section.settings.color_scheme }}\">\n\n    <h2>Custom Finish Gallery</h2>\n    {% assign finishes = product.metafields.custom.custom_finishes %}\n    <div class=\"finish-grid\">\n            {% for finish in finishes.value %}\n                <div class=\"finish-wrapper\">\n                        <img src=\"{{ finish.url }}\" alt=\"{{ finish.text }}\" class=\"img-responsive\"/>\n                        <p>{{ finish.text }}</p>\n                </div>\n            {% endfor %}\n    </div>\n</div>\n</div>\n{% endif %}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -39,6 +49,7 @@
   "order": [
     "main",
     "173861739649cd6a4a",
-    "custom_liquid_tdWxLH"
+    "custom_liquid_tdWxLH",
+    "custom_liquid_CXkQWp"
   ]
 }
