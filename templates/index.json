@@ -55,7 +55,7 @@
           "settings": {
             "image": "shopify://shop_images/custom-finishes-kadence-block.jpg",
             "side-link-alt-text": "Custom Finishes",
-            "side-link-url": "#"
+            "side-link-url": "shopify://pages/csf-custom-finishes"
           }
         },
         "side_link_kcAT8Y": {
@@ -63,7 +63,7 @@
           "settings": {
             "image": "shopify://shop_images/oilcoolers_title-copy-1.jpg",
             "side-link-alt-text": "Oil Coolers",
-            "side-link-url": "#"
+            "side-link-url": "shopify://collections/universal-oil-coolers"
           }
         },
         "side_link_zVYVAY": {
