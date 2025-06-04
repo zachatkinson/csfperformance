@@ -386,17 +386,19 @@
       "blocks": {
         "item_83Tpcd": {
           "type": "item",
+          "name": "Vortech",
           "settings": {
             "image": "shopify://shop_images/Vortech.png",
-            "link": "",
+            "link": "https://vortechsuperchargers.com/",
             "alt-text": ""
           }
         },
         "item_79rxqm": {
           "type": "item",
+          "name": "BimmerWorld",
           "settings": {
             "image": "shopify://shop_images/Bimmerworld.png",
-            "link": "https://www.bimmerworld.com",
+            "link": "https://www.bimmerworld.com/ssearch.html?query=csf#/filter:manufacturer:CSF",
             "alt-text": ""
           }
         },
@@ -418,6 +420,7 @@
         },
         "item_fTj8kY": {
           "type": "item",
+          "name": "Magnuson",
           "settings": {
             "image": "shopify://shop_images/Magnuson.png",
             "link": "",
@@ -426,6 +429,7 @@
         },
         "item_FWmDUx": {
           "type": "item",
+          "name": "Full Race",
           "settings": {
             "image": "shopify://shop_images/Full_Race.png",
             "link": "",
