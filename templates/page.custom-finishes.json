@@ -34,22 +34,11 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "custom_liquid_CXkQWp": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "{% if product.metafields.custom.custom_finishes %}\n<div class=\"{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}\">\n    <div class=\"{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} yt-padding color-{{ section.settings.color_scheme }}\">\n\n    <h2>Custom Finish Gallery</h2>\n    {% assign finishes = product.metafields.custom.custom_finishes %}\n    <div class=\"finish-grid\">\n            {% for finish in finishes.value %}\n                <div class=\"finish-wrapper\">\n                        <img src=\"{{ finish.url }}\" alt=\"{{ finish.text }}\" class=\"img-responsive\"/>\n                        <p>{{ finish.text }}</p>\n                </div>\n            {% endfor %}\n    </div>\n</div>\n</div>\n{% endif %}",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "main",
     "173861739649cd6a4a",
-    "custom_liquid_tdWxLH",
-    "custom_liquid_CXkQWp"
+    "custom_liquid_tdWxLH"
   ]
 }
