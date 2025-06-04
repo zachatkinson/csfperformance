@@ -11,7 +11,7 @@
   }
   .collection-hero{
   {% if collection.image!= blank %}
-    background-image: url(https://cdn.shopify.com/s/files/1/0677/2893/3037/files/rad-closeup-header.jpg);
+    background-image: url("https://cdn.shopify.com/s/files/1/0677/2893/3037/files/rad-closeup-header.jpg");
     {% else %}
     background-image: url("{{ collection.image | image_url }}");
   {% endif %}
