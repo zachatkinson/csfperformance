@@ -10,10 +10,10 @@
   display: block;
   }
   .collection-hero{
-  {% if collection.image!= blank %}
-    background-image: url("https://cdn.shopify.com/s/files/1/0677/2893/3037/files/rad-closeup-header.jpg");
-    {% else %}
+  {% if collection.image %}
     background-image: url("{{ collection.image | image_url }}");
+    {% else %}
+    background-image: url("https://cdn.shopify.com/s/files/1/0677/2893/3037/files/rad-closeup-header.jpg");
   {% endif %}
   background-size: cover;
   background-repeat: no-repeat;
