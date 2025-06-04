@@ -3693,9 +3693,6 @@ details-disclosure > details {
     grid-template-columns: 1fr 1fr; 
     column-gap: 0.3em
   }
-  .media-grid-5, .media-grid-6 {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 
