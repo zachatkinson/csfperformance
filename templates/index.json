@@ -267,9 +267,10 @@
         },
         "item_TJekje": {
           "type": "item",
+          "name": "TRD Series",
           "settings": {
             "image": "shopify://shop_images/TRD_Series.png",
-            "link": "",
+            "link": "https://www.gr-movement.com/",
             "alt-text": ""
           }
         },
