@@ -249,9 +249,10 @@
         },
         "item_wJJp4Y": {
           "type": "item",
+          "name": "Stanceworks",
           "settings": {
             "image": "shopify://shop_images/Stanceworks.png",
-            "link": "",
+            "link": "https://stanceworks.com/",
             "alt-text": ""
           }
         },
