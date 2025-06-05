@@ -526,25 +526,28 @@
         },
         "item_pUQNXH": {
           "type": "item",
+          "name": "M Engineering",
           "settings": {
             "image": "shopify://shop_images/M_Engineering.png",
-            "link": "",
+            "link": "https://www.m-engineering.us/",
             "alt-text": ""
           }
         },
         "item_cDAXaL": {
           "type": "item",
+          "name": "T1",
           "settings": {
             "image": "shopify://shop_images/T1.png",
-            "link": "",
+            "link": "https://www.t1racedevelopment.com/",
             "alt-text": ""
           }
         },
         "item_QH4L48": {
           "type": "item",
+          "name": "Graves",
           "settings": {
             "image": "shopify://shop_images/Graves_Motorsports.png",
-            "link": "",
+            "link": "https://www.gravesport.com/",
             "alt-text": ""
           }
         }
