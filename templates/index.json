@@ -294,17 +294,19 @@
         },
         "item_twUQwM": {
           "type": "item",
+          "name": "Panorama",
           "settings": {
             "image": "shopify://shop_images/Panorama_Porsche_Club.png",
-            "link": "",
+            "link": "https://www.pca.org/panorama",
             "alt-text": ""
           }
         },
         "item_ALTAhr": {
           "type": "item",
+          "name": "SDC",
           "settings": {
             "image": "shopify://shop_images/Social_Drivers_Club.png",
-            "link": "",
+            "link": "https://www.socaldriversclub.com/",
             "alt-text": ""
           }
         },
