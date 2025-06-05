@@ -285,9 +285,10 @@
         },
         "item_WPKyfw": {
           "type": "item",
+          "name": "Players",
           "settings": {
             "image": "shopify://shop_images/Players.png",
-            "link": "",
+            "link": "https://www.players-show.com/",
             "alt-text": ""
           }
         },
