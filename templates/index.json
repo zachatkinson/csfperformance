@@ -231,9 +231,10 @@
         },
         "item_dXDkyp": {
           "type": "item",
+          "name": "Bimmer Challenge",
           "settings": {
             "image": "shopify://shop_images/CSF_Bimmer_Challenge.png",
-            "link": "",
+            "link": "https://svbimmerchallenge.com/",
             "alt-text": ""
           }
         },
