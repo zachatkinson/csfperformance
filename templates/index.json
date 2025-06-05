@@ -312,41 +312,46 @@
         },
         "item_n6r6Hj": {
           "type": "item",
+          "name": "SpeedHunters",
           "settings": {
             "image": "shopify://shop_images/Speedhunters.png",
-            "link": "",
+            "link": "https://www.speedhunters.com/",
             "alt-text": ""
           }
         },
         "item_aCL8m9": {
           "type": "item",
+          "name": "BMW Invasion",
           "settings": {
             "image": "shopify://shop_images/BMW_Invasion.png",
-            "link": "",
+            "link": "https://www.bimmer-invasion.com/",
             "alt-text": ""
           }
         },
         "item_FbGeaz": {
           "type": "item",
+          "name": "MPact",
           "settings": {
             "image": "shopify://shop_images/Impact_Motorsports_Festival.png",
-            "link": "",
+            "link": "https://www.mpacteast.com/",
             "alt-text": ""
           }
         },
         "item_NtE3WK": {
           "type": "item",
+          "name": "T14",
           "settings": {
-            "image": "shopify://shop_images/Pit_Paddock.png",
-            "link": "",
+            "image": "shopify://shop_images/turn_14_logo_white-500.png",
+            "link": "https://news.turn14.com/category/features/",
             "alt-text": ""
           }
         },
         "item_HPnLBC": {
           "type": "item",
+          "name": "MotoIQ",
           "settings": {
             "image": "shopify://shop_images/MotoIQ.png",
-            "link": "",
+            "link": "https://motoiq.com/",
             "alt-text": ""
           }
         }
@@ -503,17 +508,19 @@
       "blocks": {
         "item_rEKWDc": {
           "type": "item",
+          "name": "GMG",
           "settings": {
             "image": "shopify://shop_images/GMG.png",
-            "link": "",
+            "link": "https://shop.gmgracing.com/collections/car-selector",
             "alt-text": ""
           }
         },
         "item_6CjXMD": {
           "type": "item",
+          "name": "VF Engineering",
           "settings": {
             "image": "shopify://shop_images/VF_Engineering.png",
-            "link": "",
+            "link": "https://vfengineering.com/",
             "alt-text": ""
           }
         },
