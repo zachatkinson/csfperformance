@@ -240,9 +240,10 @@
         },
         "item_eEwtxW": {
           "type": "item",
+          "name": "Ultrace",
           "settings": {
             "image": "shopify://shop_images/Ultrace.png",
-            "link": "",
+            "link": "https://ultraceofficial.com/en/",
             "alt-text": ""
           }
         },
