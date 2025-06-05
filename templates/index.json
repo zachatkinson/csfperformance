@@ -276,9 +276,10 @@
         },
         "item_mb9DrK": {
           "type": "item",
+          "name": "GTA",
           "settings": {
             "image": "shopify://shop_images/Global_Time_Attack.png",
-            "link": "",
+            "link": "https://globaltimeattack.com/",
             "alt-text": ""
           }
         },
