@@ -84,7 +84,8 @@
     "main": {
       "type": "main-page",
       "custom_css": [
-        ".columns-center {padding: 1em 0; align-items: center;}"
+        ".columns-center {padding: 1em 0; align-items: center;}",
+        ".h0 {display: none;}"
       ],
       "settings": {
         "padding_top": 28,
