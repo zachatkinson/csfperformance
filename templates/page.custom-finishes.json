@@ -83,7 +83,6 @@
     },
     "main": {
       "type": "main-page",
-      "disabled": true,
       "custom_css": [
         ".columns-center {padding: 1em 0; align-items: center;}"
       ],
