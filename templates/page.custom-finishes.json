@@ -129,6 +129,18 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_colors_display_rWychq": {
+      "type": "custom-colors-display",
+      "name": "Custom Colors Display",
+      "settings": {
+        "product": "8082r-f8x-m3-m4-m2-comp-top-mount-charge-air-cooler-raw-finish",
+        "heading": "Custom Finishes",
+        "anchor_id": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -138,6 +150,7 @@
     "173861739649cd6a4a",
     "custom_colors_display_Yhiw8n",
     "custom_colors_display_C7zzWk",
-    "custom_colors_display_qLUKCY"
+    "custom_colors_display_qLUKCY",
+    "custom_colors_display_rWychq"
   ]
 }
