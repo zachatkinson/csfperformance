@@ -40,21 +40,14 @@
   endif
 -%}
 
-<div class="color-scheme-{{ section.settings.color_scheme }} gradient"{% if section.settings.anchor_id != blank %} id="{{ section.settings.anchor_id }}"{% endif %}>
+<div class="color-{{ section.settings.color_scheme }} gradient"{% if section.settings.anchor_id != blank %} id="{{ section.settings.anchor_id }}"{% endif %}>
   <div class="page-width section-{{ section.id }}-padding">
     <div class="rte">
       {% if section.settings.heading != blank %}
         <h3>{{ section.settings.heading }}</h3>
       {% endif %}
       
-      {% comment %} Simple test to confirm code is running {% endcomment %}
-      <p style="background: green; color: white; padding: 10px;"><strong>UPDATED CODE IS RUNNING - LATEST VERSION</strong></p>
-      {% if product != null %}
-        <p><small>✅ Product exists: {{ product.title }}</small></p>
-        <p><small>✅ Found {{ custom_colors.size }} variants</small></p>
-        <p><small>✅ First variant: {{ custom_colors.first.title }}</small></p>
-        <p><small>✅ Conditional check: {% if custom_colors != null and custom_colors != empty %}PASS{% else %}FAIL{% endif %}</small></p>
-      {% endif %}
+
       
       {% if product != null and custom_colors != null and custom_colors != empty %}
         <div class="media-grid-6">
