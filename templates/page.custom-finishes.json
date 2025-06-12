@@ -31,7 +31,6 @@
         "heading_XiB7Xi",
         "text_CxgqKH"
       ],
-      "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "shopify://shop_images/custom-finish-header.jpg",
         "image_overlay_opacity": 50,
@@ -71,7 +70,6 @@
         "text_rayHNx",
         "button_VXc3pa"
       ],
-      "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -100,7 +98,6 @@
     },
     "custom_colors_display_Yhiw8n": {
       "type": "custom-colors-display",
-      "name": "Custom Colors Display",
       "settings": {
         "product": "8233c-bmw-s58-level-up-charge-air-cooler-manifold-custom-finish",
         "heading": "CSF S58 Level-Up Manifold Custom Finishes (CSF #8233C)",
@@ -112,11 +109,22 @@
     },
     "custom_colors_display_C7zzWk": {
       "type": "custom-colors-display",
-      "name": "Custom Colors Display",
       "settings": {
         "product": "8200c-a90-supra-bmw-b58-charge-air-cooler-manifold-custom-finish",
         "heading": "CSF B58 \"SUPER\" Manifold Custom Finishes (CSF #8200C & #8300C)",
         "anchor_id": "8200-8300-finishes",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_colors_display_qLUKCY": {
+      "type": "custom-colors-display",
+      "name": "Custom Colors Display",
+      "settings": {
+        "product": "8400c-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-custom-finish",
+        "heading": "CSF B58 \"Race X\" Manifold Custom Finishes (CSF #8400C)",
+        "anchor_id": "",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
@@ -129,6 +137,7 @@
     "main",
     "173861739649cd6a4a",
     "custom_colors_display_Yhiw8n",
-    "custom_colors_display_C7zzWk"
+    "custom_colors_display_C7zzWk",
+    "custom_colors_display_qLUKCY"
   ]
 }
