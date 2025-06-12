@@ -16,15 +16,24 @@
 
 {%- liquid
   assign product = section.settings.product
-  assign part_number = ''
+  assign custom_colors = null
   
   if product != null
-    assign part_number = product.handle
-  endif
-  
-  if part_number != blank
-    assign metaobject_handle = part_number | replace: '-', '-'
-    assign custom_colors = shop.metaobjects.custom_colors[metaobject_handle].variant.value
+    # Try to get metaobject handle from product metafield first
+    assign metaobject_handle = product.metafields.custom.colors_metaobject_handle
+    
+    # If no metafield, try common patterns based on your examples
+    if metaobject_handle == blank
+      assign part_number = product.handle | split: '-' | first
+      # Remove any 'c' suffix from part number and add it back with proper formatting
+      assign clean_part_number = part_number | remove: 'c'
+      assign metaobject_handle = 'csf-s-58-level-up-manifold-custom-finishes-csf-' | append: clean_part_number | append: '-c'
+    endif
+    
+    # Try to fetch the custom colors
+    if metaobject_handle != blank
+      assign custom_colors = shop.metaobjects.custom_colors[metaobject_handle].variant.value
+    endif
   endif
 -%}
 
@@ -53,8 +62,10 @@
           {% endfor %}
         </div>
       {% elsif product != null %}
-        <p>No custom colors found for {{ product.title }} ({{ part_number }})</p>
+        <p>No custom colors found for {{ product.title }}</p>
         <p><small>Looking for metaobject: custom_colors.{{ metaobject_handle }}</small></p>
+        <p><small>Product handle: {{ product.handle }}</small></p>
+        <p><small>Part number extracted: {{ product.handle | split: '-' | first }}</small></p>
       {% else %}
         <p>Please select a product to display custom colors.</p>
       {% endif %}
