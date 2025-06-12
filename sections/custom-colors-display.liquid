@@ -53,10 +53,10 @@
         <p><small>✅ Product exists: {{ product.title }}</small></p>
         <p><small>✅ Found {{ custom_colors.size }} variants</small></p>
         <p><small>✅ First variant: {{ custom_colors.first.title }}</small></p>
-        <p><small>✅ Conditional check: {% if custom_colors.first %}PASS{% else %}FAIL{% endif %}</small></p>
+        <p><small>✅ Conditional check: {% if custom_colors != null and custom_colors != empty %}PASS{% else %}FAIL{% endif %}</small></p>
       {% endif %}
       
-      {% if product != null and custom_colors and custom_colors.first %}
+      {% if product != null and custom_colors != null and custom_colors != empty %}
         <div class="media-grid-6">
           {% for custom_color in custom_colors %}
             {% if custom_color != blank %}
