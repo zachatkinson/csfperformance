@@ -1,0 +1,145 @@
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign product = section.settings.product
+  assign part_number = ''
+  
+  if product != null
+    assign part_number = product.handle
+  endif
+  
+  if part_number != blank
+    assign metaobject_handle = part_number | replace: '-', '-'
+    assign custom_colors = shop.metaobjects.custom_colors[metaobject_handle].variant.value
+  endif
+-%}
+
+<div class="color-scheme-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width section-{{ section.id }}-padding">
+    <div class="rte">
+      {% if section.settings.heading != blank %}
+        <h3>{{ section.settings.heading }}</h3>
+      {% endif %}
+      
+      {% if product != null and custom_colors.size > 0 %}
+        <div class="media-grid-6">
+          {% for custom_color in custom_colors %}
+            {% if custom_color != blank %}
+              <div>
+                <img 
+                  src="{{ custom_color | image_url: width: 600 }}" 
+                  alt="{{ custom_color.title | escape }} - {{ product.title | escape }}" 
+                  loading="lazy"
+                  width="600"
+                  height="auto"
+                /> 
+                <h4 class="inline-richtext">{{ custom_color.title }}</h4>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% elsif product != null %}
+        <p>No custom colors found for {{ product.title }} ({{ part_number }})</p>
+        <p><small>Looking for metaobject: custom_colors.{{ metaobject_handle }}</small></p>
+      {% else %}
+        <p>Please select a product to display custom colors.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Colors Display",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product",
+      "info": "Select the product to display custom color variants for."
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Custom Finishes"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Colors Display"
+    }
+  ]
+}
+{% endschema %} 
