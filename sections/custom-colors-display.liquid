@@ -52,11 +52,11 @@
         <p><small>Debug: Product exists = YES</small></p>
         <p><small>Debug: custom_colors = {{ custom_colors | json }}</small></p>
         <p><small>Debug: custom_colors != null = {% if custom_colors != null %}YES{% else %}NO{% endif %}</small></p>
-        <p><small>Debug: custom_colors.size = {{ custom_colors.size }}</small></p>
-        <p><small>Debug: custom_colors.size > 0 = {% if custom_colors.size > 0 %}YES{% else %}NO{% endif %}</small></p>
+        <p><small>Debug: custom_colors.first = {{ custom_colors.first.title }}</small></p>
+        <p><small>Debug: custom_colors.first exists = {% if custom_colors.first %}YES{% else %}NO{% endif %}</small></p>
       {% endif %}
       
-      {% if product != null and custom_colors and custom_colors.size > 0 %}
+      {% if product != null and custom_colors and custom_colors.first %}
         <div class="media-grid-6">
           {% for variant in custom_colors %}
             {% if variant.featured_image.src != blank %}
