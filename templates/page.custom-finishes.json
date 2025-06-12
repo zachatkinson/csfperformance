@@ -98,23 +98,13 @@
         "include_margins": true
       }
     },
-    "custom_liquid_tdWxLH": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n\n<!-- 8200 & 8300 Liquid Section -->\n\t<div class=\"rte\">\n\t  <h3>CSF B58 \"SUPER\" Manifold Custom Finishes (CSF #8200C &amp; #8300C)</h3>\n\t  <div class=\"media-grid-6\">\n\t  {% for custom_colors in shop.metaobjects.custom_colors.csf-b-58-super-manifold-custom-finishes-csf-8200-c-8300-c.variant.value %} \n\t  {% if custom_colors!= blank %}\n\t\t<div>\n\t\t  <img src=\"{{ custom_colors | image_url }}\"/> \n\t\t  <h4 class=\"inline-richtext\">{{ custom_colors.title }}</h4>\n\t\t</div>\n\t  {% endif %}\n\t  {% endfor %}\n\t  </div>\n\t</div>\n</div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "custom_colors_display_Yhiw8n": {
       "type": "custom-colors-display",
       "name": "Custom Colors Display",
       "settings": {
         "product": "8233c-bmw-s58-level-up-charge-air-cooler-manifold-custom-finish",
         "heading": "CSF S58 Level-Up Manifold Custom Finishes (CSF #8233C)",
-        "anchor_id": "",
+        "anchor_id": "8233-finishes",
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36
@@ -138,7 +128,6 @@
     "rich_text_bCCAmf",
     "main",
     "173861739649cd6a4a",
-    "custom_liquid_tdWxLH",
     "custom_colors_display_Yhiw8n",
     "custom_colors_display_C7zzWk"
   ]
