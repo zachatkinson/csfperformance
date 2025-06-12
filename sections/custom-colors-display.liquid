@@ -76,6 +76,8 @@
           <p><small>Metaobject variant field exists: {% if metaobject_test.variant != blank %}YES{% else %}NO{% endif %}</small></p>
           {% if metaobject_test.variant != blank %}
             <p><small>Variant value count: {{ metaobject_test.variant.value.size }}</small></p>
+            <p><small>Variant value type: {{ metaobject_test.variant.value | json }}</small></p>
+            <p><small>Variant field type: {{ metaobject_test.variant | json }}</small></p>
           {% endif %}
         {% endif %}
       {% else %}
