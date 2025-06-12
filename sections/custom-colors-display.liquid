@@ -32,7 +32,10 @@
     
     # Try to fetch the custom colors
     if metaobject_handle != blank
-      assign custom_colors = shop.metaobjects.custom_colors[metaobject_handle].variant.value
+      assign metaobject_test = shop.metaobjects.custom_colors[metaobject_handle]
+      if metaobject_test != blank
+        assign custom_colors = metaobject_test.variant.value
+      endif
     endif
   endif
 -%}
@@ -64,8 +67,17 @@
       {% elsif product != null %}
         <p>No custom colors found for {{ product.title }}</p>
         <p><small>Looking for metaobject: custom_colors.{{ metaobject_handle }}</small></p>
+        <p><small>Full path: shop.metaobjects.custom_colors.{{ metaobject_handle }}.variant.value</small></p>
         <p><small>Product handle: {{ product.handle }}</small></p>
         <p><small>Part number extracted: {{ product.handle | split: '-' | first }}</small></p>
+        <p><small>Clean part number: {{ product.handle | split: '-' | first | remove: 'c' }}</small></p>
+        <p><small>Metaobject exists: {% if metaobject_test != blank %}YES{% else %}NO{% endif %}</small></p>
+        {% if metaobject_test != blank %}
+          <p><small>Metaobject variant field exists: {% if metaobject_test.variant != blank %}YES{% else %}NO{% endif %}</small></p>
+          {% if metaobject_test.variant != blank %}
+            <p><small>Variant value count: {{ metaobject_test.variant.value.size }}</small></p>
+          {% endif %}
+        {% endif %}
       {% else %}
         <p>Please select a product to display custom colors.</p>
       {% endif %}
