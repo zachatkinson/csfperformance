@@ -58,17 +58,17 @@
       
       {% if product != null and custom_colors and custom_colors.first %}
         <div class="media-grid-6">
-          {% for variant in custom_colors %}
-            {% if variant.featured_image.src != blank %}
+          {% for custom_color in custom_colors %}
+            {% if custom_color != blank %}
               <div>
                 <img 
-                  src="{{ variant.featured_image.src | image_url: width: 600 }}" 
-                  alt="{{ variant.title | escape }}" 
+                  src="{{ custom_color | image_url: width: 600 }}" 
+                  alt="{{ custom_color.title | escape }}" 
                   loading="lazy"
                   width="600"
                   height="auto"
                 /> 
-                <h4 class="inline-richtext">{{ variant.title }}</h4>
+                <h4 class="inline-richtext">{{ custom_color.title }}</h4>
               </div>
             {% endif %}
           {% endfor %}
