@@ -47,7 +47,16 @@
         <h3>{{ section.settings.heading }}</h3>
       {% endif %}
       
-      {% if product != null and custom_colors != null and custom_colors.size > 0 %}
+      {% comment %} Debug output to see what's happening {% endcomment %}
+      {% if product != null %}
+        <p><small>Debug: Product exists = YES</small></p>
+        <p><small>Debug: custom_colors = {{ custom_colors | json }}</small></p>
+        <p><small>Debug: custom_colors != null = {% if custom_colors != null %}YES{% else %}NO{% endif %}</small></p>
+        <p><small>Debug: custom_colors.size = {{ custom_colors.size }}</small></p>
+        <p><small>Debug: custom_colors.size > 0 = {% if custom_colors.size > 0 %}YES{% else %}NO{% endif %}</small></p>
+      {% endif %}
+      
+      {% if product != null and custom_colors and custom_colors.size > 0 %}
         <div class="media-grid-6">
           {% for variant in custom_colors %}
             {% if variant.featured_image.src != blank %}
