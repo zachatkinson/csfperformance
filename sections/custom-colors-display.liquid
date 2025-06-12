@@ -47,13 +47,13 @@
         <h3>{{ section.settings.heading }}</h3>
       {% endif %}
       
-      {% comment %} Debug output to see what's happening {% endcomment %}
+      {% comment %} Simple test to confirm code is running {% endcomment %}
+      <p style="background: green; color: white; padding: 10px;"><strong>UPDATED CODE IS RUNNING - LATEST VERSION</strong></p>
       {% if product != null %}
-        <p><small>Debug: Product exists = YES</small></p>
-        <p><small>Debug: custom_colors = {{ custom_colors | json }}</small></p>
-        <p><small>Debug: custom_colors != null = {% if custom_colors != null %}YES{% else %}NO{% endif %}</small></p>
-        <p><small>Debug: custom_colors.first = {{ custom_colors.first.title }}</small></p>
-        <p><small>Debug: custom_colors.first exists = {% if custom_colors.first %}YES{% else %}NO{% endif %}</small></p>
+        <p><small>✅ Product exists: {{ product.title }}</small></p>
+        <p><small>✅ Found {{ custom_colors.size }} variants</small></p>
+        <p><small>✅ First variant: {{ custom_colors.first.title }}</small></p>
+        <p><small>✅ Conditional check: {% if custom_colors.first %}PASS{% else %}FAIL{% endif %}</small></p>
       {% endif %}
       
       {% if product != null and custom_colors and custom_colors.first %}
