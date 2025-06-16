@@ -82,6 +82,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_TfcfhV": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640__8350_copy.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350__8350_copy.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://products/8350-ford-bronco-2-7l-external-transmission-oil-cooler-kit"
+          }
+        },
         "slide_MDmQpw": {
           "type": "slide",
           "settings": {
@@ -144,15 +153,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://products/8331-bmw-f9x-x3m-x4m-performance-cooling-module-heat-exchanger-trans-cooler"
           }
-        },
-        "slide_TfcfhV": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640__7233_2.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350_7233_2.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://products/7233-gr-corolla-gr-yaris-high-performance-all-aluminum-radiator"
-          }
         }
       },
       "block_order": [
@@ -162,14 +162,14 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_TfcfhV",
         "slide_MDmQpw",
         "slide_WnayiF",
         "slide_HnqNxW",
         "slide_mizeRG",
         "slide_qGb8Ac",
         "slide_j89VYC",
-        "slide_A7rMUd",
-        "slide_TfcfhV"
+        "slide_A7rMUd"
       ],
       "settings": {
         "include_margins": false,
