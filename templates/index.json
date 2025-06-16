@@ -36,6 +36,7 @@
       "blocks": {
         "side_link_RyLMwd": {
           "type": "side-link",
+          "name": "Cooling Systems",
           "settings": {
             "image": "shopify://shop_images/cooling-systems_u-copy.jpg",
             "side-link-alt-text": "Cooling Systems",
@@ -44,22 +45,25 @@
         },
         "side_link_VfHCHh": {
           "type": "side-link",
+          "name": "Private Label",
           "settings": {
             "image": "shopify://shop_images/bts-final-compress.jpg",
             "side-link-alt-text": "Private Label",
-            "side-link-url": "https://csfrace.com/csf_products/private-label/"
+            "side-link-url": "https://news.csfrace.com/csf_products/private-label/"
           }
         },
         "side_link_AAgkMP": {
           "type": "side-link",
+          "name": "Custom Finishes",
           "settings": {
             "image": "shopify://shop_images/custom-finishes-kadence-block.jpg",
             "side-link-alt-text": "Custom Finishes",
-            "side-link-url": "shopify://pages/csf-custom-finishes"
+            "side-link-url": "https://news.csfrace.com/csf_products/csf-custom-finishes/"
           }
         },
         "side_link_kcAT8Y": {
           "type": "side-link",
+          "name": "Oil Coolers",
           "settings": {
             "image": "shopify://shop_images/oilcoolers_title-copy-1.jpg",
             "side-link-alt-text": "Oil Coolers",
@@ -68,6 +72,7 @@
         },
         "side_link_zVYVAY": {
           "type": "side-link",
+          "name": "IC Cores",
           "settings": {
             "image": "shopify://shop_images/iccores_title-1.jpg",
             "side-link-alt-text": "Intercooler Cores",
@@ -76,6 +81,7 @@
         },
         "side_link_apd7xy": {
           "type": "side-link",
+          "name": "Featured Product",
           "settings": {
             "image": "shopify://shop_images/8400-kadence_1.jpg",
             "side-link-alt-text": "B58 2nd Generation",
