@@ -17,7 +17,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Welcome to the NEW CSF Website",
             "link": ""
           }
         }
@@ -41,7 +41,7 @@
         "* {font-size: 18px;}",
         "#cart-icon-bubble {display: none;}",
         ".header__icon--account {display: none;}",
-        ".header__icon--cart {display: none}"
+        ".header__icon--cart {display: none;}"
       ],
       "settings": {
         "logo_position": "middle-left",
