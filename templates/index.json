@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_A7rMUd": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640__8352_copy.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350__8352_copy.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://products/8352-mclaren-720s-765lt-750s-gt-gts-charge-air-coolers"
+          }
+        },
         "slide_TfcfhV": {
           "type": "slide",
           "settings": {
@@ -150,15 +159,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://products/8317-f1x-m5-m6-f9x-m5-m8-high-performance-engine-oil-cooler"
           }
-        },
-        "slide_A7rMUd": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640__8331_copy.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350__8331_copy.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://products/8331-bmw-f9x-x3m-x4m-performance-cooling-module-heat-exchanger-trans-cooler"
-          }
         }
       },
       "block_order": [
@@ -168,14 +168,14 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_A7rMUd",
         "slide_TfcfhV",
         "slide_MDmQpw",
         "slide_WnayiF",
         "slide_HnqNxW",
         "slide_mizeRG",
         "slide_qGb8Ac",
-        "slide_j89VYC",
-        "slide_A7rMUd"
+        "slide_j89VYC"
       ],
       "settings": {
         "include_margins": false,
