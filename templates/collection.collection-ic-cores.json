@@ -85,20 +85,18 @@
         "padding_bottom": 52
       }
     },
-    "page_dmnUMy": {
-      "type": "page",
-      "name": "t:sections.page.presets.name",
-      "settings": {
-        "page": "intercooler-core-size-table",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "collapsible_content_4r3arp": {
       "type": "collapsible-content",
       "blocks": {
+        "collapsible_row_LRFD8g": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "CSF Intercooler Core Size & Spec Table",
+            "icon": "clipboard",
+            "row_content": "",
+            "page": "csf-intercooler-core-spec-table"
+          }
+        },
         "collapsible_row_Ch49Y8": {
           "type": "collapsible_row",
           "settings": {
@@ -110,6 +108,7 @@
         }
       },
       "block_order": [
+        "collapsible_row_LRFD8g",
         "collapsible_row_Ch49Y8"
       ],
       "name": "t:sections.collapsible_content.presets.name",
@@ -276,7 +275,6 @@
     "banner",
     "image_banner_xYRV8T",
     "custom_liquid_6QnPUk",
-    "page_dmnUMy",
     "collapsible_content_4r3arp",
     "creative_carousel_7ed8YT",
     "product-grid",
