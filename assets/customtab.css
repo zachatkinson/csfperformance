@@ -39,10 +39,6 @@
   text-decoration: underline;
 }
 
-.tabcontent a:visited {
-  text-decoration: #222 !important;
-}
-
 /* Chart Table CSS similar to product listings */
 .tabcontent table {
   width: 100%;
