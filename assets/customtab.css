@@ -4,12 +4,17 @@
   border-bottom: 1px solid #ccc;
 }
 .customtab button {
-  background-color: inherit;
-  float: left;
-  border: 1px solid #ccc;
-  outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  border-style: solid;
+  border-color: rgb(217, 217, 217);
+  border-width: 1px 1px 0px;
+  border-radius: 5px 5px 0px 0px;
+  padding: 12px 20px;
+  margin: 0px 5px 0px 0px;
+  color: rgb(229, 66, 66);
+  background-color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 16px;
   transition: 0.3s;
 }
 .customtab button:hover {
