@@ -87,6 +87,9 @@
     },
     "page_mweWTX": {
       "type": "page",
+      "custom_css": [
+        ".h1 {display: none;}"
+      ],
       "name": "t:sections.page.presets.name",
       "settings": {
         "page": "intercooler-core-size-table",
