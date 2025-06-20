@@ -7,7 +7,7 @@
 .customtab button {
   background-color: inherit;
   float: left;
-  border: none;
+  border: 1px solid #ccc;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
@@ -17,7 +17,7 @@
   background-color: #ddd;
 }
 .customtab button.active {
-  background-color: #ccc;
+  background-color: rgb(229, 66, 66);
 }
 .tabcontent {
   display: none;
