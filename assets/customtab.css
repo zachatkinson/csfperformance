@@ -40,7 +40,7 @@
 }
 
 .tabcontent a:visited {
-  text-decoration: #222;
+  text-decoration: #222 !important;
 }
 
 /* Chart Table CSS similar to product listings */
