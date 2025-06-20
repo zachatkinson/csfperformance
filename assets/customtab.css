@@ -2,7 +2,6 @@
 .customtab {
   overflow: hidden;
   border-bottom: 1px solid #ccc;
-  background-color: #f1f1f1;
 }
 .customtab button {
   background-color: inherit;
