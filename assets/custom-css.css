@@ -124,3 +124,30 @@ only screen and (max-width: 760px),
 	td:nth-of-type(7):before { content: "Date of Birth"; }
 	td:nth-of-type(8):before { content: "Notes"; }
 }
+
+.page-collection-tabs {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+.page-collection-tabs button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+.page-collection-tabs button:hover {
+  background-color: #ddd;
+}
+.page-collection-tabs button.active {
+  background-color: #ccc;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
