@@ -24,10 +24,22 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "page_qnmj8b": {
+      "type": "page",
+      "name": "t:sections.page.presets.name",
+      "settings": {
+        "page": "intercooler-core-size-table",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "173861739649cd6a4a"
+    "173861739649cd6a4a",
+    "page_qnmj8b"
   ]
 }
