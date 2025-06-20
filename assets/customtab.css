@@ -25,3 +25,35 @@
   border: 1px solid #ccc;
   border-top: none;
 }
+
+/* Chart Table CSS similar to product listings */
+.tabcontent table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: unset;
+}
+.tabcontent tr:nth-of-type(odd) {
+  background: #eee;
+}
+.tabcontent th {
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+.tabcontent td,
+th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+@media screen and (max-width: 750px) {
+
+  .tabcontent table, thead, tbody, th, td, tr {
+    font-size: 1rem !important;
+  }
+  
+  .tabcontent table:not([class]) td, table:not([class]) th {
+    padding: 0.5em !important;
+  }
+}
