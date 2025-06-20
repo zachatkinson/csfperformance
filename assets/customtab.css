@@ -26,6 +26,19 @@
   border-top: none;
 }
 
+.tabcontent a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.tabcontent a:hover {
+  text-decoration: underline;
+}
+
+.tabcontent a:active {
+  text-decoration: underline;
+}
+
 /* Chart Table CSS similar to product listings */
 .tabcontent table {
   width: 100%;
