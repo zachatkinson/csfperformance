@@ -3735,3 +3735,9 @@ html, body {
   padding: 1rem 1rem 0rem 1rem;
   margin-bottom: 1rem;
 }
+
+.jumplinkhead {
+  margin: 0;
+  text-align: center;
+  color: rgb(227, 42, 55);
+}
