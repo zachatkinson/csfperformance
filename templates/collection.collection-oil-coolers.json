@@ -40,7 +40,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Details, Examples, etc",
-            "button_link_1": "#custom-sizing",
+            "button_link_1": "#OilCoolerInfo",
             "button_style_secondary_1": false,
             "button_label_2": "Application Inquires",
             "button_link_2": "shopify://pages/contact",
