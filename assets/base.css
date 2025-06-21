@@ -3729,3 +3729,9 @@ html, body {
 .press-release-button:before {
   display: none !important;
 }
+
+.jumplinkbox {
+  border: 1px solid rgb(227, 42, 55);
+  padding: 1rem 1rem 0rem 1rem;
+  margin-bottom: 1rem;
+}
