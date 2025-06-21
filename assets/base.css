@@ -3704,6 +3704,10 @@ details-disclosure > details {
   padding: 0 1rem;
 }
 
+.media-grid-text-box H2, H3, H4, H5, H6 {
+  margin-top: 0;
+}
+
 html, body {
   scroll-behavior: smooth;
 }
