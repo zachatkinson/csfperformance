@@ -3700,6 +3700,9 @@ details-disclosure > details {
   }
 }
 
+.media-grid-text-box {
+  padding: 0 1rem;
+}
 
 html, body {
   scroll-behavior: smooth;
