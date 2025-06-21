@@ -39,10 +39,10 @@
         "buttons_pMrCza": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Details, Examples, etc",
+            "button_label_1": "Details, Examples, & Additional Info",
             "button_link_1": "#OilCoolerInfo",
             "button_style_secondary_1": false,
-            "button_label_2": "Application Inquires",
+            "button_label_2": "Contact Us for Custom Size Inquiries",
             "button_link_2": "shopify://pages/contact",
             "button_style_secondary_2": false
           }
@@ -55,7 +55,7 @@
       ],
       "custom_css": [
         ".banner__buttons {max-width: 80rem;}",
-        ".button {min-width: 25rem;}"
+        ".button {min-width: 35rem;}"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
