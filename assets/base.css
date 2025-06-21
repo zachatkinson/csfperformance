@@ -3613,7 +3613,7 @@ details-disclosure > details {
 
 .media-grid-4 {
   display: grid; 
-  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-columns: 1fr 1fr; 
   column-gap: 0em;
   row-gap: 1em;
 }
