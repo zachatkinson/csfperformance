@@ -40,7 +40,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Custom Size Inquiries",
-            "button_link_1": "#custom-sizing",
+            "button_link_1": "#CustomSizing",
             "button_style_secondary_1": false,
             "button_label_2": "See all Intercooler Cores",
             "button_link_2": "#ProductGridContainer",
