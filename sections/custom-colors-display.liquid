@@ -57,29 +57,21 @@
       {% comment %} MINIMAL TEST - Exact working pattern {% endcomment %}
       {% if product != null %}
         {% if clean_part_number == '8233' %}
-          <h4>Testing 8233 - Individual Metaobject:</h4>
-          <div class="media-grid-6">
-            {% for custom_colors in shop.metaobjects.custom_colors.csf-s-58-level-up-manifold-custom-finishes-csf-8233-c.variant.value %}
-              {% if custom_colors != blank %}
-                <div>
-                  <img src="{{ custom_colors | image_url: width: 600 }}" alt="{{ custom_colors.title | escape }}" loading="lazy" width="600" height="auto" /> 
-                  <h4 class="inline-richtext">{{ custom_colors.title }}</h4>
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
+          <h4>Testing 8233 - Field Name Tests:</h4>
+          {% assign test_obj = shop.metaobjects.custom_colors.csf-s-58-level-up-manifold-custom-finishes-csf-8233-c %}
+          <p>• variant.value: {{ test_obj.variant.value.size | default: "empty" }}</p>
+          <p>• custom_finishes.value: {{ test_obj.custom_finishes.value.size | default: "empty" }}</p>
+          <p>• finishes.value: {{ test_obj.finishes.value.size | default: "empty" }}</p>
+          <p>• images.value: {{ test_obj.images.value.size | default: "empty" }}</p>
+          <p>• colors.value: {{ test_obj.colors.value.size | default: "empty" }}</p>
         {% else %}
-          <h4>Testing Others - Shared Metaobject:</h4>
-          <div class="media-grid-6">
-            {% for custom_colors in shop.metaobjects.custom_colors.csf-b-58-super-manifold-custom-finishes-csf-8200-c-8300-c.variant.value %}
-              {% if custom_colors != blank %}
-                <div>
-                  <img src="{{ custom_colors | image_url: width: 600 }}" alt="{{ custom_colors.title | escape }}" loading="lazy" width="600" height="auto" /> 
-                  <h4 class="inline-richtext">{{ custom_colors.title }}</h4>
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
+          <h4>Testing Others - Field Name Tests:</h4>
+          {% assign test_obj = shop.metaobjects.custom_colors.csf-b-58-super-manifold-custom-finishes-csf-8200-c-8300-c %}
+          <p>• variant.value: {{ test_obj.variant.value.size | default: "empty" }}</p>
+          <p>• custom_finishes.value: {{ test_obj.custom_finishes.value.size | default: "empty" }}</p>
+          <p>• finishes.value: {{ test_obj.finishes.value.size | default: "empty" }}</p>
+          <p>• images.value: {{ test_obj.images.value.size | default: "empty" }}</p>
+          <p>• colors.value: {{ test_obj.colors.value.size | default: "empty" }}</p>
         {% endif %}
       {% else %}
         <p>Please select a product to display custom colors.</p>
