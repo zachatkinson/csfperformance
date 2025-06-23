@@ -39,6 +39,8 @@
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
+    <script src="{{ 'page-lightbox.js' | asset_url }}" defer="defer"></script>
+
     {{ content_for_header }}
 
     {%- liquid
@@ -405,7 +407,6 @@
     {%- endunless -%}
     <!-- End YMM short code -->
 
-    <script src="{{ 'page-lightbox.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'mailchimp-form.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>

@@ -9,17 +9,25 @@ class PageLightbox {
     
     console.log('PageLightbox: Constructor called');
     
-    // Initialize when DOM is loaded
-    if (document.readyState === 'loading') {
-      console.log('PageLightbox: DOM still loading, waiting for DOMContentLoaded');
-      document.addEventListener('DOMContentLoaded', () => this.init());
-    } else {
-      console.log('PageLightbox: DOM already loaded, initializing immediately');
+    // Use a more robust initialization approach
+    this.initializeWhenReady();
+  }
+
+  initializeWhenReady() {
+    // Wait for both DOM and images to be ready
+    if (document.readyState === 'complete') {
+      console.log('PageLightbox: Document already complete, initializing immediately');
       this.init();
+    } else if (document.readyState === 'interactive') {
+      console.log('PageLightbox: DOM interactive, waiting for full load');
+      window.addEventListener('load', () => this.init());
+    } else {
+      console.log('PageLightbox: DOM still loading, waiting for full load');
+      window.addEventListener('load', () => this.init());
     }
   }
 
-  init() {
+  async init() {
     console.log('PageLightbox: init() called');
     
     // Find all images within page content areas only
@@ -51,44 +59,112 @@ class PageLightbox {
     const allPageImages = document.querySelectorAll(includeSelector);
     console.log('PageLightbox: Found', allPageImages.length, 'total images');
     
-    // Filter out images that are in product areas
-    this.images = Array.from(allPageImages).filter(img => {
-      // Skip if image is too small or a thumbnail or icon
-      if (img.width < 150 || img.height < 150) {
-        console.log('PageLightbox: Filtered out small image:', img.src, 'dimensions:', img.width, 'x', img.height);
-        return false;
-      }
-      
-      // Skip images in excluded areas
-      for (const selector of excludeSelectors) {
-        if (img.closest(selector)) {
-          console.log('PageLightbox: Filtered out excluded image:', img.src, 'matched selector:', selector);
-          return false;
-        }
-      }
-      
-      // Skip SVG images (likely icons)
-      if (img.src.toLowerCase().endsWith('.svg')) {
-        console.log('PageLightbox: Filtered out SVG image:', img.src);
-        return false;
-      }
-      
-      console.log('PageLightbox: Keeping image:', img.src);
-      return true;
-    });
-    
-    console.log('PageLightbox: After filtering,', this.images.length, 'images remain');
-    
-    // If no suitable images found, don't initialize
-    if (this.images.length === 0) {
-      console.log('PageLightbox: No suitable images found, not initializing');
+    if (allPageImages.length === 0) {
+      console.log('PageLightbox: No images found, not initializing');
       return;
     }
+
+    // Wait for all images to load before filtering
+    try {
+      const loadedImages = await this.waitForImagesToLoad(Array.from(allPageImages));
+      console.log('PageLightbox: All images loaded, proceeding with filtering');
+      
+      // Filter out images that are in product areas or too small
+      this.images = loadedImages.filter(img => {
+        // Skip images in excluded areas
+        for (const selector of excludeSelectors) {
+          if (img.closest(selector)) {
+            console.log('PageLightbox: Filtered out excluded image:', img.src, 'matched selector:', selector);
+            return false;
+          }
+        }
+        
+        // Skip SVG images (likely icons)
+        if (img.src.toLowerCase().endsWith('.svg')) {
+          console.log('PageLightbox: Filtered out SVG image:', img.src);
+          return false;
+        }
+        
+        // Get actual dimensions - handle cases where naturalWidth/Height are available
+        const width = img.naturalWidth || img.width || 0;
+        const height = img.naturalHeight || img.height || 0;
+        
+        // Skip if image is too small or failed to load
+        if (width < 150 || height < 150) {
+          console.log('PageLightbox: Filtered out small image:', img.src, 'dimensions:', width, 'x', height);
+          return false;
+        }
+        
+        console.log('PageLightbox: Keeping image:', img.src, 'dimensions:', width, 'x', height);
+        return true;
+      });
+      
+      console.log('PageLightbox: After filtering,', this.images.length, 'images remain');
+      
+      // If no suitable images found, don't initialize
+      if (this.images.length === 0) {
+        console.log('PageLightbox: No suitable images found after filtering, not initializing');
+        return;
+      }
+      
+      // Create the lightbox container
+      this.createLightbox();
+      
+      // Add click event listeners to images
+      this.addImageEventListeners();
+      
+      this.initialized = true;
+      console.log('PageLightbox: Initialization complete');
+      
+    } catch (error) {
+      console.error('PageLightbox: Error during initialization:', error);
+    }
+  }
+
+  waitForImagesToLoad(images) {
+    console.log('PageLightbox: Waiting for', images.length, 'images to load');
     
-    // Create the lightbox container
-    this.createLightbox();
+    const imagePromises = images.map((img, index) => {
+      return new Promise((resolve) => {
+        // If image is already complete or has no src, resolve immediately
+        if (img.complete || !img.src) {
+          console.log(`PageLightbox: Image ${index + 1} already loaded:`, img.src);
+          resolve(img);
+          return;
+        }
+        
+        // Set up load and error handlers
+        const handleLoad = () => {
+          console.log(`PageLightbox: Image ${index + 1} loaded:`, img.src);
+          img.removeEventListener('load', handleLoad);
+          img.removeEventListener('error', handleError);
+          resolve(img);
+        };
+        
+        const handleError = () => {
+          console.log(`PageLightbox: Image ${index + 1} failed to load:`, img.src);
+          img.removeEventListener('load', handleLoad);
+          img.removeEventListener('error', handleError);
+          resolve(img); // Still resolve to include in filtering
+        };
+        
+        img.addEventListener('load', handleLoad);
+        img.addEventListener('error', handleError);
+        
+        // Fallback timeout in case image never fires load/error events
+        setTimeout(() => {
+          console.log(`PageLightbox: Image ${index + 1} timed out:`, img.src);
+          img.removeEventListener('load', handleLoad);
+          img.removeEventListener('error', handleError);
+          resolve(img);
+        }, 5000); // 5 second timeout
+      });
+    });
     
-    // Add click event listeners to images
+    return Promise.all(imagePromises);
+  }
+
+  addImageEventListeners() {
     this.images.forEach(img => {
       img.style.cursor = 'pointer';
       
@@ -105,9 +181,6 @@ class PageLightbox {
         this.openLightbox(img);
       }, { passive: false });
     });
-    
-    this.initialized = true;
-    console.log('PageLightbox: Initialization complete');
   }
   
   createLightbox() {
