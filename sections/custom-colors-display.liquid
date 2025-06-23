@@ -74,9 +74,10 @@
       {% elsif product != null %}
         <p>No custom colors found for {{ product.title }}</p>
         {% if metaobject_test != blank %}
-          <p><small>Found metaobject: {{ metaobject_handle }}</small></p>
+          <p><small>✅ Found metaobject: {{ metaobject_handle }}</small></p>
+          <p><small>🔍 Variant count: {{ shop.metaobjects.custom_colors[metaobject_handle].variant.value.size }}</small></p>
         {% else %}
-          <p><small>Could not find metaobject: custom_colors.{{ metaobject_handle }}</small></p>
+          <p><small>❌ Could not find metaobject: custom_colors.{{ metaobject_handle }}</small></p>
         {% endif %}
       {% else %}
         <p>Please select a product to display custom colors.</p>
