@@ -69,9 +69,6 @@
                     height="auto"
                   />
                   <h4 class="inline-richtext">{{ variant.title }}</h4>
-                  {% if variant.price > product.price %}
-                    <p class="price">+{{ variant.price | minus: product.price | money }}</p>
-                  {% endif %}
                 </div>
               {% endif %}
             {% endunless %}
