@@ -90,7 +90,14 @@ class PageLightbox {
         const height = img.naturalHeight || img.height || 0;
         
         // Skip if image is too small or failed to load
+        // But be more lenient with timeout images that might have valid URLs
         if (width < 150 || height < 150) {
+          // For images that timed out but have reasonable URLs, give them a second chance
+          if (width === 178 && height === 0 && img.src.includes('cdn.shopify.com') && 
+              (img.src.includes('width=600') || img.src.includes('width=760'))) {
+            console.log('PageLightbox: Keeping timed out Shopify image with URL width parameter:', img.src);
+            return true;
+          }
           console.log('PageLightbox: Filtered out small image:', img.src, 'dimensions:', width, 'x', height);
           return false;
         }
@@ -157,7 +164,7 @@ class PageLightbox {
           img.removeEventListener('load', handleLoad);
           img.removeEventListener('error', handleError);
           resolve(img);
-        }, 5000); // 5 second timeout
+        }, 10000); // 10 second timeout for better reliability
       });
     });
     
