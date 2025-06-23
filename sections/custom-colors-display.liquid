@@ -78,14 +78,19 @@
         <p>No custom colors found for {{ product.title }}</p>
         {% if metaobject_test != blank %}
           <p><small>Found metaobject: {{ metaobject_handle }}</small></p>
-          <p><strong>METAOBJECT DEBUG:</strong></p>
-          <p>Handle: {{ metaobject_test.handle }}</p>
-          <p>Type: {{ metaobject_test.type }}</p>
-          <p>ID: {{ metaobject_test.id }}</p>
-          <p><strong>Raw metaobject:</strong></p>
-          <div style="background: #f0f0f0; padding: 15px; margin: 10px 0; border: 1px solid #ccc; overflow-x: auto;">
-            <code style="font-size: 11px; white-space: pre-wrap;">{{ metaobject_test }}</code>
-          </div>
+          <p><strong>TRYING DIRECT FIELD ACCESS:</strong></p>
+          {% assign all_fields = metaobject_test.system.fields %}
+          <p>Fields count: {{ all_fields.size }}</p>
+          {% for field in all_fields %}
+            <p><strong>Field: {{ field.key }}</strong> ({{ field.type }})</p>
+            {% assign field_value = metaobject_test[field.key] %}
+            <p>Value: {{ field_value }}</p>
+            {% if field_value.value %}
+              <p>Value.value: {{ field_value.value }}</p>
+              <p>Value.value.size: {{ field_value.value.size }}</p>
+            {% endif %}
+            ---<br>
+          {% endfor %}
         {% else %}
           <p><small>Could not find metaobject: custom_colors.{{ metaobject_handle }}</small></p>
         {% endif %}
