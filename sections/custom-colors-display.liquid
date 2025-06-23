@@ -30,11 +30,12 @@
       
       # Try different metaobject handle patterns based on part number
       if clean_part_number == '8233'
-        # Exception: Individual pattern for specific products like 8233
         assign metaobject_handle = 'csf-s-58-level-up-manifold-custom-finishes-csf-' | append: clean_part_number | append: '-c'
-      else
-        # Default: Shared pattern for most products (originally used by 8200/8300)
+      elsif clean_part_number == '8200' or clean_part_number == '8300'
         assign metaobject_handle = 'csf-b-58-super-manifold-custom-finishes-csf-8200-c-8300-c'
+      else
+        # Default pattern for other products
+        assign metaobject_handle = 'csf-s-58-level-up-manifold-custom-finishes-csf-' | append: clean_part_number | append: '-c'
       endif
     endif
     
@@ -57,38 +58,29 @@
       
 
       
-      {% if product != null %}
-        {% comment %} Filter variants to only those with images and higher prices (custom finishes) {% endcomment %}
-        {% assign custom_finish_variants = '' | split: '' %}
-        
-        {% for variant in product.variants %}
-          {% if variant.image and variant.available and variant.price > product.price %}
-            {% unless variant.title contains 'Default' or variant.title == 'Default Title' %}
-              {% assign custom_finish_variants = custom_finish_variants | append: variant %}
-            {% endunless %}
-          {% endif %}
-        {% endfor %}
-        
-        {% if custom_finish_variants.size > 0 %}
-          <div class="media-grid-6">
-            {% for variant in custom_finish_variants limit: 12 %}
+      {% if product != null and custom_colors != null and custom_colors != empty %}
+        <div class="media-grid-6">
+          {% for custom_color in custom_colors %}
+            {% if custom_color != blank %}
               <div>
                 <img 
-                  src="{{ variant.image | image_url: width: 600 }}" 
-                  alt="{{ variant.title | escape }}" 
+                  src="{{ custom_color | image_url: width: 600 }}" 
+                  alt="{{ custom_color.title | escape }}" 
                   loading="lazy"
                   width="600"
                   height="auto"
                 /> 
-                <h4 class="inline-richtext">{{ variant.title }}</h4>
-                <p class="price">+{{ variant.price | minus: product.price | money }}</p>
+                <h4 class="inline-richtext">{{ custom_color.title }}</h4>
               </div>
-            {% endfor %}
-          </div>
-          <p><small>Showing {{ custom_finish_variants.size | at_most: 12 }} of {{ custom_finish_variants.size }} custom finish variants</small></p>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% elsif product != null %}
+        <p>No custom colors found for {{ product.title }}</p>
+        {% if metaobject_test != blank %}
+          <p><small>Found {{ custom_colors.size }} custom color variants for this product.</small></p>
         {% else %}
-          <p>No custom finish variants found for {{ product.title }}</p>
-          <p><small>Total variants: {{ product.variants.size }}</small></p>
+          <p><small>Could not find metaobject: custom_colors.{{ metaobject_handle }}</small></p>
         {% endif %}
       {% else %}
         <p>Please select a product to display custom colors.</p>
