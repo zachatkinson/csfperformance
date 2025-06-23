@@ -39,12 +39,9 @@
       endif
     endif
     
-    # Try to fetch the custom colors
+    # Try to fetch the custom colors - using direct access pattern
     if metaobject_handle != blank
       assign metaobject_test = shop.metaobjects.custom_colors[metaobject_handle]
-      if metaobject_test != blank
-        assign custom_colors = metaobject_test.variant.value
-      endif
     endif
   endif
 -%}
@@ -58,19 +55,19 @@
       
 
       
-      {% if product != null and custom_colors != null and custom_colors != empty %}
+      {% if product != null and metaobject_test != blank %}
         <div class="media-grid-6">
-          {% for custom_color in custom_colors %}
-            {% if custom_color != blank %}
+          {% for custom_colors in shop.metaobjects.custom_colors[metaobject_handle].variant.value %}
+            {% if custom_colors != blank %}
               <div>
                 <img 
-                  src="{{ custom_color | image_url: width: 600 }}" 
-                  alt="{{ custom_color.title | escape }}" 
+                  src="{{ custom_colors | image_url: width: 600 }}" 
+                  alt="{{ custom_colors.title | escape }}" 
                   loading="lazy"
                   width="600"
                   height="auto"
                 /> 
-                <h4 class="inline-richtext">{{ custom_color.title }}</h4>
+                <h4 class="inline-richtext">{{ custom_colors.title }}</h4>
               </div>
             {% endif %}
           {% endfor %}
@@ -78,7 +75,7 @@
       {% elsif product != null %}
         <p>No custom colors found for {{ product.title }}</p>
         {% if metaobject_test != blank %}
-          <p><small>Found {{ custom_colors.size }} custom color variants for this product.</small></p>
+          <p><small>Found metaobject: {{ metaobject_handle }}</small></p>
         {% else %}
           <p><small>Could not find metaobject: custom_colors.{{ metaobject_handle }}</small></p>
         {% endif %}
