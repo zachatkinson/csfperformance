@@ -3,9 +3,13 @@ class PageLightbox {
     this.lightboxContainer = null;
     this.initialized = false;
     this.currentImage = null;
-    this.images = [];
+    this.currentIndex = 0;
+    this.imageRegistry = []; // Catalog of all images
+    this.loadedImages = new Map(); // Cache of loaded images
     this.touchStartX = 0;
     this.touchEndX = 0;
+    this.preloadBuffer = 2; // Number of images to preload around current
+    this.memoryLimit = 10; // Maximum images to keep in memory
     
     console.log('PageLightbox: Constructor called');
     
@@ -28,17 +32,16 @@ class PageLightbox {
   }
 
   async init() {
-    console.log('PageLightbox: init() called');
+    console.log('PageLightbox: init() called - using Hybrid Smart Loading');
     
     // Find all images within page content areas only
-    // This selector targets images in page content but excludes product media
     const pageContentSelectors = [
-      '.rte img', // Rich text editor content (common for pages)
-      '.page-content img',
+      '.rte img',
+      '.page-content img', 
       '.page-width img',
       'section[id^="page-"] img',
       'section[id^="main-page"] img',
-      '.main-page-title + div img' // Images after page title
+      '.main-page-title + div img'
     ];
     
     // Exclude product media and model grid
@@ -48,14 +51,12 @@ class PageLightbox {
       '.product__media img',
       '.product__media-item img',
       '.product-media-modal img',
-      '.model-grid img' // Exclude model grid images
+      '.model-grid img'
     ];
     
-    // Build the query selector
     const includeSelector = pageContentSelectors.join(', ');
     console.log('PageLightbox: Using include selector:', includeSelector);
     
-    // Find all qualifying images
     const allPageImages = document.querySelectorAll(includeSelector);
     console.log('PageLightbox: Found', allPageImages.length, 'total images');
     
@@ -64,200 +65,253 @@ class PageLightbox {
       return;
     }
 
-    // Initialize with empty array and start progressive loading
-    this.images = [];
-    this.pendingImages = Array.from(allPageImages);
+    // PHASE 1: Instant Image Registry - Catalog ALL images immediately (no loading)
+    this.createImageRegistry(allPageImages, excludeSelectors);
     
-    // Filter out images that should be excluded
-    this.pendingImages = this.pendingImages.filter(img => {
-      // Skip images in excluded areas
-      for (const selector of excludeSelectors) {
-        if (img.closest(selector)) {
-          console.log('PageLightbox: Filtered out excluded image:', img.src, 'matched selector:', selector);
-          return false;
-        }
-      }
-      
-      // Skip SVG images (likely icons)
-      if (img.src.toLowerCase().endsWith('.svg')) {
-        console.log('PageLightbox: Filtered out SVG image:', img.src);
-        return false;
-      }
-      
-      return true;
-    });
-    
-    console.log('PageLightbox: After initial filtering,', this.pendingImages.length, 'images to process');
-    
-    if (this.pendingImages.length === 0) {
-      console.log('PageLightbox: No suitable images found after filtering, not initializing');
+    if (this.imageRegistry.length === 0) {
+      console.log('PageLightbox: No suitable images found after filtering');
       return;
     }
 
-    // Create the lightbox container immediately
+    // Create lightbox container immediately
     this.createLightbox();
     
-    // Start progressive loading - check images that are already loaded first
-    this.processImmediatelyAvailableImages();
+    // Add event listeners to all catalog images immediately  
+    this.addEventListenersToRegistry();
     
-    // Then start loading the rest progressively
-    this.startProgressiveImageLoading();
-    
-    console.log('PageLightbox: Progressive initialization started');
+    // Lightbox is now fully functional instantly
+    this.initialized = true;
+    console.log('PageLightbox: ⚡ INSTANT READY with', this.imageRegistry.length, 'images cataloged (smart loading enabled)');
   }
 
-  processImmediatelyAvailableImages() {
-    const readyImages = [];
-    const stillLoadingImages = [];
+  createImageRegistry(allImages, excludeSelectors) {
+    const startTime = performance.now();
     
-    this.pendingImages.forEach(img => {
-      if (img.complete && img.naturalWidth > 0) {
-        // Image is already loaded and has dimensions
-        if (this.isImageSuitableForLightbox(img)) {
-          readyImages.push(img);
+    this.imageRegistry = Array.from(allImages)
+      .filter(img => {
+        // Skip images in excluded areas
+        for (const selector of excludeSelectors) {
+          if (img.closest(selector)) {
+            return false;
+          }
         }
-      } else {
-        stillLoadingImages.push(img);
+        
+        // Skip SVG images (likely icons)
+        if (img.src.toLowerCase().endsWith('.svg')) {
+          return false;
+        }
+        
+        return true;
+      })
+      .map((img, index) => ({
+        element: img,
+        src: img.src,
+        fullSizeSrc: img.dataset.fullSize || img.src,
+        loaded: img.complete && img.naturalWidth > 0,
+        index: index,
+        width: img.naturalWidth || 0,
+        height: img.naturalHeight || 0
+      }))
+      .filter(entry => {
+        // Final size check for already loaded images
+        if (entry.loaded && (entry.width < 150 || entry.height < 150)) {
+          // Apply Shopify CDN exception
+          if (entry.width === 178 && entry.height === 0 && entry.src.includes('cdn.shopify.com') && 
+              (entry.src.includes('width=600') || entry.src.includes('width=760'))) {
+            return true;
+          }
+          return false;
+        }
+        return true;
+      });
+    
+    const endTime = performance.now();
+    console.log(`PageLightbox: 📋 Cataloged ${this.imageRegistry.length} images in ${(endTime - startTime).toFixed(1)}ms`);
+  }
+
+  addEventListenersToRegistry() {
+    this.imageRegistry.forEach((entry, index) => {
+      const img = entry.element;
+      img.style.cursor = 'pointer';
+      
+      img.addEventListener('click', (e) => {
+        console.log('PageLightbox: Image clicked:', entry.src);
+        e.preventDefault();
+        this.openLightboxAtIndex(index);
+      });
+      
+      img.addEventListener('touchstart', (e) => {
+        console.log('PageLightbox: Image touched:', entry.src);
+        e.preventDefault();
+        this.openLightboxAtIndex(index);
+      }, { passive: false });
+    });
+  }
+
+  // PHASE 2: On-Demand Loading
+  async openLightboxAtIndex(index) {
+    this.currentIndex = index;
+    this.currentImage = this.imageRegistry[index].element;
+    
+    // Show lightbox immediately with loading state
+    this.showLightboxContainer();
+    
+    // Load current image on-demand
+    const currentImageData = await this.loadImageOnDemand(index);
+    this.displayImageInLightbox(currentImageData);
+    
+    // PHASE 3: Smart Preloading - Load adjacent images in background
+    this.preloadAdjacentImages(index);
+    
+    // PHASE 4: Memory Management - Clean up distant images
+    this.cleanupDistantImages(index);
+  }
+
+  async loadImageOnDemand(index) {
+    const entry = this.imageRegistry[index];
+    
+    // Check if already loaded in cache
+    if (this.loadedImages.has(index)) {
+      console.log('PageLightbox: 🎯 Using cached image', index);
+      return this.loadedImages.get(index);
+    }
+    
+    console.log('PageLightbox: 📥 Loading image on-demand:', index, entry.src);
+    
+    return new Promise((resolve) => {
+      const img = new Image();
+      
+      img.onload = () => {
+        const imageData = {
+          element: img,
+          src: img.src,
+          width: img.naturalWidth,
+          height: img.naturalHeight,
+          index: index
+        };
+        
+        // Cache the loaded image
+        this.loadedImages.set(index, imageData);
+        console.log('PageLightbox: ✅ Loaded image', index, `(${img.naturalWidth}x${img.naturalHeight})`);
+        resolve(imageData);
+      };
+      
+      img.onerror = () => {
+        console.log('PageLightbox: ❌ Failed to load image', index);
+        // Return original element as fallback
+        const imageData = {
+          element: entry.element,
+          src: entry.src,
+          width: entry.width,
+          height: entry.height,
+          index: index
+        };
+        resolve(imageData);
+      };
+      
+      // Load the full-size version if available
+      img.src = entry.fullSizeSrc;
+    });
+  }
+
+  preloadAdjacentImages(currentIndex) {
+    const preloadIndices = [];
+    
+    // Preload images around current position
+    for (let i = 1; i <= this.preloadBuffer; i++) {
+      const prevIndex = currentIndex - i;
+      const nextIndex = currentIndex + i;
+      
+      if (prevIndex >= 0) preloadIndices.push(prevIndex);
+      if (nextIndex < this.imageRegistry.length) preloadIndices.push(nextIndex);
+    }
+    
+    // Preload in background without blocking
+    preloadIndices.forEach(index => {
+      if (!this.loadedImages.has(index)) {
+        setTimeout(() => this.loadImageOnDemand(index), 100 * Math.abs(index - currentIndex));
       }
     });
     
-    // Add immediately available images to lightbox
-    if (readyImages.length > 0) {
-      this.addImagesToLightbox(readyImages);
-      console.log('PageLightbox: Added', readyImages.length, 'immediately available images');
-    }
-    
-    // Update pending list
-    this.pendingImages = stillLoadingImages;
-    
-    // If we have enough images already, mark as initialized
-    if (this.images.length > 0) {
-      this.initialized = true;
-      console.log('PageLightbox: Lightbox ready with', this.images.length, 'images (more may be added progressively)');
-    }
+    console.log('PageLightbox: 🔄 Preloading adjacent images:', preloadIndices);
   }
 
-  startProgressiveImageLoading() {
-    if (this.pendingImages.length === 0) {
-      console.log('PageLightbox: All images processed');
+  cleanupDistantImages(currentIndex) {
+    // Only cleanup if we have too many images in memory
+    if (this.loadedImages.size <= this.memoryLimit) {
       return;
     }
     
-    console.log('PageLightbox: Starting progressive loading for', this.pendingImages.length, 'remaining images');
+    const imagesToRemove = [];
     
-    // Process images in batches to avoid overwhelming the browser
-    const batchSize = 10;
-    let currentBatch = 0;
-    
-    const processBatch = () => {
-      const startIdx = currentBatch * batchSize;
-      const endIdx = Math.min(startIdx + batchSize, this.pendingImages.length);
-      const batch = this.pendingImages.slice(startIdx, endIdx);
-      
-      if (batch.length === 0) {
-        console.log('PageLightbox: Progressive loading complete');
-        return;
+    this.loadedImages.forEach((imageData, index) => {
+      const distance = Math.abs(index - currentIndex);
+      if (distance > this.preloadBuffer + 2) {
+        imagesToRemove.push(index);
       }
-      
-      // Process this batch
-      const batchPromises = batch.map(img => this.waitForImageToLoad(img));
-      
-      Promise.all(batchPromises).then(loadedImages => {
-        const validImages = loadedImages.filter(img => this.isImageSuitableForLightbox(img));
-        
-        if (validImages.length > 0) {
-          this.addImagesToLightbox(validImages);
-          console.log('PageLightbox: Added', validImages.length, 'images from batch', currentBatch + 1, '(total now:', this.images.length, ')');
-        }
-        
-        // Process next batch
-        currentBatch++;
-        setTimeout(processBatch, 100); // Small delay to prevent blocking
+    });
+    
+    // Remove oldest distant images first
+    imagesToRemove
+      .sort((a, b) => Math.abs(b - currentIndex) - Math.abs(a - currentIndex))
+      .slice(0, Math.max(0, this.loadedImages.size - this.memoryLimit))
+      .forEach(index => {
+        this.loadedImages.delete(index);
+        console.log('PageLightbox: 🗑️ Cleaned up distant image', index);
       });
-    };
-    
-    // Start processing batches
-    processBatch();
   }
 
-  waitForImageToLoad(img) {
-    return new Promise((resolve) => {
-      if (img.complete && img.naturalWidth > 0) {
-        resolve(img);
-        return;
-      }
-      
-      const handleLoad = () => {
-        img.removeEventListener('load', handleLoad);
-        img.removeEventListener('error', handleError);
-        resolve(img);
-      };
-      
-      const handleError = () => {
-        img.removeEventListener('load', handleLoad);
-        img.removeEventListener('error', handleError);
-        resolve(img); // Still resolve to include in filtering
-      };
-      
-      img.addEventListener('load', handleLoad);
-      img.addEventListener('error', handleError);
-      
-      // Faster timeout for progressive loading
-      setTimeout(() => {
-        img.removeEventListener('load', handleLoad);
-        img.removeEventListener('error', handleError);
-        resolve(img);
-      }, 3000); // 3 second timeout per batch
-    });
-  }
-
-  isImageSuitableForLightbox(img) {
-    // Get actual dimensions - handle cases where naturalWidth/Height are available
-    const width = img.naturalWidth || img.width || 0;
-    const height = img.naturalHeight || img.height || 0;
-    
-    // Skip if image is too small or failed to load
-    // But be more lenient with timeout images that might have valid URLs
-    if (width < 150 || height < 150) {
-      // For images that timed out but have reasonable URLs, give them a second chance
-      if (width === 178 && height === 0 && img.src.includes('cdn.shopify.com') && 
-          (img.src.includes('width=600') || img.src.includes('width=760'))) {
-        console.log('PageLightbox: Keeping timed out Shopify image with URL width parameter:', img.src);
-        return true;
-      }
-      return false;
-    }
-    
-    return true;
-  }
-
-  addImagesToLightbox(newImages) {
-    newImages.forEach(img => {
-      // Avoid duplicates
-      if (!this.images.includes(img)) {
-        this.images.push(img);
-        this.addImageEventListeners(img);
-      }
-    });
-  }
-
-  addImageEventListeners(img) {
-    img.style.cursor = 'pointer';
-    
-    // Add both click and touch events
-    img.addEventListener('click', (e) => {
-      console.log('PageLightbox: Image clicked:', img.src);
-      e.preventDefault();
-      this.openLightbox(img);
+  showLightboxContainer() {
+    // Show lightbox immediately
+    requestAnimationFrame(() => {
+      this.lightboxContainer.classList.add('active');
+      this.lightboxContainer.setAttribute('aria-hidden', 'false');
     });
     
-    img.addEventListener('touchstart', (e) => {
-      console.log('PageLightbox: Image touched:', img.src);
-      e.preventDefault();
-      this.openLightbox(img);
-    }, { passive: false });
+    // Disable scrolling on body
+    document.body.style.overflow = 'hidden';
+    
+    // Trap focus within lightbox
+    this.lightboxContainer.querySelector('.page-lightbox__close').focus();
   }
-  
+
+  displayImageInLightbox(imageData) {
+    const container = this.lightboxContainer.querySelector('.page-lightbox__image-container');
+    container.innerHTML = '';
+    
+    const lightboxImg = imageData.element.cloneNode();
+    lightboxImg.className = 'page-lightbox__image';
+    lightboxImg.src = imageData.src;
+    
+    container.appendChild(lightboxImg);
+  }
+
+  async navigate(direction) {
+    if (!this.initialized || this.imageRegistry.length === 0) return;
+    
+    const newIndex = (this.currentIndex + direction + this.imageRegistry.length) % this.imageRegistry.length;
+    
+    if (newIndex === this.currentIndex) return;
+    
+    console.log('PageLightbox: 🧭 Navigating from', this.currentIndex, 'to', newIndex);
+    
+    // Update current index
+    this.currentIndex = newIndex;
+    this.currentImage = this.imageRegistry[newIndex].element;
+    
+    // Load new image (will use cache if available)
+    const imageData = await this.loadImageOnDemand(newIndex);
+    
+    // Display with animation
+    this.displayImageInLightbox(imageData);
+    
+    // Preload around new position
+    this.preloadAdjacentImages(newIndex);
+    
+    // Cleanup distant images
+    this.cleanupDistantImages(newIndex);
+  }
+
   createLightbox() {
     // Create lightbox container if it doesn't exist
     if (!this.lightboxContainer) {
@@ -282,36 +336,33 @@ class PageLightbox {
       const imageContainer = document.createElement('div');
       imageContainer.className = 'page-lightbox__image-container';
       
-      // Create navigation buttons if there are multiple images
-      if (this.images.length > 1) {
-        const prevButton = document.createElement('button');
-        prevButton.className = 'page-lightbox__nav page-lightbox__nav--prev';
-        prevButton.setAttribute('aria-label', 'Previous image');
-        prevButton.innerHTML = '&lsaquo;';
-        
-        // Add both click and touch events for navigation
-        prevButton.addEventListener('click', () => this.navigate(-1));
-        prevButton.addEventListener('touchstart', (e) => {
-          e.preventDefault();
-          this.navigate(-1);
-        }, { passive: false });
-        
-        const nextButton = document.createElement('button');
-        nextButton.className = 'page-lightbox__nav page-lightbox__nav--next';
-        nextButton.setAttribute('aria-label', 'Next image');
-        nextButton.innerHTML = '&rsaquo;';
-        
-        // Add both click and touch events for navigation
-        nextButton.addEventListener('click', () => this.navigate(1));
-        nextButton.addEventListener('touchstart', (e) => {
-          e.preventDefault();
-          this.navigate(1);
-        }, { passive: false });
-        
-        this.lightboxContainer.appendChild(prevButton);
-        this.lightboxContainer.appendChild(nextButton);
-      }
+      // Always create navigation buttons (we'll show/hide based on registry length)
+      const prevButton = document.createElement('button');
+      prevButton.className = 'page-lightbox__nav page-lightbox__nav--prev';
+      prevButton.setAttribute('aria-label', 'Previous image');
+      prevButton.innerHTML = '&lsaquo;';
       
+      // Add both click and touch events for navigation
+      prevButton.addEventListener('click', () => this.navigate(-1));
+      prevButton.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        this.navigate(-1);
+      }, { passive: false });
+      
+      const nextButton = document.createElement('button');
+      nextButton.className = 'page-lightbox__nav page-lightbox__nav--next';
+      nextButton.setAttribute('aria-label', 'Next image');
+      nextButton.innerHTML = '&rsaquo;';
+      
+      // Add both click and touch events for navigation
+      nextButton.addEventListener('click', () => this.navigate(1));
+      nextButton.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        this.navigate(1);
+      }, { passive: false });
+      
+      this.lightboxContainer.appendChild(prevButton);
+      this.lightboxContainer.appendChild(nextButton);
       this.lightboxContainer.appendChild(closeButton);
       this.lightboxContainer.appendChild(imageContainer);
       
@@ -349,7 +400,7 @@ class PageLightbox {
       // Append to body
       document.body.appendChild(this.lightboxContainer);
     }
-  }
+    }
   
   handleSwipe() {
     const swipeThreshold = 50; // Minimum distance for a swipe
@@ -357,45 +408,13 @@ class PageLightbox {
     
     if (Math.abs(swipeDistance) > swipeThreshold) {
       if (swipeDistance > 0) {
-        // Swipe right - next image
-        this.navigate(1);
-      } else {
-        // Swipe left - previous image
+        // Swipe right - previous image
         this.navigate(-1);
+      } else {
+        // Swipe left - next image
+        this.navigate(1);
       }
     }
-  }
-  
-  openLightbox(img) {
-    this.currentImage = img;
-    
-    // Create a new image element for the lightbox
-    const lightboxImg = document.createElement('img');
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-    lightboxImg.className = 'page-lightbox__image';
-    
-    // If image has data-full-size attribute, use that instead
-    if (img.dataset.fullSize) {
-      lightboxImg.src = img.dataset.fullSize;
-    }
-    
-    // Replace any existing image
-    const container = this.lightboxContainer.querySelector('.page-lightbox__image-container');
-    container.innerHTML = '';
-    container.appendChild(lightboxImg);
-    
-    // Show the lightbox with a fade effect
-    requestAnimationFrame(() => {
-      this.lightboxContainer.classList.add('active');
-      this.lightboxContainer.setAttribute('aria-hidden', 'false');
-    });
-    
-    // Disable scrolling on body
-    document.body.style.overflow = 'hidden';
-    
-    // Trap focus within lightbox
-    this.lightboxContainer.querySelector('.page-lightbox__close').focus();
   }
   
   closeLightbox() {
@@ -415,84 +434,7 @@ class PageLightbox {
       }
     }, 300); // Match the CSS transition duration
   }
-  
-  navigate(direction) {
-    if (!this.currentImage) return;
-    
-    const currentIndex = this.images.indexOf(this.currentImage);
-    const newIndex = (currentIndex + direction + this.images.length) % this.images.length;
-    const newImage = this.images[newIndex];
-    
-    // Get the current image element
-    const currentImg = this.lightboxContainer.querySelector('.page-lightbox__image');
-    
-    // Add sliding animation class based on direction
-    currentImg.classList.add(direction > 0 ? 'sliding-right' : 'sliding-left');
-    
-    // Wait for the slide-out animation to complete
-    setTimeout(() => {
-      // Create and add the new image
-      const lightboxImg = document.createElement('img');
-      lightboxImg.src = newImage.src;
-      lightboxImg.alt = newImage.alt;
-      lightboxImg.className = 'page-lightbox__image';
-      
-      // Add sliding-in animation class - reversed from the slide-out direction
-      lightboxImg.classList.add(direction > 0 ? 'sliding-in-left' : 'sliding-in-right');
-      
-      // If image has data-full-size attribute, use that instead
-      if (newImage.dataset.fullSize) {
-        lightboxImg.src = newImage.dataset.fullSize;
-      }
-      
-      // Replace the current image
-      const container = this.lightboxContainer.querySelector('.page-lightbox__image-container');
-      container.innerHTML = '';
-      container.appendChild(lightboxImg);
-      
-      // Update current image reference
-      this.currentImage = newImage;
-      
-      // Remove animation classes after animation completes
-      setTimeout(() => {
-        lightboxImg.classList.remove('sliding-in-left', 'sliding-in-right');
-      }, 300);
-    }, 300);
-  }
 }
 
-// Initialize the page lightbox
+// Initialize the page lightbox with smart loading
 new PageLightbox(); 
-
-function showImage(index) {
-  const image = images[index];
-  const imageContainer = document.querySelector('.page-lightbox__image-container');
-  const currentImage = imageContainer.querySelector('img');
-  
-  // Remove any existing animation classes
-  if (currentImage) {
-    currentImage.classList.remove('sliding-in-left', 'sliding-in-right');
-  }
-  
-  // Create new image element
-  const newImage = document.createElement('img');
-  newImage.src = image.src;
-  newImage.alt = image.alt;
-  newImage.className = 'page-lightbox__image';
-  
-  // Add appropriate animation class based on direction
-  if (currentIndex < index) {
-    newImage.classList.add('sliding-in-left');
-  } else {
-    newImage.classList.add('sliding-in-right');
-  }
-  
-  // Replace the image
-  if (currentImage) {
-    imageContainer.removeChild(currentImage);
-  }
-  imageContainer.appendChild(newImage);
-  
-  currentIndex = index;
-  updateNavigation();
-} 
