@@ -146,7 +146,7 @@
     "custom_liquid_nMfRmD": {
       "type": "custom-liquid",
       "custom_css": [
-        "hr{margin: 0}"
+        "hr {margin: 0; padding: 0;}"
       ],
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
