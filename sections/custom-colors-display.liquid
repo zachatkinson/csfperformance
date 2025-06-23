@@ -71,22 +71,33 @@
       
       
       {% if product != null and metaobject_test != blank %}
-        <div class="media-grid-6">
-          {% for custom_colors in shop.metaobjects.custom_colors[metaobject_handle].variant.value %}
-            {% if custom_colors != blank %}
-              <div>
-                <img 
-                  src="{{ custom_colors | image_url: width: 600 }}" 
-                  alt="{{ custom_colors.title | escape }}" 
-                  loading="lazy"
-                  width="600"
-                  height="auto"
-                /> 
-                <h4 class="inline-richtext">{{ custom_colors.title }}</h4>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
+        {% comment %} Try direct access like the working code {% endcomment %}
+        {% if clean_part_number == '8233' %}
+          {% assign variant_list = shop.metaobjects.custom_colors.csf-s-58-level-up-manifold-custom-finishes-csf-8233-c.variant.value %}
+        {% else %}
+          {% assign variant_list = shop.metaobjects.custom_colors.csf-b-58-super-manifold-custom-finishes-csf-8200-c-8300-c.variant.value %}
+        {% endif %}
+        
+        <p><strong>Direct access test:</strong> {{ variant_list.size }} variants found</p>
+        
+        {% if variant_list.size > 0 %}
+          <div class="media-grid-6">
+            {% for custom_colors in variant_list %}
+              {% if custom_colors != blank %}
+                <div>
+                  <img 
+                    src="{{ custom_colors | image_url: width: 600 }}" 
+                    alt="{{ custom_colors.title | escape }}" 
+                    loading="lazy"
+                    width="600"
+                    height="auto"
+                  /> 
+                  <h4 class="inline-richtext">{{ custom_colors.title }}</h4>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
       {% elsif product != null %}
         <p>No custom colors found for {{ product.title }}</p>
         {% if metaobject_test != blank %}
