@@ -57,8 +57,8 @@
         "button_VXc3pa": {
           "type": "button",
           "settings": {
-            "button_label": "Email Us",
-            "button_link": "mailto:info@csfrace.com",
+            "button_label": "Contact Us about Custom Finishes",
+            "button_link": "shopify://pages/contact",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
