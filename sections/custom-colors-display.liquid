@@ -14,36 +14,38 @@
   }
 {%- endstyle -%}
 
-{%- liquid
-  assign product = section.settings.product
-  assign custom_colors = null
+{% assign product = section.settings.product %}
+{% assign custom_colors = null %}
+{% assign part_number = '' %}
+{% assign clean_part_number = '' %}
+{% assign metaobject_handle = '' %}
+{% assign metaobject_test = null %}
+
+{% if product != null %}
+  {% comment %} Try to get metaobject handle from product metafield first {% endcomment %}
+  {% assign metaobject_handle = product.metafields.custom.colors_metaobject_handle %}
   
-  if product != null
-    # Try to get metaobject handle from product metafield first
-    assign metaobject_handle = product.metafields.custom.colors_metaobject_handle
+  {% comment %} If no metafield, try common patterns based on your examples {% endcomment %}
+  {% if metaobject_handle == blank %}
+    {% assign part_number = product.handle | split: '-' | first %}
+    {% comment %} Remove any 'c' suffix from part number and add it back with proper formatting {% endcomment %}
+    {% assign clean_part_number = part_number | remove: 'c' %}
     
-    # If no metafield, try common patterns based on your examples
-    if metaobject_handle == blank
-      assign part_number = product.handle | split: '-' | first
-      # Remove any 'c' suffix from part number and add it back with proper formatting
-      assign clean_part_number = part_number | remove: 'c'
-      
-      # Try different metaobject handle patterns based on part number
-      if clean_part_number == '8233'
-        # Only 8233 has its own individual metaobject
-        assign metaobject_handle = 'csf-s-58-level-up-manifold-custom-finishes-csf-' | append: clean_part_number | append: '-c'
-      else
-        # Everyone else uses the shared 8200/8300 metaobject
-        assign metaobject_handle = 'csf-b-58-super-manifold-custom-finishes-csf-8200-c-8300-c'
-      endif
-    endif
-    
-    # Try to fetch the custom colors - using direct access pattern
-    if metaobject_handle != blank
-      assign metaobject_test = shop.metaobjects.custom_colors[metaobject_handle]
-    endif
-  endif
--%}
+    {% comment %} Try different metaobject handle patterns based on part number {% endcomment %}
+    {% if clean_part_number == '8233' %}
+      {% comment %} Only 8233 has its own individual metaobject {% endcomment %}
+      {% assign metaobject_handle = 'csf-s-58-level-up-manifold-custom-finishes-csf-' | append: clean_part_number | append: '-c' %}
+    {% else %}
+      {% comment %} Everyone else uses the shared 8200/8300 metaobject {% endcomment %}
+      {% assign metaobject_handle = 'csf-b-58-super-manifold-custom-finishes-csf-8200-c-8300-c' %}
+    {% endif %}
+  {% endif %}
+  
+  {% comment %} Try to fetch the custom colors - using direct access pattern {% endcomment %}
+  {% if metaobject_handle != blank %}
+    {% assign metaobject_test = shop.metaobjects.custom_colors[metaobject_handle] %}
+  {% endif %}
+{% endif %}
 
 <div class="color-{{ section.settings.color_scheme }} gradient"{% if section.settings.anchor_id != blank %} id="{{ section.settings.anchor_id }}"{% endif %}>
   <div class="page-width section-{{ section.id }}-padding">
