@@ -78,12 +78,11 @@
         <p>No custom colors found for {{ product.title }}</p>
         {% if metaobject_test != blank %}
           <p><small>Found metaobject: {{ metaobject_handle }}</small></p>
-          <p><small>Available fields:</small></p>
-          <ul>
-            {% for field in metaobject_test.system.fields %}
-              <li><small>{{ field.key }} ({{ field.type }})</small></li>
-            {% endfor %}
-          </ul>
+          <p><strong>Available fields:</strong></p>
+          {% for field in metaobject_test.system.fields %}
+            <p><strong>• {{ field.key }}</strong> ({{ field.type }})</p>
+            <p><small>Trying {{ field.key }}.value: {{ metaobject_test[field.key].value.size }} items</small></p>
+          {% endfor %}
           <p><small>Trying variant.value: {{ metaobject_test.variant.value.size }} items</small></p>
           <p><small>Trying variants.value: {{ metaobject_test.variants.value.size }} items</small></p>
           <p><small>Debug - custom_colors value: {{ custom_colors }}</small></p>
