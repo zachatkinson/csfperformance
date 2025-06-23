@@ -57,7 +57,7 @@
       <p><strong>DEBUG:</strong> Product assigned: {{ product.title | default: "❌ NO PRODUCT ASSIGNED" }}</p>
       <p><strong>Part number:</strong> {{ part_number }} → Clean: {{ clean_part_number }}</p>
       <p><strong>Metaobject handle:</strong> {{ metaobject_handle }}</p>
-      <p><strong>Metaobject found:</strong> {{ metaobject_test != blank }}</p>
+      <p><strong>Metaobject found:</strong> {% if metaobject_test != blank %}✅ YES{% else %}❌ NO{% endif %}</p>
       {% if metaobject_test != blank %}
         <p><strong>Variant count:</strong> {{ shop.metaobjects.custom_colors[metaobject_handle].variant.value.size }}</p>
       {% endif %}
