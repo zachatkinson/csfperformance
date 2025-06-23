@@ -107,6 +107,55 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_fU8nfh": {
+      "type": "rich-text",
+      "blocks": {
+        "text_WtetH3": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_ctMU7P": {
+          "type": "button",
+          "settings": {
+            "button_label": "See",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "text_WtetH3",
+        "button_ctMU7P"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_nMfRmD": {
+      "type": "custom-liquid",
+      "custom_css": [
+        "hr{margin: 0}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<hr>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "custom_colors_display_qLUKCY": {
       "type": "custom-colors-display",
       "name": "Custom Colors Display",
@@ -173,6 +222,8 @@
     "main",
     "173861739649cd6a4a",
     "custom_colors_display_Yhiw8n",
+    "rich_text_fU8nfh",
+    "custom_liquid_nMfRmD",
     "custom_colors_display_qLUKCY",
     "custom_colors_display_C7zzWk",
     "custom_colors_display_kVgm9b",
