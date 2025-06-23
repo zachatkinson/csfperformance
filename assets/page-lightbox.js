@@ -13,8 +13,119 @@ class PageLightbox {
     
     console.log('PageLightbox: Constructor called');
     
+    // BEST PRACTICE: Early exit pattern - check mobile restrictions before any initialization
+    if (this.shouldSkipLightboxOnMobile()) {
+      console.log('PageLightbox: 📱 Skipped on mobile device for this page type (preserving native scroll behavior)');
+      return; // Exit completely - no lightbox overhead
+    }
+    
     // Use a more robust initialization approach
     this.initializeWhenReady();
+  }
+
+  // BEST PRACTICE: Robust device and page detection
+  shouldSkipLightboxOnMobile() {
+    const deviceInfo = this.getDeviceInfo();
+    const pageInfo = this.getPageInfo();
+    
+    console.log('PageLightbox: Device detection -', deviceInfo);
+    console.log('PageLightbox: Page detection -', pageInfo);
+    
+    // Only skip on mobile phones (not tablets) and only on non-custom-finishes pages
+    const shouldSkip = deviceInfo.isMobilePhone && !pageInfo.isCustomFinishesPage;
+    
+    if (shouldSkip) {
+      console.log('PageLightbox: 🚫 Skipping - Mobile phone on', pageInfo.pageType, 'page');
+    } else {
+      console.log('PageLightbox: ✅ Proceeding - Device:', deviceInfo.deviceType, 'Page:', pageInfo.pageType);
+    }
+    
+    return shouldSkip;
+  }
+
+  getDeviceInfo() {
+    // BEST PRACTICE: Multi-signal device detection for accuracy
+    const userAgent = navigator.userAgent.toLowerCase();
+    const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const screenWidth = window.innerWidth || document.documentElement.clientWidth;
+    
+    // Mobile phone detection (conservative approach)
+    const isMobilePhone = (
+      screenWidth < 768 && // Small screen
+      hasTouch && // Touch capability
+      (
+        /android.*mobile|iphone|ipod|blackberry|opera mini|iemobile|windows phone/i.test(userAgent) ||
+        (screenWidth < 480) // Very small screen is likely mobile
+      )
+    );
+    
+    // Tablet detection
+    const isTablet = (
+      screenWidth >= 768 && 
+      screenWidth < 1024 && 
+      hasTouch &&
+      !/android.*mobile|iphone|ipod/i.test(userAgent) // Exclude mobile phones
+    ) || /ipad|android(?!.*mobile)|tablet/i.test(userAgent);
+    
+    const isDesktop = !isMobilePhone && !isTablet;
+    
+    // Determine device type
+    let deviceType = 'desktop';
+    if (isMobilePhone) deviceType = 'mobile';
+    else if (isTablet) deviceType = 'tablet';
+    
+    return {
+      isMobilePhone,
+      isTablet,
+      isDesktop,
+      deviceType,
+      screenWidth,
+      hasTouch,
+      userAgent: userAgent.substring(0, 50) + '...' // Truncated for logging
+    };
+  }
+
+  getPageInfo() {
+    // BEST PRACTICE: Multiple detection methods with fallbacks
+    const url = window.location.pathname.toLowerCase();
+    const bodyClass = document.body.className.toLowerCase();
+    const pageTitle = document.title.toLowerCase();
+    
+    // Detect custom finishes page using multiple signals
+    const isCustomFinishesPage = (
+      url.includes('custom-finishes') ||
+      url.includes('custom-finish') ||
+      url.includes('finishes') ||
+      bodyClass.includes('custom-finishes') ||
+      bodyClass.includes('custom-finish') ||
+      pageTitle.includes('custom finish') ||
+      pageTitle.includes('custom finishes') ||
+      // Shopify template detection
+      bodyClass.includes('template--page--custom') ||
+      document.querySelector('[data-page*="custom"]') !== null ||
+      document.querySelector('[data-page*="finish"]') !== null
+    );
+    
+    // Determine page type for logging
+    let pageType = 'unknown';
+    if (isCustomFinishesPage) {
+      pageType = 'custom-finishes';
+    } else if (url.includes('products/')) {
+      pageType = 'product';
+    } else if (url.includes('collections/')) {
+      pageType = 'collection';
+    } else if (url === '/' || url === '') {
+      pageType = 'home';
+    } else if (url.includes('pages/')) {
+      pageType = 'page';
+    }
+    
+    return {
+      isCustomFinishesPage,
+      pageType,
+      url: url.substring(0, 50) + (url.length > 50 ? '...' : ''), // Truncated for logging
+      bodyClass: bodyClass.substring(0, 100) + (bodyClass.length > 100 ? '...' : '') // Truncated for logging
+    };
   }
 
   initializeWhenReady() {
@@ -406,7 +517,7 @@ class PageLightbox {
       // Append to body
       document.body.appendChild(this.lightboxContainer);
     }
-    }
+  }
   
   handleSwipe() {
     const swipeThreshold = 50; // Minimum distance for a swipe
