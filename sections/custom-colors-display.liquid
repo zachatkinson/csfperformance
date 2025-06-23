@@ -59,20 +59,14 @@
       <p><strong>Metaobject handle:</strong> {{ metaobject_handle }}</p>
       <p><strong>Metaobject found:</strong> {% if metaobject_test != blank %}✅ YES{% else %}❌ NO{% endif %}</p>
       {% if metaobject_test != blank %}
-        <p><strong>Available fields:</strong></p>
-        <ul>
-          {% for field in metaobject_test.system.fields %}
-            <li><strong>{{ field.key }}</strong> ({{ field.type }})</li>
-          {% endfor %}
-        </ul>
+        <p><strong>Raw metaobject dump:</strong></p>
+        <div style="background: #f5f5f5; padding: 10px; font-family: monospace; font-size: 11px; max-height: 300px; overflow-y: auto;">
+          {{ metaobject_test }}
+        </div>
         
-        {% comment %} Test common field names {% endcomment %}
-        <p><strong>Testing field access:</strong></p>
-        <p>• custom_finishes: {% if metaobject_test.custom_finishes %}✅{% else %}❌{% endif %}</p>
-        <p>• finishes: {% if metaobject_test.finishes %}✅{% else %}❌{% endif %}</p>
-        <p>• images: {% if metaobject_test.images %}✅{% else %}❌{% endif %}</p>
-        <p>• colors: {% if metaobject_test.colors %}✅{% else %}❌{% endif %}</p>
-        <p>• variant: {% if metaobject_test.variant %}✅{% else %}❌{% endif %}</p>
+        <p><strong>Metaobject ID:</strong> {{ metaobject_test.id }}</p>
+        <p><strong>Metaobject Type:</strong> {{ metaobject_test.type }}</p>
+        <p><strong>Metaobject Handle:</strong> {{ metaobject_test.handle }}</p>
       {% endif %}
       
       
