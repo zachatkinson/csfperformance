@@ -101,6 +101,12 @@ class PageLightbox {
           return false;
         }
         
+        // Skip images that are wrapped in links (should work as links, not lightbox)
+        if (img.closest('a')) {
+          console.log('PageLightbox: Skipping linked image (preserving link behavior):', img.src);
+          return false;
+        }
+        
         return true;
       })
       .map((img, index) => ({
