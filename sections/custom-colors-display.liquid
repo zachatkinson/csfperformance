@@ -56,25 +56,25 @@
       
       {% comment %} MINIMAL TEST - Exact working pattern {% endcomment %}
       {% if product != null %}
-        <h4>🔍 DEBUGGING - Product: {{ product.title }}</h4>
-        <p>• Total variants: {{ product.variants.size }}</p>
-        <p>• Variants with images: {{ product.variants | where: 'image' | size }}</p>
-        <p>• First 5 variant titles:</p>
-        <ul>
-          {% for variant in product.variants limit: 5 %}
-            <li>{{ variant.title }} {% if variant.image %}✅ Has Image{% else %}❌ No Image{% endif %}</li>
-          {% endfor %}
-        </ul>
-        
-        <h4>🎨 Testing Product Variants as Custom Colors:</h4>
         <div class="media-grid-6">
-          {% for variant in product.variants limit: 6 %}
-            {% if variant.image and variant.title != 'Default Title' %}
-              <div>
-                <img src="{{ variant.image | image_url: width: 300 }}" alt="{{ variant.title | escape }}" loading="lazy" width="300" height="auto" />
-                <h5>{{ variant.title }}</h5>
-              </div>
-            {% endif %}
+          {% for variant in product.variants %}
+            {% unless variant.title contains 'Select a Finish' or variant.title == 'Default Title' %}
+              {% if variant.image %}
+                <div>
+                  <img 
+                    src="{{ variant.image | image_url: width: 600 }}" 
+                    alt="{{ variant.title | escape }}" 
+                    loading="lazy"
+                    width="600"
+                    height="auto"
+                  />
+                  <h4 class="inline-richtext">{{ variant.title }}</h4>
+                  {% if variant.price > product.price %}
+                    <p class="price">+{{ variant.price | minus: product.price | money }}</p>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endunless %}
           {% endfor %}
         </div>
       {% else %}
