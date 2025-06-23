@@ -30,12 +30,11 @@
       
       # Try different metaobject handle patterns based on part number
       if clean_part_number == '8233'
+        # Only 8233 has its own individual metaobject
         assign metaobject_handle = 'csf-s-58-level-up-manifold-custom-finishes-csf-' | append: clean_part_number | append: '-c'
-      elsif clean_part_number == '8200' or clean_part_number == '8300'
-        assign metaobject_handle = 'csf-b-58-super-manifold-custom-finishes-csf-8200-c-8300-c'
       else
-        # Default pattern for other products
-        assign metaobject_handle = 'csf-s-58-level-up-manifold-custom-finishes-csf-' | append: clean_part_number | append: '-c'
+        # Everyone else uses the shared 8200/8300 metaobject
+        assign metaobject_handle = 'csf-b-58-super-manifold-custom-finishes-csf-8200-c-8300-c'
       endif
     endif
     
