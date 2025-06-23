@@ -56,23 +56,27 @@
       
       {% comment %} MINIMAL TEST - Exact working pattern {% endcomment %}
       {% if product != null %}
-        {% if clean_part_number == '8233' %}
-          <h4>Testing 8233 - Field Name Tests:</h4>
-          {% assign test_obj = shop.metaobjects.custom_colors.csf-s-58-level-up-manifold-custom-finishes-csf-8233-c %}
-          <p>• variant.value: {{ test_obj.variant.value.size | default: "empty" }}</p>
-          <p>• custom_finishes.value: {{ test_obj.custom_finishes.value.size | default: "empty" }}</p>
-          <p>• finishes.value: {{ test_obj.finishes.value.size | default: "empty" }}</p>
-          <p>• images.value: {{ test_obj.images.value.size | default: "empty" }}</p>
-          <p>• colors.value: {{ test_obj.colors.value.size | default: "empty" }}</p>
-        {% else %}
-          <h4>Testing Others - Field Name Tests:</h4>
-          {% assign test_obj = shop.metaobjects.custom_colors.csf-b-58-super-manifold-custom-finishes-csf-8200-c-8300-c %}
-          <p>• variant.value: {{ test_obj.variant.value.size | default: "empty" }}</p>
-          <p>• custom_finishes.value: {{ test_obj.custom_finishes.value.size | default: "empty" }}</p>
-          <p>• finishes.value: {{ test_obj.finishes.value.size | default: "empty" }}</p>
-          <p>• images.value: {{ test_obj.images.value.size | default: "empty" }}</p>
-          <p>• colors.value: {{ test_obj.colors.value.size | default: "empty" }}</p>
-        {% endif %}
+        <h4>🔍 DEBUGGING - Product: {{ product.title }}</h4>
+        <p>• Total variants: {{ product.variants.size }}</p>
+        <p>• Variants with images: {{ product.variants | where: 'image' | size }}</p>
+        <p>• First 5 variant titles:</p>
+        <ul>
+          {% for variant in product.variants limit: 5 %}
+            <li>{{ variant.title }} {% if variant.image %}✅ Has Image{% else %}❌ No Image{% endif %}</li>
+          {% endfor %}
+        </ul>
+        
+        <h4>🎨 Testing Product Variants as Custom Colors:</h4>
+        <div class="media-grid-6">
+          {% for variant in product.variants limit: 6 %}
+            {% if variant.image and variant.title != 'Default Title' %}
+              <div>
+                <img src="{{ variant.image | image_url: width: 300 }}" alt="{{ variant.title | escape }}" loading="lazy" width="300" height="auto" />
+                <h5>{{ variant.title }}</h5>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
       {% else %}
         <p>Please select a product to display custom colors.</p>
       {% endif %}
