@@ -64,130 +64,198 @@ class PageLightbox {
       return;
     }
 
-    // Wait for all images to load before filtering
-    try {
-      const loadedImages = await this.waitForImagesToLoad(Array.from(allPageImages));
-      console.log('PageLightbox: All images loaded, proceeding with filtering');
-      
-      // Filter out images that are in product areas or too small
-      this.images = loadedImages.filter(img => {
-        // Skip images in excluded areas
-        for (const selector of excludeSelectors) {
-          if (img.closest(selector)) {
-            console.log('PageLightbox: Filtered out excluded image:', img.src, 'matched selector:', selector);
-            return false;
-          }
-        }
-        
-        // Skip SVG images (likely icons)
-        if (img.src.toLowerCase().endsWith('.svg')) {
-          console.log('PageLightbox: Filtered out SVG image:', img.src);
+    // Initialize with empty array and start progressive loading
+    this.images = [];
+    this.pendingImages = Array.from(allPageImages);
+    
+    // Filter out images that should be excluded
+    this.pendingImages = this.pendingImages.filter(img => {
+      // Skip images in excluded areas
+      for (const selector of excludeSelectors) {
+        if (img.closest(selector)) {
+          console.log('PageLightbox: Filtered out excluded image:', img.src, 'matched selector:', selector);
           return false;
         }
-        
-        // Get actual dimensions - handle cases where naturalWidth/Height are available
-        const width = img.naturalWidth || img.width || 0;
-        const height = img.naturalHeight || img.height || 0;
-        
-        // Skip if image is too small or failed to load
-        // But be more lenient with timeout images that might have valid URLs
-        if (width < 150 || height < 150) {
-          // For images that timed out but have reasonable URLs, give them a second chance
-          if (width === 178 && height === 0 && img.src.includes('cdn.shopify.com') && 
-              (img.src.includes('width=600') || img.src.includes('width=760'))) {
-            console.log('PageLightbox: Keeping timed out Shopify image with URL width parameter:', img.src);
-            return true;
-          }
-          console.log('PageLightbox: Filtered out small image:', img.src, 'dimensions:', width, 'x', height);
-          return false;
-        }
-        
-        console.log('PageLightbox: Keeping image:', img.src, 'dimensions:', width, 'x', height);
-        return true;
-      });
-      
-      console.log('PageLightbox: After filtering,', this.images.length, 'images remain');
-      
-      // If no suitable images found, don't initialize
-      if (this.images.length === 0) {
-        console.log('PageLightbox: No suitable images found after filtering, not initializing');
-        return;
       }
       
-      // Create the lightbox container
-      this.createLightbox();
+      // Skip SVG images (likely icons)
+      if (img.src.toLowerCase().endsWith('.svg')) {
+        console.log('PageLightbox: Filtered out SVG image:', img.src);
+        return false;
+      }
       
-      // Add click event listeners to images
-      this.addImageEventListeners();
-      
+      return true;
+    });
+    
+    console.log('PageLightbox: After initial filtering,', this.pendingImages.length, 'images to process');
+    
+    if (this.pendingImages.length === 0) {
+      console.log('PageLightbox: No suitable images found after filtering, not initializing');
+      return;
+    }
+
+    // Create the lightbox container immediately
+    this.createLightbox();
+    
+    // Start progressive loading - check images that are already loaded first
+    this.processImmediatelyAvailableImages();
+    
+    // Then start loading the rest progressively
+    this.startProgressiveImageLoading();
+    
+    console.log('PageLightbox: Progressive initialization started');
+  }
+
+  processImmediatelyAvailableImages() {
+    const readyImages = [];
+    const stillLoadingImages = [];
+    
+    this.pendingImages.forEach(img => {
+      if (img.complete && img.naturalWidth > 0) {
+        // Image is already loaded and has dimensions
+        if (this.isImageSuitableForLightbox(img)) {
+          readyImages.push(img);
+        }
+      } else {
+        stillLoadingImages.push(img);
+      }
+    });
+    
+    // Add immediately available images to lightbox
+    if (readyImages.length > 0) {
+      this.addImagesToLightbox(readyImages);
+      console.log('PageLightbox: Added', readyImages.length, 'immediately available images');
+    }
+    
+    // Update pending list
+    this.pendingImages = stillLoadingImages;
+    
+    // If we have enough images already, mark as initialized
+    if (this.images.length > 0) {
       this.initialized = true;
-      console.log('PageLightbox: Initialization complete');
-      
-    } catch (error) {
-      console.error('PageLightbox: Error during initialization:', error);
+      console.log('PageLightbox: Lightbox ready with', this.images.length, 'images (more may be added progressively)');
     }
   }
 
-  waitForImagesToLoad(images) {
-    console.log('PageLightbox: Waiting for', images.length, 'images to load');
+  startProgressiveImageLoading() {
+    if (this.pendingImages.length === 0) {
+      console.log('PageLightbox: All images processed');
+      return;
+    }
     
-    const imagePromises = images.map((img, index) => {
-      return new Promise((resolve) => {
-        // If image is already complete or has no src, resolve immediately
-        if (img.complete || !img.src) {
-          console.log(`PageLightbox: Image ${index + 1} already loaded:`, img.src);
-          resolve(img);
-          return;
+    console.log('PageLightbox: Starting progressive loading for', this.pendingImages.length, 'remaining images');
+    
+    // Process images in batches to avoid overwhelming the browser
+    const batchSize = 10;
+    let currentBatch = 0;
+    
+    const processBatch = () => {
+      const startIdx = currentBatch * batchSize;
+      const endIdx = Math.min(startIdx + batchSize, this.pendingImages.length);
+      const batch = this.pendingImages.slice(startIdx, endIdx);
+      
+      if (batch.length === 0) {
+        console.log('PageLightbox: Progressive loading complete');
+        return;
+      }
+      
+      // Process this batch
+      const batchPromises = batch.map(img => this.waitForImageToLoad(img));
+      
+      Promise.all(batchPromises).then(loadedImages => {
+        const validImages = loadedImages.filter(img => this.isImageSuitableForLightbox(img));
+        
+        if (validImages.length > 0) {
+          this.addImagesToLightbox(validImages);
+          console.log('PageLightbox: Added', validImages.length, 'images from batch', currentBatch + 1, '(total now:', this.images.length, ')');
         }
         
-        // Set up load and error handlers
-        const handleLoad = () => {
-          console.log(`PageLightbox: Image ${index + 1} loaded:`, img.src);
-          img.removeEventListener('load', handleLoad);
-          img.removeEventListener('error', handleError);
-          resolve(img);
-        };
-        
-        const handleError = () => {
-          console.log(`PageLightbox: Image ${index + 1} failed to load:`, img.src);
-          img.removeEventListener('load', handleLoad);
-          img.removeEventListener('error', handleError);
-          resolve(img); // Still resolve to include in filtering
-        };
-        
-        img.addEventListener('load', handleLoad);
-        img.addEventListener('error', handleError);
-        
-        // Fallback timeout in case image never fires load/error events
-        setTimeout(() => {
-          console.log(`PageLightbox: Image ${index + 1} timed out:`, img.src);
-          img.removeEventListener('load', handleLoad);
-          img.removeEventListener('error', handleError);
-          resolve(img);
-        }, 10000); // 10 second timeout for better reliability
+        // Process next batch
+        currentBatch++;
+        setTimeout(processBatch, 100); // Small delay to prevent blocking
       });
-    });
+    };
     
-    return Promise.all(imagePromises);
+    // Start processing batches
+    processBatch();
   }
 
-  addImageEventListeners() {
-    this.images.forEach(img => {
-      img.style.cursor = 'pointer';
+  waitForImageToLoad(img) {
+    return new Promise((resolve) => {
+      if (img.complete && img.naturalWidth > 0) {
+        resolve(img);
+        return;
+      }
       
-      // Add both click and touch events
-      img.addEventListener('click', (e) => {
-        console.log('PageLightbox: Image clicked:', img.src);
-        e.preventDefault();
-        this.openLightbox(img);
-      });
+      const handleLoad = () => {
+        img.removeEventListener('load', handleLoad);
+        img.removeEventListener('error', handleError);
+        resolve(img);
+      };
       
-      img.addEventListener('touchstart', (e) => {
-        console.log('PageLightbox: Image touched:', img.src);
-        e.preventDefault();
-        this.openLightbox(img);
-      }, { passive: false });
+      const handleError = () => {
+        img.removeEventListener('load', handleLoad);
+        img.removeEventListener('error', handleError);
+        resolve(img); // Still resolve to include in filtering
+      };
+      
+      img.addEventListener('load', handleLoad);
+      img.addEventListener('error', handleError);
+      
+      // Faster timeout for progressive loading
+      setTimeout(() => {
+        img.removeEventListener('load', handleLoad);
+        img.removeEventListener('error', handleError);
+        resolve(img);
+      }, 3000); // 3 second timeout per batch
     });
+  }
+
+  isImageSuitableForLightbox(img) {
+    // Get actual dimensions - handle cases where naturalWidth/Height are available
+    const width = img.naturalWidth || img.width || 0;
+    const height = img.naturalHeight || img.height || 0;
+    
+    // Skip if image is too small or failed to load
+    // But be more lenient with timeout images that might have valid URLs
+    if (width < 150 || height < 150) {
+      // For images that timed out but have reasonable URLs, give them a second chance
+      if (width === 178 && height === 0 && img.src.includes('cdn.shopify.com') && 
+          (img.src.includes('width=600') || img.src.includes('width=760'))) {
+        console.log('PageLightbox: Keeping timed out Shopify image with URL width parameter:', img.src);
+        return true;
+      }
+      return false;
+    }
+    
+    return true;
+  }
+
+  addImagesToLightbox(newImages) {
+    newImages.forEach(img => {
+      // Avoid duplicates
+      if (!this.images.includes(img)) {
+        this.images.push(img);
+        this.addImageEventListeners(img);
+      }
+    });
+  }
+
+  addImageEventListeners(img) {
+    img.style.cursor = 'pointer';
+    
+    // Add both click and touch events
+    img.addEventListener('click', (e) => {
+      console.log('PageLightbox: Image clicked:', img.src);
+      e.preventDefault();
+      this.openLightbox(img);
+    });
+    
+    img.addEventListener('touchstart', (e) => {
+      console.log('PageLightbox: Image touched:', img.src);
+      e.preventDefault();
+      this.openLightbox(img);
+    }, { passive: false });
   }
   
   createLightbox() {
