@@ -136,7 +136,7 @@
       "settings": {
         "product": "8178-bmw-f9x-m5-m8-twin-charge-air-cooler-set",
         "heading": "BMW F9X M5/M8 & X5m/X6m/XM Charge Air Cooler Custom Finishes (CSF #8178 / #8315)",
-        "anchor_id": "",
+        "anchor_id": "8178-8315-finishes",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
@@ -148,7 +148,7 @@
       "settings": {
         "product": "8082r-f8x-m3-m4-m2-comp-top-mount-charge-air-cooler-raw-finish",
         "heading": "BMW F8X M3/M4/M2C Charge Air Cooler Custom Finishes (CSF #8082R)",
-        "anchor_id": "",
+        "anchor_id": "8082-finishes",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
@@ -160,7 +160,7 @@
       "settings": {
         "product": "8109r-bmw-f1x-m5-m6-twin-charge-air-cooler-set-raw-finish",
         "heading": "BMW F1X M5/M6 Charge Air Cooler Custom Finishes (CSF #8109R)",
-        "anchor_id": "",
+        "anchor_id": "8109-finishes",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
