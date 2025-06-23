@@ -59,7 +59,14 @@
       <p><strong>Metaobject handle:</strong> {{ metaobject_handle }}</p>
       <p><strong>Metaobject found:</strong> {% if metaobject_test != blank %}✅ YES{% else %}❌ NO{% endif %}</p>
       {% if metaobject_test != blank %}
-        <p><strong>Variant count:</strong> {{ shop.metaobjects.custom_colors[metaobject_handle].variant.value.size }}</p>
+        {% assign variant_field = metaobject_test.variant %}
+        {% if variant_field != blank %}
+          {% assign variant_value = variant_field.value %}
+          <p><strong>Variant count:</strong> {{ variant_value.size }}</p>
+          <p><strong>First variant test:</strong> {{ variant_value[0].title | default: "No title found" }}</p>
+        {% else %}
+          <p><strong>Variant field:</strong> ❌ NOT FOUND</p>
+        {% endif %}
       {% endif %}
       
       
