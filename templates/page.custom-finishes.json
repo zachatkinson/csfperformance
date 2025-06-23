@@ -96,16 +96,6 @@
         "include_margins": true
       }
     },
-    "custom_liquid_tYN9Gr": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n    <!-- 8233 Liquid Section -->\n    <div class=\"rte\">\n        <h3>CSF S58 Level-Up Manifold Custom Finishes (CSF #8233C)</h3>\n        <div class=\"media-grid-6\">\n            {% for custom_colors in shop.metaobjects.custom_colors.csf-s-58-level-up-manifold-custom-finishes-csf-8233-c.variant.value %}\n                {% if custom_colors!= blank %}\n                    <div>\n                        <img src=\"{{ custom_colors | image_url }}\"/>\n                        <h4 class=\"inline-richtext\">{{ custom_colors.title }}</h4>\n                    </div>\n                {% endif %}\n            {% endfor %}\n        </div>\n    </div>\n    <hr>\n    <!-- 8200 & 8300 Liquid Section -->\n    <div class=\"rte\">\n        <h3>CSF B58 \"SUPER\" Manifold Custom Finishes (CSF #8200C &amp; #8300C)</h3>\n        <div class=\"media-grid-6\">\n            {% for custom_colors in shop.metaobjects.custom_colors.csf-b-58-super-manifold-custom-finishes-csf-8200-c-8300-c.variant.value %}\n                {% if custom_colors!= blank %}\n                    <div>\n                        <img src=\"{{ custom_colors | image_url }}\"/>\n                        <h4 class=\"inline-richtext\">{{ custom_colors.title }}</h4>\n                    </div>\n                {% endif %}\n            {% endfor %}\n        </div>\n    </div>\n</div>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "custom_colors_display_Yhiw8n": {
       "type": "custom-colors-display",
       "settings": {
@@ -182,7 +172,6 @@
     "rich_text_bCCAmf",
     "main",
     "173861739649cd6a4a",
-    "custom_liquid_tYN9Gr",
     "custom_colors_display_Yhiw8n",
     "custom_colors_display_qLUKCY",
     "custom_colors_display_C7zzWk",
