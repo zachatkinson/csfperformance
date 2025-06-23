@@ -52,7 +52,8 @@
         <h3>{{ section.settings.heading }}</h3>
       {% endif %}
       
-
+      <p><strong>DEBUG:</strong> Product assigned: {{ product.title | default: "❌ NO PRODUCT ASSIGNED" }}</p>
+      
       
       {% if product != null and metaobject_test != blank %}
         <div class="media-grid-6">
