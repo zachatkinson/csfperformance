@@ -57,42 +57,41 @@
       
 
       
-      {% if product != null and custom_colors != null and custom_colors != empty %}
-        <div class="media-grid-6">
-          {% for custom_color in custom_colors %}
-            {% if custom_color != blank %}
-              <div>
-                <img 
-                  src="{{ custom_color | image_url: width: 600 }}" 
-                  alt="{{ custom_color.title | escape }}" 
-                  loading="lazy"
-                  width="600"
-                  height="auto"
-                /> 
-                <h4 class="inline-richtext">{{ custom_color.title }}</h4>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-      {% elsif product != null %}
-        <p>No custom colors found for {{ product.title }}</p>
-        {% if metaobject_test != blank %}
-          <p><small>Found metaobject: {{ metaobject_handle }}</small></p>
-          <p><strong>TRYING DIRECT FIELD ACCESS:</strong></p>
-          {% assign all_fields = metaobject_test.system.fields %}
-          <p>Fields count: {{ all_fields.size }}</p>
-          {% for field in all_fields %}
-            <p><strong>Field: {{ field.key }}</strong> ({{ field.type }})</p>
-            {% assign field_value = metaobject_test[field.key] %}
-            <p>Value: {{ field_value }}</p>
-            {% if field_value.value %}
-              <p>Value.value: {{ field_value.value }}</p>
-              <p>Value.value.size: {{ field_value.value.size }}</p>
-            {% endif %}
-            ---<br>
-          {% endfor %}
+      {% if product != null %}
+        {% comment %} Try variant-based approach first {% endcomment %}
+        {% assign custom_finish_variants = product.variants | where: 'available', true %}
+        {% assign display_variants = '' | split: '' %}
+        
+        {% for variant in custom_finish_variants %}
+          {% unless variant.title contains 'Default' or variant.title == 'Default Title' %}
+            {% assign display_variants = display_variants | append: variant %}
+          {% endunless %}
+        {% endfor %}
+        
+        {% if display_variants.size > 0 %}
+          <div class="media-grid-6">
+            {% for variant in display_variants limit: 12 %}
+              {% if variant.image %}
+                <div>
+                  <img 
+                    src="{{ variant.image | image_url: width: 600 }}" 
+                    alt="{{ variant.title | escape }}" 
+                    loading="lazy"
+                    width="600"
+                    height="auto"
+                  /> 
+                  <h4 class="inline-richtext">{{ variant.title }}</h4>
+                  {% if variant.price > product.price %}
+                    <p class="price">+{{ variant.price | minus: product.price | money }}</p>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <p><small>Showing {{ display_variants.size }} custom finish variants</small></p>
         {% else %}
-          <p><small>Could not find metaobject: custom_colors.{{ metaobject_handle }}</small></p>
+          <p>No custom finish variants found for {{ product.title }}</p>
+          <p><small>Total variants: {{ product.variants.size }}</small></p>
         {% endif %}
       {% else %}
         <p>Please select a product to display custom colors.</p>
