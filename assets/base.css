@@ -3633,6 +3633,7 @@ details-disclosure > details {
   font-style: var(--font-heading-style);
   font-size: calc(var(--font-heading-scale) * 1.6rem);
   padding: 0 0.2rem;
+  margin-top: 1rem;
 }
 
 .two-col-content-grid {
