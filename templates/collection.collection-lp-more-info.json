@@ -43,7 +43,7 @@
           "settings": {
             "button_label_1": "Learn more about CSF {{ collection.title }} Cooling Solutions",
             "button_link_1": "#LearnMore",
-            "button_style_secondary_1": true,
+            "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -56,7 +56,7 @@
       ],
       "custom_css": [
         ".banner__buttons {max-width: 80rem;}",
-        ".button {min-width: 35rem; color: rgb(255, 255, 255);}"
+        ".button {min-width: 35rem;}"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
