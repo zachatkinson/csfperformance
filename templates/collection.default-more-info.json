@@ -9,8 +9,62 @@
  */
 {
   "sections": {
+    "image_banner_M8G8Ci": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_fFVCiW": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_T4UJGj": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_73TaVh": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_fFVCiW",
+        "text_T4UJGj",
+        "buttons_73TaVh"
+      ],
+      "custom_css": [
+        ".banner__heading {text-shadow: #000 1px 0 10px;}",
+        ".banner__buttons {max-width: 80rem;}",
+        ".button {min-width: 35rem; background-color: rgba(var(--color-button), 90%); text-shadow: #000 1px 0 10px; font-weight: 500;}"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": true,
@@ -53,6 +107,7 @@
     }
   },
   "order": [
+    "image_banner_M8G8Ci",
     "banner",
     "product-grid",
     "custom_liquid_6QnPUk"
