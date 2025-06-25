@@ -55,7 +55,7 @@
       ],
       "custom_css": [
         ".banner__buttons {max-width: 80rem;}",
-        ".button {min-width: 25rem;}"
+        ".button {min-width: 25rem; background-color: rgba(var(--color-button), 90%); text-shadow: #000 1px 0 10px; font-weight: 500;}"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
