@@ -57,8 +57,7 @@
       "custom_css": [
         ".banner__heading {text-shadow: #000 1px 0 10px;}",
         ".banner__buttons {max-width: 80rem;}",
-        ".button {min-width: 35rem; background-color: rgba(var(--color-button), 80%); text-shadow: #000 1px 0 10px; font-weight: 500;}",
-        ".button:after {box-shadow: 0 0 0 calc(0) + var(--border-offset)) rgba(var(--color-button-text), var(--border-opacity)), 0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));}"
+        ".button {min-width: 35rem; background-color: rgba(var(--color-button), 90%); text-shadow: #000 1px 0 10px; font-weight: 500;}"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
