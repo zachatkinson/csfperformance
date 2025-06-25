@@ -54,6 +54,10 @@
         "heading_VHzkdE",
         "buttons_k3wgjd"
       ],
+      "custom_css": [
+        ".banner__buttons {max-width: 80rem;}",
+        ".button {min-width: 35rem;}"
+      ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "{{ collection.image }}",
