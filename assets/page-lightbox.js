@@ -401,6 +401,32 @@ class PageLightbox {
     lightboxImg.src = imageData.src;
     
     container.appendChild(lightboxImg);
+    
+    // Update caption
+    this.updateCaption(imageData);
+  }
+
+  updateCaption(imageData) {
+    const captionElement = this.lightboxContainer.querySelector('.page-lightbox__caption-text');
+    if (!captionElement) return;
+    
+    // Get caption from various sources (priority order)
+    const originalImg = this.imageRegistry[imageData.index].element;
+    const caption = 
+      originalImg.getAttribute('data-caption') || // Custom data attribute
+      originalImg.title ||                        // Title attribute
+      originalImg.alt ||                          // Alt text
+      '';                                         // Fallback to empty
+    
+    if (caption && caption.trim()) {
+      captionElement.textContent = caption.trim();
+      captionElement.parentElement.style.display = 'block';
+      console.log('PageLightbox: 📝 Showing caption:', caption.substring(0, 50) + (caption.length > 50 ? '...' : ''));
+    } else {
+      captionElement.textContent = '';
+      captionElement.parentElement.style.display = 'none';
+      console.log('PageLightbox: 📝 No caption available for image', imageData.index);
+    }
   }
 
   async navigate(direction) {
@@ -453,6 +479,11 @@ class PageLightbox {
       const imageContainer = document.createElement('div');
       imageContainer.className = 'page-lightbox__image-container';
       
+      // Create caption container
+      const captionContainer = document.createElement('div');
+      captionContainer.className = 'page-lightbox__caption';
+      captionContainer.innerHTML = '<span class="page-lightbox__caption-text"></span>';
+      
       // Always create navigation buttons (we'll show/hide based on registry length)
       const prevButton = document.createElement('button');
       prevButton.className = 'page-lightbox__nav page-lightbox__nav--prev';
@@ -482,6 +513,7 @@ class PageLightbox {
       this.lightboxContainer.appendChild(nextButton);
       this.lightboxContainer.appendChild(closeButton);
       this.lightboxContainer.appendChild(imageContainer);
+      this.lightboxContainer.appendChild(captionContainer);
       
       // Add keyboard navigation
       document.addEventListener('keydown', (e) => {
