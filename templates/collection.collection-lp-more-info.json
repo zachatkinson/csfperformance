@@ -55,7 +55,6 @@
         "buttons_k3wgjd"
       ],
       "custom_css": [
-        ".banner {max-width: 120rem; margin: 0 auto;}",
         ".banner__heading {text-shadow: #000 1px 0 10px;}",
         ".banner__buttons {max-width: 80rem;}",
         ".button {min-width: 35rem; background-color: rgba(var(--color-button), 90%); text-shadow: #000 1px 0 10px; font-weight: 500;}"
