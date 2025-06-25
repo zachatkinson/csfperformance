@@ -54,6 +54,7 @@
         "buttons_pMrCza"
       ],
       "custom_css": [
+        ".banner__heading {text-shadow: #000 1px 0 10px;}",
         ".banner__buttons {max-width: 80rem;}",
         ".button {min-width: 35rem;}"
       ],
