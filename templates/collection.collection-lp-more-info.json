@@ -1,0 +1,86 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "173021902287d8d74f": {
+      "type": "apps",
+      "blocks": {
+        "c_year_make_model_search_ymm_searchbox_mj8ahr": {
+          "type": "shopify://apps/c-year-make-model-search/blocks/ymm-searchbox/ce35ea35-ef50-4f43-8cb6-7c34cae4c285",
+          "settings": {
+            "searchbox_title": "Search by Year / Make / Model",
+            "searchbox_style": "horizontal"
+          }
+        }
+      },
+      "block_order": [
+        "c_year_make_model_search_ymm_searchbox_mj8ahr"
+      ],
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "custom_css": [],
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "hero_color_scheme": "scheme-3",
+        "body_color_scheme": ""
+      }
+    },
+    "custom_liquid_CATBdg": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".grid-template-columns {padding: 1em 0; align-items: center;}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "{% comment %}theme-check-disable ImgLazyLoading{% endcomment %}\n{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}\n\n{%- style -%}\n  .collection-hero--with-image .collection-hero__inner {\n  padding-bottom: calc({{ settings.media_shadow_vertical_offset | at_least: 0 }}px + 2rem);\n  }\n  .hero-wrap{\n  aspect-ratio: 3/1;\n  display: block;\n  }\n  .collection-hero{\n  background-image: url(\"{{ collection.image | image_url }}\");\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center;\n  position: relative;\n  aspect-ratio: 3/1;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  filter: brightness(0.75);\n  }\n  .collection-hero__title{\n  margin: 0;\n  text-shadow: #000 1px 0 10px;\n  font-size: 5rem;\n  }\n  @media screen and (min-width: 749px) {\n    .collection-hero{\n\n    }\n  }\n{%- endstyle -%}\n\n<div class=\"page-width color-{{ section.settings.body_color_scheme }}\">{{ collection.description }}</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "disabled": true,
+      "custom_css": [
+        "#product-grid {display: none;}",
+        "#main-collection-filters {display: none;}"
+      ],
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "173021902287d8d74f",
+    "banner",
+    "custom_liquid_CATBdg",
+    "product-grid"
+  ]
+}
