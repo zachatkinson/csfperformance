@@ -58,7 +58,7 @@
           "settings": {
             "image": "shopify://shop_images/custom-finishes-kadence-block.jpg",
             "side-link-alt-text": "Custom Finishes",
-            "side-link-url": "https://news.csfrace.com/csf_products/csf-custom-finishes/"
+            "side-link-url": "shopify://pages/csf-custom-finishes"
           }
         },
         "side_link_kcAT8Y": {
