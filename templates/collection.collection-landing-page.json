@@ -34,7 +34,7 @@
         "heading_Q8rrjm": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "{{ collection.title }}",
             "heading_size": "h1"
           }
         }
