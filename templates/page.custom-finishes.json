@@ -102,7 +102,7 @@
         "product": "8233c-bmw-s58-level-up-charge-air-cooler-manifold-custom-finish",
         "heading": "CSF S58 Level-Up Manifold Custom Finishes (CSF #8233C)",
         "anchor_id": "8233-finishes",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -138,23 +138,10 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "full_width": true,
         "padding_top": 0,
         "padding_bottom": 40
-      }
-    },
-    "custom_liquid_nMfRmD": {
-      "type": "custom-liquid",
-      "custom_css": [
-        "hr {margin: 0; padding: 0;}"
-      ],
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<hr>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "custom_colors_display_qLUKCY": {
@@ -164,7 +151,7 @@
         "product": "8400c-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-custom-finish",
         "heading": "CSF B58 \"Race X\" Manifold Custom Finishes (CSF #8400C)",
         "anchor_id": "8400-finishes",
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -175,7 +162,7 @@
         "product": "8200c-a90-supra-bmw-b58-charge-air-cooler-manifold-custom-finish",
         "heading": "CSF B58 \"SUPER\" Manifold Custom Finishes (CSF #8200C & #8300C)",
         "anchor_id": "8200-8300-finishes",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -187,7 +174,7 @@
         "product": "8178-bmw-f9x-m5-m8-twin-charge-air-cooler-set",
         "heading": "BMW F9X M5/M8 & X5m/X6m/XM Charge Air Cooler Custom Finishes (CSF #8178 / #8315)",
         "anchor_id": "8178-8315-finishes",
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -224,7 +211,6 @@
     "173861739649cd6a4a",
     "custom_colors_display_Yhiw8n",
     "rich_text_fU8nfh",
-    "custom_liquid_nMfRmD",
     "custom_colors_display_qLUKCY",
     "custom_colors_display_C7zzWk",
     "custom_colors_display_kVgm9b",
