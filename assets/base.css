@@ -3218,6 +3218,15 @@ details-disclosure > details {
   margin: -0.5rem 0 -0.5rem 0;
 }
 
+/* Button Styling - rte button color is temporary */
+.rte .button {
+  color: #000000;
+}
+
+.rte .button:hover {
+  color: rgb(var(--color-button-text));
+}
+
 /* Image mask global styles */
 
 .shape--mask {
