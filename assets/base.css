@@ -3718,11 +3718,11 @@ details-disclosure > details {
   }
   .media-grid{
     grid-template-columns: 1fr 1fr 1fr; 
-    column-gap: 3em;
+    column-gap: 1.5em;
   }
   .media-grid-4{
     grid-template-columns: 1fr 1fr 1fr 1fr; 
-    column-gap: 3em;
+    column-gap: 1.5em;
   }
   .media-grid-5 {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
