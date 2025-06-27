@@ -3219,6 +3219,10 @@ details-disclosure > details {
   margin: -0.5rem 0 -0.5rem 0;
 }
 
+/* Button Styling - rte button color is temporary */
+.rte .button {
+  color: rgb(var(--color-button-text));
+}
 
 .rte .button:hover {
   color: rgb(var(--color-button-text));
