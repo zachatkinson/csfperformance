@@ -708,6 +708,7 @@ summary::-webkit-details-marker {
 /* Default Background Image Code */
 .placeholder {
   background-image: url("https://csfrace.com/cdn/shop/files/CSF-Contact-Us-header_1.jpg") !important;
+  content: url("https://csfrace.com/cdn/shop/files/CSF-Contact-Us-header_1.jpg") !important;
   display: block;
   max-width: 100%;
   position: absolute;
