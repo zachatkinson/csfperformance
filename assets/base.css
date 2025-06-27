@@ -3220,11 +3220,11 @@ details-disclosure > details {
 }
 
 /* Custom Page Button Styling */
-.rte .button {
+.rte .button--primary {
   color: rgb(var(--color-button-text));
 }
 
-.rte .button:hover {
+.rte .button--primary:hover {
   color: rgb(var(--color-button-text));
 }
 
