@@ -3224,6 +3224,10 @@ details-disclosure > details {
   color: #000000;
 }
 
+.rte .press-release-button {
+  color: #FFFFFF;
+}
+
 .rte .button:hover {
   color: rgb(var(--color-button-text));
 }
