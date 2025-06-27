@@ -3219,7 +3219,7 @@ details-disclosure > details {
   margin: -0.5rem 0 -0.5rem 0;
 }
 
-/* Button Styling - rte button color is temporary */
+/* Custom Page Button Styling */
 .rte .button {
   color: rgb(var(--color-button-text));
 }
