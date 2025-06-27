@@ -708,6 +708,7 @@ summary::-webkit-details-marker {
 /* Default Background Image Code */
 .placeholder {
   content: url("https://cdn.shopify.com/s/files/1/0677/2893/3037/files/csf-placeholder-header.jpg");
+  filter: brightness(50%);
   display: block;
   max-width: 100%;
   position: absolute;
