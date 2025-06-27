@@ -712,7 +712,7 @@ summary::-webkit-details-marker {
 }
 
 .placeholder-svg {
-  display: none;
+  display: none !important;
 }
 
 /* End Default Background Image Code */
