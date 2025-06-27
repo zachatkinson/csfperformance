@@ -705,6 +705,11 @@ summary::-webkit-details-marker {
   width: 100%;
 }
 
+/* Testing Default Background Image */
+.placeholder-svg {
+  background-image: url("https://csfrace.com/cdn/shop/files/CSF-Contact-Us-header_1.jpg") !important;
+}
+
 /* base-focus */
 /*
   Focus ring - default (with offset)
