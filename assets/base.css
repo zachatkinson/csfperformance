@@ -716,6 +716,9 @@ summary::-webkit-details-marker {
   left: 0;
   height: 100%;
   width: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: opacity .4s cubic-bezier(.25,.46,.45,.94);
 }
 
 .placeholder-svg {
