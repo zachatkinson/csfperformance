@@ -706,7 +706,7 @@ summary::-webkit-details-marker {
 }
 
 /* Testing Default Background Image */
-.placeholder-svg {
+.placeholder {
   background-image: url("https://csfrace.com/cdn/shop/files/CSF-Contact-Us-header_1.jpg") !important;
   content: url("https://csfrace.com/cdn/shop/files/CSF-Contact-Us-header_1.jpg") !important;
 }
