@@ -41,7 +41,8 @@
         "* {font-size: 18px;}",
         "#cart-icon-bubble {display: none;}",
         ".header__icon--account {display: none;}",
-        ".header__icon--cart {display: none;}"
+        ".header__icon--cart {display: none;}",
+        "#HeaderMenu-products {color: #00c3ff;}"
       ],
       "settings": {
         "logo_position": "middle-left",
