@@ -3781,9 +3781,9 @@ html, body {
   display: none !important;
 }
 
-.product__info-container .press-release-button {
+.product__info-container .dealer-button {
   color: rgb(var(--color-button-text));
-  background-color: rgba(var(--color-button);
+  background-color: #000;
 }
 
 .jumplinkbox {
