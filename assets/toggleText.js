@@ -1,11 +1,11 @@
 function toggleText() {
     const points = document.getElementById("points");
-    const moreText = document.getElementById("moreText");
+    const HiddenTextmoreText = document.getElementById("HiddenTextmoreText");
     const button = document.getElementById("textButton");
   
-    const isHidden = moreText.style.display === "none";
+    const isHidden = HiddenTextmoreText.style.display === "none";
   
-    moreText.style.display = isHidden ? "inline" : "none";
+    HiddenTextmoreText.style.display = isHidden ? "inline" : "none";
     points.style.display = isHidden ? "none" : "inline";
     button.innerHTML = isHidden ? "Show Less" : "Show More";
  }
