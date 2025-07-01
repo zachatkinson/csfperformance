@@ -113,7 +113,7 @@
                                     {% assign featured_links = product.metafields.custom.featured_dealer_links %}
                                 
                                     {% for item in featured_links.value %}
-                                        <a href="{{ item.url }}" class="button button--full-width" target="_blank" style="color:white;">
+                                        <a href="{{ item.url }}" class="button button--full-width dealer-button" target="_blank" style="color:white;">
                                             Shop {{ item.text }}
                                         </a>
                                     {% endfor %}
