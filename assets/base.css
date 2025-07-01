@@ -3783,6 +3783,7 @@ html, body {
 
 .product__info-container .press-release-button {
   color: rgb(var(--color-button-text));
+  background-color: rgba(var(--color-button);
 }
 
 .jumplinkbox {
