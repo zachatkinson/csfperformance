@@ -3784,6 +3784,13 @@ html, body {
 .product__info-container .dealer-button {
   color: rgb(var(--color-button-text));
   background-color: #000;
+  border: 1px solid #000;
+}
+
+.product__info-container .dealer-button:hover {
+  color: #fff;
+  border: 1px solid #000;
+  outline: 1px solid #000;
 }
 
 .jumplinkbox {
