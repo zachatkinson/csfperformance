@@ -3809,3 +3809,8 @@ html, body {
   text-align: center;
   color: rgb(227, 42, 55);
 }
+
+/* Hidden Text Test */
+  #HiddenTextmoreText {
+    display: none;
+  }
