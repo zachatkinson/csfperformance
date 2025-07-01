@@ -96,6 +96,12 @@
                     {%- for block in section.blocks -%}
                         {%- case block.type -%}
                             {%- when 'featured-buttons' -%}
+                                {% if product.metafields.custom.press_release %}
+                                    <a href="{{product.metafields.custom.press_release.value}}" class="button button--full-width press-release-button" target="_blank">
+                                        Click Here for Complete Product Details
+                                    </a>
+                                    <hr />
+                                {% endif %}
                                 <h3>Where to buy</h3>
                                 {% if block.settings.show_dealer_button and product.vendor == 'CSF' %}
                                     <a href="/pages/dealer-distributor-locator" class="button button--full-width button--secondary">
@@ -111,12 +117,6 @@
                                             Shop {{ item.text }}
                                         </a>
                                     {% endfor %}
-                                      <hr />
-                                {% endif %}
-                                  {% if product.metafields.custom.press_release %}
-                                    <a href="{{product.metafields.custom.press_release.value}}" class="button button--full-width press-release-button" target="_blank">
-                                        Click Here for Complete Product Details
-                                    </a>
                                 {% endif %}
                             {%- when '@app' -%}
                                 {% render block %}
