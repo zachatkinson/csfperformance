@@ -1,7 +1,7 @@
 function toggleText() {
     const HiddenTextEllipsis = document.getElementById("HiddenTextEllipsis");
     const HiddenTextmoreText = document.getElementById("HiddenTextmoreText");
-    const button = document.getElementById("textButton");
+    const button = document.getElementById("HiddentextButton");
   
     const isHidden = HiddenTextmoreText.style.display === "none";
   
