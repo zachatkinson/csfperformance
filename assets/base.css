@@ -3793,6 +3793,11 @@ html, body {
   outline: 1px solid #000;
 }
 
+.product__info-container .dealer-button:after,
+.product__info-container .dealer-button:before {
+  display: none !important;
+}
+
 .jumplinkbox {
   border: 1px solid rgb(227, 42, 55);
   padding: 1rem 1rem 0rem 1rem;
