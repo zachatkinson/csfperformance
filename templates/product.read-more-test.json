@@ -102,7 +102,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"product-description-container\">\n  <div class=\"product-single__description rte\" id=\"product-description\">\n    {{ product.description }}\n  </div>\n  <button class=\"readmore\" style=\"text-decoration: underline;\">Read full description...</button>\n</div>",
+        "custom_liquid": "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js\" defer></script>\n<style>\n.product-description-container {\n  margin-bottom: 2rem;\n}\n</style>\n<div class=\"product-description-container\">\n  <div class=\"product-single__description rte\" id=\"product-description\">\n    {{ product.description }}\n  </div>\n  <button class=\"readmore\" style=\"text-decoration: underline;\">Read full description...</button>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
