@@ -3824,6 +3824,15 @@ html, body {
   text-decoration-thickness: 0.2rem !important;
 }
 
+.tiny-tabs-content a {
+  color: rgb(var(--color-link)) !important;
+}
+
+.tiny-tabs-content a:hover {
+  color: rgb(var(--color-link)) !important;
+  text-decoration-thickness: 0.2rem !important;
+}
+
 /* Hidden Text Test */
 #HiddenTextmoreText {
     display: none;
