@@ -46,10 +46,6 @@
             "show_dealer_button": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
         "share": {
           "type": "share",
           "settings": {
@@ -77,7 +73,6 @@
         "price",
         "variant_picker",
         "featured_buttons_NDDLN4",
-        "description",
         "share",
         "complementary_xqbWeQ"
       ],
