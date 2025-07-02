@@ -103,24 +103,6 @@
         "padding_bottom": 52
       }
     },
-    "1729277438619c2109": {
-      "type": "apps",
-      "blocks": {
-        "tinytabs_tabs_block_Enqkcf": {
-          "type": "shopify://apps/trusted-tabs/blocks/tabs-block/cd5da974-394e-41cb-b448-0c9a6d16a42d",
-          "settings": {
-            "css_selector": "",
-            "custom_css": "#tiny-tabs-global-wrapper{\nmax-width: 1100px;\nmargin-left: auto;\nmargin-right: auto;\npadding: 10px;\n}"
-          }
-        }
-      },
-      "block_order": [
-        "tinytabs_tabs_block_Enqkcf"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "product_custom_finishes_4P6ceq": {
       "type": "product-custom-finishes",
       "settings": {
@@ -164,7 +146,6 @@
   "order": [
     "main",
     "custom_liquid_8kNjYC",
-    "1729277438619c2109",
     "product_custom_finishes_4P6ceq",
     "related-products",
     "featured_articles_rCcKCX",
