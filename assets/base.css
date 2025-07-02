@@ -3816,12 +3816,12 @@ html, body {
 }
 
 .product__description a {
-  color: rgb(var(--color-link));
+  color: rgb(var(--color-link)) !important;
 }
 
 .product__description a:hover {
-  color: rgb(var(--color-link));
-  text-decoration-thickness: 0.2rem;
+  color: rgb(var(--color-link)) !important;
+  text-decoration-thickness: 0.2rem !important;
 }
 
 /* Hidden Text Test */
