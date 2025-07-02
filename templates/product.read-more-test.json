@@ -98,6 +98,16 @@
         "padding_bottom": 12
       }
     },
+    "custom_liquid_8kNjYC": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"product-description-container\">\n  <div class=\"product-single__description rte\" id=\"product-description\">\n    {{ product.description }}\n  </div>\n  <button class=\"readmore\" style=\"text-decoration: underline;\">Read full description...</button>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "1729277438619c2109": {
       "type": "apps",
       "blocks": {
@@ -158,6 +168,7 @@
   },
   "order": [
     "main",
+    "custom_liquid_8kNjYC",
     "1729277438619c2109",
     "product_custom_finishes_4P6ceq",
     "related-products",
