@@ -3825,6 +3825,7 @@ html, body {
 .product__description a:hover {
   color: rgb(var(--color-link));
   text-decoration-thickness: 0.2rem;
+  text-decoration: underline;
 }
 
 .tiny-tabs-content a {
