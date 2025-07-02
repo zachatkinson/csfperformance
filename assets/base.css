@@ -3811,6 +3811,12 @@ html, body {
 }
 
 /* Hidden Text Test */
-  #HiddenTextmoreText {
+#HiddenTextmoreText {
     display: none;
   }
+
+/* Hidden Text Read More */
+#product-description {
+  height: 92px;
+  overflow: hidden;
+}
