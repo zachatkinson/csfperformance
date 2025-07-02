@@ -3810,6 +3810,11 @@ html, body {
   color: rgb(227, 42, 55);
 }
 
+/* Product Description CSS */
+.product__description H2, H3, H4 {
+  margin: 1rem 0 0;
+}
+
 /* Hidden Text Test */
 #HiddenTextmoreText {
     display: none;
