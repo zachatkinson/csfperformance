@@ -3816,7 +3816,7 @@ html, body {
 }
 
 .product__description a {
-  color: rgba(var(--color-link), var(--alpha-link));
+  color: rgba(var(--color-link);
   text-decoration-thickness: 0.1rem;
   transition: text-decoration-thickness var(--duration-short) ease;
   text-decoration: none;
@@ -3828,7 +3828,7 @@ html, body {
 }
 
 .tiny-tabs-content a {
-  color: rgba(var(--color-link), var(--alpha-link));
+  color: rgba(var(--color-link);
   text-decoration-thickness: 0.1rem;
   transition: text-decoration-thickness var(--duration-short) ease;
   text-decoration: none;
