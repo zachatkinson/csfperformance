@@ -3837,6 +3837,7 @@ html, body {
 .tiny-tabs-content a:hover {
   color: rgb(var(--color-link));
   text-decoration-thickness: 0.2rem;
+  text-decoration: underline;
 }
 
 /* Hidden Text Test */
