@@ -3815,6 +3815,15 @@ html, body {
   margin: 1rem 0 0;
 }
 
+.product__description a {
+  color: rgb(var(--color-link));
+}
+
+.product__description a:hover {
+  color: rgb(var(--color-link));
+  text-decoration-thickness: 0.2rem;
+}
+
 /* Hidden Text Test */
 #HiddenTextmoreText {
     display: none;
