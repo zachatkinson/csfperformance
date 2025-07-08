@@ -22,10 +22,10 @@ function format_ymm_prd_prices() {
       var $titleLink = $details.find('.grid-view-item__title a').first();
       var productUrl = $titleLink.attr('href') || '#';
 
-      // Create the button HTML with improved styling
+      // Create the button HTML with no vertical padding and perfect centering
       var buttonHtml = `
-        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:70px; padding-top:8px; padding-bottom:18px;">
-          <a href="${productUrl}" class="button button--full-width ymm-inquire-vendor" style="width:100%; text-align:center; display:block; padding-top:6px; padding-bottom:14px; margin:0;">Inquire with Vendor</a>
+        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:56px;">
+          <a href="${productUrl}" class="button button--full-width ymm-inquire-vendor" style="width:100%; text-align:center; display:flex; align-items:center; justify-content:center; height:40px; min-height:40px; padding:0; margin:0;">Inquire with Vendor</a>
         </div>
       `;
       $priceSpan.html(buttonHtml);
