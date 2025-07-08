@@ -1267,3 +1267,27 @@ class BulkAdd extends HTMLElement {
 if (!customElements.get('bulk-add')) {
   customElements.define('bulk-add', BulkAdd);
 }
+
+// MutationObserver to re-init lightbox after Trusted Tabs changes content
+function setupLightboxTabObserver() {
+  const tabContentArea = document.querySelector('.tt-tabs__content');
+  if (!tabContentArea) return;
+
+  // Only set up one observer
+  if (window._lightboxTabObserver) return;
+  window._lightboxTabObserver = true;
+
+  const observer = new MutationObserver(() => {
+    if (window.pageLightbox && typeof window.pageLightbox.init === 'function') {
+      window.pageLightbox.init();
+    }
+  });
+
+  observer.observe(tabContentArea, { childList: true, subtree: true });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', setupLightboxTabObserver);
+} else {
+  setupLightboxTabObserver();
+}
