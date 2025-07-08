@@ -1268,12 +1268,12 @@ if (!customElements.get('bulk-add')) {
   customElements.define('bulk-add', BulkAdd);
 }
 
-// MutationObserver to re-init lightbox after Trusted Tabs changes content
+// --- Trusted Tabs + Lightbox Robust Integration ---
 function setupLightboxTabObserver() {
-  const tabContentArea = document.querySelector('.tt-tabs__content');
-  if (!tabContentArea) return;
+  // Use a stable parent container (e.g., main product section, main, or body)
+  const productMain = document.querySelector('.product') || document.querySelector('main') || document.body;
+  if (!productMain) return;
 
-  // Only set up one observer
   if (window._lightboxTabObserver) return;
   window._lightboxTabObserver = true;
 
@@ -1283,7 +1283,24 @@ function setupLightboxTabObserver() {
     }
   });
 
-  observer.observe(tabContentArea, { childList: true, subtree: true });
+  observer.observe(productMain, { childList: true, subtree: true });
+
+  // Also re-initialize on Trusted Tabs tab click (with a short delay)
+  function addTabClickListeners() {
+    document.querySelectorAll('.tt-tabs__tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        setTimeout(() => {
+          if (window.pageLightbox && typeof window.pageLightbox.init === 'function') {
+            window.pageLightbox.init();
+          }
+        }, 150); // slight delay to allow DOM update
+      });
+    });
+  }
+  addTabClickListeners();
+  // In case tabs are dynamically added later
+  const tabBtnObserver = new MutationObserver(addTabClickListeners);
+  tabBtnObserver.observe(productMain, { childList: true, subtree: true });
 }
 
 if (document.readyState === 'loading') {
