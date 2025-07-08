@@ -28,8 +28,15 @@ function format_ymm_prd_prices()
             ymm_comp_price = ymm_comp_price+" "+window.my_curr_code;
         }
 
+        var ymm_prd_price_raw = jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").attr("data-ymm-price");
+        var priceFloat = parseFloat(ymm_prd_price_raw);
+        if (ymm_prd_price_raw === "0.02" || ymm_prd_price_raw === "002" || priceFloat === 0.02) {
+            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html("");
+            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span[data-ymm-compare-price]").html("");
+        } else {
             jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(ymm_prd_price);
-        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span[data-ymm-compare-price]").html(ymm_comp_price);
+            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span[data-ymm-compare-price]").html(ymm_comp_price);
+        }
     } else {
         var ymm_prd_price = jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").attr("data-ymm-price"); 
         ymm_prd_price = Shopify.formatMoney(ymm_prd_price,ymm_money_format);
