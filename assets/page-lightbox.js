@@ -147,12 +147,12 @@ class PageLightbox {
   async init() {
     console.log('PageLightbox: init() called - using Hybrid Smart Loading');
     
-    // Only target images in product description on product pages
+    // Only target images in product description and tab panels on product pages
     const isProductPage = window.location.pathname.toLowerCase().includes('/products/');
     let allPageImages = [];
     if (isProductPage) {
-      allPageImages = document.querySelectorAll('.product__description img, .rte img');
-      console.log('PageLightbox: Product page detected, targeting only .product__description/.rte images:', allPageImages.length);
+      allPageImages = document.querySelectorAll('.tt-tabs__panel img, .product__description img, .rte img');
+      console.log('PageLightbox: Product page detected, targeting .tt-tabs__panel, .product__description, .rte images:', allPageImages.length);
     } else {
       // Fallback for other pages (optional, or keep as before)
       const pageContentSelectors = [
@@ -600,3 +600,6 @@ class PageLightbox {
 
 // Initialize the page lightbox with smart loading
 new PageLightbox(); 
+
+// Make the lightbox globally accessible
+window.pageLightbox = new PageLightbox(); 
