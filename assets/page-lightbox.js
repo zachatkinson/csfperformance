@@ -598,8 +598,5 @@ class PageLightbox {
   }
 }
 
-// Initialize the page lightbox with smart loading
-new PageLightbox(); 
-
-// Make the lightbox globally accessible
+// Initialize the page lightbox and make it globally accessible
 window.pageLightbox = new PageLightbox(); 
