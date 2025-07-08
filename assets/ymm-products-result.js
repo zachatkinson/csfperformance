@@ -27,20 +27,10 @@ function format_ymm_prd_prices()
             ymm_prd_price = ymm_prd_price+" "+window.my_curr_code;
             ymm_comp_price = ymm_comp_price+" "+window.my_curr_code;
         }
-
-        var ymm_prd_price_raw = jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").attr("data-ymm-price");
-        var priceFloat = parseFloat(ymm_prd_price_raw);
-        if (ymm_prd_price_raw === "0.02" || ymm_prd_price_raw === "002" || priceFloat === 0.02) {
-            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html("");
-            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span[data-ymm-compare-price]").html("");
-        } else {
-            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(ymm_prd_price);
-            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span[data-ymm-compare-price]").html(ymm_comp_price);
-        }
+        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(ymm_prd_price);
+        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span[data-ymm-compare-price]").html(ymm_comp_price);
     } else {
         var ymm_prd_price = jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").attr("data-ymm-price"); 
-        var ymm_prd_price_raw = ymm_prd_price;
-        var priceFloat = parseFloat(ymm_prd_price_raw);
         ymm_prd_price = Shopify.formatMoney(ymm_prd_price,ymm_money_format);
 
         //Currency format solution for XPF currency price having space separator - 786
@@ -52,13 +42,8 @@ function format_ymm_prd_prices()
         if(typeof dis_currency_with_code !== "undefined" &&dis_currency_with_code == "yes" && ymm_prd_price.indexOf(window.my_curr_code) == -1) {
           ymm_prd_price = ymm_prd_price+" "+window.my_curr_code;
         }
-        // Hide price if 0.02 or '002'
-        if (ymm_prd_price_raw === "0.02" || ymm_prd_price_raw === "002" || priceFloat === 0.02) {
-            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html("");
-        } else {
-            //price info displayed in card TEST
-            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html("<p class='ymm-render-price'>" + "<strong>" +ymm_prd_price + "</strong>" + " MAP" + "</p>");
-        }
+        //price info displayed in card TEST
+        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html("<p class='ymm-render-price'>" + "<strong>" +ymm_prd_price + "</strong>" + " MAP" + "</p>");
     }  
   });            
 }
