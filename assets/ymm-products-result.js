@@ -1,52 +1,65 @@
 /*** YMM Functions Start Here - 786 **/
 
 //Set YMM prices in store currency format - 786/ASK.
-function format_ymm_prd_prices()
-{
+function format_ymm_prd_prices() {
   jQuery("div[class*='ymm_price_box_']").each(function() {
-    var ymm_prd_id_str = jQuery(this).attr("class").split(' ');
+    var $priceBox = jQuery(this);
+    var ymm_prd_id_str = $priceBox.attr("class").split(' ');
     var ymm_prd_id_val = ymm_prd_id_str[1].replace("ymm_price_box_", "");
-    var ymm_prd_msrp = "MSRP"
-              
-    //Price - Sale price-786/ASK.
-    var ymm_comp_price = jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.comp_price").attr("data-ymm-compare-price");
-                
-    if (typeof ymm_comp_price !== "undefined") {
-		ymm_comp_price = Shopify.formatMoney(ymm_comp_price,ymm_money_format);
-        var ymm_prd_price = jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").attr("data-ymm-price"); 
-        ymm_prd_price = Shopify.formatMoney(ymm_prd_price,ymm_money_format);
+    var $priceSpan = $priceBox.find("span.ymm-product-price");
+    var ymm_prd_price_raw = $priceSpan.attr("data-ymm-price");
 
-        //Currency format solution for XPF currency price having space separator - 786
-        if(ymm_money_format.indexOf("amount_no_decimals_with_space_separator") != -1){
-            ymm_prd_price = ymm_prd_price.replace(/\./g, " ");
-            ymm_comp_price = ymm_comp_price.replace(/\./g, " ");
-        }
-                  
-        //If setting is set to display currency code in front of prices for e.g. "EUR" - 786 [Like "XPF" currency price value contains "XPF" in built then it will be double up, so prevent it] - 786
-        if(typeof dis_currency_with_code !== "undefined" && dis_currency_with_code == "yes" && ymm_prd_price.indexOf(window.my_curr_code) == -1) {
-            ymm_prd_price = ymm_prd_price+" "+window.my_curr_code;
-            ymm_comp_price = ymm_comp_price+" "+window.my_curr_code;
-        }
+    // Normalize price for comparison (handle "002", "0.02", 2, etc.)
+    var priceCents = parseInt(ymm_prd_price_raw, 10);
+    var priceFloat = parseFloat(ymm_prd_price_raw);
 
-            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(ymm_prd_price);
-        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span[data-ymm-compare-price]").html(ymm_comp_price);
+    // Check for 2 cents in various formats
+    var isTwoCents = (ymm_prd_price_raw === "002" || ymm_prd_price_raw === "0.02" || priceCents === 2 || priceFloat === 0.02);
+
+    if (isTwoCents) {
+      // Find the product page URL from the closest title link
+      var $details = $priceBox.closest('.ymm-product-details');
+      var $titleLink = $details.find('.grid-view-item__title a').first();
+      var productUrl = $titleLink.attr('href') || '#';
+
+      // Create the button HTML
+      var buttonHtml = '<a href="' + productUrl + '" class="button button--full-width ymm-inquire-vendor" style="margin-top:8px;display:inline-block;">Inquire with Vendor</a>';
+
+      // Replace the price with the button
+      $priceSpan.html(buttonHtml);
     } else {
-        var ymm_prd_price = jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").attr("data-ymm-price"); 
-        ymm_prd_price = Shopify.formatMoney(ymm_prd_price,ymm_money_format);
+      var ymm_prd_msrp = "MSRP";
+      var ymm_comp_price = $priceBox.find("span.comp_price").attr("data-ymm-compare-price");
 
-        //Currency format solution for XPF currency price having space separator - 786
-        if(ymm_money_format.indexOf("amount_no_decimals_with_space_separator") != -1){
+      if (typeof ymm_comp_price !== "undefined") {
+        ymm_comp_price = Shopify.formatMoney(ymm_comp_price, ymm_money_format);
+        var ymm_prd_price = $priceSpan.attr("data-ymm-price");
+        ymm_prd_price = Shopify.formatMoney(ymm_prd_price, ymm_money_format);
+
+        if (ymm_money_format.indexOf("amount_no_decimals_with_space_separator") != -1) {
+          ymm_prd_price = ymm_prd_price.replace(/\./g, " ");
+          ymm_comp_price = ymm_comp_price.replace(/\./g, " ");
+        }
+        if (typeof dis_currency_with_code !== "undefined" && dis_currency_with_code == "yes" && ymm_prd_price.indexOf(window.my_curr_code) == -1) {
+          ymm_prd_price = ymm_prd_price + " " + window.my_curr_code;
+          ymm_comp_price = ymm_comp_price + " " + window.my_curr_code;
+        }
+        $priceSpan.html(ymm_prd_price);
+        $priceBox.find("span[data-ymm-compare-price]").html(ymm_comp_price);
+      } else {
+        var ymm_prd_price = $priceSpan.attr("data-ymm-price");
+        ymm_prd_price = Shopify.formatMoney(ymm_prd_price, ymm_money_format);
+
+        if (ymm_money_format.indexOf("amount_no_decimals_with_space_separator") != -1) {
           ymm_prd_price = ymm_prd_price.replace(/\./g, " ");
         }
-                  
-        //If setting is set to display currency code in front of prices for e.g. "EUR" - 786 [Like "XPF" currency price value contains "XPF" in built then it will be double up, so prevent it] - 786
-        if(typeof dis_currency_with_code !== "undefined" &&dis_currency_with_code == "yes" && ymm_prd_price.indexOf(window.my_curr_code) == -1) {
-          ymm_prd_price = ymm_prd_price+" "+window.my_curr_code;
+        if (typeof dis_currency_with_code !== "undefined" && dis_currency_with_code == "yes" && ymm_prd_price.indexOf(window.my_curr_code) == -1) {
+          ymm_prd_price = ymm_prd_price + " " + window.my_curr_code;
         }
-        //price info displayed in card TEST
-        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html("<p class='ymm-render-price'>" + "<strong>" +ymm_prd_price + "</strong>" + " MAP" + "</p>");
-    }  
-  });            
+        $priceSpan.html("<p class='ymm-render-price'><strong>" + ymm_prd_price + "</strong> MAP</p>");
+      }
+    }
+  });
 }
 
 /*** 
