@@ -1,3 +1,5 @@
+// BEST PRACTICE: For async loading, ensure this script is included with <script src="{{ 'page-lightbox.js' | asset_url }}" async></script> or defer in your theme.liquid or relevant template.
+
 class PageLightbox {
   constructor() {
     this.lightboxContainer = null;
@@ -145,39 +147,50 @@ class PageLightbox {
   async init() {
     console.log('PageLightbox: init() called - using Hybrid Smart Loading');
     
-    // Find all images within page content areas only
-    const pageContentSelectors = [
-      '.rte img',
-      '.page-content img', 
-      '.page-width img',
-      'section[id^="page-"] img',
-      'section[id^="main-page"] img',
-      '.main-page-title + div img'
-    ];
+    // Only target images in product description on product pages
+    const isProductPage = window.location.pathname.toLowerCase().includes('/products/');
+    let allPageImages = [];
+    if (isProductPage) {
+      allPageImages = document.querySelectorAll('.product__description img, .rte img');
+      console.log('PageLightbox: Product page detected, targeting only .product__description/.rte images:', allPageImages.length);
+    } else {
+      // Fallback for other pages (optional, or keep as before)
+      const pageContentSelectors = [
+        '.rte img',
+        '.page-content img', 
+        '.page-width img',
+        'section[id^="page-"] img',
+        'section[id^="main-page"] img',
+        '.main-page-title + div img'
+      ];
+      const includeSelector = pageContentSelectors.join(', ');
+      allPageImages = document.querySelectorAll(includeSelector);
+      console.log('PageLightbox: Non-product page, using broader selectors:', allPageImages.length);
+    }
     
-    // Exclude product media and model grid
+    // Exclude product gallery images just in case
     const excludeSelectors = [
+      '.product__media-list img',
+      '.product__media-item img',
+      '.product-media-container img',
       'product-media img',
       '[data-media-id] img',
       '.product__media img',
-      '.product__media-item img',
       '.product-media-modal img',
       '.model-grid img'
     ];
+    // Filter out excluded images
+    const filteredImages = Array.from(allPageImages).filter(img => {
+      return !excludeSelectors.some(sel => img.closest(sel));
+    });
     
-    const includeSelector = pageContentSelectors.join(', ');
-    console.log('PageLightbox: Using include selector:', includeSelector);
-    
-    const allPageImages = document.querySelectorAll(includeSelector);
-    console.log('PageLightbox: Found', allPageImages.length, 'total images');
-    
-    if (allPageImages.length === 0) {
-      console.log('PageLightbox: No images found, not initializing');
+    if (filteredImages.length === 0) {
+      console.log('PageLightbox: No suitable images found, not initializing');
       return;
     }
 
     // PHASE 1: Instant Image Registry - Catalog ALL images immediately (no loading)
-    this.createImageRegistry(allPageImages, excludeSelectors);
+    this.createImageRegistry(filteredImages, []);
     
     if (this.imageRegistry.length === 0) {
       console.log('PageLightbox: No suitable images found after filtering');
