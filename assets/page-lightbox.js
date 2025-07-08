@@ -145,6 +145,20 @@ class PageLightbox {
   }
 
   async init() {
+    // Remove old listeners and clear registry/state
+    if (this.imageRegistry && this.imageRegistry.length) {
+      this.imageRegistry.forEach(imgData => {
+        if (imgData && imgData.img && imgData._lightboxHandler) {
+          imgData.img.removeEventListener('click', imgData._lightboxHandler);
+        }
+      });
+    }
+    this.imageRegistry = [];
+    this.loadedImages = new Map();
+    this.currentImage = null;
+    this.currentIndex = 0;
+    this.initialized = false;
+    
     console.log('PageLightbox: init() called - using Hybrid Smart Loading');
     
     // Only target images in product description and tab panels on product pages
@@ -260,21 +274,17 @@ class PageLightbox {
   }
 
   addEventListenersToRegistry() {
-    this.imageRegistry.forEach((entry, index) => {
-      const img = entry.element;
-      img.style.cursor = 'pointer';
-      
-      img.addEventListener('click', (e) => {
-        console.log('PageLightbox: Image clicked:', entry.src);
+    this.imageRegistry.forEach((imgData, idx) => {
+      // Remove any previous handler
+      if (imgData._lightboxHandler) {
+        imgData.img.removeEventListener('click', imgData._lightboxHandler);
+      }
+      // Add new handler
+      imgData._lightboxHandler = (e) => {
         e.preventDefault();
-        this.openLightboxAtIndex(index);
-      });
-      
-      img.addEventListener('touchstart', (e) => {
-        console.log('PageLightbox: Image touched:', entry.src);
-        e.preventDefault();
-        this.openLightboxAtIndex(index);
-      }, { passive: false });
+        this.openLightboxAtIndex(idx);
+      };
+      imgData.img.addEventListener('click', imgData._lightboxHandler);
     });
   }
 
