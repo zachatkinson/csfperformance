@@ -225,11 +225,20 @@
                             </p>
                         {%- endif -%}
                         <p>SKU: {{ card_product.selected_or_first_available_variant.sku }}</p>
-                        {% if  card_product.metafields.custom.msrp.value == card_product.price %}
+                        {% liquid
+                          assign price = card_product.price
+                          assign price_is_two_cents = false
+                          if price == 2 or price == 2.0 or price == 2.00 or price == 0.02 or price == 0.020 or price == 0.0200
+                            assign price_is_two_cents = true
+                          endif
+                        %}
+                        {% if price_is_two_cents %}
+                        <p><em>Contact Vendor for Pricing</em></p>
+                        {% elsif card_product.metafields.custom.msrp.value == card_product.price %}
                         <p><strong>{{ card_product.price | money_with_currency }}</strong> MSRP/MAP
-                            {% else %}
+                        {% else %}
                         <p><em>{{ card_product.metafields.custom.msrp.value | money_with_currency }} MSRP</em><br /><strong>{{ card_product.price | money }}</strong> USD MAP
-                            {% endif %}
+                        {% endif %}
                             {%- if card_product.quantity_price_breaks_configured? -%}
                                 {% if card_product.variants.size == 1 and quick_add == 'bulk' %}
                                     {% liquid
