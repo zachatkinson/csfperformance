@@ -13,37 +13,46 @@ function format_ymm_prd_prices()
                 
     if (typeof ymm_comp_price !== "undefined") {
 		ymm_comp_price = Shopify.formatMoney(ymm_comp_price,ymm_money_format);
-        var ymm_prd_price = jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").attr("data-ymm-price"); 
-        ymm_prd_price = Shopify.formatMoney(ymm_prd_price,ymm_money_format);
+        var ymm_prd_price_raw = jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").attr("data-ymm-price");
+        var ymm_prd_price = Shopify.formatMoney(ymm_prd_price_raw,ymm_money_format);
+        var priceFloat = parseFloat(ymm_prd_price_raw);
 
         //Currency format solution for XPF currency price having space separator - 786
         if(ymm_money_format.indexOf("amount_no_decimals_with_space_separator") != -1){
             ymm_prd_price = ymm_prd_price.replace(/\./g, " ");
             ymm_comp_price = ymm_comp_price.replace(/\./g, " ");
         }
-                  
         //If setting is set to display currency code in front of prices for e.g. "EUR" - 786 [Like "XPF" currency price value contains "XPF" in built then it will be double up, so prevent it] - 786
         if(typeof dis_currency_with_code !== "undefined" && dis_currency_with_code == "yes" && ymm_prd_price.indexOf(window.my_curr_code) == -1) {
             ymm_prd_price = ymm_prd_price+" "+window.my_curr_code;
             ymm_comp_price = ymm_comp_price+" "+window.my_curr_code;
         }
-        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(ymm_prd_price);
-        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span[data-ymm-compare-price]").html(ymm_comp_price);
+        // If price is 0.02, show Contact Vendor for Pricing
+        if (ymm_prd_price_raw === "0.02" || ymm_prd_price_raw === "002" || priceFloat === 0.02) {
+            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html("<em>Contact Vendor for Pricing</em>");
+            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span[data-ymm-compare-price]").html("");
+        } else {
+            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html(ymm_prd_price);
+            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span[data-ymm-compare-price]").html(ymm_comp_price);
+        }
     } else {
-        var ymm_prd_price = jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").attr("data-ymm-price"); 
-        ymm_prd_price = Shopify.formatMoney(ymm_prd_price,ymm_money_format);
-
+        var ymm_prd_price_raw = jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").attr("data-ymm-price");
+        var ymm_prd_price = Shopify.formatMoney(ymm_prd_price_raw,ymm_money_format);
+        var priceFloat = parseFloat(ymm_prd_price_raw);
         //Currency format solution for XPF currency price having space separator - 786
         if(ymm_money_format.indexOf("amount_no_decimals_with_space_separator") != -1){
           ymm_prd_price = ymm_prd_price.replace(/\./g, " ");
         }
-                  
         //If setting is set to display currency code in front of prices for e.g. "EUR" - 786 [Like "XPF" currency price value contains "XPF" in built then it will be double up, so prevent it] - 786
         if(typeof dis_currency_with_code !== "undefined" &&dis_currency_with_code == "yes" && ymm_prd_price.indexOf(window.my_curr_code) == -1) {
           ymm_prd_price = ymm_prd_price+" "+window.my_curr_code;
         }
-        //price info displayed in card TEST
-        jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html("<p class='ymm-render-price'>" + "<strong>" +ymm_prd_price + "</strong>" + " MAP" + "</p>");
+        // If price is 0.02, show Contact Vendor for Pricing
+        if (ymm_prd_price_raw === "0.02" || ymm_prd_price_raw === "002" || priceFloat === 0.02) {
+            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html("<em>Contact Vendor for Pricing</em>");
+        } else {
+            jQuery(".ymm_price_box_"+ymm_prd_id_val).find("span.ymm-product-price").html("<p class='ymm-render-price'>" + "<strong>" +ymm_prd_price + "</strong>" + " MAP" + "</p>");
+        }
     }  
   });            
 }
