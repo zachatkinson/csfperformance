@@ -159,15 +159,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://collections/ford-f150-raptor"
           }
-        },
-        "slide_j89VYC": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640__8317_copy.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350__8317_copy.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://products/8317-f1x-m5-m6-f9x-m5-m8-high-performance-engine-oil-cooler"
-          }
         }
       },
       "block_order": [
@@ -184,8 +175,7 @@
         "slide_WnayiF",
         "slide_HnqNxW",
         "slide_mizeRG",
-        "slide_qGb8Ac",
-        "slide_j89VYC"
+        "slide_qGb8Ac"
       ],
       "settings": {
         "include_margins": false,
