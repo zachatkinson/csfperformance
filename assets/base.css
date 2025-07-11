@@ -3890,8 +3890,8 @@ html, body {
     font-weight: 700;
     opacity: .3;
     position: absolute;
-    top: -.38em;
-    left: -.2em;    
+    bottom: -0.75em;
+    right: 0.1em;   
     text-shadow: none;
     z-index: -300;
 }
