@@ -3884,16 +3884,16 @@ html, body {
 }
 
 .testimonial-quote blockquote p:first-child:after {
-    content: '\201D';
-    color: #aaa;
-    font-size: 7.5em;
-    font-weight: 700;
-    opacity: .3;
-    position: absolute;
-    bottom: -0.8em;
-    right: 0.1em;   
-    text-shadow: none;
-    z-index: -300;
+  content: '\201D';
+  color: #aaa;
+  font-size: 7.5em;
+  font-weight: 700;
+  opacity: .3;
+  position: absolute;
+  bottom: -0.8em;
+  right: 0.1em;   
+  text-shadow: none;
+  z-index: -300;
 }
 
 .testimonial-quote img {
