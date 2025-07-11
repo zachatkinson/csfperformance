@@ -3883,6 +3883,19 @@ html, body {
   z-index: -300;
 }
 
+.testimonial-quote blockquote p:first-child:after {
+    content: '\201D';
+    color: #aaa;
+    font-size: 7.5em;
+    font-weight: 700;
+    opacity: .3;
+    position: absolute;
+    top: -.38em;
+    left: -.2em;    
+    text-shadow: none;
+    z-index: -300;
+}
+
 .testimonial-quote img {
   border: 3px solid #aaa;
   border-radius: 50%;
