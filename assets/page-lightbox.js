@@ -151,8 +151,8 @@ class PageLightbox {
     const isProductPage = window.location.pathname.toLowerCase().includes('/products/');
     let allPageImages = [];
     if (isProductPage) {
-      allPageImages = document.querySelectorAll('.tt-tabs__panel img, .product__description img, .rte img');
-      console.log('PageLightbox: Product page detected, targeting .tt-tabs__panel, .product__description, .rte images:', allPageImages.length);
+      allPageImages = document.querySelectorAll('.tt-tabs__panel img, .product__description img, .rte img, .finish-grid img');
+      console.log('PageLightbox: Product page detected, targeting .tt-tabs__panel, .product__description, .rte, .finish-grid images:', allPageImages.length);
     } else {
       // Fallback for other pages (optional, or keep as before)
       const pageContentSelectors = [

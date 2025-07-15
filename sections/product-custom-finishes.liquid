@@ -1,16 +1,26 @@
-{% if product.metafields.custom.custom_finishes %}
+{% if product.variants.size > 1 %}
 <div class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} color-{{ section.settings.color_scheme }}">
     <div class="{% if section.settings.include_margins %}page-width{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} yt-padding color-{{ section.settings.color_scheme }}">
 
     <h2>Custom Finish Gallery</h2>
-    {% assign finishes = product.metafields.custom.custom_finishes %}
     <div class="finish-grid">
-            {% for finish in finishes.value %}
-                <div class="finish-wrapper">
-                        <img src="{{ finish.url }}" alt="{{ finish.text }}" class="img-responsive"/>
-                        <p>{{ finish.text }}</p>
-                </div>
-            {% endfor %}
+        {% for variant in product.variants %}
+            {% unless variant.title contains 'Select a Finish' or variant.title == 'Default Title' %}
+                {% if variant.image %}
+                    <div class="finish-wrapper">
+                        <img 
+                            src="{{ variant.image | image_url: width: 600 }}" 
+                            alt="{{ variant.title | escape }}" 
+                            class="img-responsive"
+                            loading="lazy"
+                            width="600"
+                            height="auto"
+                        />
+                        <p>{{ variant.title }}</p>
+                    </div>
+                {% endif %}
+            {% endunless %}
+        {% endfor %}
     </div>
 </div>
 </div>
@@ -50,6 +60,11 @@
 }
 .img-responsive{
     width: 100%;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.img-responsive:hover {
+    opacity: 0.8;
 }
 @media screen and (min-width: 611px) {
     .finish-grid{

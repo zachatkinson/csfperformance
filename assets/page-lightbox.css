@@ -236,7 +236,8 @@
 .page-width img,
 section[id^="page-"] img,
 section[id^="main-page"] img,
-.main-page-title + div img {
+.main-page-title + div img,
+.finish-grid img {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -245,7 +246,8 @@ section[id^="main-page"] img,
 .page-width img:hover,
 section[id^="page-"] img:hover,
 section[id^="main-page"] img:hover,
-.main-page-title + div img:hover {
+.main-page-title + div img:hover,
+.finish-grid img:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 } 
