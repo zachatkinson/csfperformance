@@ -97,6 +97,15 @@
             "slide-url": "shopify://products/8325-porsche-964-993-oem-performance-a-c-condenser"
           }
         },
+        "slide_TRrWtF": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640_8285_8285B.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350_8285_8285B.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://products/8285-toyota-gr-corolla-stepped-core-intercooler-silver"
+          }
+        },
         "slide_A7rMUd": {
           "type": "slide",
           "settings": {
@@ -169,6 +178,7 @@
         "side_link_zVYVAY",
         "side_link_apd7xy",
         "slide_CDkmid",
+        "slide_TRrWtF",
         "slide_A7rMUd",
         "slide_TfcfhV",
         "slide_MDmQpw",
