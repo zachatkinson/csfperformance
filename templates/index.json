@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_hUxYke": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640__8094___8095___8303_copy.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350__8094___8095___8303_copy.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://collections/ford-f150-raptor"
+          }
+        },
         "slide_CDkmid": {
           "type": "slide",
           "settings": {
@@ -159,15 +168,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://products/7237-mk6-ford-fiesta-st-high-performance-all-aluminum-radiator"
           }
-        },
-        "slide_qGb8Ac": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640__8101_8102_copy.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350__8101_8102_copy.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://collections/ford-f150-raptor"
-          }
         }
       },
       "block_order": [
@@ -177,6 +177,7 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_hUxYke",
         "slide_CDkmid",
         "slide_TRrWtF",
         "slide_A7rMUd",
@@ -184,8 +185,7 @@
         "slide_MDmQpw",
         "slide_WnayiF",
         "slide_HnqNxW",
-        "slide_mizeRG",
-        "slide_qGb8Ac"
+        "slide_mizeRG"
       ],
       "settings": {
         "include_margins": false,
