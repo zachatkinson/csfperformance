@@ -23,6 +23,8 @@
 
   assign compare_at_price = target.compare_at_price
   assign price = target.price | default: 1999
+  assign variant_msrp_price = compare_at_price | money
+  assign map_price = price | money
   assign price_min = product.price_min
   assign price_max = product.price_max
   assign available = target.available | default: false
@@ -33,6 +35,8 @@
     assign money_price = price | money_with_currency
     assign money_price_min = price_min | money_with_currency
     assign money_price_max = price_max | money_with_currency
+    assign variant_msrp_price = compare_at_price | money_with_currency
+    assign map_price = price | money_with_currency
   endif
 
   if target == product and product.price_varies
