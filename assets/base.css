@@ -3828,6 +3828,10 @@ html, body {
   text-decoration: underline;
 }
 
+.tiny-tabs-content H2, H3, H4 {
+  margin: 1rem 0 0;
+}
+
 .tiny-tabs-content a {
   color: rgba(var(--color-link));
   text-decoration-thickness: 0.1rem;
