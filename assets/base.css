@@ -546,7 +546,8 @@ hr {
 }
 
 .half-hr {
-  
+  margin: 2rem auto;
+  width: 50%;
 }
 
 .full-unstyled-link {
