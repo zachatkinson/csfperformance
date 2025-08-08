@@ -3761,6 +3761,26 @@ details-disclosure > details {
   object-fit: cover;
 }
 
+.ar-2-3 img {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.ar-3-2 img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.ar-16-9 img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.ar-9-16 img {
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+}
+
 html, body {
   scroll-behavior: smooth;
 }
