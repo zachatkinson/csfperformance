@@ -3771,6 +3771,11 @@ details-disclosure > details {
   object-fit: cover;
 }
 
+.ar-4-5 img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
 .ar-16-9 img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
