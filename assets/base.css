@@ -3756,7 +3756,7 @@ details-disclosure > details {
   margin-top: 0;
 }
 
-img .ar-1-1 {
+.ar-1-1 img {
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
