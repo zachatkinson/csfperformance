@@ -3756,6 +3756,11 @@ details-disclosure > details {
   margin-top: 0;
 }
 
+img .ar-1-1 {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 html, body {
   scroll-behavior: smooth;
 }
