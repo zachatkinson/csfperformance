@@ -172,6 +172,7 @@
         "autoplay": true,
         "interaction-pause": true,
         "draggable": true,
+        "show_navigation_arrows": false,
         "direction": "to right",
         "interval": 6000,
         "duration": 300,
@@ -284,6 +285,7 @@
         "autoplay": true,
         "interaction-pause": true,
         "draggable": true,
+        "show_navigation_arrows": false,
         "direction": "to right",
         "interval": 6000,
         "duration": 300,
@@ -299,348 +301,15 @@
         "desktop-item-scroll": 1
       }
     },
-    "collapsible_content_EfAxxy": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_raDXCF": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Preferred Authorized Dealers",
-            "icon": "star",
-            "row_content": "",
-            "page": "preferred-authorized-dealers"
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_raDXCF"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
+    "page_MBhHj3": {
+      "type": "page",
+      "name": "t:sections.page.presets.name",
       "settings": {
-        "caption": "",
-        "heading": "",
+        "page": "",
         "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "row",
-        "color_scheme": "scheme-3",
-        "container_color_scheme": "scheme-3",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "creative_carousel_zYbEyt": {
-      "type": "creative-carousel",
-      "blocks": {
-        "item_ArWT9P": {
-          "type": "item",
-          "name": "Atech",
-          "settings": {
-            "image": "shopify://shop_images/Atech.svg",
-            "link": "https://www.atechmotorsports.com/",
-            "alt-text": ""
-          }
-        },
-        "item_TLCpyj": {
-          "type": "item",
-          "name": "DPPI",
-          "settings": {
-            "image": "shopify://shop_images/Diesel-Performance-Parts.svg",
-            "link": "https://www.dieselperformanceparts.com/",
-            "alt-text": ""
-          }
-        },
-        "item_8yVEcD": {
-          "type": "item",
-          "name": "EAH",
-          "settings": {
-            "image": "shopify://shop_images/eah_logo_emblem-bw.png",
-            "link": "https://www.enthusiastautoholdings.com/",
-            "alt-text": ""
-          }
-        },
-        "item_nLPmMQ": {
-          "type": "item",
-          "name": "JRP",
-          "settings": {
-            "image": "shopify://shop_images/JRP.svg",
-            "link": "http://store.jrponline.com/webstore/",
-            "alt-text": ""
-          }
-        },
-        "item_mnzVnG": {
-          "type": "item",
-          "name": "Keystone",
-          "settings": {
-            "image": "shopify://shop_images/Keystone-Automotive-Operations.svg",
-            "link": "https://www.keystoneautomotive.com/",
-            "alt-text": ""
-          }
-        },
-        "item_WpXE3K": {
-          "type": "item",
-          "name": "Meyer",
-          "settings": {
-            "image": "shopify://shop_images/Meyer.svg",
-            "link": "https://www.meyerdistributing.com/",
-            "alt-text": ""
-          }
-        },
-        "item_pHDG7C": {
-          "type": "item",
-          "name": "MotorState",
-          "settings": {
-            "image": "shopify://shop_images/MSLogo-Cut-Out-500.png",
-            "link": "https://www.motorstate.com/",
-            "alt-text": ""
-          }
-        },
-        "item_Vq6dqR": {
-          "type": "item",
-          "name": "P1",
-          "settings": {
-            "image": "shopify://shop_images/P1-Performance.svg",
-            "link": "https://p1performance.com/",
-            "alt-text": ""
-          }
-        }
-      },
-      "block_order": [
-        "item_ArWT9P",
-        "item_TLCpyj",
-        "item_8yVEcD",
-        "item_nLPmMQ",
-        "item_mnzVnG",
-        "item_WpXE3K",
-        "item_pHDG7C",
-        "item_Vq6dqR"
-      ],
-      "custom_css": [
-        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
-      ],
-      "name": "Creative Carousel - NA Dist 1",
-      "settings": {
-        "heading": "North American Distributors",
-        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
-        "include_margins": true,
-        "autoplay": true,
-        "interaction-pause": true,
-        "draggable": true,
-        "direction": "to right",
-        "interval": 6000,
-        "duration": 300,
-        "transition-timing": "ease",
-        "mobile-item-count": 1,
-        "mobile-item-gap": 25,
-        "mobile-item-scroll": 1,
-        "tablet-item-count": 4,
-        "tablet-item-gap": 50,
-        "tablet-item-scroll": 1,
-        "desktop-item-count": 8,
-        "desktop-item-gap": 25,
-        "desktop-item-scroll": 1
-      }
-    },
-    "creative_carousel_Y4nCCW": {
-      "type": "creative-carousel",
-      "blocks": {
-        "item_UmPbdB": {
-          "type": "item",
-          "name": "Premier",
-          "settings": {
-            "image": "shopify://shop_images/premier.svg",
-            "link": "https://premierwd.com/",
-            "alt-text": ""
-          }
-        },
-        "item_qmfB8A": {
-          "type": "item",
-          "name": "RSD",
-          "settings": {
-            "image": "shopify://shop_images/Rallysportdirect.svg",
-            "link": "https://www.rallysportdirect.com/",
-            "alt-text": ""
-          }
-        },
-        "item_hC8qhK": {
-          "type": "item",
-          "name": "SSF",
-          "settings": {
-            "image": "shopify://shop_images/SSF.svg",
-            "link": "https://www.ssfautoparts.com/",
-            "alt-text": ""
-          }
-        },
-        "item_iiXeBH": {
-          "type": "item",
-          "name": "Titan",
-          "settings": {
-            "image": "shopify://shop_images/Titan_Motorsports_807d3145-9ab1-4bb8-ae56-c64435e4e4aa.png",
-            "link": "https://titanmotorsports.com/collections/csf",
-            "alt-text": ""
-          }
-        },
-        "item_GVbx8Y": {
-          "type": "item",
-          "name": "T14",
-          "settings": {
-            "image": "shopify://shop_images/Turn-14.svg",
-            "link": "https://www.turn14.com/",
-            "alt-text": ""
-          }
-        },
-        "item_xfV4YA": {
-          "type": "item",
-          "name": "Worldpac",
-          "settings": {
-            "image": "shopify://shop_images/WorldPac.svg",
-            "link": "http://www.worldpac.com/",
-            "alt-text": ""
-          }
-        },
-        "item_x9HG7M": {
-          "type": "item",
-          "name": "XDP",
-          "settings": {
-            "image": "shopify://shop_images/XDP.svg",
-            "link": "https://www.xtremediesel.com/",
-            "alt-text": ""
-          }
-        }
-      },
-      "block_order": [
-        "item_UmPbdB",
-        "item_qmfB8A",
-        "item_hC8qhK",
-        "item_iiXeBH",
-        "item_GVbx8Y",
-        "item_xfV4YA",
-        "item_x9HG7M"
-      ],
-      "custom_css": [
-        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
-      ],
-      "name": "Creative Carousel - NA Dist 2",
-      "settings": {
-        "heading": "",
-        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
-        "include_margins": true,
-        "autoplay": true,
-        "interaction-pause": true,
-        "draggable": true,
-        "direction": "to right",
-        "interval": 6000,
-        "duration": 300,
-        "transition-timing": "ease",
-        "mobile-item-count": 1,
-        "mobile-item-gap": 25,
-        "mobile-item-scroll": 1,
-        "tablet-item-count": 4,
-        "tablet-item-gap": 50,
-        "tablet-item-scroll": 1,
-        "desktop-item-count": 8,
-        "desktop-item-gap": 25,
-        "desktop-item-scroll": 1
-      }
-    },
-    "collapsible_content_UfmH3M": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_h7nJhH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Africa",
-            "icon": "map_pin",
-            "row_content": "",
-            "page": "africa-international-dealers-distributors"
-          }
-        },
-        "collapsible_row_fmik7P": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Asia / Southeast Asia",
-            "icon": "map_pin",
-            "row_content": "",
-            "page": "asia-international-dealers-distributors"
-          }
-        },
-        "collapsible_row_7qHcYE": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Australia / Oceania",
-            "icon": "map_pin",
-            "row_content": "",
-            "page": "australia-oceania-international-dealers-distributors"
-          }
-        },
-        "collapsible_row_wyXaGY": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Europe",
-            "icon": "map_pin",
-            "row_content": "",
-            "page": "europe-international-dealers-distributors"
-          }
-        },
-        "collapsible_row_DLbMh7": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Middle East",
-            "icon": "map_pin",
-            "row_content": "",
-            "page": "middle-east-international-dealers-distributors"
-          }
-        },
-        "collapsible_row_6expdD": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "North America",
-            "icon": "map_pin",
-            "row_content": "",
-            "page": "north-america-international-dealers-distributors"
-          }
-        },
-        "collapsible_row_RzeTxm": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "South America",
-            "icon": "map_pin",
-            "row_content": "",
-            "page": "south-america-international-dealers-distributors"
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_h7nJhH",
-        "collapsible_row_fmik7P",
-        "collapsible_row_7qHcYE",
-        "collapsible_row_wyXaGY",
-        "collapsible_row_DLbMh7",
-        "collapsible_row_6expdD",
-        "collapsible_row_RzeTxm"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
-      "settings": {
-        "caption": "",
-        "heading": "International dealers & distributors",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "color_scheme": "scheme-1",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "173861739649cd6a4a": {
-      "type": "apps",
-      "settings": {
-        "include_margins": true
       }
     }
   },
@@ -649,10 +318,6 @@
     "main",
     "creative_carousel_w7iTLU",
     "creative_carousel_MePQfB",
-    "collapsible_content_EfAxxy",
-    "creative_carousel_zYbEyt",
-    "creative_carousel_Y4nCCW",
-    "collapsible_content_UfmH3M",
-    "173861739649cd6a4a"
+    "page_MBhHj3"
   ]
 }
