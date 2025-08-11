@@ -63,7 +63,7 @@
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
         "custom_liquid": "<div class=\"page-width\">\n<p>CSF has become the #1 choice for medium to long run custom cooling manufacturing. A tier-1 ISO-certified cooling system supplier with the ability to manufacture private label and co-branded cooling systems. Custom sizing/configurations, materials, finishes, and branding options are available.</p>\n<p>CSF takes its custom cooling program one step further than any company in N. America will the ability to stock your custom cooling products in one of our coastal warehouses (California or Virginia) and release over the period on a blanket purchase order.</p>\n<h3>Trusted by over 50 companies in high performance motorsports &amp; Technology including</h3>\n</div>",
-        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "color_scheme": "scheme-1",
         "padding_top": 16,
         "padding_bottom": 16
       }
@@ -301,6 +301,50 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "multicolumn_JFbUmT": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_bqmLyf": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dR9DrG": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_bqmLyf",
+        "column_dR9DrG"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -308,6 +352,7 @@
     "custom_liquid_JjBCnN",
     "creative_carousel_w7iTLU",
     "creative_carousel_MePQfB",
-    "main"
+    "main",
+    "multicolumn_JFbUmT"
   ]
 }
