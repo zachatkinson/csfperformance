@@ -15,14 +15,14 @@
         "heading_kDWbn6": {
           "type": "heading",
           "settings": {
-            "heading": "Before Purchasing…",
+            "heading": "Private Label & Custom Manufacturing",
             "heading_size": "h1"
           }
         },
         "text_HxHT6x": {
           "type": "text",
           "settings": {
-            "text": "Please review our policies. To protect our brand, we take our distributor and reseller policies seriously.",
+            "text": "World-Class cooling systemscustomized for your brand",
             "text_style": "body"
           }
         },
@@ -58,12 +58,14 @@
         "show_text_below": false
       }
     },
-    "main": {
-      "type": "main-page",
-      "custom_css": [],
+    "custom_liquid_JjBCnN": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "custom_liquid": "<div class=\"rte\">\n<p>CSF has become the #1 choice for medium to long run custom cooling manufacturing. A tier-1 ISO-certified cooling system supplier with the ability to manufacture private label and co-branded cooling systems. Custom sizing/configurations, materials, finishes, and branding options are available.</p>\n<p>CSF takes its custom cooling program one step further than any company in N. America will the ability to stock your custom cooling products in one of our coastal warehouses (California or Virginia) and release over the period on a blanket purchase order.</p>\n<h3>Trusted by over 50 companies in high performance motorsports &amp; Technology including</h3></div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "creative_carousel_w7iTLU": {
@@ -291,10 +293,19 @@
         "desktop-item-gap": 25,
         "desktop-item-scroll": 1
       }
+    },
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
     }
   },
   "order": [
     "image_banner_tbpUpq",
+    "custom_liquid_JjBCnN",
     "creative_carousel_w7iTLU",
     "creative_carousel_MePQfB",
     "main"
