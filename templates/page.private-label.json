@@ -291,24 +291,12 @@
         "desktop-item-gap": 25,
         "desktop-item-scroll": 1
       }
-    },
-    "page_CFmjmp": {
-      "type": "page",
-      "name": "t:sections.page.presets.name",
-      "settings": {
-        "page": "private-label-custom-manufacturing",
-        "heading_size": "h1",
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "image_banner_tbpUpq",
-    "main",
     "creative_carousel_w7iTLU",
     "creative_carousel_MePQfB",
-    "page_CFmjmp"
+    "main"
   ]
 }
