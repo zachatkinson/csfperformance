@@ -3973,3 +3973,35 @@ html, body {
   min-height: 13rem;
   background: #eee;
 }
+
+/* Table CSS for Blogs and Press Releases */
+.article-template table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: unset;
+}
+.article-template tr:nth-of-type(odd) {
+  background: #eee;
+}
+.article-template th {
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+.article-template td,
+th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+@media screen and (max-width: 750px) {
+
+  .article-template table, thead, tbody, th, td, tr {
+    font-size: 1rem !important;
+  }
+  
+  .article-template table:not([class]) td, table:not([class]) th {
+    padding: 0.5em !important;
+  }
+}
