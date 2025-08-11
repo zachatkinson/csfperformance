@@ -62,10 +62,10 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"page-width\">\n<p>CSF has become the #1 choice for medium to long run custom cooling manufacturing. A tier-1 ISO-certified cooling system supplier with the ability to manufacture private label and co-branded cooling systems. Custom sizing/configurations, materials, finishes, and branding options are available.</p>\n<p>CSF takes its custom cooling program one step further than any company in N. America will the ability to stock your custom cooling products in one of our coastal warehouses (California or Virginia) and release over the period on a blanket purchase order.</p>\n</div>",
+        "custom_liquid": "<div class=\"page-width\">\n<p>CSF has become the #1 choice for medium to long run custom cooling manufacturing. A tier-1 ISO-certified cooling system supplier with the ability to manufacture private label and co-branded cooling systems. Custom sizing/configurations, materials, finishes, and branding options are available.</p>\n<p>CSF takes its custom cooling program one step further than any company in N. America will the ability to stock your custom cooling products in one of our coastal warehouses (California or Virginia) and release over the period on a blanket purchase order.</p>\n<h3>Trusted by over 50 companies in high performance motorsports &amp; Technology including</h3>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 0
       }
     },
     "creative_carousel_w7iTLU": {
@@ -159,7 +159,7 @@
       ],
       "name": "Creative Carousel - Pref Dealers 1",
       "settings": {
-        "heading": "Trusted by over 50 companies in high performance motorsports & Technology including",
+        "heading": "",
         "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
         "include_margins": true,
         "autoplay": true,
