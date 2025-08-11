@@ -1205,6 +1205,7 @@ deferred-media {
 .button--tertiary {
   --color-button: var(--color-secondary-button);
   --color-button-text: var(--color-secondary-button-text);
+  text-align: center;
 }
 
 .button--tertiary {
@@ -1225,6 +1226,7 @@ button.shopify-payment-button__button--unbranded {
   --border-opacity: calc(1 - var(--buttons-border-opacity));
   border-radius: var(--buttons-radius-outset);
   position: relative;
+  text-align: center;
 }
 
 .button,
@@ -3227,6 +3229,7 @@ details-disclosure > details {
 /* Custom Page Button Styling */
 .rte .button--primary {
   color: rgb(var(--color-button-text));
+  text-align: center;
 }
 
 .rte .button--primary:hover {
