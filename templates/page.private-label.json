@@ -60,16 +60,7 @@
     },
     "main": {
       "type": "main-page",
-      "custom_css": [
-        ".gm-style .gm-style-iw {font-size: 12px !important; max-width: 300px !important; max-height: 350px !important;}",
-        ".gm-style-iw-d {margin: 0 15px 15px !important;}",
-        ".bss-store-image {max-height: 50px !important; padding-top: 5px;}",
-        ".ggm-iw-con__image {display: none;}",
-        ".ggm-iw__content--store-name {padding: 0 !important;}",
-        "#bss-map-search-box {max-width: 350px;}",
-        ".store-field-info {font-size: 12px;}",
-        "a:not([href]) {cursor: pointer !important;}"
-      ],
+      "custom_css": [],
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
