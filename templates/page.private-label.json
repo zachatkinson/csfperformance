@@ -1,0 +1,658 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_tbpUpq": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_kDWbn6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Before Purchasing…",
+            "heading_size": "h1"
+          }
+        },
+        "text_HxHT6x": {
+          "type": "text",
+          "settings": {
+            "text": "Please review our policies. To protect our brand, we take our distributor and reseller policies seriously.",
+            "text_style": "body"
+          }
+        },
+        "buttons_rnaCyK": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Buyers Notice",
+            "button_link_1": "shopify://pages/buyers-notice",
+            "button_style_secondary_1": false,
+            "button_label_2": "Resellers Notice",
+            "button_link_2": "shopify://pages/resellers-notice",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kDWbn6",
+        "text_HxHT6x",
+        "buttons_rnaCyK"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/purchase-bg-2.jpg",
+        "image_overlay_opacity": 50,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        ".gm-style .gm-style-iw {font-size: 12px !important; max-width: 300px !important; max-height: 350px !important;}",
+        ".gm-style-iw-d {margin: 0 15px 15px !important;}",
+        ".bss-store-image {max-height: 50px !important; padding-top: 5px;}",
+        ".ggm-iw-con__image {display: none;}",
+        ".ggm-iw__content--store-name {padding: 0 !important;}",
+        "#bss-map-search-box {max-width: 350px;}",
+        ".store-field-info {font-size: 12px;}",
+        "a:not([href]) {cursor: pointer !important;}"
+      ],
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "creative_carousel_w7iTLU": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_F7hfQ6": {
+          "type": "item",
+          "name": "BimmerWorld",
+          "settings": {
+            "image": "shopify://shop_images/Bimmerworld_9b16edff-f08e-4ff8-8cbe-923d186399f0.png",
+            "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
+            "alt-text": ""
+          }
+        },
+        "item_94BUyL": {
+          "type": "item",
+          "name": "ECS",
+          "settings": {
+            "image": "shopify://shop_images/ECS_Tuning_9c2146d0-03be-443b-a49a-1e029afe22bb.png",
+            "link": "https://www.ecstuning.com/b-csf-parts/",
+            "alt-text": ""
+          }
+        },
+        "item_teMgxP": {
+          "type": "item",
+          "name": "XPH",
+          "settings": {
+            "image": "shopify://shop_images/Extreme_Power_House.png",
+            "link": "https://x-ph.com/brands/CSF-Race.html",
+            "alt-text": ""
+          }
+        },
+        "item_VKKi3K": {
+          "type": "item",
+          "name": "FCP",
+          "settings": {
+            "image": "shopify://shop_images/FCP_Euro.png",
+            "link": "https://www.fcpeuro.com/CSF-parts/",
+            "alt-text": ""
+          }
+        },
+        "item_nbmVyi": {
+          "type": "item",
+          "name": "Pelican Parts",
+          "settings": {
+            "image": "shopify://shop_images/Pelican_Parts.png",
+            "link": "https://www.pelicanparts.com/byb-csf",
+            "alt-text": ""
+          }
+        },
+        "item_BUHDTj": {
+          "type": "item",
+          "name": "IND",
+          "settings": {
+            "image": "shopify://shop_images/IND.png",
+            "link": "https://ind-distribution.com/collections/csf",
+            "alt-text": ""
+          }
+        },
+        "item_XTQxmK": {
+          "type": "item",
+          "name": "PSI",
+          "settings": {
+            "image": "shopify://shop_images/PSI.png",
+            "link": "https://precision-sport.com/collections/all/csf",
+            "alt-text": ""
+          }
+        },
+        "item_7FqQaR": {
+          "type": "item",
+          "name": "R44",
+          "settings": {
+            "image": "shopify://shop_images/R44_Performance.png",
+            "link": "https://r44performance.com/collections/csf-radiators-vehicle-cooling-parts",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_F7hfQ6",
+        "item_94BUyL",
+        "item_teMgxP",
+        "item_VKKi3K",
+        "item_nbmVyi",
+        "item_BUHDTj",
+        "item_XTQxmK",
+        "item_7FqQaR"
+      ],
+      "custom_css": [
+        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
+      ],
+      "name": "Creative Carousel - Pref Dealers 1",
+      "settings": {
+        "heading": "Preferred Online Retailers",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "include_margins": true,
+        "autoplay": true,
+        "interaction-pause": true,
+        "draggable": true,
+        "direction": "to right",
+        "interval": 6000,
+        "duration": 300,
+        "transition-timing": "ease",
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
+        "desktop-item-count": 8,
+        "desktop-item-gap": 25,
+        "desktop-item-scroll": 1
+      }
+    },
+    "creative_carousel_MePQfB": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_cAXhGK": {
+          "type": "item",
+          "name": "Rennline",
+          "settings": {
+            "image": "shopify://shop_images/Rennline_c058fc56-e49f-4bd5-a8ec-d10aba408f9c.png",
+            "link": "https://www.rennline.com/",
+            "alt-text": ""
+          }
+        },
+        "item_QzkyX8": {
+          "type": "item",
+          "name": "Studio RSR",
+          "settings": {
+            "image": "shopify://shop_images/Studio_RSR_e5fd262e-d2c8-484a-80dd-2076efb686b7.png",
+            "link": "https://studiorsr.com/collections/vendors?q=CSF",
+            "alt-text": ""
+          }
+        },
+        "item_7eTKqj": {
+          "type": "item",
+          "name": "Titan",
+          "settings": {
+            "image": "shopify://shop_images/Titan_Motorsports_807d3145-9ab1-4bb8-ae56-c64435e4e4aa.png",
+            "link": "https://titanmotorsports.com/collections/csf",
+            "alt-text": ""
+          }
+        },
+        "item_YFxx4i": {
+          "type": "item",
+          "name": "Throtl",
+          "settings": {
+            "image": "shopify://shop_images/Throtl.png",
+            "link": "https://throtl.com/collections/csf",
+            "alt-text": ""
+          }
+        },
+        "item_QjxVax": {
+          "type": "item",
+          "name": "Turner MS",
+          "settings": {
+            "image": "shopify://shop_images/Turner_Motorsport.png",
+            "link": "https://www.turnermotorsport.com/BMW-E39-Parts/m-361-csf",
+            "alt-text": ""
+          }
+        },
+        "item_mVgmrJ": {
+          "type": "item",
+          "name": "VV",
+          "settings": {
+            "image": "shopify://shop_images/Vehicle_Virals.png",
+            "link": "https://vehiclevirals.com/collections/csf-1",
+            "alt-text": ""
+          }
+        },
+        "item_tmm3hE": {
+          "type": "item",
+          "name": "Vivid",
+          "settings": {
+            "image": "shopify://shop_images/Vivid_Racing_bf7e9060-c260-4c7b-99a8-88d78875281b.png",
+            "link": "https://www.vividracing.com/",
+            "alt-text": ""
+          }
+        },
+        "item_AGaynk": {
+          "type": "item",
+          "name": "XDP",
+          "settings": {
+            "image": "shopify://shop_images/XDP_e324f498-c30a-41ed-95af-ac1832f0c8fa.png",
+            "link": "https://www.xtremediesel.com/xdp-manufacturers/csf#/showFilters",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_cAXhGK",
+        "item_QzkyX8",
+        "item_7eTKqj",
+        "item_YFxx4i",
+        "item_QjxVax",
+        "item_mVgmrJ",
+        "item_tmm3hE",
+        "item_AGaynk"
+      ],
+      "custom_css": [
+        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
+      ],
+      "name": "Creative Carousel - Pref Dealers 2",
+      "settings": {
+        "heading": "",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "include_margins": true,
+        "autoplay": true,
+        "interaction-pause": true,
+        "draggable": true,
+        "direction": "to right",
+        "interval": 6000,
+        "duration": 300,
+        "transition-timing": "ease",
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
+        "desktop-item-count": 8,
+        "desktop-item-gap": 25,
+        "desktop-item-scroll": 1
+      }
+    },
+    "collapsible_content_EfAxxy": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_raDXCF": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Preferred Authorized Dealers",
+            "icon": "star",
+            "row_content": "",
+            "page": "preferred-authorized-dealers"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_raDXCF"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "color_scheme": "scheme-3",
+        "container_color_scheme": "scheme-3",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "creative_carousel_zYbEyt": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_ArWT9P": {
+          "type": "item",
+          "name": "Atech",
+          "settings": {
+            "image": "shopify://shop_images/Atech.svg",
+            "link": "https://www.atechmotorsports.com/",
+            "alt-text": ""
+          }
+        },
+        "item_TLCpyj": {
+          "type": "item",
+          "name": "DPPI",
+          "settings": {
+            "image": "shopify://shop_images/Diesel-Performance-Parts.svg",
+            "link": "https://www.dieselperformanceparts.com/",
+            "alt-text": ""
+          }
+        },
+        "item_8yVEcD": {
+          "type": "item",
+          "name": "EAH",
+          "settings": {
+            "image": "shopify://shop_images/eah_logo_emblem-bw.png",
+            "link": "https://www.enthusiastautoholdings.com/",
+            "alt-text": ""
+          }
+        },
+        "item_nLPmMQ": {
+          "type": "item",
+          "name": "JRP",
+          "settings": {
+            "image": "shopify://shop_images/JRP.svg",
+            "link": "http://store.jrponline.com/webstore/",
+            "alt-text": ""
+          }
+        },
+        "item_mnzVnG": {
+          "type": "item",
+          "name": "Keystone",
+          "settings": {
+            "image": "shopify://shop_images/Keystone-Automotive-Operations.svg",
+            "link": "https://www.keystoneautomotive.com/",
+            "alt-text": ""
+          }
+        },
+        "item_WpXE3K": {
+          "type": "item",
+          "name": "Meyer",
+          "settings": {
+            "image": "shopify://shop_images/Meyer.svg",
+            "link": "https://www.meyerdistributing.com/",
+            "alt-text": ""
+          }
+        },
+        "item_pHDG7C": {
+          "type": "item",
+          "name": "MotorState",
+          "settings": {
+            "image": "shopify://shop_images/MSLogo-Cut-Out-500.png",
+            "link": "https://www.motorstate.com/",
+            "alt-text": ""
+          }
+        },
+        "item_Vq6dqR": {
+          "type": "item",
+          "name": "P1",
+          "settings": {
+            "image": "shopify://shop_images/P1-Performance.svg",
+            "link": "https://p1performance.com/",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_ArWT9P",
+        "item_TLCpyj",
+        "item_8yVEcD",
+        "item_nLPmMQ",
+        "item_mnzVnG",
+        "item_WpXE3K",
+        "item_pHDG7C",
+        "item_Vq6dqR"
+      ],
+      "custom_css": [
+        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
+      ],
+      "name": "Creative Carousel - NA Dist 1",
+      "settings": {
+        "heading": "North American Distributors",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "include_margins": true,
+        "autoplay": true,
+        "interaction-pause": true,
+        "draggable": true,
+        "direction": "to right",
+        "interval": 6000,
+        "duration": 300,
+        "transition-timing": "ease",
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
+        "desktop-item-count": 8,
+        "desktop-item-gap": 25,
+        "desktop-item-scroll": 1
+      }
+    },
+    "creative_carousel_Y4nCCW": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_UmPbdB": {
+          "type": "item",
+          "name": "Premier",
+          "settings": {
+            "image": "shopify://shop_images/premier.svg",
+            "link": "https://premierwd.com/",
+            "alt-text": ""
+          }
+        },
+        "item_qmfB8A": {
+          "type": "item",
+          "name": "RSD",
+          "settings": {
+            "image": "shopify://shop_images/Rallysportdirect.svg",
+            "link": "https://www.rallysportdirect.com/",
+            "alt-text": ""
+          }
+        },
+        "item_hC8qhK": {
+          "type": "item",
+          "name": "SSF",
+          "settings": {
+            "image": "shopify://shop_images/SSF.svg",
+            "link": "https://www.ssfautoparts.com/",
+            "alt-text": ""
+          }
+        },
+        "item_iiXeBH": {
+          "type": "item",
+          "name": "Titan",
+          "settings": {
+            "image": "shopify://shop_images/Titan_Motorsports_807d3145-9ab1-4bb8-ae56-c64435e4e4aa.png",
+            "link": "https://titanmotorsports.com/collections/csf",
+            "alt-text": ""
+          }
+        },
+        "item_GVbx8Y": {
+          "type": "item",
+          "name": "T14",
+          "settings": {
+            "image": "shopify://shop_images/Turn-14.svg",
+            "link": "https://www.turn14.com/",
+            "alt-text": ""
+          }
+        },
+        "item_xfV4YA": {
+          "type": "item",
+          "name": "Worldpac",
+          "settings": {
+            "image": "shopify://shop_images/WorldPac.svg",
+            "link": "http://www.worldpac.com/",
+            "alt-text": ""
+          }
+        },
+        "item_x9HG7M": {
+          "type": "item",
+          "name": "XDP",
+          "settings": {
+            "image": "shopify://shop_images/XDP.svg",
+            "link": "https://www.xtremediesel.com/",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_UmPbdB",
+        "item_qmfB8A",
+        "item_hC8qhK",
+        "item_iiXeBH",
+        "item_GVbx8Y",
+        "item_xfV4YA",
+        "item_x9HG7M"
+      ],
+      "custom_css": [
+        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
+      ],
+      "name": "Creative Carousel - NA Dist 2",
+      "settings": {
+        "heading": "",
+        "color_scheme": "scheme-d8a3fd42-f6b5-4956-9428-b73fec36728b",
+        "include_margins": true,
+        "autoplay": true,
+        "interaction-pause": true,
+        "draggable": true,
+        "direction": "to right",
+        "interval": 6000,
+        "duration": 300,
+        "transition-timing": "ease",
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
+        "desktop-item-count": 8,
+        "desktop-item-gap": 25,
+        "desktop-item-scroll": 1
+      }
+    },
+    "collapsible_content_UfmH3M": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_h7nJhH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Africa",
+            "icon": "map_pin",
+            "row_content": "",
+            "page": "africa-international-dealers-distributors"
+          }
+        },
+        "collapsible_row_fmik7P": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Asia / Southeast Asia",
+            "icon": "map_pin",
+            "row_content": "",
+            "page": "asia-international-dealers-distributors"
+          }
+        },
+        "collapsible_row_7qHcYE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Australia / Oceania",
+            "icon": "map_pin",
+            "row_content": "",
+            "page": "australia-oceania-international-dealers-distributors"
+          }
+        },
+        "collapsible_row_wyXaGY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Europe",
+            "icon": "map_pin",
+            "row_content": "",
+            "page": "europe-international-dealers-distributors"
+          }
+        },
+        "collapsible_row_DLbMh7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Middle East",
+            "icon": "map_pin",
+            "row_content": "",
+            "page": "middle-east-international-dealers-distributors"
+          }
+        },
+        "collapsible_row_6expdD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "North America",
+            "icon": "map_pin",
+            "row_content": "",
+            "page": "north-america-international-dealers-distributors"
+          }
+        },
+        "collapsible_row_RzeTxm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "South America",
+            "icon": "map_pin",
+            "row_content": "",
+            "page": "south-america-international-dealers-distributors"
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_h7nJhH",
+        "collapsible_row_fmik7P",
+        "collapsible_row_7qHcYE",
+        "collapsible_row_wyXaGY",
+        "collapsible_row_DLbMh7",
+        "collapsible_row_6expdD",
+        "collapsible_row_RzeTxm"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "International dealers & distributors",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "scheme-1",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "173861739649cd6a4a": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "image_banner_tbpUpq",
+    "main",
+    "creative_carousel_w7iTLU",
+    "creative_carousel_MePQfB",
+    "collapsible_content_EfAxxy",
+    "creative_carousel_zYbEyt",
+    "creative_carousel_Y4nCCW",
+    "collapsible_content_UfmH3M",
+    "173861739649cd6a4a"
+  ]
+}
