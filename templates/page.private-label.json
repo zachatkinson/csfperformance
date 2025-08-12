@@ -310,8 +310,8 @@
         "column_Jw4z66": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "",
+            "text": "<h5>Minimum order quantity (M0Q)</h5><ul><li>Radiators – 30-50 Units p/ Order (Depends on Design and Application). Expectation of at Least 100 Units p/ Year</li><li>Radiator Cores – 30 Units</li><li>Intercoolers – 50 Units p/ )Order. Expectation of at Least 100 Units p/ Year</li><li>Oil Coolers, Power Steering, and Transmission Coolers – 50 Units p/ order. Expectation of at Least 100 Units p/ Year</li><li>Intercooler Cores – 30 Units</li></ul><p>* Our requirements are flexible if we see opportunity within a partnership, however <strong>CSF does not do custom one-off projects.</strong></p><h5>BUILD TIMES</h5><p>Please allow for lead times that typically range from 60 – 150 days. Our lead times vary and depend on many factors including; seasonality, material availability, quantity ordered, and freight availability/speed. Some custom orders can be expedited depending on quantity and shipping options.</p>",
             "link_label": "",
             "link": ""
           }
@@ -332,7 +332,7 @@
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
-        "title": "Multicolumn",
+        "title": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
@@ -344,7 +344,7 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
