@@ -307,6 +307,15 @@
     "multicolumn_9EhWtw": {
       "type": "multicolumn",
       "blocks": {
+        "column_jtRrnY": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
         "column_Jw4z66": {
           "type": "column",
           "settings": {
@@ -315,20 +324,11 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column_jtRrnY": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "column_Jw4z66",
-        "column_jtRrnY"
+        "column_jtRrnY",
+        "column_Jw4z66"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
