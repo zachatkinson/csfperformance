@@ -11,30 +11,6 @@
   "sections": {
     "image_banner_7iF7Qp": {
       "type": "image-banner",
-      "blocks": {
-        "heading_jNtHYq": {
-          "type": "heading",
-          "settings": {
-            "heading": "{{ article.title }}",
-            "heading_size": "h1"
-          }
-        },
-        "buttons_PiGmfr": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "{{ article.url }}",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_jNtHYq",
-        "buttons_PiGmfr"
-      ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "{{ article.image }}",
@@ -50,12 +26,45 @@
         "show_text_below": true
       }
     },
-    "custom_liquid_kXPiz3": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
+    "rich_text_U47gtn": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DP93KL": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ article.title }}",
+            "heading_size": "h1"
+          }
+        },
+        "text_wCEcM7": {
+          "type": "text",
+          "settings": {
+            "text": "<p>See Product Listing</p>"
+          }
+        },
+        "button_qD73YB": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_DP93KL",
+        "text_wCEcM7",
+        "button_qD73YB"
+      ],
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "custom_liquid": "<h2>Original Press Release</h2>\nFor the most up to date product information see product listing.",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
+        "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -135,7 +144,7 @@
   },
   "order": [
     "image_banner_7iF7Qp",
-    "custom_liquid_kXPiz3",
+    "rich_text_U47gtn",
     "main",
     "featured_product_with_prices_MynNG7"
   ]
