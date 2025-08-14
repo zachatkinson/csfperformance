@@ -49,7 +49,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "image": "{{ article.image }}",
-        "image_2": "shopify://shop_images/1920x640__8350_copy.jpg",
+        "image_2": "{{ article.image }}",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
