@@ -91,63 +91,6 @@
       ],
       "settings": {}
     },
-    "featured_product_XH8VHV": {
-      "type": "featured-product",
-      "blocks": {
-        "text_XaHhFR": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_QPkEdm": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_qiPGAY": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_KLaWy6": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "share_y9dmGx": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_XaHhFR",
-        "title_QPkEdm",
-        "price_qiPGAY",
-        "variant_picker_KLaWy6",
-        "share_y9dmGx"
-      ],
-      "name": "t:sections.featured-product.presets.name",
-      "settings": {
-        "product": "{{ article.metafields.custom.press_release_product_link.value }}",
-        "color_scheme": "scheme-1",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "featured_product_with_prices_MynNG7": {
       "type": "featured-product-with-prices",
       "blocks": {
@@ -204,7 +147,7 @@
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "product": "",
+        "product": "{{ article.metafields.custom.press_release_product_link.value }}",
         "color_scheme": "",
         "secondary_background": false,
         "media_size": "medium",
@@ -222,7 +165,6 @@
   "order": [
     "image_banner_xhR9tR",
     "main",
-    "featured_product_XH8VHV",
     "featured_product_with_prices_MynNG7"
   ]
 }
