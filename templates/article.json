@@ -45,8 +45,8 @@
         "button_qD73YB": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "See Product Listing",
+            "button_link": "{{ article.metafields.custom.product_link.value }}",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -63,7 +63,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
