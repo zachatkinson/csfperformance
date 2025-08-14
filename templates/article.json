@@ -134,7 +134,7 @@
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "product": "",
+        "product": "{{ article.metafields.custom.press_release_product_link.value }}",
         "color_scheme": "scheme-1",
         "secondary_background": false,
         "media_size": "medium",
