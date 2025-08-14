@@ -110,40 +110,12 @@
         "price_NGafRM": {
           "type": "price",
           "settings": {}
-        },
-        "variant_picker_qA3VnR": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_DnHqtH": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_YQNx4G": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_geH3Fj": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
         "text_Bz7G9Y",
         "title_VJpTQw",
-        "price_NGafRM",
-        "variant_picker_qA3VnR",
-        "quantity_selector_DnHqtH",
-        "buy_buttons_YQNx4G",
-        "share_geH3Fj"
+        "price_NGafRM"
       ],
       "name": "t:sections.featured-product.presets.name",
       "settings": {
