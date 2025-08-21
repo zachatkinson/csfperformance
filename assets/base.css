@@ -4012,3 +4012,9 @@ th {
 .color-scheme-section {
   padding: 1rem 0;
 }
+
+.center-logo {
+  display: block;
+  margin: auto;
+  width: 40%;
+}
