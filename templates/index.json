@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_mizeRG": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640__8188_v2.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350__8188.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://products/8188-porsche-992-911-turbo-turbo-s-intercooler-system"
+          }
+        },
         "slide_hUxYke": {
           "type": "slide",
           "settings": {
@@ -159,15 +168,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://products/7239-mk3-ford-focus-rs-high-performance-all-aluminum-radiator"
           }
-        },
-        "slide_mizeRG": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640__7237_copy.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350__7237_copy.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://products/7237-mk6-ford-fiesta-st-high-performance-all-aluminum-radiator"
-          }
         }
       },
       "block_order": [
@@ -177,6 +177,7 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_mizeRG",
         "slide_hUxYke",
         "slide_CDkmid",
         "slide_TRrWtF",
@@ -184,8 +185,7 @@
         "slide_TfcfhV",
         "slide_MDmQpw",
         "slide_WnayiF",
-        "slide_HnqNxW",
-        "slide_mizeRG"
+        "slide_HnqNxW"
       ],
       "settings": {
         "include_margins": false,
