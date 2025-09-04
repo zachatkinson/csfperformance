@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_HnqNxW": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640__8355_copy.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350__8355_copy.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://products/8355-f87-m2-n55-f3x-340i-440i-f2x-m240i-high-performance-auxiliary-radiator"
+          }
+        },
         "slide_mizeRG": {
           "type": "slide",
           "settings": {
@@ -159,15 +168,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://products/7089-bmw-f-chassis-gen-1-b58-high-performance-all-aluminum-radiator"
           }
-        },
-        "slide_HnqNxW": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640__7239_copy.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350__7239_copy.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://products/7239-mk3-ford-focus-rs-high-performance-all-aluminum-radiator"
-          }
         }
       },
       "block_order": [
@@ -177,6 +177,7 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_HnqNxW",
         "slide_mizeRG",
         "slide_hUxYke",
         "slide_CDkmid",
@@ -184,8 +185,7 @@
         "slide_A7rMUd",
         "slide_TfcfhV",
         "slide_MDmQpw",
-        "slide_WnayiF",
-        "slide_HnqNxW"
+        "slide_WnayiF"
       ],
       "settings": {
         "include_margins": false,
