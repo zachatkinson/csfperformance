@@ -407,7 +407,7 @@
         "tablet-item-count": 3,
         "tablet-item-gap": 50,
         "tablet-item-scroll": 1,
-        "desktop-item-count": 4,
+        "desktop-item-count": 6,
         "desktop-item-gap": 50,
         "desktop-item-scroll": 1
       }
