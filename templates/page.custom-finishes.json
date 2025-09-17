@@ -156,6 +156,34 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_nfUHBC": {
+      "type": "rich-text",
+      "blocks": {
+        "button_Bbfjmx": {
+          "type": "button",
+          "settings": {
+            "button_label": "See the CSF #8400C",
+            "button_link": "shopify://products/8400c-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-custom-finish",
+            "button_style_secondary": false,
+            "button_label_2": "CSF #8400 Press Release",
+            "button_link_2": "https://news.csfrace.com/new-csf-gen-2-b58-race-x-manifold/",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_Bbfjmx"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "custom_colors_display_C7zzWk": {
       "type": "custom-colors-display",
       "settings": {
@@ -165,6 +193,62 @@
         "color_scheme": "scheme-2",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_Nr3Yrw": {
+      "type": "rich-text",
+      "blocks": {
+        "button_KFYP3q": {
+          "type": "button",
+          "settings": {
+            "button_label": "See the CSF #8200C",
+            "button_link": "shopify://products/8200c-a90-supra-bmw-b58-charge-air-cooler-manifold-custom-finish",
+            "button_style_secondary": false,
+            "button_label_2": "CSF #8200 Press Release",
+            "button_link_2": "https://news.csfrace.com/csfs-new-super-manifold-for-a90-91-supra-and-bmw-b58/",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_KFYP3q"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_f6hftX": {
+      "type": "rich-text",
+      "blocks": {
+        "button_FhPXjF": {
+          "type": "button",
+          "settings": {
+            "button_label": "See the CSF #8300C",
+            "button_link": "shopify://products/8300c-bmw-gen-1-b58-charge-air-cooler-manifold-custom-finish",
+            "button_style_secondary": false,
+            "button_label_2": "CSF #8300 Press Release",
+            "button_link_2": "https://news.csfrace.com/new-csf-gen-1-b58-charge-air-cooler-manifold/",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_FhPXjF"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "custom_colors_display_kVgm9b": {
@@ -212,7 +296,10 @@
     "custom_colors_display_Yhiw8n",
     "rich_text_fU8nfh",
     "custom_colors_display_qLUKCY",
+    "rich_text_nfUHBC",
     "custom_colors_display_C7zzWk",
+    "rich_text_Nr3Yrw",
+    "rich_text_f6hftX",
     "custom_colors_display_kVgm9b",
     "custom_colors_display_rWychq",
     "custom_colors_display_ziVdWT"
