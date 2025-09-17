@@ -589,13 +589,13 @@
         "interval": 6000,
         "duration": 300,
         "transition-timing": "ease",
-        "mobile-item-count": 1,
+        "mobile-item-count": 3,
         "mobile-item-gap": 25,
         "mobile-item-scroll": 1,
         "tablet-item-count": 4,
         "tablet-item-gap": 50,
         "tablet-item-scroll": 1,
-        "desktop-item-count": 6,
+        "desktop-item-count": 4,
         "desktop-item-gap": 50,
         "desktop-item-scroll": 1
       }
