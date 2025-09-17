@@ -297,11 +297,11 @@
         "button_qjpGUD": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": "",
+            "button_label": "See the CSF #8315",
+            "button_link": "shopify://products/8315-bmw-x5m-x6m-xm-high-performance-charge-air-coolers",
             "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
+            "button_label_2": "CSF #8315 Press Release",
+            "button_link_2": "https://news.csfrace.com/new-csf-bmw-x5m-x6m-xm-charge-air-coolers/",
             "button_style_secondary_2": false
           }
         }
@@ -325,10 +325,10 @@
         "button_GaCgVc": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
+            "button_label": "See the CSF #8351",
             "button_link": "",
             "button_style_secondary": false,
-            "button_label_2": "",
+            "button_label_2": "CSF #8351 Press Release",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
@@ -337,6 +337,7 @@
       "block_order": [
         "button_GaCgVc"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
