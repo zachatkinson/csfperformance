@@ -263,6 +263,90 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_fnPHYV": {
+      "type": "rich-text",
+      "blocks": {
+        "button_yTBdVa": {
+          "type": "button",
+          "settings": {
+            "button_label": "See the CSF #8178",
+            "button_link": "shopify://products/8178-bmw-f9x-m5-m8-twin-charge-air-cooler-set",
+            "button_style_secondary": false,
+            "button_label_2": "CSF #8178 Press Release",
+            "button_link_2": "https://news.csfrace.com/f90-m5-f92-m8-high-performance-charge-coolers/",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_yTBdVa"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_7AC9PC": {
+      "type": "rich-text",
+      "blocks": {
+        "button_qjpGUD": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_qjpGUD"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_pQfhgT": {
+      "type": "rich-text",
+      "blocks": {
+        "button_GaCgVc": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_GaCgVc"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "custom_colors_display_rWychq": {
       "type": "custom-colors-display",
       "name": "Custom Colors Display",
@@ -301,6 +385,9 @@
     "rich_text_Nr3Yrw",
     "rich_text_f6hftX",
     "custom_colors_display_kVgm9b",
+    "rich_text_fnPHYV",
+    "rich_text_7AC9PC",
+    "rich_text_pQfhgT",
     "custom_colors_display_rWychq",
     "custom_colors_display_ziVdWT"
   ]
