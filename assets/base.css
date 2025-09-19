@@ -4018,3 +4018,10 @@ th {
   margin: auto;
   width: 40%;
 }
+
+.finish-grid a {
+  color: rgba(var(--color-link));
+  text-decoration-thickness: 0.1rem;
+  transition: text-decoration-thickness var(--duration-short) ease;
+  text-decoration: none;
+}
