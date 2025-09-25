@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_MDmQpw": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640__8351_copy.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350__8351_copy.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://products/8351-bmw-g9x-m5-high-performance-charge-air-coolers"
+          }
+        },
         "slide_WnayiF": {
           "type": "slide",
           "settings": {
@@ -159,15 +168,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://products/8350-ford-bronco-2-7l-external-transmission-oil-cooler-kit"
           }
-        },
-        "slide_MDmQpw": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640_8334_2.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350__8334_copy.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://products/8334-porsche-964-993-oem-performance-engine-oil-cooler"
-          }
         }
       },
       "block_order": [
@@ -177,6 +177,7 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_MDmQpw",
         "slide_WnayiF",
         "slide_HnqNxW",
         "slide_mizeRG",
@@ -184,8 +185,7 @@
         "slide_CDkmid",
         "slide_TRrWtF",
         "slide_A7rMUd",
-        "slide_TfcfhV",
-        "slide_MDmQpw"
+        "slide_TfcfhV"
       ],
       "settings": {
         "include_margins": false,
