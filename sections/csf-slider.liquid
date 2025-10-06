@@ -218,6 +218,12 @@ font-size: 0;
   .csf-slider-arrow { display: none !important; }
 }
 
+/* Hide blaze slider arrows that may bleed into csf-slider */
+.csf-slider-right .blaze-prev,
+.csf-slider-right .blaze-next {
+  display: none !important;
+}
+
 @media screen and (min-width: 768px) {
 .slider-grid{
 grid-template-columns: 1fr;
