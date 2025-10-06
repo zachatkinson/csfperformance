@@ -29,18 +29,6 @@
             </div>
           </div>
         </div>
-        {% if section.settings.show_navigation_arrows %}
-          <button class="blaze-prev" aria-label="Previous slide">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          <button class="blaze-next" aria-label="Next slide">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-        {% endif %}
       </div>
     </div>
 </div>
@@ -71,24 +59,6 @@
       slidesToScroll: {{ section.settings.desktop-item-scroll }}
     },
   })
-  
-  {% if section.settings.show_navigation_arrows %}
-  // Add navigation functionality
-  const prevButton_{{ unique_class }} = el_{{ unique_class }}.querySelector('.blaze-prev');
-  const nextButton_{{ unique_class }} = el_{{ unique_class }}.querySelector('.blaze-next');
-  
-  if (prevButton_{{ unique_class }}) {
-    prevButton_{{ unique_class }}.addEventListener('click', () => {
-      slider_{{ unique_class }}.prev();
-    });
-  }
-  
-  if (nextButton_{{ unique_class }}) {
-    nextButton_{{ unique_class }}.addEventListener('click', () => {
-      slider_{{ unique_class }}.next();
-    });
-  }
-  {% endif %}
 </script>
 {% schema %}
 {
@@ -129,13 +99,6 @@
       "id": "draggable",
       "default": true,
       "label": "Draggable"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_navigation_arrows",
-      "default": false,
-      "label": "Show Navigation Arrows",
-      "info": "Display left and right navigation arrows"
     },
     {
       "type": "select",
@@ -330,57 +293,6 @@
 
 .blaze-track{
   margin-bottom: 2rem;
-}
-
-.blaze-slider-{{ unique_class }} {
-  position: relative;
-}
-
-.blaze-slider-{{ unique_class }} .blaze-prev,
-.blaze-slider-{{ unique_class }} .blaze-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 10;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.blaze-slider-{{ unique_class }} .blaze-prev {
-  left: 10px;
-}
-
-.blaze-slider-{{ unique_class }} .blaze-next {
-  right: 10px;
-}
-
-.blaze-slider-{{ unique_class }} .blaze-prev:hover,
-.blaze-slider-{{ unique_class }} .blaze-next:hover {
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.blaze-slider-{{ unique_class }} .blaze-prev:disabled,
-.blaze-slider-{{ unique_class }} .blaze-next:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-@media (max-width: 767px) {
-  .blaze-slider-{{ unique_class }} .blaze-prev,
-  .blaze-slider-{{ unique_class }} .blaze-next {
-    width: 35px;
-    height: 35px;
-  }
 }
 {% endstylesheet %}
 {% javascript %}
