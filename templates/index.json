@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_TfcfhV": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/7273_copy_2.jpg",
+            "mobile-image": "shopify://shop_images/7273_copy.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://collections/porsche-992-911"
+          }
+        },
         "slide_MDmQpw": {
           "type": "slide",
           "settings": {
@@ -159,15 +168,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://products/8352-mclaren-720s-765lt-750s-gt-gts-charge-air-coolers"
           }
-        },
-        "slide_TfcfhV": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640__8350_copy.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350__8350_copy.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://products/8350-ford-bronco-2-7l-external-transmission-oil-cooler-kit"
-          }
         }
       },
       "block_order": [
@@ -177,6 +177,7 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_TfcfhV",
         "slide_MDmQpw",
         "slide_WnayiF",
         "slide_HnqNxW",
@@ -184,8 +185,7 @@
         "slide_hUxYke",
         "slide_CDkmid",
         "slide_TRrWtF",
-        "slide_A7rMUd",
-        "slide_TfcfhV"
+        "slide_A7rMUd"
       ],
       "settings": {
         "include_margins": false,
@@ -396,7 +396,6 @@
         "autoplay": true,
         "interaction-pause": true,
         "draggable": true,
-        "show_navigation_arrows": false,
         "direction": "to left",
         "interval": 5000,
         "duration": 300,
@@ -505,7 +504,6 @@
         "autoplay": true,
         "interaction-pause": true,
         "draggable": true,
-        "show_navigation_arrows": false,
         "direction": "to right",
         "interval": 5400,
         "duration": 300,
@@ -584,7 +582,6 @@
         "autoplay": true,
         "interaction-pause": true,
         "draggable": true,
-        "show_navigation_arrows": true,
         "direction": "to left",
         "interval": 6000,
         "duration": 300,
