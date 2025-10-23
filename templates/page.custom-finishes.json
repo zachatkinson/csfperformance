@@ -125,7 +125,7 @@
             "button_style_secondary": false,
             "button_label_2": "CSF #8233 Press Release",
             "button_link_2": "https://news.csfrace.com/new-csf-g8x-m3-m4-level-up-charge-air-cooler-manifold/",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
         }
       },
@@ -167,7 +167,7 @@
             "button_style_secondary": false,
             "button_label_2": "CSF #8400 Press Release",
             "button_link_2": "https://news.csfrace.com/new-csf-gen-2-b58-race-x-manifold/",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
         }
       },
@@ -206,7 +206,7 @@
             "button_style_secondary": false,
             "button_label_2": "CSF #8200 Press Release",
             "button_link_2": "https://news.csfrace.com/csfs-new-super-manifold-for-a90-91-supra-and-bmw-b58/",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
         }
       },
@@ -234,7 +234,7 @@
             "button_style_secondary": false,
             "button_label_2": "CSF #8300 Press Release",
             "button_link_2": "https://news.csfrace.com/new-csf-gen-1-b58-charge-air-cooler-manifold/",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
         }
       },
@@ -256,7 +256,7 @@
       "name": "Custom Colors Display",
       "settings": {
         "product": "8178-bmw-f9x-m5-m8-twin-charge-air-cooler-set",
-        "heading": "BMW F9X M5/M8 | X5m/X6m/XM | F9X M5 - Charge Air Cooler Custom Finishes (CSF #8178 / #8315 / #8351)",
+        "heading": "BMW F9X M5/M8 | X5m/X6m/XM | G9X M5 - Charge Air Cooler Custom Finishes (CSF #8178 / #8315 / #8351)",
         "anchor_id": "8178-8315-finishes",
         "color_scheme": "scheme-4",
         "padding_top": 36,
@@ -274,7 +274,7 @@
             "button_style_secondary": false,
             "button_label_2": "CSF #8178 Press Release",
             "button_link_2": "https://news.csfrace.com/f90-m5-f92-m8-high-performance-charge-coolers/",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
         }
       },
@@ -302,7 +302,7 @@
             "button_style_secondary": false,
             "button_label_2": "CSF #8315 Press Release",
             "button_link_2": "https://news.csfrace.com/new-csf-bmw-x5m-x6m-xm-charge-air-coolers/",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
         }
       },
@@ -316,7 +316,7 @@
         "color_scheme": "scheme-4",
         "full_width": true,
         "padding_top": 12,
-        "padding_bottom": 52
+        "padding_bottom": 12
       }
     },
     "rich_text_pQfhgT": {
@@ -326,18 +326,17 @@
           "type": "button",
           "settings": {
             "button_label": "See the CSF #8351",
-            "button_link": "",
+            "button_link": "shopify://products/8351-bmw-g9x-m5-high-performance-charge-air-coolers",
             "button_style_secondary": false,
             "button_label_2": "CSF #8351 Press Release",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
         }
       },
       "block_order": [
         "button_GaCgVc"
       ],
-      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
