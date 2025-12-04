@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_TRrWtF": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/8212_8213_copy_2.jpg",
+            "mobile-image": "shopify://shop_images/8212_8213_copy.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://collections/all-mclaren-products"
+          }
+        },
         "slide_3iEdJE": {
           "type": "slide",
           "settings": {
@@ -159,15 +168,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://products/8325-porsche-964-993-oem-performance-a-c-condenser"
           }
-        },
-        "slide_TRrWtF": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640_8285_8285B.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350_8285_8285B.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://products/8285-toyota-gr-corolla-stepped-core-intercooler-silver"
-          }
         }
       },
       "block_order": [
@@ -177,6 +177,7 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_TRrWtF",
         "slide_3iEdJE",
         "slide_TfcfhV",
         "slide_MDmQpw",
@@ -184,8 +185,7 @@
         "slide_HnqNxW",
         "slide_mizeRG",
         "slide_hUxYke",
-        "slide_CDkmid",
-        "slide_TRrWtF"
+        "slide_CDkmid"
       ],
       "settings": {
         "include_margins": false,
