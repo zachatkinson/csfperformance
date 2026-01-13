@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_CDkmid": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640__7246_7247.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350_1920x640__7246_7247.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://collections/new-products"
+          }
+        },
         "slide_TRrWtF": {
           "type": "slide",
           "settings": {
@@ -159,15 +168,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://collections/ford-f150-raptor"
           }
-        },
-        "slide_CDkmid": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640__8325.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350__8325_copy.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://products/8325-porsche-964-993-oem-performance-a-c-condenser"
-          }
         }
       },
       "block_order": [
@@ -177,6 +177,7 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_CDkmid",
         "slide_TRrWtF",
         "slide_3iEdJE",
         "slide_TfcfhV",
@@ -184,8 +185,7 @@
         "slide_WnayiF",
         "slide_HnqNxW",
         "slide_mizeRG",
-        "slide_hUxYke",
-        "slide_CDkmid"
+        "slide_hUxYke"
       ],
       "settings": {
         "include_margins": false,
