@@ -452,6 +452,7 @@ table.Porsche {
 
 table.Porsche td, th {
   padding: 0.25em 1em;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.2);
 }
 
 @media screen and (max-width: 749px) {
