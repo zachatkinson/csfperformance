@@ -441,6 +441,10 @@ table:not([class]) th {
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
 }
 
+table.Porsche td, th {
+  padding: 0.25em 1em;
+}
+
 @media screen and (max-width: 749px) {
   .small-hide {
     display: none !important;
