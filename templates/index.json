@@ -353,15 +353,6 @@
             "alt-text": ""
           }
         },
-        "item_NtE3WK": {
-          "type": "item",
-          "name": "T14",
-          "settings": {
-            "image": "shopify://shop_images/turn_14_logo_white-500.png",
-            "link": "https://news.turn14.com/category/features/",
-            "alt-text": ""
-          }
-        },
         "item_HPnLBC": {
           "type": "item",
           "name": "MotoIQ",
@@ -386,7 +377,6 @@
         "item_n6r6Hj",
         "item_aCL8m9",
         "item_FbGeaz",
-        "item_NtE3WK",
         "item_HPnLBC"
       ],
       "settings": {
