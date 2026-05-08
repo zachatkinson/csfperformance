@@ -404,6 +404,118 @@
         "desktop-item-scroll": 1
       }
     },
+    "creative_carousel_wEpzYi": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_kUYxig": {
+          "type": "item",
+          "name": "Rywire",
+          "settings": {
+            "image": "shopify://shop_images/Rywire-500-black.png",
+            "link": "https://www.rywire.com/",
+            "alt-text": ""
+          }
+        },
+        "item_A4UANx": {
+          "type": "item",
+          "name": "Meyers Manx",
+          "settings": {
+            "image": "shopify://shop_images/Meyers-Manx-500-black.png",
+            "link": "https://meyersmanx.com/",
+            "alt-text": ""
+          }
+        },
+        "item_3AdmCj": {
+          "type": "item",
+          "name": "Mountune",
+          "settings": {
+            "image": "shopify://shop_images/Mountune-400-black.png",
+            "link": "https://www.mountunestore.com/",
+            "alt-text": ""
+          }
+        },
+        "item_mqbLgt": {
+          "type": "item",
+          "name": "Nexalus",
+          "settings": {
+            "image": "shopify://shop_images/cropped-logo-N-120-black.png",
+            "link": "https://www.nexalus.com/",
+            "alt-text": ""
+          }
+        },
+        "item_LUi7BA": {
+          "type": "item",
+          "name": "PCS",
+          "settings": {
+            "image": "shopify://shop_images/pcs__logo-500-black.png",
+            "link": "https://powertraincontrolsolutions.com/",
+            "alt-text": ""
+          }
+        },
+        "item_rabRBF": {
+          "type": "item",
+          "name": "PRL",
+          "settings": {
+            "image": "shopify://shop_images/PRL_Logo-500-black.png",
+            "link": "https://prlmotorsports.com/",
+            "alt-text": ""
+          }
+        },
+        "item_N7TBnT": {
+          "type": "item",
+          "name": "Renntech",
+          "settings": {
+            "image": "shopify://shop_images/RENNtech-500-black.png",
+            "link": "https://renntechmercedes.com/",
+            "alt-text": ""
+          }
+        },
+        "item_tXDL3W": {
+          "type": "item",
+          "name": "Rogue",
+          "settings": {
+            "image": "shopify://shop_images/rogue-engineering-logo-300-black.png",
+            "link": "https://www.rogueengineering.com/",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_kUYxig",
+        "item_A4UANx",
+        "item_3AdmCj",
+        "item_mqbLgt",
+        "item_LUi7BA",
+        "item_rabRBF",
+        "item_N7TBnT",
+        "item_tXDL3W"
+      ],
+      "custom_css": [
+        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
+      ],
+      "name": "Creative Carousel - PL Companies 4",
+      "settings": {
+        "heading": "",
+        "color_scheme": "scheme-2",
+        "include_margins": true,
+        "autoplay": true,
+        "interaction-pause": true,
+        "draggable": true,
+        "direction": "to right",
+        "interval": 6000,
+        "duration": 300,
+        "transition-timing": "ease",
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
+        "desktop-item-count": 8,
+        "desktop-item-gap": 25,
+        "desktop-item-scroll": 1
+      }
+    },
     "custom_liquid_yFbDPW": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -474,6 +586,7 @@
     "creative_carousel_w7iTLU",
     "creative_carousel_MePQfB",
     "creative_carousel_Rca9A4",
+    "creative_carousel_wEpzYi",
     "custom_liquid_yFbDPW",
     "multicolumn_9EhWtw",
     "main"
