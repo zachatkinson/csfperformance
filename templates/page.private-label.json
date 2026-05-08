@@ -91,19 +91,19 @@
         },
         "item_teMgxP": {
           "type": "item",
-          "name": "XPH",
+          "name": "A/C Solutions",
           "settings": {
-            "image": "shopify://shop_images/Extreme_Power_House.png",
-            "link": "https://x-ph.com/brands/CSF-Race.html",
+            "image": "shopify://shop_images/ACS-1x1-500.png",
+            "link": "https://www.acsolutions.co/",
             "alt-text": ""
           }
         },
         "item_VKKi3K": {
           "type": "item",
-          "name": "FCP",
+          "name": "Bisimoto",
           "settings": {
-            "image": "shopify://shop_images/FCP_Euro.png",
-            "link": "https://www.fcpeuro.com/CSF-parts/",
+            "image": "shopify://shop_images/bisimoto-500-black.png",
+            "link": "https://bisimoto.com/",
             "alt-text": ""
           }
         },
