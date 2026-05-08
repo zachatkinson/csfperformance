@@ -45,7 +45,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "image": "shopify://shop_images/purchase-bg-2.jpg",
+        "image": "shopify://shop_images/Private-Label-Header_1.jpg",
         "image_overlay_opacity": 50,
         "image_height": "small",
         "desktop_content_position": "middle-center",
@@ -196,7 +196,7 @@
           "type": "item",
           "name": "Eurowise",
           "settings": {
-            "image": "shopify://shop_images/Studio_RSR_e5fd262e-d2c8-484a-80dd-2076efb686b7.png",
+            "image": "shopify://shop_images/eurowise-logo-200-black-t.png",
             "link": "https://studiorsr.com/collections/vendors?q=CSF",
             "alt-text": ""
           }
