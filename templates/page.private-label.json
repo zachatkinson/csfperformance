@@ -317,26 +317,26 @@
           "type": "item",
           "name": "Mountune",
           "settings": {
-            "image": "shopify://shop_images/Mountune-500-black.png",
+            "image": "shopify://shop_images/Mountune-400-black.png",
             "link": "https://www.mountunestore.com/",
             "alt-text": ""
           }
         },
         "item_xXARjY": {
           "type": "item",
-          "name": "Full Race",
+          "name": "Nexalus",
           "settings": {
-            "image": "shopify://shop_images/Full_Race-500-black.png",
-            "link": "https://www.full-race.com/",
+            "image": "shopify://shop_images/cropped-logo-N-120-black.png",
+            "link": "https://www.nexalus.com/",
             "alt-text": ""
           }
         },
         "item_KLzQ9A": {
           "type": "item",
-          "name": "Good-Win",
+          "name": "PCS",
           "settings": {
             "image": "shopify://shop_images/goodwin_logo_145-black.png",
-            "link": "https://www.good-win-racing.com/",
+            "link": "https://powertraincontrolsolutions.com/",
             "alt-text": ""
           }
         },
