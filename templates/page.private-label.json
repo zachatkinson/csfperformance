@@ -73,19 +73,19 @@
       "blocks": {
         "item_F7hfQ6": {
           "type": "item",
-          "name": "BimmerWorld",
+          "name": "034 MS",
           "settings": {
-            "image": "shopify://shop_images/ECS_Tuning_9c2146d0-03be-443b-a49a-1e029afe22bb.png",
-            "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
+            "image": "shopify://shop_images/034-Motor-Sports-500-black.png",
+            "link": "https://www.034motorsport.com/",
             "alt-text": ""
           }
         },
         "item_94BUyL": {
           "type": "item",
-          "name": "ECS",
+          "name": "A&A Corvette",
           "settings": {
-            "image": "shopify://shop_images/ECS_Tuning_9c2146d0-03be-443b-a49a-1e029afe22bb.png",
-            "link": "https://www.ecstuning.com/b-csf-parts/",
+            "image": "shopify://shop_images/aa_logo_500-black.png",
+            "link": "https://www.aacorvette.com/",
             "alt-text": ""
           }
         },
