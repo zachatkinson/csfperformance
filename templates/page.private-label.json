@@ -30,7 +30,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Click Here to Inquire",
-            "button_link_1": "",
+            "button_link_1": "#h-inquire",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
