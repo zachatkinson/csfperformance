@@ -157,7 +157,7 @@
       "custom_css": [
         ".blaze-slide img {max-height: 100px; max-width: 100px;}"
       ],
-      "name": "Creative Carousel - Pref Dealers 1",
+      "name": "Creative Carousel - PL Companies 1",
       "settings": {
         "heading": "",
         "color_scheme": "scheme-2",
@@ -185,16 +185,16 @@
       "blocks": {
         "item_cAXhGK": {
           "type": "item",
-          "name": "Rennline",
+          "name": "DMS",
           "settings": {
-            "image": "shopify://shop_images/Rennline_c058fc56-e49f-4bd5-a8ec-d10aba408f9c.png",
-            "link": "https://www.rennline.com/",
+            "image": "shopify://shop_images/DMS-logo-300-black.png",
+            "link": "https://dedicatedmotorsports.com/",
             "alt-text": ""
           }
         },
         "item_QzkyX8": {
           "type": "item",
-          "name": "Studio RSR",
+          "name": "Eurowise",
           "settings": {
             "image": "shopify://shop_images/Studio_RSR_e5fd262e-d2c8-484a-80dd-2076efb686b7.png",
             "link": "https://studiorsr.com/collections/vendors?q=CSF",
@@ -203,19 +203,19 @@
         },
         "item_7eTKqj": {
           "type": "item",
-          "name": "Titan",
+          "name": "Flyin Miata",
           "settings": {
-            "image": "shopify://shop_images/Titan_Motorsports_807d3145-9ab1-4bb8-ae56-c64435e4e4aa.png",
-            "link": "https://titanmotorsports.com/collections/csf",
+            "image": "shopify://shop_images/Flyin_Miata-400-black.png",
+            "link": "https://flyinmiata.com/",
             "alt-text": ""
           }
         },
         "item_YFxx4i": {
           "type": "item",
-          "name": "Throtl",
+          "name": "Full Race",
           "settings": {
-            "image": "shopify://shop_images/Throtl.png",
-            "link": "https://throtl.com/collections/csf",
+            "image": "shopify://shop_images/Full_Race-500-black.png",
+            "link": "https://www.full-race.com/",
             "alt-text": ""
           }
         },
@@ -269,7 +269,7 @@
       "custom_css": [
         ".blaze-slide img {max-height: 100px; max-width: 100px;}"
       ],
-      "name": "Creative Carousel - Pref Dealers 2",
+      "name": "Creative Carousel - PL Companies 2",
       "settings": {
         "heading": "",
         "color_scheme": "scheme-2",
