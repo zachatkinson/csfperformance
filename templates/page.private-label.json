@@ -436,18 +436,18 @@
         },
         "item_mqbLgt": {
           "type": "item",
-          "name": "Nexalus",
+          "name": "TRD",
           "settings": {
-            "image": "shopify://shop_images/cropped-logo-N-120-black.png",
-            "link": "https://www.nexalus.com/",
+            "image": "shopify://shop_images/TRD-logo-500-black.png",
+            "link": "https://www.toyota.com/racing/",
             "alt-text": ""
           }
         },
         "item_LUi7BA": {
           "type": "item",
-          "name": "PCS",
+          "name": "Turbosmart",
           "settings": {
-            "image": "shopify://shop_images/pcs__logo-500-black.png",
+            "image": "shopify://shop_images/Turbosmart-500-black.png",
             "link": "https://powertraincontrolsolutions.com/",
             "alt-text": ""
           }
