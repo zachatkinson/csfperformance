@@ -306,10 +306,10 @@
         },
         "item_yYAzQM": {
           "type": "item",
-          "name": "Eurowise",
+          "name": "Meyers Manx",
           "settings": {
-            "image": "shopify://shop_images/Studio_RSR_e5fd262e-d2c8-484a-80dd-2076efb686b7.png",
-            "link": "https://studiorsr.com/collections/vendors?q=CSF",
+            "image": "shopify://shop_images/Meyers-Manx-500-black.png",
+            "link": "https://meyersmanx.com/",
             "alt-text": ""
           }
         },
