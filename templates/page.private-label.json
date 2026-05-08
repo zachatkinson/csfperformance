@@ -292,6 +292,118 @@
         "desktop-item-scroll": 1
       }
     },
+    "creative_carousel_Rca9A4": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_fYVnGW": {
+          "type": "item",
+          "name": "Magnuson",
+          "settings": {
+            "image": "shopify://shop_images/magnuson-logo-500-black.png",
+            "link": "https://magnusonsuperchargers.com/",
+            "alt-text": ""
+          }
+        },
+        "item_yYAzQM": {
+          "type": "item",
+          "name": "Eurowise",
+          "settings": {
+            "image": "shopify://shop_images/Studio_RSR_e5fd262e-d2c8-484a-80dd-2076efb686b7.png",
+            "link": "https://studiorsr.com/collections/vendors?q=CSF",
+            "alt-text": ""
+          }
+        },
+        "item_hyF6pg": {
+          "type": "item",
+          "name": "Flyin Miata",
+          "settings": {
+            "image": "shopify://shop_images/Flyin_Miata-400-black.png",
+            "link": "https://flyinmiata.com/",
+            "alt-text": ""
+          }
+        },
+        "item_xXARjY": {
+          "type": "item",
+          "name": "Full Race",
+          "settings": {
+            "image": "shopify://shop_images/Full_Race-500-black.png",
+            "link": "https://www.full-race.com/",
+            "alt-text": ""
+          }
+        },
+        "item_KLzQ9A": {
+          "type": "item",
+          "name": "Good-Win",
+          "settings": {
+            "image": "shopify://shop_images/goodwin_logo_145-black.png",
+            "link": "https://www.good-win-racing.com/",
+            "alt-text": ""
+          }
+        },
+        "item_QGDya8": {
+          "type": "item",
+          "name": "HPD/HRC",
+          "settings": {
+            "image": "shopify://shop_images/HPD-HRC-500-black.png",
+            "link": "https://hondaracing-us.honda.com/",
+            "alt-text": ""
+          }
+        },
+        "item_UyHTRN": {
+          "type": "item",
+          "name": "Jackson Racing",
+          "settings": {
+            "image": "shopify://shop_images/Jackson-Racing-500-black.png",
+            "link": "https://jacksonracing.com/",
+            "alt-text": ""
+          }
+        },
+        "item_CPM8RF": {
+          "type": "item",
+          "name": "Kincer",
+          "settings": {
+            "image": "shopify://shop_images/Kincer-Chassis-Logo-300-black.png",
+            "link": "https://kincerchassis.com/",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_fYVnGW",
+        "item_yYAzQM",
+        "item_hyF6pg",
+        "item_xXARjY",
+        "item_KLzQ9A",
+        "item_QGDya8",
+        "item_UyHTRN",
+        "item_CPM8RF"
+      ],
+      "custom_css": [
+        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
+      ],
+      "name": "Creative Carousel - PL Companies 3",
+      "settings": {
+        "heading": "",
+        "color_scheme": "scheme-2",
+        "include_margins": true,
+        "autoplay": true,
+        "interaction-pause": true,
+        "draggable": true,
+        "direction": "to right",
+        "interval": 6000,
+        "duration": 300,
+        "transition-timing": "ease",
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
+        "desktop-item-count": 8,
+        "desktop-item-gap": 25,
+        "desktop-item-scroll": 1
+      }
+    },
     "custom_liquid_yFbDPW": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
@@ -361,6 +473,7 @@
     "custom_liquid_JjBCnN",
     "creative_carousel_w7iTLU",
     "creative_carousel_MePQfB",
+    "creative_carousel_Rca9A4",
     "custom_liquid_yFbDPW",
     "multicolumn_9EhWtw",
     "main"
