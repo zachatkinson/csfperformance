@@ -111,7 +111,7 @@
             "title": "Private Label + Custom manufacturing",
             "text": "<p>For inquiries regarding private label products and short to medium-run custom cooling manufacturing, please contact CSF Race at <a href=\"mailto:info@csfrace.com\">info@csfrace.com</a><br/><br/>* CSF does <span style=\"text-decoration:underline\">NOT</span> make custom one-off products.*</p>",
             "link_label": "Learn More About Private Label",
-            "link": "https://csfrace.com/csf_products/private-label/"
+            "link": "shopify://pages/private-label-custom-manufacturing"
           }
         },
         "column_UMUBbn": {
@@ -174,7 +174,7 @@
         "column_LPEizR"
       ],
       "custom_css": [
-        ".hulk-powered-wrapper {display: none}"
+        ".hulk-powered-wrapper {display: none;}"
       ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
