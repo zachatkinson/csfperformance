@@ -454,28 +454,28 @@
         },
         "item_rabRBF": {
           "type": "item",
-          "name": "PRL",
+          "name": "Unitronic",
           "settings": {
-            "image": "shopify://shop_images/PRL_Logo-500-black.png",
-            "link": "https://prlmotorsports.com/",
+            "image": "shopify://shop_images/unitronic-logo-stack-500-black.png",
+            "link": "https://www.getunitronic.com/",
             "alt-text": ""
           }
         },
         "item_N7TBnT": {
           "type": "item",
-          "name": "Renntech",
+          "name": "VF Engineering",
           "settings": {
-            "image": "shopify://shop_images/RENNtech-500-black.png",
-            "link": "https://renntechmercedes.com/",
+            "image": "shopify://shop_images/VF_Engineering_ROUND-500-black.png",
+            "link": "https://vfengineering.com/",
             "alt-text": ""
           }
         },
         "item_tXDL3W": {
           "type": "item",
-          "name": "Rogue",
+          "name": "Vortech",
           "settings": {
-            "image": "shopify://shop_images/rogue-engineering-logo-300-black.png",
-            "link": "https://www.rogueengineering.com/",
+            "image": "shopify://shop_images/Vortech_Logo_Tall-500-black.png",
+            "link": "https://vortechsuperchargers.com/",
             "alt-text": ""
           }
         }
