@@ -118,28 +118,28 @@
         },
         "item_BUHDTj": {
           "type": "item",
-          "name": "IND",
+          "name": "Cicio Performance",
           "settings": {
-            "image": "shopify://shop_images/IND.png",
-            "link": "https://ind-distribution.com/collections/csf",
+            "image": "shopify://shop_images/Cicio-Performance-Logo-200-black.png",
+            "link": "https://cicioperformance.com/",
             "alt-text": ""
           }
         },
         "item_XTQxmK": {
           "type": "item",
-          "name": "PSI",
+          "name": "Concept III",
           "settings": {
-            "image": "shopify://shop_images/PSI.png",
-            "link": "https://precision-sport.com/collections/all/csf",
+            "image": "shopify://shop_images/Concept_3_Logo_200-black.png",
+            "link": "https://www.concept3performance.com/",
             "alt-text": ""
           }
         },
         "item_7FqQaR": {
           "type": "item",
-          "name": "R44",
+          "name": "Concept Z",
           "settings": {
-            "image": "shopify://shop_images/R44_Performance.png",
-            "link": "https://r44performance.com/collections/csf-radiators-vehicle-cooling-parts",
+            "image": "shopify://shop_images/CZP-500-black.png",
+            "link": "https://conceptzperformance.com/",
             "alt-text": ""
           }
         }
