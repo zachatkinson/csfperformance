@@ -75,7 +75,7 @@
           "type": "item",
           "name": "BimmerWorld",
           "settings": {
-            "image": "shopify://shop_images/Bimmerworld_9b16edff-f08e-4ff8-8cbe-923d186399f0.png",
+            "image": "shopify://shop_images/ECS_Tuning_9c2146d0-03be-443b-a49a-1e029afe22bb.png",
             "link": "https://www.bimmerworld.com/Cooling/#/filter:manufacturer:CSF",
             "alt-text": ""
           }
@@ -165,7 +165,6 @@
         "autoplay": true,
         "interaction-pause": true,
         "draggable": true,
-        "show_navigation_arrows": false,
         "direction": "to right",
         "interval": 6000,
         "duration": 300,
@@ -278,7 +277,6 @@
         "autoplay": true,
         "interaction-pause": true,
         "draggable": true,
-        "show_navigation_arrows": false,
         "direction": "to right",
         "interval": 6000,
         "duration": 300,
