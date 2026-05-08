@@ -109,10 +109,10 @@
         },
         "item_nbmVyi": {
           "type": "item",
-          "name": "Pelican Parts",
+          "name": "Carbahn",
           "settings": {
-            "image": "shopify://shop_images/Pelican_Parts.png",
-            "link": "https://www.pelicanparts.com/byb-csf",
+            "image": "shopify://shop_images/CarBahn_Logo-white-500-black.png",
+            "link": "https://carbahn.com/",
             "alt-text": ""
           }
         },
