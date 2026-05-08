@@ -221,37 +221,37 @@
         },
         "item_QjxVax": {
           "type": "item",
-          "name": "Turner MS",
+          "name": "Good-Win",
           "settings": {
-            "image": "shopify://shop_images/Turner_Motorsport.png",
-            "link": "https://www.turnermotorsport.com/BMW-E39-Parts/m-361-csf",
+            "image": "shopify://shop_images/goodwin_logo_145-black.png",
+            "link": "https://www.good-win-racing.com/",
             "alt-text": ""
           }
         },
         "item_mVgmrJ": {
           "type": "item",
-          "name": "VV",
+          "name": "HPD/HRC",
           "settings": {
-            "image": "shopify://shop_images/Vehicle_Virals.png",
-            "link": "https://vehiclevirals.com/collections/csf-1",
+            "image": "shopify://shop_images/HPD-HRC-500-black.png",
+            "link": "https://hondaracing-us.honda.com/",
             "alt-text": ""
           }
         },
         "item_tmm3hE": {
           "type": "item",
-          "name": "Vivid",
+          "name": "Jackson Racing",
           "settings": {
-            "image": "shopify://shop_images/Vivid_Racing_bf7e9060-c260-4c7b-99a8-88d78875281b.png",
-            "link": "https://www.vividracing.com/",
+            "image": "shopify://shop_images/Jackson-Racing-500-black.png",
+            "link": "https://jacksonracing.com/",
             "alt-text": ""
           }
         },
         "item_AGaynk": {
           "type": "item",
-          "name": "XDP",
+          "name": "Kincer",
           "settings": {
-            "image": "shopify://shop_images/XDP_e324f498-c30a-41ed-95af-ac1832f0c8fa.png",
-            "link": "https://www.xtremediesel.com/xdp-manufacturers/csf#/showFilters",
+            "image": "shopify://shop_images/Kincer-Chassis-Logo-300-black.png",
+            "link": "https://kincerchassis.com/",
             "alt-text": ""
           }
         }
