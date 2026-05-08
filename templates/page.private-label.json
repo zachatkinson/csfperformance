@@ -315,10 +315,10 @@
         },
         "item_hyF6pg": {
           "type": "item",
-          "name": "Flyin Miata",
+          "name": "Mountune",
           "settings": {
-            "image": "shopify://shop_images/Flyin_Miata-400-black.png",
-            "link": "https://flyinmiata.com/",
+            "image": "shopify://shop_images/Mountune-500-black.png",
+            "link": "https://www.mountunestore.com/",
             "alt-text": ""
           }
         },
