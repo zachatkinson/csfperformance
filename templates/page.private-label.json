@@ -335,17 +335,17 @@
           "type": "item",
           "name": "PCS",
           "settings": {
-            "image": "shopify://shop_images/goodwin_logo_145-black.png",
+            "image": "shopify://shop_images/pcs__logo-500-black.png",
             "link": "https://powertraincontrolsolutions.com/",
             "alt-text": ""
           }
         },
         "item_QGDya8": {
           "type": "item",
-          "name": "HPD/HRC",
+          "name": "PRL",
           "settings": {
-            "image": "shopify://shop_images/HPD-HRC-500-black.png",
-            "link": "https://hondaracing-us.honda.com/",
+            "image": "shopify://shop_images/PRL_Logo-500-black.png",
+            "link": "https://prlmotorsports.com/",
             "alt-text": ""
           }
         },
