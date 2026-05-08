@@ -418,19 +418,19 @@
         },
         "item_A4UANx": {
           "type": "item",
-          "name": "Meyers Manx",
+          "name": "SSC N. America",
           "settings": {
-            "image": "shopify://shop_images/Meyers-Manx-500-black.png",
-            "link": "https://meyersmanx.com/",
+            "image": "shopify://shop_images/SSC-NA-logo-500-black.png",
+            "link": "https://sscnorthamerica.com/",
             "alt-text": ""
           }
         },
         "item_3AdmCj": {
           "type": "item",
-          "name": "Mountune",
+          "name": "Supermiata",
           "settings": {
-            "image": "shopify://shop_images/Mountune-400-black.png",
-            "link": "https://www.mountunestore.com/",
+            "image": "shopify://shop_images/Supermiata-500-black.png",
+            "link": "https://949racing.com/supermiata/",
             "alt-text": ""
           }
         },
