@@ -201,12 +201,39 @@
             "alt-text": ""
           }
         },
+        "item_Bn4LgM": {
+          "type": "item",
+          "name": "Doc Race",
+          "settings": {
+            "image": "shopify://shop_images/DocRace-Logo-500-black.png",
+            "link": "https://docrace.com/",
+            "alt-text": ""
+          }
+        },
+        "item_bAjmAC": {
+          "type": "item",
+          "name": "EMPI",
+          "settings": {
+            "image": "shopify://shop_images/EMPI_logo-500-black.png",
+            "link": "https://empius.com/",
+            "alt-text": ""
+          }
+        },
         "item_QzkyX8": {
           "type": "item",
           "name": "Eurowise",
           "settings": {
             "image": "shopify://shop_images/eurowise-logo-500-black.png",
-            "link": "https://studiorsr.com/collections/vendors?q=CSF",
+            "link": "https://shop.eurowise.com/",
+            "alt-text": ""
+          }
+        },
+        "item_D3nJqP": {
+          "type": "item",
+          "name": "Figs Engineering",
+          "settings": {
+            "image": "shopify://shop_images/figs-3-500-black.png",
+            "link": "https://www.shopfigs.com/",
             "alt-text": ""
           }
         },
@@ -227,44 +254,17 @@
             "link": "https://www.full-race.com/",
             "alt-text": ""
           }
-        },
-        "item_QjxVax": {
-          "type": "item",
-          "name": "Good-Win",
-          "settings": {
-            "image": "shopify://shop_images/goodwin_logo_145-black.png",
-            "link": "https://www.good-win-racing.com/",
-            "alt-text": ""
-          }
-        },
-        "item_mVgmrJ": {
-          "type": "item",
-          "name": "HPD/HRC",
-          "settings": {
-            "image": "shopify://shop_images/HPD-HRC-500-black.png",
-            "link": "https://hondaracing-us.honda.com/",
-            "alt-text": ""
-          }
-        },
-        "item_tmm3hE": {
-          "type": "item",
-          "name": "Jackson Racing",
-          "settings": {
-            "image": "shopify://shop_images/Jackson-Racing-500-black.png",
-            "link": "https://jacksonracing.com/",
-            "alt-text": ""
-          }
         }
       },
       "block_order": [
         "item_AGaynk",
         "item_cAXhGK",
+        "item_Bn4LgM",
+        "item_bAjmAC",
         "item_QzkyX8",
+        "item_D3nJqP",
         "item_7eTKqj",
-        "item_YFxx4i",
-        "item_QjxVax",
-        "item_mVgmrJ",
-        "item_tmm3hE"
+        "item_YFxx4i"
       ],
       "custom_css": [
         ".blaze-slide img {max-height: 100px; max-width: 100px;}"
@@ -295,6 +295,33 @@
     "creative_carousel_Rca9A4": {
       "type": "creative-carousel",
       "blocks": {
+        "item_NU8YjX": {
+          "type": "item",
+          "name": "Good-Win",
+          "settings": {
+            "image": "shopify://shop_images/goodwin_logo_145-black.png",
+            "link": "https://www.good-win-racing.com/",
+            "alt-text": ""
+          }
+        },
+        "item_XHYL6p": {
+          "type": "item",
+          "name": "HPD/HRC",
+          "settings": {
+            "image": "shopify://shop_images/HPD-HRC-500-black.png",
+            "link": "https://hondaracing-us.honda.com/",
+            "alt-text": ""
+          }
+        },
+        "item_TmKbyN": {
+          "type": "item",
+          "name": "Jackson Racing",
+          "settings": {
+            "image": "shopify://shop_images/Jackson-Racing-500-black.png",
+            "link": "https://jacksonracing.com/",
+            "alt-text": ""
+          }
+        },
         "item_zUhK38": {
           "type": "item",
           "name": "Kincer",
@@ -378,6 +405,9 @@
         }
       },
       "block_order": [
+        "item_NU8YjX",
+        "item_XHYL6p",
+        "item_TmKbyN",
         "item_zUhK38",
         "item_fYVnGW",
         "item_yYAzQM",
