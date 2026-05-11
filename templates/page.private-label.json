@@ -649,12 +649,30 @@
             "alt-text": ""
           }
         },
+        "item_xCjnqG": {
+          "type": "item",
+          "name": "Turbokraft",
+          "settings": {
+            "image": "shopify://shop_images/Turbokraft-500-black.png",
+            "link": "https://www.turbokraft.com/",
+            "alt-text": ""
+          }
+        },
         "item_fYmkcU": {
           "type": "item",
           "name": "Turbosmart",
           "settings": {
             "image": "shopify://shop_images/Turbosmart-500-black.png",
             "link": "https://powertraincontrolsolutions.com/",
+            "alt-text": ""
+          }
+        },
+        "item_MhG4my": {
+          "type": "item",
+          "name": "Turner Motorsport",
+          "settings": {
+            "image": "shopify://shop_images/turner-ms-500-black.png",
+            "link": "https://www.turnermotorsport.com/",
             "alt-text": ""
           }
         },
@@ -689,7 +707,9 @@
       "block_order": [
         "item_agxb7h",
         "item_XgALt7",
+        "item_xCjnqG",
         "item_fYmkcU",
+        "item_MhG4my",
         "item_98prNE",
         "item_ziEQLc",
         "item_FkkYeC"
