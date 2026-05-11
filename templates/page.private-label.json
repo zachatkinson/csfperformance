@@ -586,7 +586,7 @@
           "type": "item",
           "name": "Tick Performance",
           "settings": {
-            "image": "shopify://shop_images/tick_performance_v2_logo_bw.png",
+            "image": "shopify://shop_images/tick-performance-500-black.png",
             "link": "https://www.tickperformance.com/",
             "alt-text": ""
           }
