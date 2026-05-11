@@ -425,6 +425,15 @@
             "alt-text": ""
           }
         },
+        "item_E7ErTh": {
+          "type": "item",
+          "name": "Palm Beach Dyno",
+          "settings": {
+            "image": "shopify://shop_images/Palm-Beach-Dyno-500-black.png",
+            "link": "https://www.pbdyno.com/",
+            "alt-text": ""
+          }
+        },
         "item_YmpPma": {
           "type": "item",
           "name": "PCS",
@@ -440,6 +449,15 @@
           "settings": {
             "image": "shopify://shop_images/PRL_Logo-500-black.png",
             "link": "https://prlmotorsports.com/",
+            "alt-text": ""
+          }
+        },
+        "item_UaMTLt": {
+          "type": "item",
+          "name": "Pure Turbos",
+          "settings": {
+            "image": "shopify://shop_images/pureturbos-500-black.png",
+            "link": "https://www.pureturbos.com/",
             "alt-text": ""
           }
         },
@@ -465,8 +483,10 @@
       "block_order": [
         "item_cmUfby",
         "item_Q4AUjn",
+        "item_E7ErTh",
         "item_YmpPma",
         "item_HKBAPL",
+        "item_UaMTLt",
         "item_HxX3B3",
         "item_UpntF8"
       ],
