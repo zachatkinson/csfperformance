@@ -183,6 +183,15 @@
     "creative_carousel_MePQfB": {
       "type": "creative-carousel",
       "blocks": {
+        "item_AGaynk": {
+          "type": "item",
+          "name": "Designed By Moran",
+          "settings": {
+            "image": "shopify://shop_images/Kincer-Chassis-Logo-300-black.png",
+            "link": "https://www.designedbymoran.com/",
+            "alt-text": ""
+          }
+        },
         "item_cAXhGK": {
           "type": "item",
           "name": "DMS",
@@ -245,26 +254,17 @@
             "link": "https://jacksonracing.com/",
             "alt-text": ""
           }
-        },
-        "item_AGaynk": {
-          "type": "item",
-          "name": "Kincer",
-          "settings": {
-            "image": "shopify://shop_images/Kincer-Chassis-Logo-300-black.png",
-            "link": "https://kincerchassis.com/",
-            "alt-text": ""
-          }
         }
       },
       "block_order": [
+        "item_AGaynk",
         "item_cAXhGK",
         "item_QzkyX8",
         "item_7eTKqj",
         "item_YFxx4i",
         "item_QjxVax",
         "item_mVgmrJ",
-        "item_tmm3hE",
-        "item_AGaynk"
+        "item_tmm3hE"
       ],
       "custom_css": [
         ".blaze-slide img {max-height: 100px; max-width: 100px;}"
@@ -295,6 +295,15 @@
     "creative_carousel_Rca9A4": {
       "type": "creative-carousel",
       "blocks": {
+        "item_zUhK38": {
+          "type": "item",
+          "name": "Kincer",
+          "settings": {
+            "image": "shopify://shop_images/Kincer-Chassis-Logo-300-black.png",
+            "link": "https://kincerchassis.com/",
+            "alt-text": ""
+          }
+        },
         "item_fYVnGW": {
           "type": "item",
           "name": "Magnuson",
@@ -369,6 +378,7 @@
         }
       },
       "block_order": [
+        "item_zUhK38",
         "item_fYVnGW",
         "item_yYAzQM",
         "item_hyF6pg",
