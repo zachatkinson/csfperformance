@@ -304,6 +304,15 @@
             "alt-text": ""
           }
         },
+        "item_VPmyCW": {
+          "type": "item",
+          "name": "Griffin Motorsports Solutions (GMS)",
+          "settings": {
+            "image": "shopify://shop_images/GMS-logo-400-black.png",
+            "link": "https://www.griffin-motorsports.com/",
+            "alt-text": ""
+          }
+        },
         "item_XHYL6p": {
           "type": "item",
           "name": "HPD/HRC",
@@ -331,6 +340,15 @@
             "alt-text": ""
           }
         },
+        "item_KXdWTJ": {
+          "type": "item",
+          "name": "MA Performance",
+          "settings": {
+            "image": "shopify://shop_images/maperformance-logo-500-black.png",
+            "link": "https://www.maperformance.com/",
+            "alt-text": ""
+          }
+        },
         "item_fYVnGW": {
           "type": "item",
           "name": "Magnuson",
@@ -348,75 +366,17 @@
             "link": "https://meyersmanx.com/",
             "alt-text": ""
           }
-        },
-        "item_hyF6pg": {
-          "type": "item",
-          "name": "Mountune",
-          "settings": {
-            "image": "shopify://shop_images/Mountune-400-black.png",
-            "link": "https://www.mountunestore.com/",
-            "alt-text": ""
-          }
-        },
-        "item_xXARjY": {
-          "type": "item",
-          "name": "Nexalus",
-          "settings": {
-            "image": "shopify://shop_images/cropped-logo-N-120-black.png",
-            "link": "https://www.nexalus.com/",
-            "alt-text": ""
-          }
-        },
-        "item_KLzQ9A": {
-          "type": "item",
-          "name": "PCS",
-          "settings": {
-            "image": "shopify://shop_images/pcs__logo-500-black.png",
-            "link": "https://powertraincontrolsolutions.com/",
-            "alt-text": ""
-          }
-        },
-        "item_QGDya8": {
-          "type": "item",
-          "name": "PRL",
-          "settings": {
-            "image": "shopify://shop_images/PRL_Logo-500-black.png",
-            "link": "https://prlmotorsports.com/",
-            "alt-text": ""
-          }
-        },
-        "item_UyHTRN": {
-          "type": "item",
-          "name": "Renntech",
-          "settings": {
-            "image": "shopify://shop_images/RENNtech-500-black.png",
-            "link": "https://renntechmercedes.com/",
-            "alt-text": ""
-          }
-        },
-        "item_CPM8RF": {
-          "type": "item",
-          "name": "Rogue",
-          "settings": {
-            "image": "shopify://shop_images/rogue-engineering-logo-300-black.png",
-            "link": "https://www.rogueengineering.com/",
-            "alt-text": ""
-          }
         }
       },
       "block_order": [
         "item_NU8YjX",
+        "item_VPmyCW",
         "item_XHYL6p",
         "item_TmKbyN",
         "item_zUhK38",
+        "item_KXdWTJ",
         "item_fYVnGW",
-        "item_yYAzQM",
-        "item_hyF6pg",
-        "item_xXARjY",
-        "item_KLzQ9A",
-        "item_QGDya8",
-        "item_UyHTRN",
-        "item_CPM8RF"
+        "item_yYAzQM"
       ],
       "custom_css": [
         ".blaze-slide img {max-height: 100px; max-width: 100px;}"
@@ -444,10 +404,102 @@
         "desktop-item-scroll": 1
       }
     },
-    "creative_carousel_wEpzYi": {
+    "creative_carousel_RrAHtR": {
       "type": "creative-carousel",
       "blocks": {
-        "item_kUYxig": {
+        "item_cmUfby": {
+          "type": "item",
+          "name": "Mountune",
+          "settings": {
+            "image": "shopify://shop_images/Mountune-400-black.png",
+            "link": "https://www.mountunestore.com/",
+            "alt-text": ""
+          }
+        },
+        "item_Q4AUjn": {
+          "type": "item",
+          "name": "Nexalus",
+          "settings": {
+            "image": "shopify://shop_images/cropped-logo-N-120-black.png",
+            "link": "https://www.nexalus.com/",
+            "alt-text": ""
+          }
+        },
+        "item_YmpPma": {
+          "type": "item",
+          "name": "PCS",
+          "settings": {
+            "image": "shopify://shop_images/pcs__logo-500-black.png",
+            "link": "https://powertraincontrolsolutions.com/",
+            "alt-text": ""
+          }
+        },
+        "item_HKBAPL": {
+          "type": "item",
+          "name": "PRL",
+          "settings": {
+            "image": "shopify://shop_images/PRL_Logo-500-black.png",
+            "link": "https://prlmotorsports.com/",
+            "alt-text": ""
+          }
+        },
+        "item_HxX3B3": {
+          "type": "item",
+          "name": "Renntech",
+          "settings": {
+            "image": "shopify://shop_images/RENNtech-500-black.png",
+            "link": "https://renntechmercedes.com/",
+            "alt-text": ""
+          }
+        },
+        "item_UpntF8": {
+          "type": "item",
+          "name": "Rogue",
+          "settings": {
+            "image": "shopify://shop_images/rogue-engineering-logo-300-black.png",
+            "link": "https://www.rogueengineering.com/",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_cmUfby",
+        "item_Q4AUjn",
+        "item_YmpPma",
+        "item_HKBAPL",
+        "item_HxX3B3",
+        "item_UpntF8"
+      ],
+      "custom_css": [
+        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
+      ],
+      "name": "Creative Carousel - PL Companies 4",
+      "settings": {
+        "heading": "",
+        "color_scheme": "scheme-2",
+        "include_margins": true,
+        "autoplay": true,
+        "interaction-pause": true,
+        "draggable": true,
+        "direction": "to right",
+        "interval": 6000,
+        "duration": 300,
+        "transition-timing": "ease",
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
+        "desktop-item-count": 8,
+        "desktop-item-gap": 25,
+        "desktop-item-scroll": 1
+      }
+    },
+    "creative_carousel_wzRGBa": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_E38jbn": {
           "type": "item",
           "name": "Rywire",
           "settings": {
@@ -456,7 +508,7 @@
             "alt-text": ""
           }
         },
-        "item_A4UANx": {
+        "item_BhJbfC": {
           "type": "item",
           "name": "SSC N. America",
           "settings": {
@@ -465,7 +517,7 @@
             "alt-text": ""
           }
         },
-        "item_3AdmCj": {
+        "item_cYdKWn": {
           "type": "item",
           "name": "Supermiata",
           "settings": {
@@ -474,7 +526,7 @@
             "alt-text": ""
           }
         },
-        "item_mqbLgt": {
+        "item_agTtmN": {
           "type": "item",
           "name": "TRD",
           "settings": {
@@ -483,7 +535,7 @@
             "alt-text": ""
           }
         },
-        "item_LUi7BA": {
+        "item_wtJdwV": {
           "type": "item",
           "name": "Turbosmart",
           "settings": {
@@ -492,7 +544,7 @@
             "alt-text": ""
           }
         },
-        "item_rabRBF": {
+        "item_Bw3yFt": {
           "type": "item",
           "name": "Unitronic",
           "settings": {
@@ -501,7 +553,7 @@
             "alt-text": ""
           }
         },
-        "item_N7TBnT": {
+        "item_qjXXpk": {
           "type": "item",
           "name": "VF Engineering",
           "settings": {
@@ -510,7 +562,7 @@
             "alt-text": ""
           }
         },
-        "item_tXDL3W": {
+        "item_A3Mq44": {
           "type": "item",
           "name": "Vortech",
           "settings": {
@@ -521,19 +573,131 @@
         }
       },
       "block_order": [
-        "item_kUYxig",
-        "item_A4UANx",
-        "item_3AdmCj",
-        "item_mqbLgt",
-        "item_LUi7BA",
-        "item_rabRBF",
-        "item_N7TBnT",
-        "item_tXDL3W"
+        "item_E38jbn",
+        "item_BhJbfC",
+        "item_cYdKWn",
+        "item_agTtmN",
+        "item_wtJdwV",
+        "item_Bw3yFt",
+        "item_qjXXpk",
+        "item_A3Mq44"
       ],
       "custom_css": [
         ".blaze-slide img {max-height: 100px; max-width: 100px;}"
       ],
-      "name": "Creative Carousel - PL Companies 4",
+      "name": "Creative Carousel - PL Companies 5",
+      "settings": {
+        "heading": "",
+        "color_scheme": "scheme-2",
+        "include_margins": true,
+        "autoplay": true,
+        "interaction-pause": true,
+        "draggable": true,
+        "direction": "to right",
+        "interval": 6000,
+        "duration": 300,
+        "transition-timing": "ease",
+        "mobile-item-count": 1,
+        "mobile-item-gap": 25,
+        "mobile-item-scroll": 1,
+        "tablet-item-count": 4,
+        "tablet-item-gap": 50,
+        "tablet-item-scroll": 1,
+        "desktop-item-count": 8,
+        "desktop-item-gap": 25,
+        "desktop-item-scroll": 1
+      }
+    },
+    "creative_carousel_cbcVfQ": {
+      "type": "creative-carousel",
+      "blocks": {
+        "item_CYwdPm": {
+          "type": "item",
+          "name": "Rywire",
+          "settings": {
+            "image": "shopify://shop_images/Rywire-500-black.png",
+            "link": "https://www.rywire.com/",
+            "alt-text": ""
+          }
+        },
+        "item_KhLxDe": {
+          "type": "item",
+          "name": "SSC N. America",
+          "settings": {
+            "image": "shopify://shop_images/SSC-NA-logo-500-black.png",
+            "link": "https://sscnorthamerica.com/",
+            "alt-text": ""
+          }
+        },
+        "item_Y8LWKd": {
+          "type": "item",
+          "name": "Supermiata",
+          "settings": {
+            "image": "shopify://shop_images/Supermiata-500-black.png",
+            "link": "https://949racing.com/supermiata/",
+            "alt-text": ""
+          }
+        },
+        "item_agxb7h": {
+          "type": "item",
+          "name": "TRD",
+          "settings": {
+            "image": "shopify://shop_images/TRD-logo-500-black.png",
+            "link": "https://www.toyota.com/racing/",
+            "alt-text": ""
+          }
+        },
+        "item_fYmkcU": {
+          "type": "item",
+          "name": "Turbosmart",
+          "settings": {
+            "image": "shopify://shop_images/Turbosmart-500-black.png",
+            "link": "https://powertraincontrolsolutions.com/",
+            "alt-text": ""
+          }
+        },
+        "item_98prNE": {
+          "type": "item",
+          "name": "Unitronic",
+          "settings": {
+            "image": "shopify://shop_images/unitronic-logo-stack-500-black.png",
+            "link": "https://www.getunitronic.com/",
+            "alt-text": ""
+          }
+        },
+        "item_ziEQLc": {
+          "type": "item",
+          "name": "VF Engineering",
+          "settings": {
+            "image": "shopify://shop_images/VF_Engineering_ROUND-500-black.png",
+            "link": "https://vfengineering.com/",
+            "alt-text": ""
+          }
+        },
+        "item_FkkYeC": {
+          "type": "item",
+          "name": "Vortech",
+          "settings": {
+            "image": "shopify://shop_images/Vortech_Logo_Tall-500-black.png",
+            "link": "https://vortechsuperchargers.com/",
+            "alt-text": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_CYwdPm",
+        "item_KhLxDe",
+        "item_Y8LWKd",
+        "item_agxb7h",
+        "item_fYmkcU",
+        "item_98prNE",
+        "item_ziEQLc",
+        "item_FkkYeC"
+      ],
+      "custom_css": [
+        ".blaze-slide img {max-height: 100px; max-width: 100px;}"
+      ],
+      "name": "Creative Carousel - PL Companies 6",
       "settings": {
         "heading": "",
         "color_scheme": "scheme-2",
@@ -626,7 +790,9 @@
     "creative_carousel_w7iTLU",
     "creative_carousel_MePQfB",
     "creative_carousel_Rca9A4",
-    "creative_carousel_wEpzYi",
+    "creative_carousel_RrAHtR",
+    "creative_carousel_wzRGBa",
+    "creative_carousel_cbcVfQ",
     "custom_liquid_yFbDPW",
     "multicolumn_9EhWtw",
     "main"
