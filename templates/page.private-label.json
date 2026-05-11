@@ -633,6 +633,15 @@
       "blocks": {
         "item_agxb7h": {
           "type": "item",
+          "name": "Top Rank",
+          "settings": {
+            "image": "shopify://shop_images/top-rank-logo-wide-500-black.png",
+            "link": "https://www.importavehicle.com/",
+            "alt-text": ""
+          }
+        },
+        "item_XgALt7": {
+          "type": "item",
           "name": "TRD",
           "settings": {
             "image": "shopify://shop_images/TRD-logo-500-black.png",
@@ -679,6 +688,7 @@
       },
       "block_order": [
         "item_agxb7h",
+        "item_XgALt7",
         "item_fYmkcU",
         "item_98prNE",
         "item_ziEQLc",
