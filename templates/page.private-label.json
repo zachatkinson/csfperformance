@@ -635,7 +635,7 @@
           "type": "item",
           "name": "Top Rank",
           "settings": {
-            "image": "shopify://shop_images/top-rank-logo-wide-500-black.png",
+            "image": "shopify://shop_images/top-rank-logo-500-black.png",
             "link": "https://www.importavehicle.com/",
             "alt-text": ""
           }
