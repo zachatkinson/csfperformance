@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_3iEdJE": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/7245-8365-8375_Banner-1920x640-2.jpg",
+            "mobile-image": "shopify://shop_images/7245-8365-8375_Graphic-1440x1800.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://collections/ford-gt-1st-gen"
+          }
+        },
         "slide_TfcfhV": {
           "type": "slide",
           "settings": {
@@ -159,15 +168,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://collections/all-mclaren-products"
           }
-        },
-        "slide_3iEdJE": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640_7238.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350_7238.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://products/7238-mk3-ford-focus-st-high-performance-all-aluminum-radiator"
-          }
         }
       },
       "block_order": [
@@ -177,6 +177,7 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_3iEdJE",
         "slide_TfcfhV",
         "slide_MDmQpw",
         "slide_WnayiF",
@@ -184,8 +185,7 @@
         "slide_mizeRG",
         "slide_hUxYke",
         "slide_CDkmid",
-        "slide_TRrWtF",
-        "slide_3iEdJE"
+        "slide_TRrWtF"
       ],
       "settings": {
         "include_margins": false,
