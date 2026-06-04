@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_TRrWtF": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/8372_1920x640t.jpg",
+            "mobile-image": "shopify://shop_images/8372_1080x1350_f07ecb4a-c66c-4846-bfe0-b1871c6b26a3.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://products/8372-bmw-g2x-m340i-m440i-g42-m240i-high-performance-engine-oil-cooler"
+          }
+        },
         "slide_3iEdJE": {
           "type": "slide",
           "settings": {
@@ -159,15 +168,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://collections/new-products"
           }
-        },
-        "slide_TRrWtF": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/8212_8213_copy_2.jpg",
-            "mobile-image": "shopify://shop_images/8212_8213_copy.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://collections/all-mclaren-products"
-          }
         }
       },
       "block_order": [
@@ -177,6 +177,7 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_TRrWtF",
         "slide_3iEdJE",
         "slide_TfcfhV",
         "slide_MDmQpw",
@@ -184,8 +185,7 @@
         "slide_HnqNxW",
         "slide_mizeRG",
         "slide_hUxYke",
-        "slide_CDkmid",
-        "slide_TRrWtF"
+        "slide_CDkmid"
       ],
       "settings": {
         "include_margins": false,
