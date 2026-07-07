@@ -590,29 +590,29 @@
     "featured_youtube_home_KNK3Pc": {
       "type": "featured-youtube-home",
       "blocks": {
+        "youtube_video_DhYzjp": {
+          "type": "youtube_video",
+          "settings": {
+            "video_url": "https://www.youtube.com/watch?v=oIBk7cFJGs8"
+          }
+        },
         "youtube_video_QYDAkG": {
           "type": "youtube_video",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=Tt9Z9QL76ps"
+            "video_url": "https://www.youtube.com/watch?v=Dzv1SSVKVK8"
           }
         },
         "youtube_video_Qm3T7b": {
           "type": "youtube_video",
           "settings": {
-            "video_url": "https://www.youtube.com/watch?v=EOe5xRF39TQ"
-          }
-        },
-        "youtube_video_HJB7ew": {
-          "type": "youtube_video",
-          "settings": {
-            "video_url": "https://www.youtube.com/watch?v=-EV-wa8uQdU"
+            "video_url": "https://www.youtube.com/watch?v=zw6VC_pSKY8"
           }
         }
       },
       "block_order": [
+        "youtube_video_DhYzjp",
         "youtube_video_QYDAkG",
-        "youtube_video_Qm3T7b",
-        "youtube_video_HJB7ew"
+        "youtube_video_Qm3T7b"
       ],
       "settings": {
         "include_margins": false,
