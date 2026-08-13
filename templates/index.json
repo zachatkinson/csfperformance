@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_hUxYke": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640__7251_7252_83774_copy.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350__7251__7252__83774.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://collections/ferrari-458-italia-spider"
+          }
+        },
         "slide_CDkmid": {
           "type": "slide",
           "settings": {
@@ -159,15 +168,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://products/8381-porsche-996-911-986-boxster-oem-performance-a-c-condenser"
           }
-        },
-        "slide_hUxYke": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640_8343n.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350_8343n.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://products/8343-fl5-honda-civic-type-r-dual-engine-oil-cooler-kit"
-          }
         }
       },
       "block_order": [
@@ -177,6 +177,7 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_hUxYke",
         "slide_CDkmid",
         "slide_WnayiF",
         "slide_TRrWtF",
@@ -184,8 +185,7 @@
         "slide_TfcfhV",
         "slide_MDmQpw",
         "slide_HnqNxW",
-        "slide_mizeRG",
-        "slide_hUxYke"
+        "slide_mizeRG"
       ],
       "settings": {
         "include_margins": false,
