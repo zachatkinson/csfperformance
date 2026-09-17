@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_HnqNxW": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640__7249.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350__7249.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://products/7249-6th-gen-camaro-lt1-ss-zl1-3rd-gen-cts-v-high-performance-all-aluminum-radiator"
+          }
+        },
         "slide_mizeRG": {
           "type": "slide",
           "settings": {
@@ -159,15 +168,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://products/8368-porsche-964-993-oem-performance-a-c-evaporator"
           }
-        },
-        "slide_HnqNxW": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640__8374_8378_copy.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350__8374_8378_copy.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://products/8374-motorsport-dual-pass-radiator-with-shroud-14-spal-brushless-fans-harnesses"
-          }
         }
       },
       "block_order": [
@@ -177,6 +177,7 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_HnqNxW",
         "slide_mizeRG",
         "slide_hUxYke",
         "slide_CDkmid",
@@ -184,8 +185,7 @@
         "slide_TRrWtF",
         "slide_3iEdJE",
         "slide_TfcfhV",
-        "slide_MDmQpw",
-        "slide_HnqNxW"
+        "slide_MDmQpw"
       ],
       "settings": {
         "include_margins": false,
