@@ -192,7 +192,7 @@
         "reveal_on_scroll": false,
         "show_arrows": true,
         "show_dots": true,
-        "auto_rotate_interval": 5
+        "auto_rotate_interval": 6
       }
     },
     "featured_collection": {
