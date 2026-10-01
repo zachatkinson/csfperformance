@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_MDmQpw": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/1920x640__7240_copy.jpg",
+            "mobile-image": "shopify://shop_images/1080x1350__7240_copy.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://products/7240-renntech-by-csf-mercedes-r129-sl600-oem-performance-all-aluminum-radiator"
+          }
+        },
         "slide_WnayiF": {
           "type": "slide",
           "settings": {
@@ -159,15 +168,6 @@
             "slide-alt-text": "",
             "slide-url": "shopify://products/8371-csf-universal-large-single-pass-oil-cooler-m22-x-1-5-12-0l-x-9-33h-x-2-16w"
           }
-        },
-        "slide_MDmQpw": {
-          "type": "slide",
-          "settings": {
-            "slide-image": "shopify://shop_images/1920x640__8368.jpg",
-            "mobile-image": "shopify://shop_images/1080x1350__8368.jpg",
-            "slide-alt-text": "",
-            "slide-url": "shopify://products/8368-porsche-964-993-oem-performance-a-c-evaporator"
-          }
         }
       },
       "block_order": [
@@ -177,6 +177,7 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_MDmQpw",
         "slide_WnayiF",
         "slide_HnqNxW",
         "slide_mizeRG",
@@ -184,8 +185,7 @@
         "slide_CDkmid",
         "slide_TRrWtF",
         "slide_3iEdJE",
-        "slide_TfcfhV",
-        "slide_MDmQpw"
+        "slide_TfcfhV"
       ],
       "settings": {
         "include_margins": false,
