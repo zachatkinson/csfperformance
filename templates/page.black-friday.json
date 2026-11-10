@@ -128,43 +128,11 @@
         "padding_bottom": 36
       }
     },
-    "collapsible_content_4G3cgw": {
-      "type": "collapsible-content",
-      "blocks": {
-        "collapsible_row_TVMhWi": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Products Excluded from promotional pricing",
-            "icon": "check_mark",
-            "row_content": "<ul><li><strong>CSF #8186</strong> – Porsche 991 GT2 RS Twin Intercooler Set</li><li><strong>CSF #8188</strong> – Porsche 992 Turbo / Turbo S Intercooler System</li><li><strong>CSF #8194 / 8194B</strong> – Audi C8 RS6/RS7 Twin Intercooler Set</li><li><strong>CSF #8200 / 8200B / 8200C / 8200S</strong> – Supra/BMW B58 “Super” Charge-Air-Cooler Manifold & Spacer</li><li><strong>CSF #8210 / 8210B</strong> – Ferrari 488/Pista/F8 Twin Intercooler Set</li><li><strong>CSF #8211 / 8211R</strong> – Lamborghini Urus / Audi RS Q8 Twin Intercooler Set</li><li><strong>CSF #8217</strong> – Porsche 992 Carrera (3.0t) Intercooler System</li><li><strong>CSF #8233 / 8233B / 8233C</strong> – BMW S58 “Level Up” Charge-Air-Cooler Manifold</li><li><strong>CSF #8280 / 8280B</strong> – Audi SQ8/SQ7 Twin Intercooler Set</li><li><strong>CSF #8300 / 8300B / 8300C</strong> – BMW Gen 1 B58 Charge-Air-Cooler Manifold</li><li><strong>CSF #8343</strong>&nbsp;–&nbsp;FL5 Honda Civic Type R Dual Engine Oil Cooler Kit</li><li><strong>CSF #8350</strong>&nbsp;–&nbsp;Ford Bronco 2.7L External Transmission Oil Cooler Kit</li><li><strong>CSF #8352</strong> – McLaren 720S / 765LT / 750S / GT / GTS Charge-Air-Coolers</li><li><strong>CSF #8375</strong>&nbsp;–&nbsp;2005-2006 Ford GT High-Performance Transaxle Cooler Kit<br/></li><li><strong>CSF #8400 / 8400B / 8400C</strong> – Supra/BMW B58 “Race X” Charge-Air-Cooler Manifold</li><li><strong>CSF #8401</strong>&nbsp;–&nbsp;B58 \"No Limit\" Billet Air-to-Air Competition Manifold<br/></li><li><strong>CSF #8402</strong>&nbsp;– S58 \"No Limit\" Billet Air-to-Air Competition Manifold<br/></li><li><strong>CSF #8403</strong>&nbsp;–&nbsp;Nitrous Jet Fitting Adaptor Plugs (qty. 6) for CSF B58/S58 Manifolds<br/></li><li><strong>CSF #8404</strong>&nbsp;–&nbsp;Second Fuel Rail Kit for CSF 8401/8402 B58 & S58 Air-to-Air Billet Manifolds</li></ul>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_TVMhWi"
-      ],
-      "name": "t:sections.collapsible_content.presets.name",
-      "settings": {
-        "caption": "The following specialty products are excluded from all Black Friday promotional pricing, including the temporary MAP advertising allowance and additional dealer discounts. Existing pricing and MAP requirements remain in effect for these products.",
-        "heading": "",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "section",
-        "color_scheme": "",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "custom_liquid_JNiQaK": {
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"page-width color-{{ section.settings.body_color_scheme }}\">\n<h3>*CSF Product Excluded from Black Friday Sale Discounts</h3>\n<p>The following specialty products are excluded from all Black Friday promotional pricing, including the temporary MAP advertising allowance and additional dealer discounts. Existing pricing and MAP requirements remain in effect for these products.</p>\n<ul>\n<li><strong>CSF #8186</strong> &ndash; Porsche 991 GT2 RS Twin Intercooler Set</li>\n<li><strong>CSF #8188</strong> &ndash; Porsche 992 Turbo / Turbo S Intercooler System</li>\n<li><strong>CSF #8194 / 8194B</strong> &ndash; Audi C8 RS6/RS7 Twin Intercooler Set</li>\n<li><strong>CSF #8200 / 8200B / 8200C / 8200S</strong> &ndash; Supra/BMW B58 &ldquo;Super&rdquo; Charge-Air-Cooler Manifold &amp; Spacer</li>\n<li><strong>CSF #8210 / 8210B</strong> &ndash; Ferrari 488/Pista/F8 Twin Intercooler Set</li>\n<li><strong>CSF #8211 / 8211R</strong> &ndash; Lamborghini Urus / Audi RS Q8 Twin Intercooler Set</li>\n<li><strong>CSF #8217</strong> &ndash; Porsche 992 Carrera (3.0t) Intercooler System</li>\n<li><strong>CSF #8233 / 8233B / 8233C</strong> &ndash; BMW S58 &ldquo;Level Up&rdquo; Charge-Air-Cooler Manifold</li>\n<li><strong>CSF #8280 / 8280B</strong> &ndash; Audi SQ8/SQ7 Twin Intercooler Set</li>\n<li><strong>CSF #8300 / 8300B / 8300C</strong> &ndash; BMW Gen 1 B58 Charge-Air-Cooler Manifold</li>\n<li><strong>CSF #8343</strong>&nbsp;&ndash;&nbsp;FL5 Honda Civic Type R Dual Engine Oil Cooler Kit</li>\n<li><strong>CSF #8350</strong>&nbsp;&ndash;&nbsp;Ford Bronco 2.7L External Transmission Oil Cooler Kit</li>\n<li><strong>CSF #8352</strong> &ndash; McLaren 720S / 765LT / 750S / GT / GTS Charge-Air-Coolers</li>\n<li><strong>CSF #8375</strong>&nbsp;&ndash;&nbsp;2005-2006 Ford GT High-Performance Transaxle Cooler Kit</li>\n<li><strong>CSF #8400 / 8400B / 8400C</strong> &ndash; Supra/BMW B58 &ldquo;Race X&rdquo; Charge-Air-Cooler Manifold</li>\n<li><strong>CSF #8401</strong>&nbsp;&ndash;&nbsp;B58 \"No Limit\" Billet Air-to-Air Competition Manifold</li>\n<li><strong>CSF #8402</strong>&nbsp;&ndash; S58 \"No Limit\" Billet Air-to-Air Competition Manifold</li>\n<li><strong>CSF #8403</strong>&nbsp;&ndash;&nbsp;Nitrous Jet Fitting Adaptor Plugs (qty. 6) for CSF B58/S58 Manifolds</li>\n<li><strong>CSF #8404</strong>&nbsp;&ndash;&nbsp;Second Fuel Rail Kit for CSF 8401/8402 B58 &amp; S58 Air-to-Air Billet Manifolds</li>\n</ul>\n</div>",
+        "custom_liquid": "<div id=\"excluded-products\" class=\"page-width color-{{ section.settings.body_color_scheme }}\">\n<hr>\n<h3>*CSF Product Excluded from Black Friday Sale Discounts</h3>\n<p>The following specialty products are excluded from all Black Friday promotional pricing, including the temporary MAP advertising allowance and additional dealer discounts. Existing pricing and MAP requirements remain in effect for these products.</p>\n<ul>\n<li><strong>CSF #8186</strong> &ndash; Porsche 991 GT2 RS Twin Intercooler Set</li>\n<li><strong>CSF #8188</strong> &ndash; Porsche 992 Turbo / Turbo S Intercooler System</li>\n<li><strong>CSF #8194 / 8194B</strong> &ndash; Audi C8 RS6/RS7 Twin Intercooler Set</li>\n<li><strong>CSF #8200 / 8200B / 8200C / 8200S</strong> &ndash; Supra/BMW B58 &ldquo;Super&rdquo; Charge-Air-Cooler Manifold &amp; Spacer</li>\n<li><strong>CSF #8210 / 8210B</strong> &ndash; Ferrari 488/Pista/F8 Twin Intercooler Set</li>\n<li><strong>CSF #8211 / 8211R</strong> &ndash; Lamborghini Urus / Audi RS Q8 Twin Intercooler Set</li>\n<li><strong>CSF #8217</strong> &ndash; Porsche 992 Carrera (3.0t) Intercooler System</li>\n<li><strong>CSF #8233 / 8233B / 8233C</strong> &ndash; BMW S58 &ldquo;Level Up&rdquo; Charge-Air-Cooler Manifold</li>\n<li><strong>CSF #8280 / 8280B</strong> &ndash; Audi SQ8/SQ7 Twin Intercooler Set</li>\n<li><strong>CSF #8300 / 8300B / 8300C</strong> &ndash; BMW Gen 1 B58 Charge-Air-Cooler Manifold</li>\n<li><strong>CSF #8343</strong>&nbsp;&ndash;&nbsp;FL5 Honda Civic Type R Dual Engine Oil Cooler Kit</li>\n<li><strong>CSF #8350</strong>&nbsp;&ndash;&nbsp;Ford Bronco 2.7L External Transmission Oil Cooler Kit</li>\n<li><strong>CSF #8352</strong> &ndash; McLaren 720S / 765LT / 750S / GT / GTS Charge-Air-Coolers</li>\n<li><strong>CSF #8375</strong>&nbsp;&ndash;&nbsp;2005-2006 Ford GT High-Performance Transaxle Cooler Kit</li>\n<li><strong>CSF #8400 / 8400B / 8400C</strong> &ndash; Supra/BMW B58 &ldquo;Race X&rdquo; Charge-Air-Cooler Manifold</li>\n<li><strong>CSF #8401</strong>&nbsp;&ndash;&nbsp;B58 \"No Limit\" Billet Air-to-Air Competition Manifold</li>\n<li><strong>CSF #8402</strong>&nbsp;&ndash; S58 \"No Limit\" Billet Air-to-Air Competition Manifold</li>\n<li><strong>CSF #8403</strong>&nbsp;&ndash;&nbsp;Nitrous Jet Fitting Adaptor Plugs (qty. 6) for CSF B58/S58 Manifolds</li>\n<li><strong>CSF #8404</strong>&nbsp;&ndash;&nbsp;Second Fuel Rail Kit for CSF 8401/8402 B58 &amp; S58 Air-to-Air Billet Manifolds</li>\n</ul>\n</div>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -177,7 +145,6 @@
     "rich_text_yzFxjW",
     "featured_collection_XXJggK",
     "featured_collection_Tg38Xz",
-    "collapsible_content_4G3cgw",
     "custom_liquid_JNiQaK"
   ]
 }
