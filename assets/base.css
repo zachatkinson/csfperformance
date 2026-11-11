@@ -4053,3 +4053,8 @@ th {
   transition: text-decoration-thickness var(--duration-short) ease;
   text-decoration: none;
 }
+
+.three-column-list {
+    column-count: 3;
+    column-gap: var(--grid-mobile-horizontal-spacing);
+}
