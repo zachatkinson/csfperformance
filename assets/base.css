@@ -4058,3 +4058,9 @@ th {
     column-count: 3;
     column-gap: var(--grid-mobile-horizontal-spacing);
 }
+
+@media screen and (max-width: 750px) {
+    .three-column-list {
+        column-count: 2;
+    }
+}
