@@ -17,15 +17,14 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to the NEW CSF Website",
-            "link": ""
+            "text": "CSF Black Friday Sale!",
+            "link": "shopify://pages/black-friday-cyber-monday-sales-promotions"
           }
         }
       },
       "block_order": [
         "announcement-bar-0"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "scheme-5",
         "show_line_separator": true,
