@@ -99,3 +99,18 @@
   text-transform: uppercase;
   color: rgba(var(--color-foreground), 0.7);
 }
+
+/* CSF sale pricing: MAP struck through, sale price in red */
+.price--on-sale .price__sale .price-item--sale,
+.card__sale-pricing .price-item--sale {
+  color: #c8102e;
+}
+
+.price__sale-label {
+  color: #c8102e;
+  font-weight: 600;
+}
+
+.card__sale-pricing s {
+  color: rgba(var(--color-foreground), 0.75);
+}

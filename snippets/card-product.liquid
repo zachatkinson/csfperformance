@@ -234,6 +234,19 @@
                         %}
                         {% if price_is_two_cents %}
                         <p><em>Contact Vendor for Pricing</em></p>
+                        {% elsif card_product.compare_at_price > card_product.price %}
+                        {%- comment -%} On sale: Compare-at = original MAP (struck through), Price = sale price {%- endcomment -%}
+                        <p class="card__sale-pricing">
+                          {%- if card_product.metafields.custom.msrp.value == card_product.compare_at_price -%}
+                            <s>{{ card_product.compare_at_price | money_with_currency }}</s> MSRP/MAP
+                          {%- else -%}
+                            {%- if card_product.metafields.custom.msrp.value != blank -%}
+                              <em>{{ card_product.metafields.custom.msrp.value | money_with_currency }} MSRP</em><br />
+                            {%- endif -%}
+                            <s>{{ card_product.compare_at_price | money }}</s> USD MAP
+                          {%- endif -%}
+                          <br /><span class="price__sale-label">Sale Price:</span> <strong class="price-item--sale">{{ card_product.price | money_with_currency }}</strong>
+                        </p>
                         {% elsif card_product.metafields.custom.msrp.value == card_product.price %}
                         <p><strong>{{ card_product.price | money_with_currency }}</strong> MSRP/MAP
                         {% else %}

@@ -55,10 +55,6 @@
 -%}
 
 {%- unless target == null and placeholder == null -%}
-    <script>
-        let productData = {{ product | json }};
-        let msrpRender = {{ variant_msrp_price }};
-    </script>
   <div
     class="
       price
@@ -117,22 +113,29 @@
         {% if price_is_two_cents %}
           <em>Contact Vendor for Pricing</em>
         {% else %}
-          {%- unless product.price_varies == false and product.compare_at_price_varies %}
-            <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-            <span>
-              <s class="price-item price-item--regular">
-                {% if settings.currency_code_enabled %}
-                  {{ compare_at_price | money_with_currency }}
-                {% else %}
-                  {{ compare_at_price | money }}
-                {% endif %}
-              </s>
-            </span>
-          {%- endunless -%}
+          {%- comment -%}
+            On sale: Compare-at price = original MAP (struck through), Price = sale price.
+          {%- endcomment -%}
+          {%- liquid
+            assign money_compare_at = compare_at_price | money
+            if settings.currency_code_enabled
+              assign money_compare_at = compare_at_price | money_with_currency
+            endif
+          -%}
+          {%- if variant_msrp_price == money_compare_at -%}
+            MSRP/MAP:
+          {%- else -%}
+            {%- if product.metafields.custom.msrp.value != blank -%}
+              <em>MSRP: {{ variant_msrp_price }}</em><br />
+            {%- endif -%}
+            MAP:
+          {%- endif %}
+          <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
+          <s class="price-item price-item--regular">{{ money_compare_at }}</s>
+          <br />
+          <span class="price__sale-label">Sale Price:</span>
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.sale_price' | t }}</span>
-          <span class="price-item price-item--sale price-item--last">
-            {{ money_price }}
-          </span>
+          <strong class="price-item price-item--sale price-item--last">{{ money_price }}</strong>
         {% endif %}
       </div>
       <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
@@ -160,35 +163,6 @@
       </span>
     {%- endif -%}
   </div>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const msrpElement = document.querySelector(".msrp-amount");
-                const variantSelect = document.querySelector("[name='id']");
-
-                console.log("Product data loaded:", productData);
-
-                function updateMsrp() {
-                    {% if product.variants.size > 1 %}
-                    const selectedVariantId = variantSelect.value;
-                    const selectedVariant = productData.variants.find(variant => variant.id == selectedVariantId);
-
-                    if (selectedVariant) {
-                        console.log("Selected variant:", selectedVariant);
-                        const msrp = selectedVariant.compare_at_price || selectedVariant.msrp;
-                        msrpElement.textContent = msrp ? Shopify.formatMoney(msrp) : msrp;
-                    }
-                }
-                {% else %}
-                const msrp = msrpRender;
-                {% endif %}
-                // Listen for changes on variant selection
-                variantSelect.addEventListener("change", updateMsrp);
-
-                // Initial call to set MSRP on page load
-                updateMsrp();
-            });
-        </script>
 
 {% endunless %}
 
