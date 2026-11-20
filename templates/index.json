@@ -88,6 +88,15 @@
             "side-link-url": "shopify://products/8400-bmw-gen-2-b58-race-x-charge-air-cooler-manifold-raw-billet"
           }
         },
+        "slide_QCQMXM": {
+          "type": "slide",
+          "settings": {
+            "slide-image": "shopify://shop_images/CSF-BF26N-Banner_1.jpg",
+            "mobile-image": "shopify://shop_images/CSF-Black_Friday_Ad_1.jpg",
+            "slide-alt-text": "",
+            "slide-url": "shopify://pages/black-friday-cyber-monday-sales-promotions"
+          }
+        },
         "slide_MDmQpw": {
           "type": "slide",
           "settings": {
@@ -177,6 +186,7 @@
         "side_link_kcAT8Y",
         "side_link_zVYVAY",
         "side_link_apd7xy",
+        "slide_QCQMXM",
         "slide_MDmQpw",
         "slide_WnayiF",
         "slide_HnqNxW",
